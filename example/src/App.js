@@ -8,8 +8,8 @@ import Logo from './assets/Logo.svg'
 
 import { HomePage } from 'knotel-website-ui'
 import 'knotel-website-ui/dist/index.css'
-import 'knotel-website-ui/src/assets/css/style.css'
-import 'knotel-website-ui/src/assets/css/pagination.css'
+import 'knotel-website-ui/dist/css/style.css'
+import 'knotel-website-ui/dist/css/pagination.css'
 
 const widgets = [
   {
