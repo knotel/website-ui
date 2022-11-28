@@ -1,0 +1,73 @@
+.section {
+    background-color: var(--beige-bg);
+}
+
+.item {
+    display: inline-block;
+    width: 33.3%;
+}
+
+.title {
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 1.2;
+    padding: 35px 40px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.info {
+    padding-top: 24px;
+}
+
+.wrapper {
+    min-height: 300px;
+    padding: 40px;
+}
+
+.text_wrap {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    padding-top: 24px;
+}
+
+.text_wrap:first-child, .info:first-child {
+    padding-top: 0;
+}
+
+.label,
+.value {
+    padding-left: 8px;
+}
+
+.list {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2;
+}
+
+
+.list li {
+    list-style: disc;
+    margin-left: 20px;
+    padding-left: 4px;
+}
+
+.list li::marker {
+    width: 2px;
+    height: 2px;
+}
+
+.icon {
+    font-size: 15px;
+    width: 15px;
+    height: 15px;
+}
+
+.download {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 12px;
+}

@@ -1,0 +1,34 @@
+.greenBg {
+    background: #004605;
+    color: var(--text-white);
+}
+
+.lightBlueBg {
+    background: #DCE1D9;
+    color: var(--default-text);
+}
+
+.section_border {
+    border: 1px solid var(--border-color);
+}
+
+.block_Center {
+    padding: 120px 0px;
+}
+
+.text {
+    max-width: 500px;
+    margin: auto;
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 1.2;
+    text-align: center;
+    font-style: normal;
+}
+
+.text span {
+    font-family: "Gelasio";
+    font-style: italic;
+    font-size: 23px;
+    line-height: 1.2;
+}

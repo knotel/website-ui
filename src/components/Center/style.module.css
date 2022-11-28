@@ -1,0 +1,36 @@
+.center {
+    max-width: 1728px;
+    padding: 0 112px;
+    margin: auto;
+    width: 100%;
+}
+@media (max-width: 1600px) {
+    .center {
+        padding: 0 100px;
+    }
+}
+@media (max-width: 1440px) {
+    .center {
+        padding: 0 80px;
+    }
+}
+@media (max-width: 1200px) {
+    .center {
+        padding: 0 60px;
+    }
+}
+@media (max-width: 1024px) {
+    .center {
+        padding: 0 40px;
+    }
+}
+@media (max-width: 550px) {
+    .center {
+        padding: 0 30px;
+    }
+}
+@media (max-width: 420px) {
+    .center {
+        padding: 0 20px;
+    }
+}

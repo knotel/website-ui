@@ -1,0 +1,35 @@
+.enquire_wrap {
+    border: 1px solid var(--border-color);
+}
+
+.left {
+    display: inline-block;
+    width: 40%;
+    height: 100vh;
+    padding: 40px;
+}
+
+.right {
+    display: inline-block;
+    width: 60%;
+    height: 100vh;
+    border-left: 1px solid var(--border-color);
+    padding: 40px;
+}
+
+.text {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 400px;
+    padding-top: 16px;
+}
+
+.text span {
+    font-family: "Gelasio";
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 350;
+    line-height: 1.6;
+}
+

@@ -1,0 +1,139 @@
+/* header */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    background-color: var(--text-white);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo img,
+.footer_logo img {
+    width: 120px;
+    height: auto;
+}
+
+.header_logo {
+    padding: 32px 0;
+}
+
+.header_menu_wrap {
+    padding: 20px 0px;
+}
+
+.header_menu {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 12px;
+    vertical-align: middle;
+    color: var(--primary-blue);
+}
+
+.header_menu:hover {
+    color: var(--coral-red);
+}
+
+.header_btn {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 12px;
+}
+
+/*footer*/
+.footer_wrap {
+    padding: 49px 116px;
+    background: var(--footer-bg);
+    border: 1px solid var(--border-color);
+    border-top: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_col,
+.footer_email {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.footer_email {
+    padding: 0px;
+}
+
+.footer_link_item {
+    padding-top: 8px;
+}
+
+.footer_title {
+    letter-spacing: 1.6px;
+    padding-bottom: 16px;
+}
+
+.footer_bottom {
+    background: var(--footer-bottom-bg);
+    color: var(--layout-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 116px;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-white);
+}
+
+.footer_email {
+    text-decoration: underline;
+}
+
+.footer_left {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_email {
+    padding-top: 24px;
+}
+
+.f_button {
+    padding-top: 24px;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social_padd {
+    padding-top: 24px;
+}
+
+.social_logo {
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid var(--logo-border);
+    width: 35px;
+    height: 35px;
+}
+
+.social_icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: color .1s;
+}
+
+.social_logo:hover {
+    border: 2px solid var(--button-bg);
+    background-color: var(--button-bg);
+    color: var(--text-white);
+}

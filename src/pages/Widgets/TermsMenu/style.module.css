@@ -1,0 +1,22 @@
+.terms_section {
+    border: 1px solid var(--border-color);
+    padding-left: 8px;
+    border-top:none;
+}
+
+.menu_label {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    vertical-align: middle;
+    padding: 28px 0px;
+    margin-left: 32px;
+    border-bottom: 4px solid #0000;
+}
+
+.menu_label.active{
+    color: var(--common-blue);
+    border-color:var(--common-blue) ;
+}
+
