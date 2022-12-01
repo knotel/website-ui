@@ -61,7 +61,7 @@ const NormalLink = ({
   }
 
   return (
-    <a className={`${className}`} onClick={onClick} href={false}>
+    <a className={`${className}`} onClick={onClick} href=''>
       {children}
     </a>
   )

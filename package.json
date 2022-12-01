@@ -1,6 +1,6 @@
 {
   "name": "knotel-website-ui",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "private": true,
   "description": "Made with create-react-library",
   "author": "",
@@ -20,7 +20,7 @@
     }
   },
   "scripts": {
-    "build": "microbundle-crl --no-compress --jsxFragment React.Fragment --format modern,cjs && cp -r src/assets/css dist/ && cp -r src/assets/fonts  dist/ ",
+    "build": "microbundle-crl --no-compress --jsxFragment React.Fragment --format modern,cjs && cp -r src/assets/css dist/ && cp -r src/assets/fonts  dist/",
     "start": "run-s build",
     "watch": "npm-watch",
     "prepare": "run-s build",

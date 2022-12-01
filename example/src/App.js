@@ -31,12 +31,14 @@ const widgets = [
       {
         image: leftBg,
         title: 'Office',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing eliti'
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing eliti',
+        link: '/offices'
       },
       {
         image: rightBg,
         title: 'Workclub',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing eliti'
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing eliti',
+        link: '/workclubs'
       }
     ]
   },
