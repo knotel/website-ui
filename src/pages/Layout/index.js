@@ -22,7 +22,6 @@ const Layout = ({ children, headerProps, footerProps }) => {
         winWidth: window.innerWidth,
         winHeight: $(window).height()
       }
-      console.log('dimensions changing --->', _dimensions)
       setDimensions(_dimensions)
       setContext(_dimensions)
     }
@@ -36,6 +35,7 @@ const Layout = ({ children, headerProps, footerProps }) => {
     <>
       <Header
         logo={headerProps.logo}
+        links={headerProps.links}
         setOpenForm={(e) => {
           setOpenForm(e)
         }}

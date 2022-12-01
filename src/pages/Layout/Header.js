@@ -3,7 +3,7 @@ import Button from '../../components/Field/Button.js'
 import style from './style.module.css'
 const NormalLink = lazy(() => import('../../components/NormalLink'))
 
-const Header = ({ setOpenForm, logo }) => {
+const Header = ({ setOpenForm, logo, links }) => {
   return (
     <div className={style.header}>
       <div className='c'>
@@ -16,8 +16,11 @@ const Header = ({ setOpenForm, logo }) => {
             </Suspense>
           </div>
           <div className={style.header_menu_wrap}>
-            <NormalLink className={style.header_menu}>Office</NormalLink>
-            <NormalLink className={style.header_menu}>Workclub</NormalLink>
+            {links.map(({ text, url }) => (
+              <NormalLink link={url} key={url} className={style.header_menu}>
+                {text}
+              </NormalLink>
+            ))}
             <div className={style.header_btn}>
               <Button
                 buttonType='header_blue_btn'

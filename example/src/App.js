@@ -149,16 +149,16 @@ const App = () => {
     <HomePage
       headerProps={{
         logo: Logo,
-        links: {
-          office: {
+        links: [
+          {
             text: 'Office',
             url: '/office'
           },
-          workClub: {
+          {
             text: 'WorkClub',
             url: '/workclub'
           }
-        }
+        ]
       }}
       footerProps={{
         logo: Logo,
