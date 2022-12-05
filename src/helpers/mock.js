@@ -1,332 +1,411 @@
-import bannerImg from "../assets/images/hero.jpg";
-import bannerlogo from "../assets/images/bannerlogo.svg";
-import leftBg from "../assets/images/office.jpg";
-import rightBg from "../assets/images/workclub.jpg";
-import newsletterImg from "../assets/images/frame.jpg";
-import detailImg from "../assets/images/detailImg.jpg";
-import landlordImage from "../assets/images/landlordImage.jpg";
-import image1 from "../assets/images/image1.jpg";
-import image2 from "../assets/images/image2.jpg";
-import image3 from "../assets/images/image3.jpg";
-import download from "../assets/images/download.svg";
-import logo1 from "../assets/images/logo1.svg";
-import logo2 from "../assets/images/logo2.svg";
-import logo3 from "../assets/images/logo3.svg";
-import logo4 from "../assets/images/logo4.svg";
-import logo5 from "../assets/images/logo5.svg";
-import blogo1 from "../assets/images/blogo1.jpg";
-import blogo2 from "../assets/images/blogo2.jpg";
+import bannerImg from '../assets/images/hero.jpg'
+import bannerlogo from '../assets/images/bannerlogo.svg'
+import leftBg from '../assets/images/office.jpg'
+import rightBg from '../assets/images/workclub.jpg'
+import newsletterImg from '../assets/images/frame.jpg'
+import detailImg from '../assets/images/detailImg.jpg'
+import landlordImage from '../assets/images/landlordImage.jpg'
+import image1 from '../assets/images/image1.jpg'
+import image2 from '../assets/images/image2.jpg'
+import image3 from '../assets/images/image3.jpg'
+import download from '../assets/images/download.svg'
+import logo1 from '../assets/images/logo1.svg'
+import logo2 from '../assets/images/logo2.svg'
+import logo3 from '../assets/images/logo3.svg'
+import logo4 from '../assets/images/logo4.svg'
+import logo5 from '../assets/images/logo5.svg'
+import blogo1 from '../assets/images/blogo1.jpg'
+import blogo2 from '../assets/images/blogo2.jpg'
 
-
-
-
-const privacyMenu = [{
-    label: "Website terms of use",
-    link: "/terms-of-use",
-}, {
-    label: "Privacy (US)",
-    link: "/privacy-us",
-}, {
-    label: "Privacy (Eur)",
-    link: "/privacy-eur"
-}, {
-    label: "Personal information",
-    link: "/personal-information"
-}, {
-    label: "Accessibility",
-    link: "/accessibility"
-}, {
-    label: "California data subject access request form",
-    link: "/data-access-request"
-}];
+const privacyMenu = [
+  {
+    label: 'Website terms of use',
+    link: '/terms-of-use'
+  },
+  {
+    label: 'Privacy (US)',
+    link: '/privacy-us'
+  },
+  {
+    label: 'Privacy (Eur)',
+    link: '/privacy-eur'
+  },
+  {
+    label: 'Personal information',
+    link: '/personal-information'
+  },
+  {
+    label: 'Accessibility',
+    link: '/accessibility'
+  },
+  {
+    label: 'California data subject access request form',
+    link: '/data-access-request'
+  }
+]
 
 const data = {
-    home: [{
-        type: "hero_banner",
-        desktop_image: bannerImg,
-        title: "Introducing",
-        title_image: bannerlogo,
-        button_label: "Enquire",
-        button_url: "/"
-    }, {
-        type: "text",
-        bg_color: "green",
-        text: "<span> Workclub </span> hubs with access to your own branded <span> private office </span> in key gateway cities across the globe."
-    }, {
-        type: "menu_section",
-        items: [{
-            image: leftBg,
-            title: "Office",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing eliti",
-        },
-        {
-            image: rightBg,
-            title: "Workclub",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing eliti"
-        }]
-    }, {
-        type: "text_image_block",
-        items: [{
-            title: "Lorem ipsum dolor",
-            sub_title: "Tempus scelerisque felis",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus scelerisque felis lobortis commodo quis. Pulvinar leo ac, lacinia nibh tincidunt. ",
-            button_label: "Learn more",
-            button_url: "/",
-            image: detailImg,
-            image_position: 'right',
-
-        },
-        {
-            title: "Lorem ipsum dolor",
-            sub_title: "Tempus scelerisque felis",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus scelerisque felis lobortis commodo quis. Pulvinar leo ac, lacinia nibh tincidunt. ",
-            button_label: "Learn more",
-            button_url: "/",
-            image: detailImg,
-            image_position: 'left',
-
-        }]
-    }],
-
-    "enquire-form": [{
-        type: "enquire_form",
-        title: "Lets Connect",
-        text: "<span> Lorem ipsum dolor sit amet, </span> consectetur adipiscing elit.",
-    }],
-
-    "news_letter": {
-        title: "Newsletter",
-        text: "<span> Sign up for the good stuff.</span> Break up your emails with the odd update from us. We hate spam too, so we promise to only send you good things.",
-        button_label: "Sign up",
-        button_url: "/",
-        image: newsletterImg
-    },
-
-    "contact": {
-        form_title: "How can we help you?",
-        form_text: "<span>Lorem ipsum dolor sit amet,</span> consectetur adipiscing elit. Enim quam tortor volutpat egestas.",
-        button_label: "Submit"
-    },
-
-    office: [{
-        type: "left_right_banner",
-        image: bannerImg,
-        bg_color: "green",
-        title: "Ullamcorper purus",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitant ullamcorper placerat neque, pretium tortor.",
-        button_label: "Location",
-        button_url: "/",
-        border_line: true
-    }, {
-        type: "text",
-        bg_color: "lightblue",
-        text: "<span>Lorem ipsum dolor sit amet,</span> consectetur adipiscing elit. Orci rhoncus auctor duis suscipit lobortis id diam. Tortor eu feugiat euismod tempor eget sed cras."
-    }, {
-        type: "image_slider",
-        options: ["All", "UK", "Europe", "America"],
-        items: [{
-            location: "america",
-            image: image1,
-            title: "Atlanta",
-            link: ""
-        },
-        {
-            location: "Europe",
-            image: image2,
-            title: "Austin",
-            link: ""
-        }, {
-            location: "uk",
-            image: image3,
-            title: "Berlin",
-            link: ""
-        }, {
-            location: "america",
-            image: image1,
-            title: "Atlanta",
-            link: ""
-        },
-        {
-            location: "Europe",
-            image: image2,
-            title: "Austin",
-            link: ""
-        }, {
-            location: "uk",
-            image: image3,
-            title: "Berlin",
-            link: ""
-        }]
-    }, {
-        type: "amenities",
-        heading: "Amenities",
-        items: [{
-            image: image1,
-            title: "Amenity name",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus."
-        },
-        {
-            image: image2,
-            title: "Amenity name",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus."
-        }, {
-            image: image3,
-            title: "Amenity name",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus."
-        }]
-    }],
-
-    brokers: [{
-        type: "left_right_banner",
-        image: bannerImg,
-        bg_color: "darkblue",
-        title: "Flexible solutions to meet client needs.",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-        button_label: "Get in touch",
-        button_url: "/",
-        whiteButton: true
-    }, {
-        type: "text_table",
-        items: [{
-            title: "Build client trust",
-            text: "A partner who respects your relationships. We provide you with the optionality for all the ways your clients work."
-        }, {
-            title: "Increase revenue",
-            text: "Transparent compensation, timely payments. Close deals faster with our simple, proven sales process. Earn more with each renewal and expansion."
-        }, {
-            title: "Grow together",
-            text: "Maintain your client relationships as they scale in the Knotel portfolio. Advise your clients on strategy, from Series A to IPO. Earn compensation on all expansion and renewal business."
-        }]
-    }],
-
-    landlords: [{
-        type: "left_right_banner",
-        image: bannerImg,
-        bg_color: "darkblue",
-        title: "Flexible solutions for your office portfolio.",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        button_label: "Submit your space",
-        button_url: "/",
-        whiteButton: true
-    }, {
-        type: "image_with_text",
-        items: [{
-            image: landlordImage,
-            title: "Mauris fusce.",
-            text: "Knotel works with landlords to design, build and operate office space for companies on flexible terms, while minimizing buildout disruption and maximizing long-term property value.",
-            button_label: "Submit your space",
-            button_url: "/",
-            image_position: 'left',
-        }, {
-            image: landlordImage,
-            title: "Mauris fusce.",
-            text: "Knotel works with landlords to design, build and operate office space for companies on flexible terms, while minimizing buildout disruption and maximizing long-term property value.",
-            button_label: "Submit your space",
-            button_url: "/",
-            image_position: 'right',
-        },
-        {
-            image: landlordImage,
-            title: "Mauris fusce.",
-            text: "Knotel works with landlords to design, build and operate office space for companies on flexible terms, while minimizing buildout disruption and maximizing long-term property value.",
-            button_label: "Submit your space",
-            button_url: "/",
-            image_position: 'left',
-        }]
-    }],
-    detail: [{
-        type: "banner",
-        image: detailImg,
-        title: "HYLO ground floor",
-        text: "Welcome to London’s future workplace."
+  home: [
+    {
+      type: 'hero_banner',
+      desktop_image: bannerImg,
+      title: 'Introducing',
+      title_image: bannerlogo,
+      button_label: 'Enquire',
+      button_url: '/'
     },
     {
-        type: "details",
-        items: [{
-            title: "About",
-            list: [{
-                icon: logo1,
-                label: "Available:",
-                value: "November 1"
-            }, {
-                icon: logo2,
-                label: "Floor #:",
-                value: "Ground Floor"
-            }, {
-                icon: logo3,
-                label: "Size:",
-                value: "26,685 sqft"
-            }, {
-                icon: logo4,
-                label: "Seat #:",
-                value: "Undefined Seats"
-            }, {
-                icon: logo5,
-                label: "Enquire:",
-                value: "Lorem@ipsum.com",
-                link: true
-            }]
-        }, {
-            title: "Whats Included",
-            list: [{
-                text: "Lorem ipsum dolor sit amet",
-            }, {
-                text: "consectetur adipiscing elit ",
-            }, {
-                text: "Nisi, nulla id viverra pharetra",
-            }, {
-                text: "Eget leo vitae mattis leo",
-            }, {
-                text: "Risus etiam nisl",
-            }, {
-                text: "Sit turpis sed vestibulum dignissim",
-            }]
-        }, {
-            title: "Further Information",
-            list: [{
-                logo: download,
-                button_label: "Download Flyer",
-                button_link: "/"
-            }, {
-                logo: download,
-                button_label: "Download Images",
-                button_link: "/"
-            }, {
-                logo: download,
-                button_label: "Download Floor Plan",
-                button_link: "/"
-            }]
-        }]
-    },{
-        type: "text_image_slider",
-        items: [{
-            title: "London’s future workspace",
-            text: "Knotel at HYLO offers 27,000 square feet of premium office space across 4 floors and access to 17,000 sq ft of retail space. One of London’s most exciting new buildings, HYLO boasts high rise tower floors, roof gardens and new public space. Welcome to London’s future workplace.",
-            button_label: "Schedule a tour",
-            button_url: "/",
-            image_position: 'right',
-            list:[{image: blogo1},{image: blogo2},{image: blogo1},{image: blogo2}]
+      type: 'text',
+      bg_color: 'green',
+      text: '<span> Workclub </span> hubs with access to your own branded <span> private office </span> in key gateway cities across the globe.'
+    },
+    {
+      type: 'menu_section',
+      items: [
+        {
+          image: leftBg,
+          title: 'Office',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing eliti'
+        },
+        {
+          image: rightBg,
+          title: 'Workclub',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing eliti'
+        }
+      ]
+    },
+    {
+      type: 'text_image_block',
+      items: [
+        {
+          title: 'Lorem ipsum dolor',
+          sub_title: 'Tempus scelerisque felis',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus scelerisque felis lobortis commodo quis. Pulvinar leo ac, lacinia nibh tincidunt. ',
+          button_label: 'Learn more',
+          button_url: '/',
+          image: detailImg,
+          image_position: 'right'
+        },
+        {
+          title: 'Lorem ipsum dolor',
+          sub_title: 'Tempus scelerisque felis',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus scelerisque felis lobortis commodo quis. Pulvinar leo ac, lacinia nibh tincidunt. ',
+          button_label: 'Learn more',
+          button_url: '/',
+          image: detailImg,
+          image_position: 'left'
+        }
+      ]
+    }
+  ],
 
+  'enquire-form': [
+    {
+      type: 'enquire_form',
+      title: 'Lets Connect',
+      text: '<span> Lorem ipsum dolor sit amet, </span> consectetur adipiscing elit.'
+    }
+  ],
+
+  news_letter: {
+    title: 'Newsletter',
+    text: '<span> Sign up for the good stuff.</span> Break up your emails with the odd update from us. We hate spam too, so we promise to only send you good things.',
+    feedback:
+      '<span>Thank you for subscribing</span><p> We will be in touch soon.<p/> ',
+    button_label: 'Sign up',
+    button_url: '/',
+    image: newsletterImg
+  },
+
+  contact: {
+    form_title: 'How can we help you?',
+    form_text:
+      '<span>Lorem ipsum dolor sit amet,</span> consectetur adipiscing elit. Enim quam tortor volutpat egestas.',
+    button_label: 'Submit',
+    feedback:
+      '<span>Thank you for your response </span><p> We will be in touch soon.<p/> '
+  },
+
+  office: [
+    {
+      type: 'left_right_banner',
+      image: bannerImg,
+      bg_color: 'green',
+      title: 'Ullamcorper purus',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitant ullamcorper placerat neque, pretium tortor.',
+      button_label: 'Location',
+      button_url: '/',
+      border_line: true
+    },
+    {
+      type: 'text',
+      bg_color: 'lightblue',
+      text: '<span>Lorem ipsum dolor sit amet,</span> consectetur adipiscing elit. Orci rhoncus auctor duis suscipit lobortis id diam. Tortor eu feugiat euismod tempor eget sed cras.'
+    },
+    {
+      type: 'image_slider',
+      options: ['All', 'UK', 'Europe', 'America'],
+      items: [
+        {
+          location: 'america',
+          image: image1,
+          title: 'Atlanta',
+          link: ''
         },
         {
-            title: "Old & new collide",
-            text: "This is a place where old and new collide; from cutting-edge-cool Old Street and Shoreditch to the historically influenced City of London. The area is the epicentre of London’s creative and collaborative industries and is more popular than ever with many of London’s forward-thinking financial and professional occupiers. ",
-            button_label: "Request information",
-            button_url: "/",
-            list:[{image: blogo2},{image: blogo1},{image: blogo2},{image: blogo1}],
-            image_position: 'left',
-            bg_color: "green",
-            white_button:true
-        }]
-    }],
-    "terms-of-use": [
-        {
-            type: "terms_menu",
-            items: privacyMenu,
+          location: 'Europe',
+          image: image2,
+          title: 'Austin',
+          link: ''
         },
         {
-            type: 'text_editor',
-            text: `
+          location: 'uk',
+          image: image3,
+          title: 'Berlin',
+          link: ''
+        },
+        {
+          location: 'america',
+          image: image1,
+          title: 'Atlanta',
+          link: ''
+        },
+        {
+          location: 'Europe',
+          image: image2,
+          title: 'Austin',
+          link: ''
+        },
+        {
+          location: 'uk',
+          image: image3,
+          title: 'Berlin',
+          link: ''
+        }
+      ]
+    },
+    {
+      type: 'amenities',
+      heading: 'Amenities',
+      items: [
+        {
+          image: image1,
+          title: 'Amenity name',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus.'
+        },
+        {
+          image: image2,
+          title: 'Amenity name',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus.'
+        },
+        {
+          image: image3,
+          title: 'Amenity name',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus.'
+        }
+      ]
+    }
+  ],
+
+  brokers: [
+    {
+      type: 'left_right_banner',
+      image: bannerImg,
+      bg_color: 'darkblue',
+      title: 'Flexible solutions to meet client needs.',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+      button_label: 'Get in touch',
+      button_url: '/',
+      whiteButton: true
+    },
+    {
+      type: 'text_table',
+      items: [
+        {
+          title: 'Build client trust',
+          text: 'A partner who respects your relationships. We provide you with the optionality for all the ways your clients work.'
+        },
+        {
+          title: 'Increase revenue',
+          text: 'Transparent compensation, timely payments. Close deals faster with our simple, proven sales process. Earn more with each renewal and expansion.'
+        },
+        {
+          title: 'Grow together',
+          text: 'Maintain your client relationships as they scale in the Knotel portfolio. Advise your clients on strategy, from Series A to IPO. Earn compensation on all expansion and renewal business.'
+        }
+      ]
+    }
+  ],
+
+  landlords: [
+    {
+      type: 'left_right_banner',
+      image: bannerImg,
+      bg_color: 'darkblue',
+      title: 'Flexible solutions for your office portfolio.',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      button_label: 'Submit your space',
+      button_url: '/',
+      whiteButton: true
+    },
+    {
+      type: 'image_with_text',
+      items: [
+        {
+          image: landlordImage,
+          title: 'Mauris fusce.',
+          text: 'Knotel works with landlords to design, build and operate office space for companies on flexible terms, while minimizing buildout disruption and maximizing long-term property value.',
+          button_label: 'Submit your space',
+          button_url: '/',
+          image_position: 'left'
+        },
+        {
+          image: landlordImage,
+          title: 'Mauris fusce.',
+          text: 'Knotel works with landlords to design, build and operate office space for companies on flexible terms, while minimizing buildout disruption and maximizing long-term property value.',
+          button_label: 'Submit your space',
+          button_url: '/',
+          image_position: 'right'
+        },
+        {
+          image: landlordImage,
+          title: 'Mauris fusce.',
+          text: 'Knotel works with landlords to design, build and operate office space for companies on flexible terms, while minimizing buildout disruption and maximizing long-term property value.',
+          button_label: 'Submit your space',
+          button_url: '/',
+          image_position: 'left'
+        }
+      ]
+    }
+  ],
+  detail: [
+    {
+      type: 'banner',
+      image: detailImg,
+      title: 'HYLO ground floor',
+      text: 'Welcome to London’s future workplace.'
+    },
+    {
+      type: 'details',
+      items: [
+        {
+          title: 'About',
+          list: [
+            {
+              icon: logo1,
+              label: 'Available:',
+              value: 'November 1'
+            },
+            {
+              icon: logo2,
+              label: 'Floor #:',
+              value: 'Ground Floor'
+            },
+            {
+              icon: logo3,
+              label: 'Size:',
+              value: '26,685 sqft'
+            },
+            {
+              icon: logo4,
+              label: 'Seat #:',
+              value: 'Undefined Seats'
+            },
+            {
+              icon: logo5,
+              label: 'Enquire:',
+              value: 'Lorem@ipsum.com',
+              link: true
+            }
+          ]
+        },
+        {
+          title: 'Whats Included',
+          list: [
+            {
+              text: 'Lorem ipsum dolor sit amet'
+            },
+            {
+              text: 'consectetur adipiscing elit '
+            },
+            {
+              text: 'Nisi, nulla id viverra pharetra'
+            },
+            {
+              text: 'Eget leo vitae mattis leo'
+            },
+            {
+              text: 'Risus etiam nisl'
+            },
+            {
+              text: 'Sit turpis sed vestibulum dignissim'
+            }
+          ]
+        },
+        {
+          title: 'Further Information',
+          list: [
+            {
+              logo: download,
+              button_label: 'Download Flyer',
+              button_link: '/'
+            },
+            {
+              logo: download,
+              button_label: 'Download Images',
+              button_link: '/'
+            },
+            {
+              logo: download,
+              button_label: 'Download Floor Plan',
+              button_link: '/'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      type: 'text_image_slider',
+      items: [
+        {
+          title: 'London’s future workspace',
+          text: 'Knotel at HYLO offers 27,000 square feet of premium office space across 4 floors and access to 17,000 sq ft of retail space. One of London’s most exciting new buildings, HYLO boasts high rise tower floors, roof gardens and new public space. Welcome to London’s future workplace.',
+          button_label: 'Schedule a tour',
+          button_url: '/',
+          image_position: 'right',
+          list: [
+            { image: blogo1 },
+            { image: blogo2 },
+            { image: blogo1 },
+            { image: blogo2 }
+          ]
+        },
+        {
+          title: 'Old & new collide',
+          text: 'This is a place where old and new collide; from cutting-edge-cool Old Street and Shoreditch to the historically influenced City of London. The area is the epicentre of London’s creative and collaborative industries and is more popular than ever with many of London’s forward-thinking financial and professional occupiers. ',
+          button_label: 'Request information',
+          button_url: '/',
+          list: [
+            { image: blogo2 },
+            { image: blogo1 },
+            { image: blogo2 },
+            { image: blogo1 }
+          ],
+          image_position: 'left',
+          bg_color: 'green',
+          white_button: true
+        }
+      ]
+    }
+  ],
+  'terms-of-use': [
+    {
+      type: 'terms_menu',
+      items: privacyMenu
+    },
+    {
+      type: 'text_editor',
+      text: `
             <h6>Effective Date of Current Policy: June 17, 2022</h6>
             <h1>Website terms</h1>
             <h3>Sessions Website Terms</h3>
@@ -541,32 +620,32 @@ const data = {
                 lease or financing, or withdrawal without notice. Any projections, opinions, assumptions or estimates contained within the Sites are for example only, and such projections, opinions, assumptions or
                 estimates may not represent current or future performance of a listed property. You and your tax and legal advisors should conduct your own investigation of any property listed on this site and any contemplated
                 transaction concerning any property listed on the Sites.
-            </p></br></br></br></br>`,
-        }
-    ],
+            </p></br></br></br></br>`
+    }
+  ],
 
-    "privacy-us": [
-        {
-            type: "terms_menu",
-            items: privacyMenu,
-        },
-        {
-            type: 'text_editor',
-            text: "<h6>Effective Date of Current Policy: June 17, 2022</h6><h1>Privacy notice</h1>",
-        },
-        {
-            type: 'text_editor',
-            text: `
+  'privacy-us': [
+    {
+      type: 'terms_menu',
+      items: privacyMenu
+    },
+    {
+      type: 'text_editor',
+      text: '<h6>Effective Date of Current Policy: June 17, 2022</h6><h1>Privacy notice</h1>'
+    },
+    {
+      type: 'text_editor',
+      text: `
             <p>This Privacy Notice explains how Sessions Collection, including its subsidiaries, handles your personal information. This Privacy Notice applies to this website or mobile application and the websites or mobile applications of Knotel Holdings, LLC and our affiliates (hereinafter referred to as “Sessions,” “we”, “us” or “our”) that display or refer to this Privacy Notice (each a Site and collectively, the Sites), and to any online services that may be available on or through the Sites or other services and products provided by us (the “Services”). This Privacy Notice describes the personal information we collect on the Site and through the Services, and how we use and protect that information.  This Privacy Notice does not apply to information unrelated to any identified or identifiable individual, household, or device.</p>
-            <p>In addition, if you are a resident of the European Economic Area (“EEA”), please see our European Privacy Addendum.</p></br></br>`,
-        },
-        {
-            type: 'text_editor',
-            text: "<h2>Information we collect</h2>",
-        },
-        {
-            type: 'text_editor',
-            text: ` 
+            <p>In addition, if you are a resident of the European Economic Area (“EEA”), please see our European Privacy Addendum.</p></br></br>`
+    },
+    {
+      type: 'text_editor',
+      text: '<h2>Information we collect</h2>'
+    },
+    {
+      type: 'text_editor',
+      text: ` 
             <ul>
             To provide the Services, we collect the following information:
             <li>By which you may be personally identified, such as a first and last name, a home or other physical address, an email address, a telephone number, date of birth, payment information, business information
@@ -621,13 +700,14 @@ const data = {
         Information from third party sources. Advertisers, application providers, and other third parties provide us information in connection with tools we offer and through tools they
         use to collect information about you when you use our Services. The information they collect may be associated with your personal information or they may collect information about your online
         activities over time. They may use this information to provide you with interest-based advertising or other targeted content.
-    <p>`,
-        },
+    <p>`
+    },
+    {
+      type: 'two_column_table',
+      items: [
         {
-            type: 'two_column_table',
-            items: [{
-                title: "How we use the information we gather",
-                text: `
+          title: 'How we use the information we gather',
+          text: `
                 <p>We may use data we collect for a variety of purposes, including the following:</p><ul>
                 <li>To operate our business and provide our Services to you, which includes managing and controlling access to locations.</li>
                 <li>To support events and meetings occurring at our locations.</li>  
@@ -642,9 +722,10 @@ const data = {
                 <li>To detect and prevent fraud and other prohibited, illicit or illegal activity.</li> 
                 <li>For other purposes permitted by law or to which you consent.</li>
                 </ul>`
-            }, {
-                title: "How we share personal information",
-                text: `
+        },
+        {
+          title: 'How we share personal information',
+          text: `
                 <p>We may share your information with third parties in order to support and provide our Services. For example we may share your information: </p>
                 <ul>
                 <li>With third party service providers that we have engaged to help deliver our Services and products to you, including co-working space management vendors, event managers, and payment processing providers. We may 
@@ -659,69 +740,79 @@ const data = {
                 <li>To the extent permitted by law, when required by law, in connection with a court order, or other government or law enforcement authority or regulatory agency, or whenever we believe that disclosing such information is necessary or advisable, 
                 for example, to protect the rights, property, interests, or safety of you, ourselves or others.</li>
                 </ul>`
-            }]
-        },
-        {
-            type: 'three_column_table',
-            items: [{
-                title: "How we secure information",
-                text: "We maintain policies and procedures to protect the security of your information and to safeguard against unauthorized access to or use of your data. Of course, despite these measures, no network or system is ever entirely secure and we cannot guarantee the security of networks and systems that we operate or that are operated on our behalf."
-            }, {
-                title: "What choices do you have?",
-                text: "Update personal information. If you maintain an online account with us, you can log in to that account to review and change certain information you have provided to us."
-            }, {
-                title: "Links to third party sites",
-                text: "We may provide links to websites that are owned or operated by other companies. When you use a link to visit a third-party website, you will be subject to that website’s privacy and security practices, which may differ from ours. You should review the Privacy Notice, terms of use and security practices of the linked third-party website to understand how that site may use your data and/or information. We are not responsible for the privacy or security of these third-party sites, or the accuracy, completeness, or reliability of the information they provide."
-            }, {
-                title: "Children’s privacy rights",
-                text: "Our online services are not directed to children under the age of 18. We do not knowingly collect data from children under age 18 without parental consent."
-            }, {
-                title: "Updates to privacy notice",
-                text: "We may update this Privacy Notice from time to time in order to provide clarification or notice of changes to our practices. If we make changes, we will revise the Effective Date at the top of this Privacy Notice. Changes to this Privacy Notice will be effective once they are posted unless otherwise indicated."
-            }, {
-                title: "Contact us",
-                text: "If you have any questions or concerns about privacy at Sessions, please contact us at legal@knotel.com, by calling (646) 883-6300."
-            }]
         }
-    ],
-    "privacy-eur": [
+      ]
+    },
+    {
+      type: 'three_column_table',
+      items: [
         {
-            type: "terms_menu",
-            items: privacyMenu,
+          title: 'How we secure information',
+          text: 'We maintain policies and procedures to protect the security of your information and to safeguard against unauthorized access to or use of your data. Of course, despite these measures, no network or system is ever entirely secure and we cannot guarantee the security of networks and systems that we operate or that are operated on our behalf.'
         },
         {
-            type: 'text_editor',
-            text: "<h6>Effective Date of Current Policy: June 17, 2022</h6><br/><h1>Website terms</h1>",
-        }],
-    "personal-information": [
-        {
-            type: "terms_menu",
-            items: privacyMenu,
+          title: 'What choices do you have?',
+          text: 'Update personal information. If you maintain an online account with us, you can log in to that account to review and change certain information you have provided to us.'
         },
         {
-            type: 'text_editor',
-            text: "<h6>Effective Date of Current Policy: June 17, 2022</h6><br/><h1>Website terms</h1>",
-        }],
-    "accessibility": [
-        {
-            type: "terms_menu",
-            items: privacyMenu,
+          title: 'Links to third party sites',
+          text: 'We may provide links to websites that are owned or operated by other companies. When you use a link to visit a third-party website, you will be subject to that website’s privacy and security practices, which may differ from ours. You should review the Privacy Notice, terms of use and security practices of the linked third-party website to understand how that site may use your data and/or information. We are not responsible for the privacy or security of these third-party sites, or the accuracy, completeness, or reliability of the information they provide.'
         },
         {
-            type: 'text_editor',
-            text: "<h6>Effective Date of Current Policy: June 17, 2022</h6><br/><h1>Website terms</h1>",
-        }],
-    "data-access-request": [
-        {
-            type: "terms_menu",
-            items: privacyMenu,
+          title: 'Children’s privacy rights',
+          text: 'Our online services are not directed to children under the age of 18. We do not knowingly collect data from children under age 18 without parental consent.'
         },
         {
-            type: 'text_editor',
-            text: "<h6>Effective Date of Current Policy: June 17, 2022</h6><br/><h1>Website terms</h1>",
-        }]
+          title: 'Updates to privacy notice',
+          text: 'We may update this Privacy Notice from time to time in order to provide clarification or notice of changes to our practices. If we make changes, we will revise the Effective Date at the top of this Privacy Notice. Changes to this Privacy Notice will be effective once they are posted unless otherwise indicated.'
+        },
+        {
+          title: 'Contact us',
+          text: 'If you have any questions or concerns about privacy at Sessions, please contact us at legal@knotel.com, by calling (646) 883-6300.'
+        }
+      ]
+    }
+  ],
+  'privacy-eur': [
+    {
+      type: 'terms_menu',
+      items: privacyMenu
+    },
+    {
+      type: 'text_editor',
+      text: '<h6>Effective Date of Current Policy: June 17, 2022</h6><br/><h1>Website terms</h1>'
+    }
+  ],
+  'personal-information': [
+    {
+      type: 'terms_menu',
+      items: privacyMenu
+    },
+    {
+      type: 'text_editor',
+      text: '<h6>Effective Date of Current Policy: June 17, 2022</h6><br/><h1>Website terms</h1>'
+    }
+  ],
+  accessibility: [
+    {
+      type: 'terms_menu',
+      items: privacyMenu
+    },
+    {
+      type: 'text_editor',
+      text: '<h6>Effective Date of Current Policy: June 17, 2022</h6><br/><h1>Website terms</h1>'
+    }
+  ],
+  'data-access-request': [
+    {
+      type: 'terms_menu',
+      items: privacyMenu
+    },
+    {
+      type: 'text_editor',
+      text: '<h6>Effective Date of Current Policy: June 17, 2022</h6><br/><h1>Website terms</h1>'
+    }
+  ]
 }
 
-export {
-    data
-}
+export { data }

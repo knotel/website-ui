@@ -55,7 +55,10 @@ const Layout = ({ children, headerProps, footerProps }) => {
         width={dimesions.winWidth}
       />
       {openForm === 'enquire-form' && (
-        <EnquireModal onClose={() => setOpenForm(false)} />
+        <EnquireModal
+          {...headerProps.contactForm}
+          onClose={() => setOpenForm(false)}
+        />
       )}
     </>
   )

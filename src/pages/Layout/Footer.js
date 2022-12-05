@@ -12,13 +12,20 @@ import style from './style.module.css'
 const NormalLink = lazy(() => import('../../components/NormalLink'))
 
 const Footer = ({ footerProps }) => {
-  const { footerLinks, socials, subscribeLabel, contactEmail, footerLeftText, footerRightText } =
-    footerProps
+  const {
+    footerLinks,
+    socials,
+    subscribeLabel,
+    contactEmail,
+    footerLeftText,
+    footerRightText,
+    newsLetterForm
+  } = footerProps
 
   const [open, setOpen] = useState(false)
 
   return (
-    <div className={`c has_border`}>
+    <div className='c has_border'>
       <Suspense fallback={<></>}>
         <div className={style.footer_wrap}>
           <div className={style.footer_left}>
@@ -34,11 +41,14 @@ const Footer = ({ footerProps }) => {
                   setOpen(true)
                 }}
                 label={subscribeLabel}
-              ></Button>
+              />
             </div>
             {open === true && (
               <NewsLetter
-                content={get(data, 'news_letter', {})}
+                onSubmit={newsLetterForm.onSubmit}
+                submitting={newsLetterForm.submitting}
+                submitted={newsLetterForm.submitted}
+                content={newsLetterForm.content}
                 onClose={() => setOpen(false)}
               />
             )}
@@ -49,7 +59,7 @@ const Footer = ({ footerProps }) => {
                   <div className={style.social_padd} key={`f_s_${i}`}>
                     <NormalLink link={item.link} className={style.social_logo}>
                       <span className={style.social_icon}>
-                        <i className={item.icon}></i>
+                        <i className={item.icon} />
                       </span>
                     </NormalLink>
                   </div>

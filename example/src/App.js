@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import bannerImg from './assets/hero.jpg'
 import bannerlogo from './assets/bannerlogo.svg'
 import leftBg from './assets/office.jpg'
@@ -147,6 +147,16 @@ const footerLeftText =
 const footerRightText = 'Copyright © 2022 Knotel. All rights reserved.'
 
 const App = () => {
+  const [loading, setLoading] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = (data) => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+      setSubmitted(true)
+    }, 1000)
+  }
   return (
     <HomePage
       headerProps={{
@@ -160,7 +170,23 @@ const App = () => {
             text: 'WorkClub',
             url: '/workclub'
           }
-        ]
+        ],
+        contactForm: {
+          content: {
+            form_title: 'How can we help you?',
+            form_text:
+              '<span>Torem ipsum dolor sit amet,</span> consectetur adipiscing elit. Enim quam tortor volutpat egestas.',
+            button_label: 'Submit',
+            feedback:
+              '<span>Thank you for your response </span><p> We will be in touch soon.<p/> '
+          },
+          onSubmit: handleSubmit,
+          submitting: loading,
+          submitted,
+          sizeOptions: ['0-10', '11-20', '35-50'],
+          locationOptions: { Nigeria: 'Nigeria', Abia: 'Abia' },
+          interestOptions: ['Events', 'WorkClub', 'Office', 'Others']
+        }
       }}
       footerProps={{
         logo: Logo,
@@ -169,7 +195,21 @@ const App = () => {
         subscribeLabel,
         contactEmail,
         footerLeftText,
-        footerRightText
+        footerRightText,
+        newsLetterForm: {
+          content: {
+            title: 'Newsletter',
+            text: '<span> Sign up for the good stuff.</span> Break up your emails with the odd update from us. We hate spam too, so we promise to only send you good things.',
+            feedback:
+              '<span>Thank you for subscribing</span><p> We will be in touch soon.<p/> ',
+            button_label: 'Sign up',
+            button_url: '/',
+            image: bannerImg
+          },
+          onSubmit: handleSubmit,
+          submitting: loading,
+          submitted: submitted
+        }
       }}
       widgets={widgets}
     />
