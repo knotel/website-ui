@@ -1,26 +1,26 @@
 .text_wrap {
-    width: 33.33%;
-    display: inline-block;
+  width: 33.33%;
+  display: inline-block;
 }
 
 .sub_title {
-    font-size: 19px;
-    font-weight: 300;
-    line-height: 1.2;
-    padding-top: 16px;
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 1.2;
+  padding-top: 16px;
 }
 
 .text {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.5;
-    padding-top: 24px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  padding-top: 24px;
 }
 
 .button {
-    padding-top: 40px;
+  padding-top: 40px;
 }
 
-.item_inner_wrap{
-    padding: 95px 40px;
+.item_inner_wrap {
+  padding: 95px 40px;
 }

@@ -1,15 +1,15 @@
-import React, { lazy, Suspense, useState } from 'react'
-import { get } from 'lodash'
+import React, { lazy, Suspense, useState } from "react";
+import { get } from "lodash";
 
-import { data } from '../../helpers/mock'
-import { logo } from '../../components/Images.js'
+import { data } from "../../helpers/mock";
+import { logo } from "../../components/Images.js";
 
-import Button from '../../components/Field/Button'
-import NewsLetter from '../../components/NewsLetter'
+import Button from "../../components/Field/Button";
+import NewsLetter from "../../components/NewsLetter";
 
-import style from './style.module.css'
+import style from "./style.module.css";
 
-const NormalLink = lazy(() => import('../../components/NormalLink'))
+const NormalLink = lazy(() => import("../../components/NormalLink"));
 
 const Footer = ({ footerProps }) => {
   const {
@@ -19,18 +19,18 @@ const Footer = ({ footerProps }) => {
     contactEmail,
     footerLeftText,
     footerRightText,
-    newsLetterForm
-  } = footerProps
+    newsLetterForm,
+  } = footerProps;
 
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   return (
-    <div className='c has_border'>
+    <div className="c has_border">
       <Suspense fallback={<></>}>
         <div className={style.footer_wrap}>
           <div className={style.footer_left}>
             <NormalLink className={style.footer_logo}>
-              <img src={footerProps.logo} alt='knotel' />
+              <img src={footerProps.logo} alt="knotel" />
             </NormalLink>
             <NormalLink className={style.footer_email}>
               {contactEmail}
@@ -38,7 +38,7 @@ const Footer = ({ footerProps }) => {
             <div className={style.f_button}>
               <Button
                 onClick={() => {
-                  setOpen(true)
+                  setOpen(true);
                 }}
                 label={subscribeLabel}
               />
@@ -90,7 +90,7 @@ const Footer = ({ footerProps }) => {
         </div>
       </Suspense>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

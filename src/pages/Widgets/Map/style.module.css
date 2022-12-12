@@ -1,0 +1,25 @@
+.top {
+  padding: 24px 40px;
+}
+
+.title {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.address {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.2;
+  padding-top: 8px;
+}
+
+.sizer {
+  padding-top: 43.6%;
+}
+
+.map {
+  position: relative;
+  height: 60vh;
+}

@@ -1,55 +1,85 @@
 .section {
-    position: relative;
+  position: relative;
 }
 
 .left {
-    display: inline-block;
-    width: 50%;
-    padding: 40px;
-    vertical-align: middle;
+  display: inline-block;
+  width: 50%;
 }
 
 .right {
-    padding: 40px;
-    width: 50%;
-    display: inline-block;
-    vertical-align: middle;
+  width: 50%;
+  display: inline-block;
+  position: relative;
 }
 
 .right_side {
-    direction: rtl;
+  direction: rtl;
 }
 
 .right_side .left,
 .right_side .right {
-    direction: ltr;
+  direction: ltr;
+}
+
+.abs {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  padding: 40px;
+}
+
+.padd {
+  padding-top: 24px;
+}
+
+.above {
+  padding-top: 40px;
+}
+
+.image {
+  padding: 40px;
+}
+
+.redBg {
+  background-color: #c9343a;
+  color: var(--text-white);
 }
 
 .img_wrap {
-    position: relative;
+  position: relative;
 }
 
 .sizer {
-    padding-top: 79%;
+  padding-top: 79%;
 }
 
 .title {
-    font-size: 28px;
-    font-weight: 300;
-    line-height: 1.1;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.1;
 }
 
 .text {
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 1.66;
-    padding-top: 16px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.66;
+  padding-top: 16px;
 }
 
 .button {
-    padding-top: 16px;
+  padding-top: 16px;
 }
 
 .btn_padd {
-    padding: 12px;
+  padding: 12px;
+}
+
+.paddingClass .text {
+  padding-top: 24px;
+}
+
+.paddingClass .button {
+  padding-top: 32px;
 }

@@ -1,90 +1,83 @@
 .newsletter {
-    border-bottom: 1px solid var(--border-color);
-    background-color: #FFFBF5;
-    position: relative;
-    overflow: hidden;
-}
-
-.newsletter::after {
-    content: "";
-    width: 1px;
-    height: 2000px;
-    background: var(--border-color);
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
+  background-color: #fffbf5;
+  position: relative;
+  overflow: hidden;
 }
 
 .newsletterDialog {
-    background-color: var(--cream-bg);
+  background-color: var(--cream-bg);
 }
 
 .left {
-    display: inline-block;
-    width: 50%;
-    padding: 80px 40px;
+  display: inline-block;
+  width: 50%;
 }
 
 .right {
-    display: inline-block;
-    width: 50%;
-    padding: 80px 40px 40px;
+  display: inline-block;
+  width: 50%;
+  /* padding: 80px 40px 40px; */
+}
+
+.content {
+  padding: 80px 40px;
+  height: 100%;
 }
 
 .text {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.6;
-    padding-top: 16px;
-    max-width: 520px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  padding-top: 16px;
+  max-width: 520px;
 }
 
 .text span {
-    font-family: "Gelasio";
-    font-style: italic;
-    font-size: 18px;
-    font-weight: 350;
-    line-height: 1.6;
+  font-family: "Gelasio";
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 350;
+  line-height: 1.6;
 }
 
 .form {
-    padding-top: 15px;
-    max-width: 580px;
+  padding-top: 15px;
+  max-width: 580px;
 }
 
 .form_title {
-    font-size: 28px;
-    font-weight: 300;
-    line-height: 1.2;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.2;
 }
 
 .form_wrap {
-    margin-left: -8px;
-    margin-right: -8px;
+  margin-left: -8px;
+  margin-right: -8px;
 }
 
 .form_block {
-    display: inline-block;
-    width: 50%;
-    padding-left: 8px;
-    padding-right: 8px;
+  display: inline-block;
+  width: 50%;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .sizer {
-    padding-top: 66%;
+  padding-top: 66%;
 }
 
 .item_bg {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: inherit;
 }
 
 .item_img {
-    transition: all .4s ease;
+  transition: all 0.4s ease;
 }
 
 .item:hover .item_img {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }

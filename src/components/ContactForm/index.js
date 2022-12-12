@@ -1,12 +1,12 @@
-import React from 'react'
-import { Field, Form } from 'react-final-form'
-import { required, email } from 'redux-form-validators'
+import React from "react";
+import { Field, Form } from "react-final-form";
+import { required, email } from "redux-form-validators";
 
-import { composeValidators } from '../../helpers/input'
+import { composeValidators } from "../../helpers/input";
 
-import { Button, Dropdown, Input } from '../Field'
-import LazyLoad from '../Lazyload'
-import style from './style.module.css'
+import { Button, Dropdown, Input } from "../Field";
+import LazyLoad from "../Lazyload";
+import style from "./style.module.css";
 
 const ContactForm = ({
   contact,
@@ -16,7 +16,7 @@ const ContactForm = ({
   submitted,
   locationOptions,
   sizeOptions,
-  interestOptions
+  interestOptions,
 }) => {
   return (
     <>
@@ -30,7 +30,7 @@ const ContactForm = ({
       {submitted ? (
         <LazyLoad>
           <div
-            style={{ borderWidth: '0' }}
+            style={{ borderWidth: "0" }}
             className={style.text}
             dangerouslySetInnerHTML={{ __html: contact.feedback }}
           />
@@ -39,106 +39,106 @@ const ContactForm = ({
         <Form
           onSubmit={(data) => onSubmit(data)}
           render={({ handleSubmit, values }) => {
-            const locationValues = Object.values(locationOptions)
+            const locationValues = Object.values(locationOptions);
             return (
               <form
-                name='booking_contact'
+                name="booking_contact"
                 className={style.form}
                 onSubmit={handleSubmit}
               >
                 <div className={style.form_wrap}>
                   <div className={style.form_block}>
                     <Field
-                      name='firstName'
+                      name="firstName"
                       component={Input}
-                      placeholder='First Name*'
+                      placeholder="First Name*"
                       validate={composeValidators(required())}
                     />
                   </div>
                   <div className={style.form_block}>
                     <Field
-                      name='lastName'
+                      name="lastName"
                       component={Input}
-                      placeholder='Last Name*'
+                      placeholder="Last Name*"
                       validate={composeValidators(required())}
                     />
                   </div>
                 </div>
                 <Field
-                  name='email'
+                  name="email"
                   component={Input}
-                  placeholder='Email Addrress*'
+                  placeholder="Email Addrress*"
                   validate={composeValidators(required(), email())}
                 />
                 <Field
-                  name='phone'
+                  name="phone"
                   component={Input}
-                  placeholder='Phone Number'
+                  placeholder="Phone Number"
                   validate={composeValidators(required())}
                 />
                 <div className={style.form_wrap}>
                   <div className={style.form_block}>
                     <Field
-                      name='companyName'
+                      name="companyName"
                       component={Input}
-                      placeholder='Company Name'
+                      placeholder="Company Name"
                       validate={composeValidators(required())}
                     />
                   </div>
                   <div className={style.form_block}>
                     <Field
-                      name='companySize'
+                      name="companySize"
                       component={Dropdown}
-                      prompt='Company Size'
+                      prompt="Company Size"
                       options={sizeOptions}
                       validate={composeValidators(required())}
                     />
                   </div>
                 </div>
                 <Field
-                  name='location'
+                  name="location"
                   component={Dropdown}
-                  prompt='Select City'
+                  prompt="Select City"
                   options={locationOptions}
                   validate={composeValidators(required())}
                 />
                 {values.location ===
                 locationValues[locationValues.length - 1] ? (
                   <Field
-                    name='locationAdditionalDetails'
+                    name="locationAdditionalDetails"
                     component={Input}
-                    placeholder='Location Details'
+                    placeholder="Location Details"
                     validate={composeValidators(required())}
                   />
                 ) : (
                   <></>
                 )}
                 <Field
-                  name='interest'
+                  name="interest"
                   component={Dropdown}
-                  prompt='Interested in ...'
+                  prompt="Interested in ..."
                   options={interestOptions}
                   validate={composeValidators(required())}
                 />
                 <Field
-                  name='additionalDetails'
-                  type='textarea'
+                  name="additionalDetails"
+                  type="textarea"
                   rows={2}
                   component={Input}
-                  placeholder='Additional details'
+                  placeholder="Additional details"
                 />
                 <Button
                   fetching={submitting}
                   submit
                   label={contact.button_label}
-                  buttonType='form_button'
+                  buttonType="form_button"
                 />
               </form>
-            )
+            );
           }}
         />
       )}
     </>
-  )
-}
-export default ContactForm
+  );
+};
+export default ContactForm;

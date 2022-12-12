@@ -1,65 +1,64 @@
 .section {
-    border-left: 1px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
 }
 
 .text h6 {
-    font-size: 12px;
-    line-height: 1.1;
-    font-weight: 300;
-    padding:40px;
-    padding-bottom: 0px;
+  font-size: 12px;
+  line-height: 1.1;
+  font-weight: 300;
+  padding: 40px;
+  padding-bottom: 0px;
 }
 
 .text h1 {
-    font-size: 33px;
-    line-height: 1.2;
-    font-weight: 300;
-    padding: 40px;
-    padding-top: 16px;
-    border-bottom: 1px solid var(--border-color);
+  font-size: 33px;
+  line-height: 1.2;
+  font-weight: 300;
+  padding: 40px;
+  padding-top: 16px;
+  border-bottom: 1px solid var(--border-color);
 }
-.text h2{
-    font-size: 28px;
-    line-height: 1.2;
-    font-weight: 300;
-    padding: 40px;
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
+.text h2 {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 300;
+  padding: 40px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .text h3 {
-    font-size: 23px;
-    line-height: 1.2;
-    font-weight: 300;
-    padding: 32px 40px 0px;
+  font-size: 23px;
+  line-height: 1.2;
+  font-weight: 300;
+  padding: 32px 40px 0px;
 }
 
 .sub_head {
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: 300;
-    padding-top: 32px;
-
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  padding-top: 32px;
 }
 
 .text p,
-.text ul, .text li {
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: 300;
-    padding-top: 32px;
-    padding: 32px 40px 0px;
+.text ul,
+.text li {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  padding-top: 32px;
+  padding: 32px 40px 0px;
 }
 
 .text li {
-    list-style: disc;
-    padding-top: 0px;
-    padding-left: 0px;
-    margin-left: 24px;
+  list-style: disc;
+  padding-top: 0px;
+  padding-left: 0px;
+  margin-left: 24px;
 }
 
-
 .text li:first-child {
-    padding-top: 32px;
+  padding-top: 32px;
 }

@@ -1,9 +1,9 @@
-import React, { Suspense } from 'react'
-import { get } from 'lodash'
+import React, { Suspense } from "react";
+import { get } from "lodash";
 
-import { data } from '../../helpers/mock'
-import DialogBox from '../../components/DialogBox'
-import ContactForm from '../ContactForm'
+import { data } from "../../helpers/mock";
+import DialogBox from "../../components/DialogBox";
+import ContactForm from "../ContactForm";
 
 const EnquireModal = ({
   onClose,
@@ -13,12 +13,12 @@ const EnquireModal = ({
   locationOptions,
   sizeOptions,
   content,
-  interestOptions
+  interestOptions,
 }) => {
   return (
     <Suspense fallback={<></>}>
-      <DialogBox className='enquireForm' onClose={onClose} extraClass>
-        <div className='enquire'>
+      <DialogBox className="enquireForm" onClose={onClose} extraClass>
+        <div className="enquire">
           <ContactForm
             onSubmit={onSubmit}
             submitted={submitted}
@@ -32,6 +32,6 @@ const EnquireModal = ({
         </div>
       </DialogBox>
     </Suspense>
-  )
-}
-export default EnquireModal
+  );
+};
+export default EnquireModal;

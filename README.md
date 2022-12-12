@@ -13,14 +13,14 @@ npm install --save knotel-website-ui
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import MyComponent from 'knotel-website-ui'
-import 'knotel-website-ui/dist/index.css'
+import MyComponent from "knotel-website-ui";
+import "knotel-website-ui/dist/index.css";
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <MyComponent />;
   }
 }
 ```

@@ -1,60 +1,64 @@
 .item {
-   display: inline-block;
-   width: 50%;
+  display: inline-block;
+  width: 50%;
 }
 
 .sizer {
-   position: relative;
-   z-index: 1;
-   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 52.08%, rgba(0, 0, 0, 0.8) 100%);
-   padding-top: 77%;
+  position: relative;
+  z-index: 1;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 52.08%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  padding-top: 77%;
 }
 
 .item_inner_wrap {
-   padding: 40px;
+  padding: 40px;
 }
 
 .item_content_wrap {
-   position: relative;
-   overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .item_bg {
-   transition: all .6s ease;
+  transition: all 0.6s ease;
 }
 
 .item:hover .item_bg {
-   transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .section_text {
-   display: flex;
-   align-items: center;
-   padding-top: 16px;
+  display: flex;
+  align-items: center;
+  padding-top: 16px;
 }
 
 .section_text .icon {
-   font-size: 20px;
+  font-size: 20px;
 }
 
 .text_wrap {
-   position: absolute;
-   left: 0px;
-   bottom: 0px;
-   color: var(--text-white);
-   padding: 40px;
-   width: 100%;
-   z-index: 2;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  color: var(--text-white);
+  padding: 40px;
+  width: 100%;
+  z-index: 2;
 }
 
 .text {
-   font-size: 16px;
-   font-weight: 300;
-   line-height: 1.5;
-   max-width: 300px;
-   padding-left: 26px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  max-width: 300px;
+  padding-left: 26px;
 }
 
 .link {
-   width: 100%;
+  width: 100%;
 }

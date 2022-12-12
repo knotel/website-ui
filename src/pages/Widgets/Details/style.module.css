@@ -1,73 +1,100 @@
 .section {
-    background-color: var(--beige-bg);
+  background-color: var(--beige-bg);
 }
 
 .item {
-    display: inline-block;
-    width: 33.3%;
+  display: inline-block;
+  width: 33.3%;
+  position: relative;
 }
 
 .title {
-    font-size: 23px;
-    font-weight: 300;
-    line-height: 1.2;
-    padding: 35px 40px;
-    border-bottom: 1px solid var(--border-color);
+  font-size: 23px;
+  font-weight: 300;
+  line-height: 1.2;
+  padding: 35px 40px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .info {
-    padding-top: 24px;
+  padding-top: 24px;
 }
 
 .wrapper {
-    min-height: 300px;
-    padding: 40px;
+  min-height: 300px;
+  padding: 40px;
+}
+
+.padd {
+  padding-top: 32px;
 }
 
 .text_wrap {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.5;
-    padding-top: 24px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  padding-top: 24px;
 }
 
-.text_wrap:first-child, .info:first-child {
-    padding-top: 0;
+.text_wrap.aboutUs {
+  align-items: flex-start;
 }
 
-.label,
-.value {
-    padding-left: 8px;
+.text_wrap.aboutUs .label {
+  min-width: 112px;
+}
+
+.text_wrap .flex {
+  display: flex;
+  align-items: center;
+}
+
+.text_wrap:first-child,
+.info:first-child {
+  padding-top: 0;
+}
+
+.label {
+  padding-left: 8px;
+}
+
+.link {
+  border-bottom: 1px solid var(--border-color);
+  line-height: normal;
+}
+
+.link:hover {
+  border-bottom: 1px solid var(--common-blue);
 }
 
 .list {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 2;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 2;
 }
 
-
 .list li {
-    list-style: disc;
-    margin-left: 20px;
-    padding-left: 4px;
+  list-style: disc;
+  margin-left: 20px;
+  padding-left: 4px;
 }
 
 .list li::marker {
-    width: 2px;
-    height: 2px;
+  width: 2px;
+  height: 2px;
 }
 
 .icon {
-    font-size: 15px;
-    width: 15px;
-    height: 15px;
+  font-size: 15px;
+  width: 15px;
+  height: 15px;
 }
 
 .download {
-    font-size: 14px;
-    font-weight: 300;
-    padding: 12px;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 12px;
+  line-height: 1.2;
 }

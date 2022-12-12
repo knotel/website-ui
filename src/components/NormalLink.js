@@ -1,70 +1,80 @@
-import React from 'react'
+import React from "react";
+import Link from "next/link";
 
 const NormalLink = ({
-  children = '',
-  link = '',
-  className = '',
+  children = "",
+  link = "",
+  className = "",
   onClick = () => {},
   disabled = false,
   download = false,
-  target = '_self'
+  target = "_self",
 }) => {
-  const mailtoCondt = link.indexOf('mailto:') !== -1
-  const telCondt = link.indexOf('tel:') !== -1
-  const httpCondt = link.indexOf('http') !== -1
+  let mailtoCondt = link.indexOf("mailto:") !== -1;
+  let telCondt = link.indexOf("tel:") !== -1;
+  let httpCondt = link.indexOf("http") !== -1;
 
   if (disabled) {
-    return <div className={`${className} disabledLink`}>{children}</div>
+    return (
+      <div className={`${className} ${style.disabledLink}`}>{children}</div>
+    );
   }
 
   if (download === true) {
     return (
-      <a className={`${className}`} href={link} onClick={onClick} download>
-        {children}
-      </a>
-    )
+      <Link href={link}>
+        <a className={`${className}`} onClick={onClick} download>
+          {children}
+        </a>
+      </Link>
+    );
   }
 
   if (httpCondt) {
     return (
-      <a
-        className={`${className}`}
-        href={link}
-        target='_blank'
-        rel='noreferrer'
-        onClick={onClick}
-      >
-        {children}
-      </a>
-    )
+      <Link href={link}>
+        <a
+          className={`${className}`}
+          target="_blank"
+          rel="noreferrer"
+          onClick={onClick}
+        >
+          {children}
+        </a>
+      </Link>
+    );
   }
 
   if (mailtoCondt || telCondt) {
     return (
-      <a className={`${className}`} href={link} onClick={onClick}>
-        {children}
-      </a>
-    )
+      <Link href={link}>
+        <a className={`${className}`} onClick={onClick}>
+          {children}
+        </a>
+      </Link>
+    );
   }
 
   if (link) {
     return (
-      <a
-        className={`${className}`}
-        href={link}
-        target={target}
-        onClick={onClick}
-      >
-        {children}
-      </a>
-    )
+      <Link href={link}>
+        <a
+          className={`${className}`}
+          href={link}
+          target={target}
+          onClick={onClick}
+        >
+          {children}
+        </a>
+      </Link>
+    );
   }
 
   return (
-    <a className={`${className}`} onClick={onClick} href=''>
+    <a className={`${className}`} onClick={onClick}>
       {children}
     </a>
-  )
-}
+  );
+};
 
-export default NormalLink
+export default NormalLink;

@@ -1,0 +1,105 @@
+.AmenitiesModal {
+  border: 1px solid var(--border-color);
+  background-color: var(--cream-bg);
+}
+
+.top {
+  font-size: 28px;
+  line-height: 1.2px;
+  font-weight: 300;
+  padding: 40px;
+}
+
+.section {
+  position: relative;
+}
+
+.left {
+  display: inline-block;
+  width: 50%;
+  padding: 40px;
+}
+
+.right {
+  width: 50%;
+  display: inline-block;
+  padding: 40px;
+  position: relative;
+}
+
+.right_side {
+  direction: rtl;
+}
+
+.right_side .left,
+.right_side .right {
+  direction: ltr;
+}
+
+.abs {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  padding: 40px;
+}
+
+.next {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.next_icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border-color);
+  margin-left: 16px;
+}
+
+.next_icon:hover {
+  background-color: var(--coral-red);
+  color: white;
+  border: 1px solid var(--coral-red);
+}
+
+.icon {
+  font-size: 12px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img_wrap {
+  position: relative;
+}
+
+.sizer {
+  padding-top: 110%;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.1;
+  padding-bottom: 8px;
+}
+
+.text p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  padding-top: 24px;
+}
+
+.button {
+  padding-top: 16px;
+}
+
+.btn_padd {
+  padding: 12px;
+}
