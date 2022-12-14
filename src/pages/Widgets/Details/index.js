@@ -42,6 +42,7 @@ const Details = ({ items = [] }) => {
                             button_label = false,
                             icon = false,
                             text = false,
+                            on_button_click,
                           } = value;
                           if (icon) {
                             return (
@@ -103,7 +104,7 @@ const Details = ({ items = [] }) => {
                                   className={style.download}
                                   icon_placement="left"
                                   svgIcon={value.logo}
-                                  onClick={() => {}}
+                                  onClick={on_button_click}
                                   label={value.button_label}
                                 />
                               </div>

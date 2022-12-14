@@ -37,6 +37,7 @@ const Footer = ({ footerProps }) => {
             </NormalLink>
             <div className={style.f_button}>
               <Button
+                id={"subscribeTrigger"}
                 onClick={() => {
                   setOpen(true);
                 }}

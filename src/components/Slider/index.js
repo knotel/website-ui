@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import OutOfView from "../Lazyload/OutOfView";
 import "swiper/css";
 import "swiper/css/navigation";

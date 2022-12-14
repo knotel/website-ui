@@ -5,7 +5,7 @@ import style from "./style.module.css";
 
 const GoogleMaps = lazy(() => import("../../../components/GoogleMaps"));
 
-const Map = ({ address, loc = {} }) => {
+const Map = ({ address, loc = {}, APIKey, markerIcon }) => {
   return (
     <>
       <div className={`${style.outer}`}>
@@ -39,8 +39,10 @@ const Map = ({ address, loc = {} }) => {
               <div className={`section_border_bottom`}></div>
               <div className={style.map}>
                 <GoogleMaps
+                  APIKey={APIKey}
+                  markerIcon={markerIcon}
                   markers={[{ loc }]}
-                  center={{ lat: 51.507222, lng: -0.1275 }}
+                  center={loc}
                   zoom={15}
                 />
               </div>

@@ -23,6 +23,7 @@ const Header = ({ setOpenForm, logo, links }) => {
             ))}
             <div className={style.header_btn}>
               <Button
+                id={"enquireTrigger"}
                 buttonType="header_blue_btn"
                 onClick={() => {
                   setOpenForm("enquire-form");

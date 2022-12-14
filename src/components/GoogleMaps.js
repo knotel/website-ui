@@ -1,18 +1,23 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
 
-import markerSvg from "../assets/images/marker.svg";
-
 const Marker = ({ pointer }) => {
   return <div>{pointer}</div>;
 };
 
-const GoogleMaps = ({ markers = [], center = {}, zoom = 11 }) => {
+const GoogleMaps = ({
+  markers = [],
+  center = {},
+  zoom = 11,
+  APIKey,
+  markerIcon,
+}) => {
+  console.log("marker icon --->", markerIcon);
   return (
     // Important! Always set the container height explicitly
     <div style={{ position: "absolute", height: "100%", width: "100%" }}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: process.env.REACT_APP_MAP_API_KEY }}
+        bootstrapURLKeys={{ key: APIKey }}
         defaultCenter={center}
         defaultZoom={zoom}
         options={(maps) => ({
@@ -147,7 +152,7 @@ const GoogleMaps = ({ markers = [], center = {}, zoom = 11 }) => {
                     transform: "translateX(-50%)",
                   }}
                 >
-                  <img src={markerSvg} alt="marker" />
+                  <img src={markerIcon} alt="marker" />
                 </span>
               }
             />

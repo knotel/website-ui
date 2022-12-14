@@ -4,7 +4,13 @@ import bannerlogo from "./assets/bannerlogo.svg";
 import leftBg from "./assets/office.jpg";
 import rightBg from "./assets/workclub.jpg";
 import detailImg from "./assets/detailImg.jpg";
-import chevronDown from "./assets/chevronDown.svg";
+import download from "./assets/download.svg";
+import logo1 from "./assets/logo1.svg";
+import logo2 from "./assets/logo2.svg";
+import logo3 from "./assets/logo3.svg";
+import logo4 from "./assets/logo4.svg";
+import logo5 from "./assets/logo5.svg";
+import marker from "./assets/marker.svg";
 import Logo from "./assets/Logo.svg";
 
 import Page from "knotel-website-ui";
@@ -70,120 +76,135 @@ import "knotel-website-ui/dist/css/pagination.css";
 
 const widgets = [
   {
-    type: "left_right_banner",
-    image: bannerImg,
-    bg_color: "green",
-    title: "Ullamcorper purus",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitant ullamcorper placerat neque, pretium tortor.",
-    button_label: "Location",
-    button_url: "?g=location",
-    border_line: true,
-    icon: chevronDown,
+    type: "banner",
+    image: detailImg,
+    title: "HYLO ground floor",
+    text: "Welcome to London’s future workplace.",
   },
   {
-    type: "text",
-    bg_color: "lightblue",
-    text: "<span>Lorem ipsum dolor sit amet,</span> consectetur adipiscing elit. Orci rhoncus auctor duis suscipit lobortis id diam. Tortor eu feugiat euismod tempor eget sed cras.",
-  },
-  {
-    id: "location",
-    type: "image_slider",
-    options: ["All", "UK", "Europe", "America"],
+    type: "details",
     items: [
       {
-        location: "america",
-        image: leftBg,
-        title: "Atlanta",
-        link: "https://www.deskeo.com/",
+        title: "About",
+        list: [
+          {
+            icon: logo1,
+            label: "Available:",
+            value: "November 1",
+          },
+          {
+            icon: logo2,
+            label: "Floor #:",
+            value: "Ground Floor",
+          },
+          {
+            icon: logo3,
+            label: "Size:",
+            value: "26,685 sqft",
+          },
+          {
+            icon: logo4,
+            label: "Seat #:",
+            value: "Undefined Seats",
+          },
+          {
+            icon: logo5,
+            label: "Enquire:",
+            link: "Lorem@ipsum.com",
+          },
+        ],
       },
       {
-        location: "europe",
-        image: rightBg,
-        title: "Austin",
-        link: "https://www.deskeo.com/",
+        title: "Whats Included",
+        list: [
+          {
+            text: "Lorem ipsum dolor sit amet",
+          },
+          {
+            text: "consectetur adipiscing elit ",
+          },
+          {
+            text: "Nisi, nulla id viverra pharetra",
+          },
+          {
+            text: "Eget leo vitae mattis leo",
+          },
+          {
+            text: "Risus etiam nisl",
+          },
+          {
+            text: "Sit turpis sed vestibulum dignissim",
+          },
+        ],
       },
       {
-        location: "uk",
-        image: leftBg,
-        title: "Berlin",
-        link: "https://www.deskeo.com/",
-      },
-      {
-        location: "america",
-        image: rightBg,
-        title: "New York",
-        link: "https://www.deskeo.com/",
-      },
-      {
-        location: "europe",
-        image: leftBg,
-        title: "Munich",
-        link: "https://www.deskeo.com/",
-      },
-      {
-        location: "uk",
-        image: rightBg,
-        title: "Scotland",
-        link: "",
-      },
-      {
-        location: "america",
-        image: leftBg,
-        title: "Houston",
-        link: "",
-      },
-      {
-        location: "europe",
-        image: rightBg,
-        title: "Oslo",
-        link: "",
-      },
-      {
-        location: "uk",
-        image: leftBg,
-        title: "Wales",
-        link: "",
-      },
-      {
-        location: "america",
-        image: rightBg,
-        title: "Los Angeles",
-        link: "",
-      },
-      {
-        location: "europe",
-        image: leftBg,
-        title: "Athens",
-        link: "",
-      },
-      {
-        location: "uk",
-        image: rightBg,
-        title: "Dublin",
-        link: "",
+        title: "Further Information",
+        list: [
+          {
+            logo: download,
+            button_label: "Download Flyer",
+            button_link: "/",
+            on_button_click: () => console.log("download flyer"),
+          },
+          {
+            logo: download,
+            button_label: "Download Images",
+            button_link: "/",
+            on_button_click: () => console.log("download images"),
+          },
+          {
+            logo: download,
+            button_label: "Download Floor Plan",
+            button_link: "/",
+            on_button_click: () => console.log("download flor plan"),
+          },
+        ],
       },
     ],
   },
   {
-    type: "amenities",
-    heading: "Amenities",
+    type: "text_image_slider",
     items: [
       {
-        image: leftBg,
-        title: "Amenity name",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus.",
-      },
-      {
-        image: rightBg,
-        title: "Amenity name",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus.",
-      },
-      {
-        image: leftBg,
-        title: "Amenity name",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus.",
+        title: "London’s future workspace",
+        text: "Knotel at HYLO offers 27,000 square feet of premium office space across 4 floors and access to 17,000 sq ft of retail space. One of London’s most exciting new buildings, HYLO boasts high rise tower floors, roof gardens and new public space. Welcome to London’s future workplace.",
+        button_label: "Schedule a tour",
+        // button_url: "/",
+        on_button_click: () =>
+          document.getElementById("enquireTrigger")?.click(),
+        image_position: "right",
+        caption: "HYLO groundfloor",
+        list: [{ image: rightBg }, { image: rightBg }, { image: rightBg }],
       },
     ],
+  },
+  {
+    type: "text_image_slider",
+    items: [
+      {
+        title: "Old & new collide",
+        text: "This is a place where old and new collide; from cutting-edge-cool Old Street and Shoreditch to the historically influenced City of London. The area is the epicentre of London’s creative and collaborative industries and is more popular than ever with many of London’s forward-thinking financial and professional occupiers. ",
+        button_label: "Request information",
+        button_url: "/",
+        on_button_click: () =>
+          document.getElementById("enquireTrigger")?.click(),
+        list: [{ image: rightBg }, { image: rightBg }, { image: rightBg }],
+        image_position: "left",
+        bg_color: "green",
+        caption: "Image caption goes here",
+        white_button: true,
+      },
+    ],
+  },
+  {
+    type: "map",
+    address: "103–105 Bunhill Row, 8th floor",
+    APIKey: "AIzaSyA7QhLNGYH_eg6-ZtPhfZlkh6dBSBNpcdk",
+    markerIcon: marker,
+    loc: {
+      lat: 30.26555,
+      lng: -97.7497,
+    },
   },
 ];
 

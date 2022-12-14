@@ -23,6 +23,7 @@ const Button = (props) => {
     rectBtn = false,
     buttonType = false,
     icon_placement = "right",
+    id,
   } = props;
 
   const btnTypes = {
@@ -97,6 +98,7 @@ const Button = (props) => {
   if (onClick) {
     return (
       <a
+        id={id}
         className={`${style.button}${className ? " " + className : ""}`}
         onClick={onClick}
         href={false}
