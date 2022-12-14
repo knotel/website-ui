@@ -199,7 +199,7 @@ const widgets = [
   {
     type: "map",
     address: "103–105 Bunhill Row, 8th floor",
-    APIKey: "AIzaSyA7QhLNGYH_eg6-ZtPhfZlkh6dBSBNpcdk",
+    APIKey: "",
     markerIcon: marker,
     loc: {
       lat: 30.26555,
