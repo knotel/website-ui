@@ -21,5 +21,11 @@
 
 .map {
   position: relative;
-  height: 60vh;
+  height: calc(60vh - 4px);
+  margin: auto;
+  width: calc(100% - 4px);
+}
+
+.mapPad {
+  padding: 1.5px 1px;
 }

@@ -30,7 +30,7 @@ const Map = ({ address, loc = {}, APIKey, markerIcon }) => {
         <div className={`c`}>
           <Suspense fallback={<></>}>
             <LazyLoad
-              lazyLoadClass={`section_wrap`}
+              lazyLoadClass={`section_wrap ${style.mapPad}`}
               animatedClass="animated"
               rootMargin="-20%"
             >

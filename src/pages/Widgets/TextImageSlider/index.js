@@ -11,7 +11,12 @@ import Slider from "../../../components/Slider";
 
 import style from "./style.module.css";
 
-const TextImageSlider = ({ items = [], autoHeight = false, delay = 10000 }) => {
+const TextImageSlider = ({
+  items = [],
+  autoHeight = false,
+  delay = 10000,
+  hideBorder = "",
+}) => {
   const swiperRef = useRef(null);
   console.log;
   const colorClass = {
@@ -41,10 +46,26 @@ const TextImageSlider = ({ items = [], autoHeight = false, delay = 10000 }) => {
             animatedClass="animated"
             rootMargin="-20%"
           >
-            <div className={`section_border_top`}></div>
-            <div className={`section_border_left`}></div>
-            <div className={`section_border_right`}></div>
-            <div className={`section_border_bottom`}></div>
+            {hideBorder === "top" ? (
+              <></>
+            ) : (
+              <div className={`section_border_top`}></div>
+            )}
+            {hideBorder === "left" ? (
+              <></>
+            ) : (
+              <div className={`section_border_left`}></div>
+            )}
+            {hideBorder === "right" ? (
+              <div className={`section_border_right`}></div>
+            ) : (
+              ""
+            )}
+            {hideBorder === "bottom" ? (
+              <></>
+            ) : (
+              <div className={`section_border_bottom`}></div>
+            )}
             {items &&
               items.length > 0 &&
               items.map((item, i) => {

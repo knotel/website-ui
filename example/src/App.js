@@ -10,7 +10,8 @@ import logo2 from "./assets/logo2.svg";
 import logo3 from "./assets/logo3.svg";
 import logo4 from "./assets/logo4.svg";
 import logo5 from "./assets/logo5.svg";
-import marker from "./assets/marker.svg";
+// import marker from "./assets/marker.svg";
+import marker from "./assets/marker.png";
 import Logo from "./assets/Logo.svg";
 
 import Page from "knotel-website-ui";
@@ -180,6 +181,7 @@ const widgets = [
   },
   {
     type: "text_image_slider",
+    hideBorder: "bottom",
     items: [
       {
         title: "Old & new collide",
@@ -208,12 +210,92 @@ const widgets = [
   },
 ];
 
+// const widgets = [
+//   {
+//     type: "left_right_banner",
+//     image: bannerImg,
+//     bg_color: "green",
+//     title: "Ullamcorper purus",
+//     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitant ullamcorper placerat neque, pretium tortor.",
+//     button_label: "Location",
+//     button_url: "/",
+//     border_line: true,
+//   },
+//   {
+//     type: "text",
+//     bg_color: "lightblue",
+//     text: "<span>Lorem ipsum dolor sit amet,</span> consectetur adipiscing elit. Orci rhoncus auctor duis suscipit lobortis id diam. Tortor eu feugiat euismod tempor eget sed cras.",
+//   },
+//   {
+//     type: "image_slider",
+//     options: ["All", "UK", "Europe", "America"],
+//     items: [
+//       {
+//         location: "america",
+//         image: leftBg,
+//         title: "Atlanta",
+//         link: "",
+//       },
+//       {
+//         location: "Europe",
+//         image: rightBg,
+//         title: "Austin",
+//         link: "",
+//       },
+//       {
+//         location: "uk",
+//         image: leftBg,
+//         title: "Berlin",
+//         link: "",
+//       },
+//       {
+//         location: "america",
+//         image: rightBg,
+//         title: "Atlanta",
+//         link: "",
+//       },
+//       {
+//         location: "Europe",
+//         image: leftBg,
+//         title: "Austin",
+//         link: "",
+//       },
+//       {
+//         location: "uk",
+//         image: leftBg,
+//         title: "Berlin",
+//         link: "",
+//       },
+//     ],
+//   },
+//   {
+//     type: "amenities",
+//     heading: "Amenities",
+//     items: [
+//       {
+//         image: leftBg,
+//         title: "Amenity name",
+//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus.",
+//       },
+//       {
+//         image: rightBg,
+//         title: "Amenity name",
+//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus.",
+//       },
+//       {
+//         image: leftBg,
+//         title: "Amenity name",
+//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus.",
+//       },
+//     ],
+//   },
+// ];
 const footerLinks = [
   {
     title: "Company",
     links: [
       {
-        label: "Presxs",
+        label: "Press",
         link: "/",
       },
       {
