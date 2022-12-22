@@ -24,7 +24,7 @@ const DateTime = (props) => {
     showTimeSelectOnly = false,
     showYearDropdown = false,
     showYearPicker = false,
-    placeholder = "Pick a date & time",
+    placeholder = "Available From",
     emptyValue = true,
     add12Hours = false,
   } = props;

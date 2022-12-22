@@ -5,7 +5,7 @@ import style from "./style.module.css";
 
 const GoogleMaps = lazy(() => import("../../../components/GoogleMaps"));
 
-const Map = ({ address, loc = {}, APIKey, markerIcon }) => {
+const Map = ({ address, loc = {}, APIKey, markerIcon, onMarkerPress }) => {
   return (
     <>
       <div className={`${style.outer}`}>
@@ -44,6 +44,7 @@ const Map = ({ address, loc = {}, APIKey, markerIcon }) => {
                   markers={[{ loc }]}
                   center={loc}
                   zoom={15}
+                  onMarkerPress={onMarkerPress}
                 />
               </div>
             </LazyLoad>

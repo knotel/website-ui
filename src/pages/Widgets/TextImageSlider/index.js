@@ -18,7 +18,6 @@ const TextImageSlider = ({
   hideBorder = "",
 }) => {
   const swiperRef = useRef(null);
-  console.log;
   const colorClass = {
     green: style.greenBg,
     darkblue: style.blueBg,
@@ -69,7 +68,6 @@ const TextImageSlider = ({
             {items &&
               items.length > 0 &&
               items.map((item, i) => {
-                console.log("text --->", item.text, item.title);
                 return (
                   <div
                     className={`section_item ${style.text_image} ${

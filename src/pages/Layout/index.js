@@ -37,7 +37,6 @@ const Layout = ({ children, headerProps, footerProps }) => {
     };
   }, []);
 
-  console.log("update applied -->");
 
   useEffect(() => {
     //Scroll to a section

@@ -1,7 +1,7 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
 
-const Marker = ({ pointer }) => {
+const Marker = ({ pointer, onMarkerPress }) => {
   return <div>{pointer}</div>;
 };
 
@@ -11,15 +11,15 @@ const GoogleMaps = ({
   zoom = 11,
   APIKey,
   markerIcon,
+  onMarkerPress,
 }) => {
-  console.log("marker icon --->", markerIcon);
   return (
     // Important! Always set the container height explicitly
     <div style={{ position: "absolute", height: "100%", width: "100%" }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: APIKey }}
-        defaultCenter={center}
-        defaultZoom={zoom}
+        center={center}
+        zoom={zoom}
         options={(maps) => ({
           styles: [
             {
@@ -145,6 +145,7 @@ const GoogleMaps = ({
               lng={lng}
               pointer={
                 <span
+                  onClick={() => onMarkerPress?.(lat, lng)}
                   style={{
                     position: "absolute",
                     left: "50%",

@@ -11,7 +11,24 @@ import style from "./style.module.css";
 import NormalLink from "../../../components/NormalLink";
 import LazyLoad from "../../../components/Lazyload";
 
-const Filters = ({ items = [] }) => {
+const Filters = ({
+  items = [],
+  cityOptions,
+  neighborhoodOptions,
+  seatOptions,
+  floorOptions,
+  sizeOptions,
+  city,
+  APIKey,
+  markerIcon,
+  mapCenter,
+  setCenter,
+  onMarkerPress,
+  onMouseOverListing,
+  onFilterChanged,
+  defaultFilters,
+}) => {
+
   const [height, setHeight] = useState(0);
   useEffect(() => {
     if (height === 0) {
@@ -28,50 +45,6 @@ const Filters = ({ items = [] }) => {
     let wrapperTop = $(`.${style.wrap}`).offsetTop || 214;
     setHeight(parseFloat(windowsHeight) - parseFloat(wrapperTop));
   };
-  const formOnChange = (list, values) => {
-    if (values.floor) {
-      list = list.filter((item) => item.floor === values.floor);
-    }
-    if (values.city) {
-      list = list.filter((item) => {
-        return (
-          item.country.toLowerCase().indexOf(values.city) !== -1 ||
-          item.address.toLowerCase().indexOf(values.city) !== -1
-        );
-      });
-    }
-    if (values.neighbourhood) {
-      list = list.filter(
-        (item) =>
-          item.address.toLowerCase().indexOf(values.neighbourhood) !== -1
-      );
-    }
-    if (values.date_range) {
-      list = list.filter((item) => {
-        let itemDate = moment(item.available_date, "X").format("YYYY-MM-DD");
-        let dateRange = moment(values.date_range, "X").format("YYYY-MM-DD");
-        return moment(itemDate).isSame(dateRange, "day");
-      });
-    }
-    if (values.seat) {
-      let seats = parseInt(values.seat);
-      if (seats === 0) {
-        list = list.filter((item) => item.seat === values.seat);
-      } else {
-        list = list.filter((item) => {
-          return item.seat >= seats && item.seat !== 0;
-        });
-      }
-    }
-    if (values.square_feet) {
-      let sqft = values.square_feet;
-      let length = sqft.split("-");
-      list = list.filter((item) => {
-        return item.square_feet >= length[0] && item.square_feet <= length[1];
-      });
-    }
-    return list;
-  };
 
   return (
     <>
@@ -82,10 +55,9 @@ const Filters = ({ items = [] }) => {
         rootMargin="-20%"
       >
         <Form
-          onSubmit={(data) => console.log(data)}
+          onSubmit={(data) => onFilterChanged(data)}
           render={({ handleSubmit, values }) => {
             let list = items;
-            list = formOnChange(list, values);
             return (
               <>
                 <div className={style.filter}>
@@ -94,78 +66,90 @@ const Filters = ({ items = [] }) => {
                     <div className={`section_wrap`}>
                       <div className={`section_border_left`}></div>
                       <div className={`section_border_right`}></div>
-                      <div className={style.title}>London</div>
+                      <div className={style.title}>{city}</div>
                       <div className={style.filters}>
                         <form
+                          onChange={handleSubmit}
                           name="booking_contact"
                           className={style.form}
-                          onSubmit={handleSubmit}
+                          // onSubmit={handleSubmit}
                         >
                           <div className={style.form_block}>
                             <Field
+                              defaultValue={defaultFilters.city}
                               name="city"
                               component={Dropdown}
                               classes={style.menu}
                               prompt="City"
-                              options={{
-                                london: "London",
-                                birmingham: "Birmingham",
-                                conventry: "Conventry",
-                                leeds: "Leeds",
-                                liverpool: "Liverpool",
-                              }}
+                              // options={{
+                              //   london: "London",
+                              //   birmingham: "Birmingham",
+                              //   conventry: "Conventry",
+                              //   leeds: "Leeds",
+                              //   liverpool: "Liverpool",
+                              // }}
+                              options={cityOptions}
                               onChange={() => alert("sdyghiu")}
                             />
                             <Field
-                              name="neighbourhood"
+                              defaultValue={defaultFilters.neighborhood}
+                              name="neighborhood"
                               component={Dropdown}
                               classes={style.menu}
-                              prompt="Neighbourhood"
-                              options={{
-                                "greater london": "Greater London",
-                                durham: "Durham",
-                                dorset: "Dorset",
-                              }}
+                              prompt="Neighborhood"
+                              // options={{
+                              //   "greater london": "Greater London",
+                              //   durham: "Durham",
+                              //   dorset: "Dorset",
+                              // }}
+                              options={neighborhoodOptions}
                             />
                             <Field
-                              name="date_range"
+                              defaultValue={defaultFilters.availableFrom}
+                              name="availableFrom"
                               component={DateTime}
                               classes={style.menu}
                               prompt="Date Range"
-                              emptyValue={true}
+                              emptyValue={""}
                             />
                             <Field
-                              name="seat"
+                              defaultValue={defaultFilters.seatCapacity}
+                              name="seatCapacity"
                               component={Dropdown}
                               classes={style.menu}
                               prompt="Seat #"
-                              options={{
-                                0: "Undefined Seats",
-                                10: "10 Above",
-                                20: "20 Above",
-                              }}
+                              // options={{
+                              //   0: "Undefined Seats",
+                              //   10: "10 Above",
+                              //   20: "20 Above",
+                              // }}
+                              options={seatOptions}
                             />
                             <Field
+                              defaultValue={defaultFilters.floor}
                               name="floor"
                               component={Dropdown}
                               classes={style.menu}
                               prompt="Floor #"
-                              options={{
-                                1: "Ground Floor",
-                                2: "Second Floor",
-                                3: "Thrid Floor",
-                              }}
+                              // options={{
+                              //   1: "Ground Floor",
+                              //   2: "Second Floor",
+                              //   3: "Thrid Floor",
+                              // }}
+                              options={floorOptions}
                             />
                             <Field
-                              name="square_feet"
+                              defaultValue={defaultFilters.size}
+                              name="size"
                               component={Dropdown}
                               classes={style.menu}
                               prompt="Square Feet"
-                              options={{
-                                "10000-20000": "10000 - 20000 sqft",
-                                "20000-40000": "20000 - 40000 sqft",
-                                "40000-80000": "40000 - 80000 sqft",
-                              }}
+                              // options={{
+                              //   "10000-20000": "10000 - 20000 sqft",
+                              //   "20000-40000": "20000 - 40000 sqft",
+                              //   "40000-80000": "40000 - 80000 sqft",
+                              // }}
+                              options={sizeOptions}
                             />
                           </div>
                         </form>
@@ -185,11 +169,17 @@ const Filters = ({ items = [] }) => {
                         style={{ height: `${height}px` }}
                       >
                         <>
-                          <div className={style.left}>
+                          <div id="listings_cont" className={style.left}>
                             {list.map((item, index) => {
                               return (
                                 <div
-                                  className={`section_item ${style.wrapper}`}
+                                  data-latitude={item.lat}
+                                  data-longitude={item.lng}
+                                  onMouseOver={(e) => {
+                                    onMouseOverListing?.(e);
+                                    setCenter({ lat: item.lat, lng: item.lng });
+                                  }}
+                                  className={`section_item ${style.wrapper} listing_item`}
                                   key={`location_details_${index}`}
                                 >
                                   <div
@@ -247,7 +237,7 @@ const Filters = ({ items = [] }) => {
                                       })}
                                     </div>
                                     <Button
-                                      link="/detail"
+                                      link={item.link}
                                       className={style.more}
                                       label={"More Details"}
                                     />
@@ -262,8 +252,16 @@ const Filters = ({ items = [] }) => {
                                 markers={list.map((x) => ({
                                   loc: { lat: x.lat, lng: x.lng },
                                 }))}
-                                center={{ lat: 51.507222, lng: -0.1275 }}
+                                center={
+                                  mapCenter || {
+                                    lat: list[0].lat,
+                                    lng: list[0].lng,
+                                  }
+                                }
                                 zoom={15}
+                                APIKey={APIKey}
+                                markerIcon={markerIcon}
+                                onMarkerPress={onMarkerPress}
                               />
                             </div>
                           </div>
