@@ -29,7 +29,7 @@ const DateTime = (props) => {
     add12Hours = false,
   } = props;
   const [value, setValue] = useState(
-    props.input.value ? moment(props.input.value).toDate() : ""
+    props.input.value ? moment(parseInt(props.input.value)).toDate() : ""
   );
 
   const onChangeHandler = (value) => {
@@ -56,7 +56,7 @@ const DateTime = (props) => {
 
   useEffect(() => {
     const inputvalue = get(input, "value");
-    setValue(inputvalue ? moment(inputvalue).toDate() : "");
+    setValue(inputvalue ? moment(parseInt(inputvalue)).toDate() : "");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [get(input, "value")]);
 
