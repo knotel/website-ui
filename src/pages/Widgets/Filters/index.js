@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Field, Form } from "react-final-form";
 import $ from "jquery-slim";
+import { isEqual, isEmpty } from "lodash";
 import moment from "moment";
 
 import { Button, Dropdown, DateTime } from "../../../components/Field";
@@ -28,7 +29,6 @@ const Filters = ({
   onFilterChanged,
   defaultFilters,
 }) => {
-
   const [height, setHeight] = useState(0);
   useEffect(() => {
     if (height === 0) {
@@ -39,6 +39,8 @@ const Filters = ({
       window.removeEventListener("resize", offset);
     };
   }, []);
+
+  const onChangeRef = useRef();
 
   const offset = () => {
     let windowsHeight = window.innerHeight;
@@ -57,6 +59,13 @@ const Filters = ({
         <Form
           onSubmit={(data) => onFilterChanged(data)}
           render={({ handleSubmit, values }) => {
+            if (!onChangeRef.current && !isEmpty(values)) {
+              onChangeRef.current = values;
+            } else if (!isEqual(onChangeRef.current, values)) {
+              onChangeRef.current = values;
+              handleSubmit(values);
+            }
+
             let list = items;
             return (
               <>
@@ -69,10 +78,8 @@ const Filters = ({
                       <div className={style.title}>{city}</div>
                       <div className={style.filters}>
                         <form
-                          onChange={handleSubmit}
                           name="booking_contact"
                           className={style.form}
-                          // onSubmit={handleSubmit}
                         >
                           <div className={style.form_block}>
                             <Field
@@ -108,6 +115,7 @@ const Filters = ({
                               defaultValue={defaultFilters.availableFrom}
                               name="availableFrom"
                               component={DateTime}
+                              onChange={() => console.log("field changed --->")}
                               classes={style.menu}
                               prompt="Date Range"
                               emptyValue={""}

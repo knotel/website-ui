@@ -29,11 +29,11 @@ const DateTime = (props) => {
     add12Hours = false,
   } = props;
   const [value, setValue] = useState(
-    props.input.value ? moment(props.input.value * 1000).toDate() : ""
+    props.input.value ? moment(props.input.value).toDate() : ""
   );
 
   const onChangeHandler = (value) => {
-    input.onChange(getDefaultValue(value));
+    input.onChange(new Date(value).valueOf());
   };
 
   const getDefaultValue = (value) => {
@@ -49,14 +49,14 @@ const DateTime = (props) => {
 
   useEffect(() => {
     if (!get(input, "value")) {
-      input.onChange(getDefaultValue(value));
+      input.onChange(new Date(value).valueOf());
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     const inputvalue = get(input, "value");
-    setValue(inputvalue ? moment(inputvalue * 1000).toDate() : "");
+    setValue(inputvalue ? moment(inputvalue).toDate() : "");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [get(input, "value")]);
 
