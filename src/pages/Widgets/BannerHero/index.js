@@ -12,6 +12,7 @@ const BannerHero = ({
   title,
   title_image,
   desktop_image,
+  onButtonClick,
   button_label,
   button_url,
 }) => {
@@ -42,6 +43,7 @@ const BannerHero = ({
                 <div className={style.button}>
                   <Button
                     buttonType="banner_btn"
+                    onClick={onButtonClick}
                     label={button_label}
                     link={button_url}
                   />

@@ -291,193 +291,268 @@ import "knotel-website-ui/dist/css/pagination.css";
 //   },
 // ];
 
-const widgets = (mapCenter, setCenter) => [
+// const widgets = (mapCenter, setCenter) => [
+//   {
+//     type: "filters",
+//     options: [
+//       "City",
+//       "Neighbourhood",
+//       "Square Feet",
+//       "Date Range",
+//       "Seat #",
+//       "Floor #",
+//     ],
+//     APIKey: "AIzaSyA7QhLNGYH_eg6-ZtPhfZlkh6dBSBNpcdk",
+//     markerIcon: marker,
+//     mapCenter,
+//     setCenter,
+//     onMarkerPress: (lat, lng) => {},
+//     cityOptions: {
+//       "hylo-first-floor": "HyLO",
+//     },
+//     city: "Amsterdam",
+//     defaultFilters: {},
+//     onMouseOverListing: (e) => {},
+//     onFilterChanged: (values) => console.log("filter changed -->", values),
+//     items: [
+//       {
+//         image: leftBg,
+//         link: "",
+//         country: "London",
+//         place: "HYLO, Ground Floor",
+//         address: "Bunhill Row, Greater London, United Kingdom",
+//         lat: 6.5244,
+//         lng: 3.3792,
+//         floor: "1",
+//         seat: "1000",
+//         square_feet: "26685",
+//         available_date: 1670025000,
+//         list: [
+//           {
+//             icon: logo1,
+//             label: "Available:",
+//             value: "December 3",
+//           },
+//           {
+//             icon: logo2,
+//             label: "Floor #:",
+//             value: "Ground Floor",
+//           },
+//           {
+//             icon: logo3,
+//             label: "Size:",
+//             value: "26,685 sqft",
+//           },
+//           {
+//             icon: logo4,
+//             label: "Seat #:",
+//             value: "1000 Seats",
+//           },
+//           {
+//             icon: logo5,
+//             label: "Enquire:",
+//             link: "Lorem@ipsum.com",
+//           },
+//         ],
+//       },
+//       {
+//         image: leftBg,
+//         link: "",
+//         country: "London",
+//         place: "80 Old Street, 3rd Floor",
+//         address: "80, Old Street, Greater London, United Kingdom",
+//         lat: 51.507224,
+//         lng: -0.1277,
+//         seat: "0",
+//         floor: "1",
+//         square_feet: "16685",
+//         available_date: 1670025000,
+//         list: [
+//           {
+//             icon: logo1,
+//             label: "Available:",
+//             value: "December 3",
+//           },
+//           {
+//             icon: logo2,
+//             label: "Floor #:",
+//             value: "Ground Floor",
+//           },
+//           {
+//             icon: logo3,
+//             label: "Size:",
+//             value: "16,685 sqft",
+//           },
+//           {
+//             icon: logo4,
+//             label: "Seat #:",
+//             value: "Undefined Seats",
+//           },
+//           {
+//             icon: logo5,
+//             label: "Enquire:",
+//             link: "Lorem@ipsum.com",
+//           },
+//         ],
+//       },
+//       {
+//         image: rightBg,
+//         link: "",
+//         country: "Conventry",
+//         place: "Clerks Court",
+//         address: "Dorset, United Kingdom",
+//         lat: 51.50722,
+//         lng: -0.1273,
+//         floor: "1",
+//         seat: "10",
+//         square_feet: "26685",
+//         available_date: 1667300455,
+//         list: [
+//           {
+//             icon: logo1,
+//             label: "Available:",
+//             value: "November 1",
+//           },
+//           {
+//             icon: logo2,
+//             label: "Floor #:",
+//             value: "Ground Floor",
+//           },
+//           {
+//             icon: logo3,
+//             label: "Size:",
+//             value: "26,685 sqft",
+//           },
+//           {
+//             icon: logo4,
+//             label: "Seat #:",
+//             value: "10 Seats",
+//           },
+//           {
+//             icon: logo5,
+//             label: "Enquire:",
+//             link: "Lorem@ipsum.com",
+//           },
+//         ],
+//       },
+//       {
+//         image: rightBg,
+//         link: "",
+//         country: "London",
+//         place: "80 Old Street, 3rd Floor",
+//         address: "80, Old Street, Greater London, United Kingdom",
+//         lat: 51.507224,
+//         lng: -0.1277,
+//         floor: "3",
+//         seat: "2000",
+//         square_feet: "36685",
+//         available_date: 1667300455,
+//         list: [
+//           {
+//             icon: logo1,
+//             label: "Available:",
+//             value: "November 1",
+//           },
+//           {
+//             icon: logo2,
+//             label: "Floor #:",
+//             value: "Thrid Floor",
+//           },
+//           {
+//             icon: logo3,
+//             label: "Size:",
+//             value: "36,685 sqft",
+//           },
+//           {
+//             icon: logo4,
+//             label: "Seat #:",
+//             value: "Undefined Seats",
+//           },
+//           {
+//             icon: logo5,
+//             label: "Enquire:",
+//             link: "Lorem@ipsum.com",
+//           },
+//         ],
+//       },
+//     ],
+//   },
+// ];
+
+// landlords
+// const widgets = () => [
+//   {
+//     type: "left_right_banner",
+//     image: bannerImg,
+//     bg_color: "darkblue",
+//     title: "Flexible solutions for your office portfolio.",
+//     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+//     button_label: "Submit your space",
+//     button_url: "image_with_text",
+//     whiteButton: true,
+//   },
+//   {
+//     type: "image_with_text",
+//     items: [
+//       {
+//         image: leftBg,
+//         title: "Mauris fusce.",
+//         text: "Knotel works with landlords to design, build and operate office space for companies on flexible terms, while minimizing buildout disruption and maximizing long-term property value.",
+//         button_label: "Submit your space",
+//         onButtonClick: () => console.log("----> button clicked"),
+//         image_position: "left",
+//       },
+//       {
+//         image: leftBg,
+//         title: "Mauris fusce.",
+//         text: "Knotel works with landlords to design, build and operate office space for companies on flexible terms, while minimizing buildout disruption and maximizing long-term property value.",
+//         button_label: "Submit your space",
+//         button_url: "/",
+//         image_position: "right",
+//       },
+//       {
+//         image: leftBg,
+//         title: "Mauris fusce.",
+//         text: "Knotel works with landlords to design, build and operate office space for companies on flexible terms, while minimizing buildout disruption and maximizing long-term property value.",
+//         button_label: "Submit your space",
+//         button_url: "/",
+//         image_position: "left",
+//       },
+//     ],
+//   },
+// ];
+
+// brokers
+const widgets = () => [
   {
-    type: "filters",
-    options: [
-      "City",
-      "Neighbourhood",
-      "Square Feet",
-      "Date Range",
-      "Seat #",
-      "Floor #",
-    ],
-    APIKey: "AIzaSyA7QhLNGYH_eg6-ZtPhfZlkh6dBSBNpcdk",
-    markerIcon: marker,
-    mapCenter,
-    setCenter,
-    onMarkerPress: (lat, lng) => {},
-    cityOptions: {
-      "hylo-first-floor": "HyLO",
-    },
-    city: "Amsterdam",
-    defaultFilters: {},
-    onMouseOverListing: (e) => {},
-    onFilterChanged: (values) => console.log("filter changed -->", values),
+    type: "left_right_banner",
+    image: bannerImg,
+    bg_color: "darkblue",
+    title: "Flexible solutions to meet client needs.",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+    button_label: "Get in touch",
+    button_url: "/",
+    onButtonClick: ()=> console.log("button clicked --->")
+  },
+  {
+    type: "text_table",
     items: [
       {
-        image: leftBg,
-        link: "",
-        country: "London",
-        place: "HYLO, Ground Floor",
-        address: "Bunhill Row, Greater London, United Kingdom",
-        lat: 6.5244,
-        lng: 3.3792,
-        floor: "1",
-        seat: "1000",
-        square_feet: "26685",
-        available_date: 1670025000,
-        list: [
-          {
-            icon: logo1,
-            label: "Available:",
-            value: "December 3",
-          },
-          {
-            icon: logo2,
-            label: "Floor #:",
-            value: "Ground Floor",
-          },
-          {
-            icon: logo3,
-            label: "Size:",
-            value: "26,685 sqft",
-          },
-          {
-            icon: logo4,
-            label: "Seat #:",
-            value: "1000 Seats",
-          },
-          {
-            icon: logo5,
-            label: "Enquire:",
-            link: "Lorem@ipsum.com",
-          },
-        ],
+        title: "Build client trust",
+        text: "A partner who respects your relationships. We provide you with the optionality for all the ways your clients work.",
       },
       {
-        image: leftBg,
-        link: "",
-        country: "London",
-        place: "80 Old Street, 3rd Floor",
-        address: "80, Old Street, Greater London, United Kingdom",
-        lat: 51.507224,
-        lng: -0.1277,
-        seat: "0",
-        floor: "1",
-        square_feet: "16685",
-        available_date: 1670025000,
-        list: [
-          {
-            icon: logo1,
-            label: "Available:",
-            value: "December 3",
-          },
-          {
-            icon: logo2,
-            label: "Floor #:",
-            value: "Ground Floor",
-          },
-          {
-            icon: logo3,
-            label: "Size:",
-            value: "16,685 sqft",
-          },
-          {
-            icon: logo4,
-            label: "Seat #:",
-            value: "Undefined Seats",
-          },
-          {
-            icon: logo5,
-            label: "Enquire:",
-            link: "Lorem@ipsum.com",
-          },
-        ],
+        title: "Increase revenue",
+        text: "Transparent compensation, timely payments. Close deals faster with our simple, proven sales process. Earn more with each renewal and expansion.",
       },
       {
-        image: rightBg,
-        link: "",
-        country: "Conventry",
-        place: "Clerks Court",
-        address: "Dorset, United Kingdom",
-        lat: 51.50722,
-        lng: -0.1273,
-        floor: "1",
-        seat: "10",
-        square_feet: "26685",
-        available_date: 1667300455,
-        list: [
-          {
-            icon: logo1,
-            label: "Available:",
-            value: "November 1",
-          },
-          {
-            icon: logo2,
-            label: "Floor #:",
-            value: "Ground Floor",
-          },
-          {
-            icon: logo3,
-            label: "Size:",
-            value: "26,685 sqft",
-          },
-          {
-            icon: logo4,
-            label: "Seat #:",
-            value: "10 Seats",
-          },
-          {
-            icon: logo5,
-            label: "Enquire:",
-            link: "Lorem@ipsum.com",
-          },
-        ],
-      },
-      {
-        image: rightBg,
-        link: "",
-        country: "London",
-        place: "80 Old Street, 3rd Floor",
-        address: "80, Old Street, Greater London, United Kingdom",
-        lat: 51.507224,
-        lng: -0.1277,
-        floor: "3",
-        seat: "2000",
-        square_feet: "36685",
-        available_date: 1667300455,
-        list: [
-          {
-            icon: logo1,
-            label: "Available:",
-            value: "November 1",
-          },
-          {
-            icon: logo2,
-            label: "Floor #:",
-            value: "Thrid Floor",
-          },
-          {
-            icon: logo3,
-            label: "Size:",
-            value: "36,685 sqft",
-          },
-          {
-            icon: logo4,
-            label: "Seat #:",
-            value: "Undefined Seats",
-          },
-          {
-            icon: logo5,
-            label: "Enquire:",
-            link: "Lorem@ipsum.com",
-          },
-        ],
+        title: "Grow together",
+        text: "Maintain your client relationships as they scale in the Knotel portfolio. Advise your clients on strategy, from Series A to IPO. Earn compensation on all expansion and renewal business.",
       },
     ],
   },
 ];
+
 const footerLinks = [
   {
     title: "Company",

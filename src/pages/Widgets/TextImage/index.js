@@ -68,6 +68,7 @@ const TextImage = ({ items = [], className = false }) => {
                           <div className={style.text}>{item.text}</div>
                           <div className={style.button}>
                             <Button
+                              onClick={item.onButtonClick}
                               buttonType={
                                 item.cream_btn === true ? "cream_btn" : ""
                               }

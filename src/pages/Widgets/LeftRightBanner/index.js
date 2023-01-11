@@ -10,6 +10,7 @@ const LeftRightBanner = ({
   title,
   text,
   image,
+  onButtonClick,
   bg_color,
   button_label,
   button_url,
@@ -44,12 +45,14 @@ const LeftRightBanner = ({
                 {icon ? (
                   <Button
                     buttonType="icon_btn"
+                    onClick={onButtonClick}
                     label={button_label}
                     link={button_url}
                     svgIcon={icon}
                   />
                 ) : (
                   <Button
+                    onClick={onButtonClick}
                     buttonType="white_btn"
                     label={button_label}
                     link={button_url}
