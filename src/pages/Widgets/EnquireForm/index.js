@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { get } from "lodash";
-import { EqualHeight, EqualHeightElement } from "react-equal-height";
+import { EqualHeight, EqualHeightElement } from "react-equal-height/clean";
 
 import { data } from "../../../helpers/mock";
 import ContactForm from "../../../components/ContactForm";

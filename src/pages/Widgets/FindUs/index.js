@@ -1,5 +1,5 @@
 import React from "react";
-import { EqualHeight, EqualHeightElement } from "react-equal-height";
+import { EqualHeight, EqualHeightElement } from "react-equal-height/clean";
 
 import GoogleMaps from "../../../components/GoogleMaps";
 import LazyLoad from "../../../components/Lazyload";

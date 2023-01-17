@@ -6,8 +6,7 @@ import NormalLink from "../../../components/NormalLink";
 
 import style from "./style.module.css";
 
-const TermsMenu = ({ items = [] }) => {
-  const { pathname } = useLocation();
+const TermsMenu = ({ items = [], pathname }) => {
   let selected = items.find((i) => i.link === pathname);
   return (
     <div className={`c has_border`}>

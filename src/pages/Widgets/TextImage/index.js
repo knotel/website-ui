@@ -1,6 +1,6 @@
 import React from "react";
 import { get } from "lodash";
-import { EqualHeight, EqualHeightElement } from "react-equal-height";
+import { EqualHeight, EqualHeightElement } from "react-equal-height/clean";
 
 import Media from "../../../components/Media";
 import { Button } from "../../../components/Field";

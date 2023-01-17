@@ -1,22 +1,29 @@
 import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Button } from "../../../components/Field";
 import LazyLoad from "../../../components/Lazyload";
 import Media from "../../../components/Media";
 import NormalLink from "../../../components/NormalLink";
 import Slider from "../../../components/Slider";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 import style from "./style.module.css";
 
+const sliderOptions = {
+  arrows: false,
+  pagination: false,
+  perPage: 3,
+  gap: "16px",
+};
+
 const swiperSlideClick = (swiper, items, action = "next") => {
-  let nextSlide = swiper.activeIndex + 1;
-  let prevSlide = swiper.activeIndex - 1;
+  let nextSlide = swiper.index + 1;
+  let prevSlide = swiper.index - 1;
   prevSlide = prevSlide > -1 ? prevSlide : 0;
   if (nextSlide >= items.length) {
     nextSlide = 0;
   }
-  swiper.slideTo(action === "prev" ? prevSlide : nextSlide);
+  swiper.go(action === "prev" ? prevSlide : nextSlide);
 };
 
 const ImageSlider = ({ id = "", options, items = [], autoplay = false }) => {
@@ -66,10 +73,15 @@ const ImageSlider = ({ id = "", options, items = [], autoplay = false }) => {
       <div className={`c`}>
         <Slider swiperRef={swiperRef} autoplay={autoplay}>
           <div className={style.slider}>
-            <Swiper ref={swiperRef} spaceBetween={16} slidesPerView={3}>
+            <Splide
+              options={sliderOptions}
+              ref={swiperRef}
+              onMoved={(e, prev) => setActive(prev)}
+              aria-label="My Favorite Images"
+            >
               {getItems().map((item, i) => {
                 return (
-                  <SwiperSlide
+                  <SplideSlide
                     className={`section_item ${style.item}`}
                     key={`location_${i}`}
                   >
@@ -88,15 +100,15 @@ const ImageSlider = ({ id = "", options, items = [], autoplay = false }) => {
                         <div className={style.view}>View Location</div>
                       </div>
                     </div>
-                  </SwiperSlide>
+                  </SplideSlide>
                 );
               })}
-            </Swiper>
+            </Splide>
             <div className={style.prev}>
               <NormalLink
                 className={style.slider_icon}
                 onClick={() =>
-                  swiperSlideClick(swiperRef.current.swiper, items, "prev")
+                  swiperSlideClick(swiperRef.current.splide, items, "prev")
                 }
               >
                 <span className={style.icon}>
@@ -108,7 +120,7 @@ const ImageSlider = ({ id = "", options, items = [], autoplay = false }) => {
               <NormalLink
                 className={style.slider_icon}
                 onClick={() =>
-                  swiperSlideClick(swiperRef.current.swiper, items)
+                  swiperSlideClick(swiperRef.current.splide, items)
                 }
               >
                 <span className={style.icon}>

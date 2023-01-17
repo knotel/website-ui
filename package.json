@@ -1,6 +1,6 @@
 {
   "name": "knotel-website-ui",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "private": true,
   "description": "Made with create-react-library",
   "author": "",
@@ -50,6 +50,7 @@
     "react-dropzone": "^14.2.1",
     "react-equal-height": "^1.2.2",
     "react-final-form": "^6.5.9",
+    "react-no-ssr": "^1.1.0",
     "react-redux": "^8.0.2",
     "react-router-dom": "^6.3.0",
     "react-svg": "^15.1.14",
@@ -57,14 +58,14 @@
     "redux": "^4.2.0",
     "redux-form-validators": "^3.3.2",
     "redux-promise-middleware": "^6.1.2",
-    "swiper": "^8.4.5",
-    "swiper-react": "^1.0.0"
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide": "^4.1.4"
   },
   "peerDependencies": {
+    "next": "12.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "next": "12.1.0"
+    "react-scripts": "5.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",

@@ -18,6 +18,7 @@ import Page from "knotel-website-ui";
 import "knotel-website-ui/dist/index.css";
 import "knotel-website-ui/dist/css/style.css";
 import "knotel-website-ui/dist/css/pagination.css";
+import "knotel-website-ui/dist/css/swiper.css";
 
 // const widgets = [
 //   {
@@ -75,140 +76,140 @@ import "knotel-website-ui/dist/css/pagination.css";
 //   },
 // ];
 
-// const widgets = [
-//   {
-//     type: "banner",
-//     image: detailImg,
-//     title: "HYLO ground floor",
-//     text: "Welcome to London’s future workplace.",
-//   },
-//   {
-//     type: "details",
-//     items: [
-//       {
-//         title: "About",
-//         list: [
-//           {
-//             icon: logo1,
-//             label: "Available:",
-//             value: "November 1",
-//           },
-//           {
-//             icon: logo2,
-//             label: "Floor #:",
-//             value: "Ground Floor",
-//           },
-//           {
-//             icon: logo3,
-//             label: "Size:",
-//             value: "26,685 sqft",
-//           },
-//           {
-//             icon: logo4,
-//             label: "Seat #:",
-//             value: "Undefined Seats",
-//           },
-//           {
-//             icon: logo5,
-//             label: "Enquire:",
-//             link: "Lorem@ipsum.com",
-//           },
-//         ],
-//       },
-//       {
-//         title: "Whats Included",
-//         list: [
-//           {
-//             text: "Lorem ipsum dolor sit amet",
-//           },
-//           {
-//             text: "consectetur adipiscing elit ",
-//           },
-//           {
-//             text: "Nisi, nulla id viverra pharetra",
-//           },
-//           {
-//             text: "Eget leo vitae mattis leo",
-//           },
-//           {
-//             text: "Risus etiam nisl",
-//           },
-//           {
-//             text: "Sit turpis sed vestibulum dignissim",
-//           },
-//         ],
-//       },
-//       {
-//         title: "Further Information",
-//         list: [
-//           {
-//             logo: download,
-//             button_label: "Download Flyer",
-//             button_link: "/",
-//             on_button_click: () => console.log("download flyer"),
-//           },
-//           {
-//             logo: download,
-//             button_label: "Download Images",
-//             button_link: "/",
-//             on_button_click: () => console.log("download images"),
-//           },
-//           {
-//             logo: download,
-//             button_label: "Download Floor Plan",
-//             button_link: "/",
-//             on_button_click: () => console.log("download flor plan"),
-//           },
-//         ],
-//       },
-//     ],
-//   },
-//   {
-//     type: "text_image_slider",
-//     items: [
-//       {
-//         title: "London’s future workspace",
-//         text: "Knotel at HYLO offers 27,000 square feet of premium office space across 4 floors and access to 17,000 sq ft of retail space. One of London’s most exciting new buildings, HYLO boasts high rise tower floors, roof gardens and new public space. Welcome to London’s future workplace.",
-//         button_label: "Schedule a tour",
-//         // button_url: "/",
-//         on_button_click: () =>
-//           document.getElementById("enquireTrigger")?.click(),
-//         image_position: "right",
-//         caption: "HYLO groundfloor",
-//         list: [{ image: rightBg }, { image: rightBg }, { image: rightBg }],
-//       },
-//     ],
-//   },
-//   {
-//     type: "text_image_slider",
-//     hideBorder: "bottom",
-//     items: [
-//       {
-//         title: "Old & new collide",
-//         text: "This is a place where old and new collide; from cutting-edge-cool Old Street and Shoreditch to the historically influenced City of London. The area is the epicentre of London’s creative and collaborative industries and is more popular than ever with many of London’s forward-thinking financial and professional occupiers. ",
-//         button_label: "Request information",
-//         button_url: "/",
-//         on_button_click: () =>
-//           document.getElementById("enquireTrigger")?.click(),
-//         list: [{ image: rightBg }, { image: rightBg }, { image: rightBg }],
-//         image_position: "left",
-//         bg_color: "green",
-//         caption: "Image caption goes here",
-//         white_button: true,
-//       },
-//     ],
-//   },
-//   {
-//     type: "map",
-//     address: "103–105 Bunhill Row, 8th floor",
-//     APIKey: "",
-//     markerIcon: marker,
-//     loc: {
-//       lat: 30.26555,
-//       lng: -97.7497,
-//     },
-//   },
-// ];
+const widgets = () => [
+  {
+    type: "banner",
+    image: detailImg,
+    title: "HYLO ground floor",
+    text: "Welcome to London’s future workplace.",
+  },
+  {
+    type: "details",
+    items: [
+      {
+        title: "About",
+        list: [
+          {
+            icon: logo1,
+            label: "Available:",
+            value: "November 1",
+          },
+          {
+            icon: logo2,
+            label: "Floor #:",
+            value: "Ground Floor",
+          },
+          {
+            icon: logo3,
+            label: "Size:",
+            value: "26,685 sqft",
+          },
+          {
+            icon: logo4,
+            label: "Seat #:",
+            value: "Undefined Seats",
+          },
+          {
+            icon: logo5,
+            label: "Enquire:",
+            link: "Lorem@ipsum.com",
+          },
+        ],
+      },
+      {
+        title: "Whats Included",
+        list: [
+          {
+            text: "Lorem ipsum dolor sit amet",
+          },
+          {
+            text: "consectetur adipiscing elit ",
+          },
+          {
+            text: "Nisi, nulla id viverra pharetra",
+          },
+          {
+            text: "Eget leo vitae mattis leo",
+          },
+          {
+            text: "Risus etiam nisl",
+          },
+          {
+            text: "Sit turpis sed vestibulum dignissim",
+          },
+        ],
+      },
+      {
+        title: "Further Information",
+        list: [
+          {
+            logo: download,
+            button_label: "Download Flyer",
+            button_link: "/",
+            on_button_click: () => console.log("download flyer"),
+          },
+          {
+            logo: download,
+            button_label: "Download Images",
+            button_link: "/",
+            on_button_click: () => console.log("download images"),
+          },
+          {
+            logo: download,
+            button_label: "Download Floor Plan",
+            button_link: "/",
+            on_button_click: () => console.log("download flor plan"),
+          },
+        ],
+      },
+    ],
+  },
+  {
+    type: "text_image_slider",
+    items: [
+      {
+        title: "London’s future workspace",
+        text: "Knotel at HYLO offers 27,000 square feet of premium office space across 4 floors and access to 17,000 sq ft of retail space. One of London’s most exciting new buildings, HYLO boasts high rise tower floors, roof gardens and new public space. Welcome to London’s future workplace.",
+        button_label: "Schedule a tour",
+        // button_url: "/",
+        on_button_click: () =>
+          document.getElementById("enquireTrigger")?.click(),
+        image_position: "right",
+        caption: "HYLO groundfloor",
+        list: [{ image: rightBg }, { image: rightBg }, { image: rightBg }],
+      },
+    ],
+  },
+  {
+    type: "text_image_slider",
+    hideBorder: "bottom",
+    items: [
+      {
+        title: "Old & new collide",
+        text: "This is a place where old and new collide; from cutting-edge-cool Old Street and Shoreditch to the historically influenced City of London. The area is the epicentre of London’s creative and collaborative industries and is more popular than ever with many of London’s forward-thinking financial and professional occupiers. ",
+        button_label: "Request information",
+        button_url: "/",
+        on_button_click: () =>
+          document.getElementById("enquireTrigger")?.click(),
+        list: [{ image: rightBg }, { image: rightBg }, { image: rightBg }],
+        image_position: "left",
+        bg_color: "green",
+        caption: "Image caption goes here",
+        white_button: true,
+      },
+    ],
+  },
+  {
+    type: "map",
+    address: "103–105 Bunhill Row, 8th floor",
+    APIKey: "",
+    markerIcon: marker,
+    loc: {
+      lat: 30.26555,
+      lng: -97.7497,
+    },
+  },
+];
 
 // const widgets = [
 //   {
@@ -523,35 +524,35 @@ import "knotel-website-ui/dist/css/pagination.css";
 // ];
 
 // brokers
-const widgets = () => [
-  {
-    type: "left_right_banner",
-    image: bannerImg,
-    bg_color: "darkblue",
-    title: "Flexible solutions to meet client needs.",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-    button_label: "Get in touch",
-    button_url: "/",
-    onButtonClick: ()=> console.log("button clicked --->")
-  },
-  {
-    type: "text_table",
-    items: [
-      {
-        title: "Build client trust",
-        text: "A partner who respects your relationships. We provide you with the optionality for all the ways your clients work.",
-      },
-      {
-        title: "Increase revenue",
-        text: "Transparent compensation, timely payments. Close deals faster with our simple, proven sales process. Earn more with each renewal and expansion.",
-      },
-      {
-        title: "Grow together",
-        text: "Maintain your client relationships as they scale in the Knotel portfolio. Advise your clients on strategy, from Series A to IPO. Earn compensation on all expansion and renewal business.",
-      },
-    ],
-  },
-];
+// const widgets = () => [
+//   {
+//     type: "left_right_banner",
+//     image: bannerImg,
+//     bg_color: "darkblue",
+//     title: "Flexible solutions to meet client needs.",
+//     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+//     button_label: "Get in touch",
+//     button_url: "/",
+//     onButtonClick: ()=> console.log("button clicked --->")
+//   },
+//   {
+//     type: "text_table",
+//     items: [
+//       {
+//         title: "Build client trust",
+//         text: "A partner who respects your relationships. We provide you with the optionality for all the ways your clients work.",
+//       },
+//       {
+//         title: "Increase revenue",
+//         text: "Transparent compensation, timely payments. Close deals faster with our simple, proven sales process. Earn more with each renewal and expansion.",
+//       },
+//       {
+//         title: "Grow together",
+//         text: "Maintain your client relationships as they scale in the Knotel portfolio. Advise your clients on strategy, from Series A to IPO. Earn compensation on all expansion and renewal business.",
+//       },
+//     ],
+//   },
+// ];
 
 const footerLinks = [
   {

@@ -1,9 +1,9 @@
-import React, { Suspense, lazy } from "react";
+import React from "react";
 import LazyLoad from "../../../components/Lazyload";
+import GoogleMaps from "../../../components/GoogleMaps";
 
 import style from "./style.module.css";
 
-const GoogleMaps = lazy(() => import("../../../components/GoogleMaps"));
 
 const Map = ({ address, loc = {}, APIKey, markerIcon, onMarkerPress }) => {
   return (
@@ -28,27 +28,25 @@ const Map = ({ address, loc = {}, APIKey, markerIcon, onMarkerPress }) => {
           </div>
         </LazyLoad>
         <div className={`c`}>
-          <Suspense fallback={<></>}>
-            <LazyLoad
-              lazyLoadClass={`section_wrap ${style.mapPad}`}
-              animatedClass="animated"
-              rootMargin="-20%"
-            >
-              <div className={`section_border_left`}></div>
-              <div className={`section_border_right`}></div>
-              <div className={`section_border_bottom`}></div>
-              <div className={style.map}>
-                <GoogleMaps
-                  APIKey={APIKey}
-                  markerIcon={markerIcon}
-                  markers={[{ loc }]}
-                  center={loc}
-                  zoom={15}
-                  onMarkerPress={onMarkerPress}
-                />
-              </div>
-            </LazyLoad>
-          </Suspense>
+          <LazyLoad
+            lazyLoadClass={`section_wrap ${style.mapPad}`}
+            animatedClass="animated"
+            rootMargin="-20%"
+          >
+            <div className={`section_border_left`}></div>
+            <div className={`section_border_right`}></div>
+            <div className={`section_border_bottom`}></div>
+            <div className={style.map}>
+              <GoogleMaps
+                APIKey={APIKey}
+                markerIcon={markerIcon}
+                markers={[{ loc }]}
+                center={loc}
+                zoom={15}
+                onMarkerPress={onMarkerPress}
+              />
+            </div>
+          </LazyLoad>
         </div>
       </div>
     </>

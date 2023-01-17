@@ -13,8 +13,8 @@ const Layout = ({ children, headerProps, footerProps }) => {
   const { setContext } = useContext(AppContext);
   const [dimesions, setDimensions] = useState({
     height: 0,
-    winWidth: window.innerWidth,
-    winHeight: window.innerHeight,
+    // winWidth: window.innerWidth,
+    // winHeight: window.innerHeight,
   });
   const router = useRouter();
   const g = router?.query?.g;

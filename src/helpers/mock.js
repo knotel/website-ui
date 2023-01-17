@@ -400,6 +400,7 @@ const data = {
     {
       type: "terms_menu",
       items: privacyMenu,
+      pathname: "/terms-of-use",
     },
     {
       type: "text_editor",

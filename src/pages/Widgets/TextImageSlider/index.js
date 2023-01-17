@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { get } from "lodash";
-import { Pagination, Autoplay } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EqualHeight, EqualHeightElement } from "react-equal-height";
+import dynamic from "next/dynamic";
+import { EqualHeight, EqualHeightElement } from "react-equal-height/clean";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 import { Button } from "../../../components/Field";
 import Media from "../../../components/Media";
@@ -10,6 +10,8 @@ import LazyLoad from "../../../components/Lazyload";
 import Slider from "../../../components/Slider";
 
 import style from "./style.module.css";
+
+const sliderOptions = { arrows: false, pagination: false };
 
 const TextImageSlider = ({
   items = [],
@@ -111,26 +113,24 @@ const TextImageSlider = ({
                     <div className={style.right}>
                       <EqualHeightElement name="TextImageSliderContent">
                         <Slider className="text_slider" swiperRef={swiperRef}>
-                          <Swiper
+                          <Splide
+                            options={sliderOptions}
                             ref={swiperRef}
-                            modules={[Pagination, Autoplay]}
-                            autoplay={{ delay }}
-                            pagination={false}
-                            spaceBetween={0}
-                            slidesPerView={1}
-                            onSlideChange={(e) => setActive(e.activeIndex)}
+                            onMoved={(e, prev) => setActive(prev)}
+                            aria-label="My Favorite Images"
                           >
                             {item.list.map((item, i) => (
-                              <SwiperSlide key={`img_slider_${i}`}>
+                              <SplideSlide key={item.image}>
                                 <div className={style.img}>
                                   <div className={style.img_wrap}>
                                     <div className={style.sizer} />
                                     <Media src={item.image} />
                                   </div>
                                 </div>
-                              </SwiperSlide>
+                                {/* <Media src={item.image} /> */}
+                              </SplideSlide>
                             ))}
-                          </Swiper>
+                          </Splide>
                         </Slider>
                         <div className={style.bottom}>
                           <div className={style.caption}>
@@ -144,7 +144,7 @@ const TextImageSlider = ({
                                 }`}
                                 key={i}
                                 onClick={() => {
-                                  swiperRef.current.swiper.slideTo(i);
+                                  swiperRef.current.splide.go(i);
                                 }}
                               ></div>
                             ))}

@@ -9,8 +9,8 @@ import Error from "./Error";
 
 import style from "./style.module.css";
 
-const PopperContainer = ({ children }) =>
-  ReactDOM.createPortal(children, document.querySelector("body"));
+// const PopperContainer = ({ children }) =>
+//   ReactDOM.createPortal(children, document.querySelector("body"));
 
 const DateTime = (props) => {
   const {
@@ -67,7 +67,7 @@ const DateTime = (props) => {
       }`}
     >
       {label && <Label text={label} required={required} focus={true} />}
-      <DatePicker
+      {/* <DatePicker
         popperContainer={PopperContainer}
         placeholderText={placeholder}
         selected={value}
@@ -77,7 +77,7 @@ const DateTime = (props) => {
         showTimeSelectOnly={showTimeSelectOnly}
         showYearDropdown={showYearDropdown}
         showYearPicker={showYearPicker}
-      />
+      /> */}
       <span className={`${style.dropdownIcon} ${style.middle}`}>
         <i className="fas fa-chevron-down"></i>
       </span>

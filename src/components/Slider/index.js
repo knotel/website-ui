@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import OutOfView from "../Lazyload/OutOfView";
-import "swiper/css";
-import "swiper/css/navigation";
 
 const Slider = ({ className, children, swiperRef, autoplay = true }) => {
   const onOutHandler = (entry, observer) => {
+    const Autoplay = swiperRef?.current?.splide?.Components?.Autoplay;
     if (autoplay === true) {
       if (entry.isIntersecting) {
-        swiperRef.current.swiper.autoplay.run();
+        Autoplay?.play();
       } else {
-        swiperRef.current.swiper.autoplay.pause();
+        Autoplay?.pause();
       }
     } else {
       observer.disconnect();

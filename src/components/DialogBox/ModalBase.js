@@ -5,19 +5,22 @@ import style from "./style.module.css";
 export default class ModalBase extends React.Component {
   constructor(props) {
     super(props);
-    this.el = document.createElement("div");
-    this.el.className = props.className || style.modal;
+    this.state = { el: null };
   }
-
   componentDidMount() {
-    document.body.appendChild(this.el);
+    const el = document.createElement("div");
+    el.className = this.props.className || style.modal;
+    document.body.appendChild(el);
+    this.setState({ el });
   }
-
   componentWillUnmount() {
-    document.body.removeChild(this.el);
+    if (this.state.el) {
+      document.body.removeChild(this.state.el);
+    }
   }
-
   render() {
-    return ReactDOM.createPortal(this.props.children, this.el);
+    return this.state.el
+      ? ReactDOM.createPortal(this.props.children, this.state.el)
+      : null;
   }
 }

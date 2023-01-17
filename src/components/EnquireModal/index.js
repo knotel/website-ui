@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { get } from "lodash";
 
 import { data } from "../../helpers/mock";
@@ -16,22 +16,20 @@ const EnquireModal = ({
   interestOptions,
 }) => {
   return (
-    <Suspense fallback={<></>}>
-      <DialogBox className="enquireForm" onClose={onClose} extraClass>
-        <div className="enquire">
-          <ContactForm
-            onSubmit={onSubmit}
-            submitted={submitted}
-            submitting={submitting}
-            locationOptions={locationOptions}
-            sizeOptions={sizeOptions}
-            interestOptions={interestOptions}
-            contact={content}
-            showText
-          />
-        </div>
-      </DialogBox>
-    </Suspense>
+    <DialogBox className="enquireForm" onClose={onClose} extraClass>
+      <div className="enquire">
+        <ContactForm
+          onSubmit={onSubmit}
+          submitted={submitted}
+          submitting={submitting}
+          locationOptions={locationOptions}
+          sizeOptions={sizeOptions}
+          interestOptions={interestOptions}
+          contact={content}
+          showText
+        />
+      </div>
+    </DialogBox>
   );
 };
 export default EnquireModal;

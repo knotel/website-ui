@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import $ from "cash-dom";
+import $ from "jquery-slim";
 
 let timer = 0;
 let winHei = 0;
@@ -25,11 +25,11 @@ const InfiniteScroll = (props) => {
 
   const crossedScrollThreshold = () => {
     let st = $(el)[0].pageYOffset + winHei + offsetPercent;
-    let sh =
-      el === window
-        ? document.documentElement.scrollHeight
-        : $(el)[0].scrollHeight;
-    return st >= sh;
+    // let sh =
+    //   el === window
+    //     ? document.documentElement.scrollHeight
+    //     : $(el)[0].scrollHeight;
+    // return st >= sh;
   };
 
   useEffect(() => {

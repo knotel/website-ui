@@ -1,4 +1,4 @@
-import $ from "cash-dom";
+import $ from "jquery-slim";
 
 export const smoothScroll = (classname, scrollTopOffset) => {
   if (scrollTopOffset === undefined) {

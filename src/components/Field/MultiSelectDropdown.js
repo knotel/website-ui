@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { get } from "lodash";
-import $ from "cash-dom";
+import $ from "jquery-slim";
 
 import Label from "./Label";
 import Error from "./Error";
@@ -30,14 +30,14 @@ const MultiSelectDropdown = (props) => {
     wrapperRef = node;
   };
 
-  useEffect(() => {
-    setLabel();
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // useEffect(() => {
+  //   setLabel();
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   useEffect(() => {
     setLabel();
