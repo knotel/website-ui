@@ -76,7 +76,6 @@ const ImageSlider = ({ id = "", options, items = [], autoplay = false }) => {
             <Splide
               options={sliderOptions}
               ref={swiperRef}
-              onMoved={(e, prev) => setActive(prev)}
               aria-label="My Favorite Images"
             >
               {getItems().map((item, i) => {
