@@ -6,7 +6,7 @@ import LazyLoad from "../../../components/Lazyload";
 
 import style from "./style.module.css";
 
-const FindUs = ({ title, address, items = [], loc = {} }) => {
+const FindUs = ({ title, address, items = [], loc = {}, APIKey, markerIcon }) => {
   return (
     <>
       <EqualHeight>
@@ -49,8 +49,10 @@ const FindUs = ({ title, address, items = [], loc = {} }) => {
               <EqualHeightElement name="FindUS">
                 <div className={style.map}>
                   <GoogleMaps
+                    APIKey={APIKey}
+                    markerIcon={markerIcon}
                     markers={[{ loc }]}
-                    center={{ lat: 51.507222, lng: -0.1275 }}
+                    center={loc}
                     zoom={15}
                   />
                 </div>

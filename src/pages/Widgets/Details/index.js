@@ -71,18 +71,24 @@ const Details = ({ items = [] }) => {
                                   </div>
                                 )}
                                 {value.link && (
-                                  <NormalLink link="/" className={style.link}>
-                                    {" "}
-                                    {value.link}
+                                  <NormalLink
+                                    link={`${
+                                      value.type ? value.type + ":" : "s"
+                                    }${value.link}`}
+                                    className={style.link}
+                                  >
+                                    {value.linkLabel || value.link}
                                   </NormalLink>
                                 )}
                                 {value.hours === true && (
                                   <div>
-                                    <div> Mon - Fri: {value.open}</div>
+                                    <div>
+                                      {" "}
+                                      {value.openDays}: {value.open}
+                                    </div>
                                     <div>{value.timing}</div>
                                     <div className={style.padd}>
-                                      {" "}
-                                      Sat - Sun:
+                                      {value.closedDays}:
                                     </div>
                                     <div>{value.close}</div>
                                   </div>

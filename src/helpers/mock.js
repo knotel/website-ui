@@ -46,7 +46,7 @@ const data = {
   home: [
     {
       type: "hero_banner",
-      desktop_image: bannerImg,
+    desktop_image: bannerImg,
       title: "Introducing",
       title_image: bannerlogo,
       button_label: "Enquire",
