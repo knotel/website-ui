@@ -73,7 +73,7 @@ const Details = ({ items = [] }) => {
                                 {value.link && (
                                   <NormalLink
                                     link={`${
-                                      value.type ? value.type + ":" : "s"
+                                      value.type ? value.type + ":" : ""
                                     }${value.link}`}
                                     className={style.link}
                                   >
