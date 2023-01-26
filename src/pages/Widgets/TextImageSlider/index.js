@@ -58,10 +58,11 @@ const TextImageSlider = ({
               <div className={`section_border_left`}></div>
             )}
             {hideBorder === "right" ? (
-              <div className={`section_border_right`}></div>
+              <></>
             ) : (
-              ""
+              <div className={`section_border_right`}></div>
             )}
+
             {hideBorder === "bottom" ? (
               <></>
             ) : (
@@ -111,7 +112,7 @@ const TextImageSlider = ({
                           </EqualHeightElement>
                         </>
                       ) : null}
-                      <div className={`section_border_bottom`}></div> 
+                      <div className={`section_border_bottom`}></div>
                     </div>
                     <div className={style.right}>
                       <EqualHeightElement name="TextImageSliderContent">

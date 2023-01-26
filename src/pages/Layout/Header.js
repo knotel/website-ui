@@ -98,15 +98,11 @@ const Header = ({
                 className={style.mobile_menu_center}
               >
                 <div className={style.menu_padd}>
-                  <NormalLink className={style.menu_links} link="/">
-                    Home
-                  </NormalLink>
-                  <NormalLink className={style.menu_links} link="/office">
-                    Office
-                  </NormalLink>
-                  <NormalLink className={style.menu_links} link="/workclub">
-                    Workclub
-                  </NormalLink>
+                  {links.map((item) => (
+                    <NormalLink className={style.menu_links} link={item.url}>
+                      {item.text}
+                    </NormalLink>
+                  ))}
                   <div className={style.header_btn}>
                     <Button
                       buttonType="header_blue_btn"
