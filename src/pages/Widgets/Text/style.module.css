@@ -14,7 +14,10 @@
 }
 
 .block_Center {
-  padding: 120px 0px;
+  min-height: 324px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .text {
@@ -32,4 +35,36 @@
   font-style: italic;
   font-size: 23px;
   line-height: 1.2;
+}
+
+@media (max-width: 900px) {
+  .block_Center {
+    min-height: 300px;
+    padding: 30px;
+  }
+
+  .text,
+  .text span {
+    font-size: 21px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .block_Center {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 420px) {
+  .block_Center {
+    min-height: 300px;
+    padding: 30px;
+  }
+
+  .text,
+  .text span {
+    font-size: 19px;
+  }
+
 }

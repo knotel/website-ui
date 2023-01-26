@@ -1,20 +1,26 @@
 import { get } from "lodash";
-import React from "react";
+import React, { useContext } from "react";
 import { EqualHeight, EqualHeightElement } from "react-equal-height/clean";
 
 import { Button } from "../../../components/Field";
 import LazyLoad from "../../../components/Lazyload";
 import NormalLink from "../../../components/NormalLink";
+import { AppContext } from "../../../Contexts/AppContext";
 
 import style from "./style.module.css";
 
 const Details = ({ items = [] }) => {
+  const {
+    appContext: { winWidth },
+  } = useContext(AppContext);
   return (
     <>
       <EqualHeight>
         <div className={`c has_border`}>
           <LazyLoad
-            lazyLoadClass={`section_wrap col_3`}
+            lazyLoadClass={`section_wrap details col_3 ${
+              winWidth < 1260 && winWidth >= 650 ? ` col_50_50` : ""
+            }`}
             animatedClass="animated"
             rootMargin="-20%"
           >
@@ -23,20 +29,23 @@ const Details = ({ items = [] }) => {
             <div className={`section_border_right`}></div>
             <div className={`section_border_bottom`}></div>
             <div className={`section_border_middle`}></div>
-            {items.length >= 2 && (
+            {winWidth >= 1260 && items.length >= 2 && (
               <div className={`section_border_middle_2`}></div>
             )}
             <div className={style.section}>
               {items.map((item, index) => {
                 return (
-                  <div className={`${style.item}`} key={`details_${index}`}>
+                  <div
+                    className={`details_table ${style.item}`}
+                    key={`details_${index}`}
+                  >
                     <div className={style.title}>
                       <EqualHeightElement name="DetailsTitle">
                         {item.title}
                       </EqualHeightElement>
                     </div>
-                    <div className={style.wrapper}>
-                      <EqualHeightElement name="DetailsContent">
+                    <EqualHeightElement name="DetailsContent">
+                      <div className={`${style.wrapper}`}>
                         {item.list.map((value, j) => {
                           const {
                             button_label = false,
@@ -117,8 +126,9 @@ const Details = ({ items = [] }) => {
                             );
                           }
                         })}
-                      </EqualHeightElement>
-                    </div>
+                      </div>
+                      <div className={`section_border_bottom`}></div>
+                    </EqualHeightElement>
                   </div>
                 );
               })}

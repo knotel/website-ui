@@ -9,11 +9,7 @@
   width: 100%;
   height: 100%;
   left: 0;
-  background-image: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.2)
-  );
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   z-index: 1;
 }
 
@@ -107,7 +103,7 @@
   margin-top: 40px;
 }
 
-.button > * {
+.button>* {
   vertical-align: middle;
 }
 
@@ -139,77 +135,94 @@
 }
 
 @media (max-width: 1400px) {
-  .logo img {
-    height: 50px;
+  .banner_logo img {
+    width: 380px;
   }
 }
 
 @media (max-width: 1200px) {
-  .logo img {
-    height: 40px;
+  .banner_logo img {
+    width: 350px;
   }
 
-  .text {
-    font-size: 24px;
+  .banner_hero {
+    padding-bottom: 140px;
   }
 
-  .left {
-    max-width: 400px;
+  .banner_hero_after.animated {
+    height: 160px;
   }
 
-  .banner_image {
-    background-position: 35% 50%;
-  }
-
-  .button {
-    margin-top: 35px;
+  .banner_hero_after {
+    bottom: 60px;
   }
 }
 
-@media (max-width: 900px) {
-  .logo img {
-    height: 30px;
+@media (max-width: 1024px) {
+  .banner {
+    min-height: 80vh !important;
   }
 
-  .text {
-    font-size: 22px;
-    line-height: 1.4;
+  .banner_logo img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 820px) {
+
+  .banner_hero {
+    padding-bottom: 120px;
   }
 
-  .banner_image {
-    background-position: 20% 50%;
+  .banner_hero_after.animated {
+    height: 140px;
+  }
+
+  .banner_hero_after {
+    bottom: 50px;
+  }
+}
+
+@media (max-width: 740px) {
+  .banner_logo img {
+    width: 300px;
+  }
+
+  .banner {
+    min-height: 70vh !important;
+  }
+
+  .banner_logo {
+    margin-top: 28px;
   }
 
   .button {
-    margin-top: 30px;
+    margin-top: 32px;
   }
 }
 
 @media (max-width: 550px) {
-  .desktop,
-  .link {
-    display: none;
+  .banner_logo img {
+    width: 280px;
   }
 
-  .mobile {
-    display: block;
+  .banner_hero {
+    padding-bottom: 100px;
+  }
+
+  .banner_hero_after.animated {
+    height: 120px;
+  }
+
+  .banner_hero_after {
+    bottom: 40px;
+  }
+
+  .title {
+    font-size: 28px;
   }
 
   .banner {
-    min-height: 75vh !important;
-  }
-
-  .bannerI_image {
-    background-position: 50% 100%;
-  }
-
-  .left {
-    padding: 40px 0;
-  }
-
-  .banner_center {
-    margin: 0;
-    display: flex;
-    align-items: flex-end;
+    min-height: 60vh !important;
   }
 }

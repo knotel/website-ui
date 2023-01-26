@@ -32,3 +32,76 @@
   font-weight: 350;
   line-height: 1.6;
 }
+
+:global .form_left .section_border_bottom {
+  display: none;
+}
+
+@media (max-width: 900px) {
+
+  .left,
+  .content {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 820px) {
+
+  .left,
+  .right {
+    display: block;
+    width: 100%;
+    padding: 30px;
+  }
+
+  .right {
+    padding: 10px;
+  }
+
+  .left {
+    position: relative;
+  }
+
+  .text,
+  .text span {
+    font-size: 16px;
+  }
+
+  :global .form_left .section_border_bottom {
+    display: block;
+  }
+
+  :global .form .equal-height-JlocK {
+    height: auto ! important;
+  }
+
+  :global .enquire_form .section_border_middle {
+    display: none;
+
+  }
+}
+
+@media (max-width: 500px) {
+  .right {
+    padding: 0px;
+  }
+
+  .content {
+    padding: 40px;
+  }
+
+  .text,
+  .text span {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .left {
+    padding: 30px;
+  }
+
+  .content {
+    padding: 30px;
+  }
+}

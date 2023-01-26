@@ -34,7 +34,3 @@
 .sizer {
   padding-top: 50%;
 }
-
-:global(.fixed).bgImage {
-  background-attachment: fixed;
-}

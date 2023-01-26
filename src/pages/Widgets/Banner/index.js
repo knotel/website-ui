@@ -26,7 +26,7 @@ const Banner = ({ image, title, text, border_line = false, logo }) => {
           style={{ minHeight: (winHeight - height) * (80 / 100) }}
         >
           <div className={style.gradient} />
-          <Media src={image} size="2560x1124" /> 
+          <Media src={image} size="2560x1124" />
           {title && (
             <>
               <div className={style.content}>

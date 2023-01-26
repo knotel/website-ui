@@ -24,6 +24,12 @@
   height: 100%;
 }
 
+.title {
+  font-size: 33px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
 .text {
   font-size: 18px;
   font-weight: 400;
@@ -80,4 +86,126 @@
 
 .item:hover .item_img {
   transform: scale(1.05);
+}
+
+@media (max-width: 1260px) {
+  .content {
+    padding: 50px 40px;
+    height: 100%;
+  }
+
+  .form {
+    padding-top: 0px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .text {
+    font-size: 16px;
+    padding-top: 12px;
+    line-height: 1.4;
+  }
+
+  .text span {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sizer {
+    padding-top: 40%;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .content {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 940px) {
+  .newsletterDialog {
+    max-width: 500px;
+  }
+
+  .left,
+  .right {
+    display: block;
+    width: 100%;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .content {
+    padding: 40px;
+    padding-top: 50px;
+  }
+
+  .left .content {
+    padding-top: 0px;
+  }
+
+  :global .newsletter_modal .section_border_middle {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 40px 30px;
+  }
+
+  .sizer {
+    padding-top: 60%;
+  }
+
+  .form_block {
+    display: block;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .text {
+    font-size: 14px;
+    padding-top: 10px;
+  }
+
+  .text span {
+    font-size: 14px;
+  }
+
+  :global .newsletter_modal .equal-height-JlocK {
+    height: auto !important;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 40px 30px;
+    padding-bottom: 24px;
+  }
+
+  .sizer {
+    padding-top: 64%;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .content {
+    padding: 40px 24px 30px;
+  }
 }

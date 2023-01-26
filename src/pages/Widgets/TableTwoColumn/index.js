@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { chunk } from "lodash";
 import { EqualHeight, EqualHeightElement } from "react-equal-height/clean";
-
 import LazyLoad from "../../../components/Lazyload";
 
 import style from "./style.module.css";
+import { AppContext } from "../../../Contexts/AppContext";
 
 const TableTwoColumn = ({ items = [] }) => {
+  const {
+    appContext: { winWidth },
+  } = useContext(AppContext);
   const chunks = chunk(items, 2);
 
   if (!items || items.length <= 0) {
@@ -17,7 +20,7 @@ const TableTwoColumn = ({ items = [] }) => {
       <div className={`c has_border`}>
         <EqualHeight>
           <LazyLoad
-            lazyLoadClass={`section_wrap col_2`}
+            lazyLoadClass={`section_wrap ${winWidth > 950 ? `col_2` : ""}`}
             animatedClass="animated"
             rootMargin="-20%"
           >
@@ -25,10 +28,7 @@ const TableTwoColumn = ({ items = [] }) => {
             <div className={`section_border_left`}></div>
             <div className={`section_border_right`}></div>
             <div className={`section_border_bottom`}></div>
-            <div className={`section_border_middle`}></div>
-            {items.length >= 2 && (
-              <div className={`section_border_middle_2`}></div>
-            )}
+            {winWidth > 950 && <div className={`section_border_middle`}></div>}
             {chunks.map((items, cIndex) =>
               items.map((item, index) => {
                 let islastRow = false;
@@ -49,22 +49,21 @@ const TableTwoColumn = ({ items = [] }) => {
                       rootMargin="-20%"
                     >
                       <div className={`section_border_bottom`}></div>
-                      <div className={style.title}>
-                        <EqualHeightElement name="TextTableTitle">
-                          {item.title}
-                        </EqualHeightElement>
-                      </div>
+                      <EqualHeightElement name="TextTableTitle">
+                        <div className={style.title}>{item.title}</div>
+                      </EqualHeightElement>
                     </LazyLoad>
-                    <EqualHeightElement name="TextTableText">
-                      <LazyLoad>
-                        <div className={style.table_text}>
+                    <div className={`two_column_content ${style.content}`}>
+                      <EqualHeightElement name="TextTableText">
+                        <LazyLoad>
                           <div
                             className={style.text}
                             dangerouslySetInnerHTML={{ __html: item.text }}
                           ></div>
-                        </div>
-                      </LazyLoad>
-                    </EqualHeightElement>
+                        </LazyLoad>
+                      </EqualHeightElement>
+                      <div className={`section_border_bottom`}></div>
+                    </div>
                   </div>
                 );
               })

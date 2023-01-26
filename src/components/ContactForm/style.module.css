@@ -3,6 +3,10 @@
   max-width: 600px;
 }
 
+.form_small {
+  max-width: 400px;
+}
+
 .form_title {
   font-size: 28px;
   font-weight: 300;
@@ -35,4 +39,37 @@
   font-size: 18px;
   font-weight: 350;
   line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .form {
+    padding-top: 0px;
+  }
+
+  .form_title {
+    font-size: 24px;
+  }
+
+  .text,
+  .text span {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 550px) {
+  .form_block {
+    display: block;
+    width: 100%;
+  }
+
+  .form_title {
+    font-size: 21px;
+  }
+
+  .text,
+  .text span {
+    font-size: 14px;
+  }
 }

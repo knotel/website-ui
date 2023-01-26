@@ -33,11 +33,15 @@
 
 .text_wrap {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.2;
   padding-top: 16px;
+}
+
+.label {
+  min-width: 60px;
 }
 
 .label,
@@ -49,4 +53,58 @@
   font-size: 15px;
   width: 15px;
   height: 15px;
+}
+
+@media(max-width:1200px) {
+  .content {
+    padding: 30px;
+  }
+
+  .left {
+    position: relative;
+  }
+
+  .left,
+  .right {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media(max-width:1024px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .address {
+    padding-top: 18px;
+  }
+
+  .details {
+    padding-top: 12px;
+  }
+
+  .right {
+    height: 40vh;
+  }
+}
+
+@media(max-width:740px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media(max-width:500px) {
+  .address {
+    padding-top: 16px;
+  }
+
+  .details {
+    padding-top: 8px;
+  }
+
+  .content {
+    padding: 30px 16px;
+  }
 }

@@ -54,6 +54,7 @@
   top: 32px;
   padding: 0;
 }
+
 .newsletterDialog {
   background-color: var(--cream-bg);
 }
@@ -62,6 +63,13 @@
   font-size: 14px;
   line-height: 1;
   font-weight: 400;
+}
+
+.x_icon {
+  width: 24px;
+  height: 24px;
+  font-weight: 400;
+  margin-left: 8px;
 }
 
 .closeText {
@@ -88,7 +96,7 @@
   visibility: hidden;
   opacity: 0;
   transition: all 0.4s;
-  transition-delay: 0.6s;
+  transition-delay: 0.2s;
 }
 
 .dialogOpen .dialogContent {
@@ -96,6 +104,27 @@
   visibility: visible;
   opacity: 1;
 }
+
+.header_dialog {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: var(--layout-bg);
+  transform: translateX(100%);
+  top: 0;
+  max-width: 1608px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.dialogOpen .header_dialog {
+  transform: translateX(0%);
+  visibility: visible;
+  opacity: 1;
+  transition: transform 0.4s, opacity 0.4s;
+  transition-delay: 0.2s;
+}
+
 
 :global(.enquireForm) {
   position: fixed;
@@ -109,7 +138,7 @@
   transition-delay: 0.6s;
   background-color: #fffbf5;
   height: 100%;
-  max-width: 600px;
+  max-width: 500px;
   margin: 0;
 }
 
@@ -140,5 +169,185 @@
   .col {
     display: block;
     width: auto;
+  }
+
+
+  .extraClass {
+    left: 30px;
+    top: 18px;
+  }
+
+  :global(.find_more) .dialogClose {
+    left: 24px;
+    padding: 24px 0px;
+  }
+
+  :global(.mobileFilter) .closeText {
+    display: block;
+  }
+
+  :global(.newsletter_dialog) .dialogContent {
+    width: calc(100% - 100px);
+  }
+
+  :global(.mobile_menu) .dialogContent {
+    width: 100%;
+  }
+
+  :global(.enquire) {
+    margin-top: 52px;
+  }
+
+  :global(.enquireForm) {
+    height: 100%;
+    max-width: 300px;
+  }
+
+  :global(.newsletter_dialog) .dialogClose {
+    padding: 12px 0px;
+  }
+
+  :global(.newsletter_dialog) .closeText {
+    display: block;
+  }
+
+  :global(.find_more) .dialogContent {
+    width: calc(100% - 80px);
+  }
+}
+
+
+@media(max-width:1260px) {
+  :global(.newsletter_dialog) .dialogClose {
+    padding: 16px;
+    right: 30px;
+  }
+
+  :global(.newsletter_dialog) .closeText {
+    font-size: 14px;
+  }
+
+  :global(.find_more) .dialogClose {
+    right: 30px;
+  }
+
+}
+
+@media(max-width: 1200px) {
+  :global(.enquire) {
+    padding: 40px;
+    padding-right: 40px;
+    margin-top: 72px;
+  }
+
+  :global(.enquireForm) {
+    height: 100%;
+    max-width: 500px;
+    overflow: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .extraClass {
+    top: 24px;
+    padding: 0;
+  }
+}
+
+@media(max-width:940px) {
+  :global(.find_more) .dialogContent {
+    width: calc(100% - 220px);
+  }
+}
+
+@media(max-width:740px) {
+  :global(.find_more) .dialogContent {
+    width: calc(100% - 180px);
+  }
+}
+
+@media (max-width: 820px) {
+  .extraClass {
+    left: 30px;
+    top: 20px;
+  }
+
+  :global(.enquire) {
+    padding: 30px;
+    padding-right: 30px;
+    margin-top: 64px;
+  }
+
+  :global(.enquireForm) {
+    height: 100%;
+    max-width: 400px;
+  }
+
+  :global(.find_more) .closeIcon {
+    font: 12px;
+  }
+
+  :global(.find_more) .closeText {
+    font-size: 14px;
+    padding-left: 10px;
+  }
+
+  :global(.mobileFilter) .dialogContent {
+    background-color: #EEE7DB;
+    height: 100%;
+    width: 100%;
+    margin-top: 85px;
+  }
+
+  :global(.mobileFilter) .dialogClose {
+    padding: 30px;
+    right: 30px;
+    padding-right: 0px;
+  }
+
+  :global(.mobileFilter) .closeIcon {
+    display: none;
+  }
+}
+
+@media(max-width:600px) {
+
+  :global(.newsletter_dialog) .dialogClose {
+    padding: 12px 0px;
+  }
+
+  :global(.find_more) .dialogContent {
+    width: calc(100% - 120px);
+  }
+
+  :global(.find_more) .dialogClose {
+    right: 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  :global(.enquireForm) {
+    min-width: 100%;
+  }
+
+}
+
+@media (max-width: 420px) {
+  .extraClass {
+    left: 30px;
+    top: 16px;
+  }
+
+  :global(.newsletter_dialog) .dialogContent {
+    width: calc(100% - 60px);
+  }
+
+
+  :global(.enquire) {
+    margin-top: 46px;
+  }
+
+  :global(.find_more) .dialogContent {
+    width: calc(100% - 60px);
   }
 }

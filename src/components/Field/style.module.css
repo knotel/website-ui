@@ -75,6 +75,7 @@
 .icon_label {
   display: inline-block;
 }
+
 .cream_btn {
   padding: 12px 16px;
 }
@@ -132,6 +133,11 @@
   vertical-align: middle;
 }
 
+.date_time {
+  padding-top: 0 !important;
+  /* margin-top: 25px; */
+}
+
 .date_time .react-datepicker-wrapper {
   display: flex;
   align-items: center;
@@ -142,7 +148,7 @@
   cursor: pointer;
   width: 100%;
   font-weight: 300;
-  padding: 12px 16px;
+  padding: 14px 16px;
   border: 1px solid var(--border-color);
   line-height: 1;
   color: var(--default-text);
@@ -176,7 +182,7 @@
   transform: translateY(-50%);
 }
 
-.fetching + span {
+.fetching+span {
   opacity: 0;
   visibility: hidden;
 }
@@ -230,7 +236,7 @@
 }
 
 .dropdown .textbox {
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .textbox::-webkit-input-placeholder {
@@ -419,11 +425,11 @@
   line-height: 1;
 }
 
-input[type="checkbox"]:checked + .inputCheckboxLabel .checkboxCenter {
+input[type="checkbox"]:checked+.inputCheckboxLabel .checkboxCenter {
   opacity: 1;
 }
 
-input[type="checkbox"]:checked + .inputCheckboxLabel .checkboxSquare {
+input[type="checkbox"]:checked+.inputCheckboxLabel .checkboxSquare {
   border-color: var(--common-button-color);
 }
 
@@ -490,49 +496,132 @@ input[type="checkbox"]:checked + .inputCheckboxLabel .checkboxSquare {
   position: relative;
 }
 
-.uploadArea {
-  margin-top: 60px;
-  max-width: 785px;
-  border: 1.5px dashed var(--text-box-placeholder);
-  padding: 60px;
+:global(.office_filter) .dropdown .textbox {
+  background-color: transparent;
 }
 
-.uploadArea img {
-  height: 65px;
-  width: auto;
+:global(.office_filter) .date_time input {
+  background-color: transparent;
 }
 
-.uploadArea h1 {
-  font-size: 33px;
-  padding-top: 30px;
+:global(.office_filter) .date_time {
+  margin-top: 16px;
 }
 
-.uploadArea h5 {
-  font-size: 13px;
-  padding-top: 15px;
+@media(max-width:1260px) {
+  .white_btn {
+    padding: 12px 20px;
+  }
+
+  :global(.newsletter_modal) .textbox {
+    padding: 12px;
+  }
+
+  :global(.newsletter_modal) .formGroup {
+    padding-top: 18px;
+  }
+
+  :global(.newsletter_modal) .form_button {
+    padding: 10px;
+    margin-top: 18px;
+  }
 }
 
-.uploadArea .uploadButtonOuter {
-  padding-top: 15px;
+@media(max-width:820px) {
+  .header_blue_btn {
+    padding: 8px 24px;
+  }
+
+  :global(.slider_head) .dropdown .textbox {
+    padding: 10px;
+  }
+
+  :global(.office_filter) .formGroup {
+    padding-top: 16px;
+  }
 }
 
-.uploadArea .button {
-  min-width: 0;
+@media (max-width: 740px) {
+
+  .banner_btn {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  .block_btn {
+    padding: 9px 12px;
+  }
+
+  .textbox {
+    padding: 12px 16px;
+  }
+
+  .formGroup {
+    padding-top: 18px;
+  }
+
+  .form_button {
+    line-height: 1.2;
+    padding: 12px 24px;
+    margin-top: 20px;
+  }
+
+  :global(.newsletter_modal) .formGroup {
+    padding-top: 12px;
+  }
+
+  :global(.no_match) .header_blue_btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
 }
 
-.uploadArea .errors {
-  color: var(--has-error);
+@media(max-width:600px) {
+  .formGroup {
+    padding-top: 16px;
+  }
+
+  .form_button {
+    margin-top: 18px;
+  }
+
+  .white_btn {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  :global(.newsletter_modal) .textbox {
+    padding: 10px;
+  }
+
+  :global(.newsletter_modal) .formGroup {
+    padding-top: 10px;
+  }
+
+  :global(.newsletter_modal) .form_button {
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 14px;
+  }
 }
 
-.uploadArea .errors > li {
-  padding-top: 15px;
+@media(max-width:500px) {
+  .form_button {
+    padding: 10px 20px;
+  }
+
+  :global(.slider_head) .dropdown .textbox {
+    padding: 8px;
+  }
+
+  :global(.no_match) .header_blue_btn {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
 }
 
-.uploadArea .innerErrors > li {
-  padding-top: 5px;
-  font-weight: bold;
-}
-
-.fileInput {
-  display: none;
+@media(max-width:420px) {
+  .formGroup {
+    padding-top: 14px;
+  }
 }

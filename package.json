@@ -1,6 +1,6 @@
 {
   "name": "knotel-website-ui",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "private": true,
   "description": "Made with create-react-library",
   "author": "",
@@ -38,6 +38,7 @@
     "cash-dom": "^8.1.1",
     "date-fns": "^2.28.0",
     "final-form": "^4.20.7",
+    "react-final-form-listeners": "^1.0.3",
     "google-map-react": "^2.2.0",
     "highcharts": "^10.1.0",
     "highcharts-react-official": "^3.1.0",

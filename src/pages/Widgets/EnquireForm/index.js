@@ -18,7 +18,7 @@ const EnquireForm = ({ title, text }) => {
       <EqualHeight>
         <div className={`c has_border`}>
           <LazyLoad
-            lazyLoadClass={`section_wrap col_40_60`}
+            lazyLoadClass={`section_wrap enquire_form col_40_60`}
             animatedClass="animated"
             rootMargin="-20%"
           >
@@ -27,10 +27,10 @@ const EnquireForm = ({ title, text }) => {
             <div className={`section_border_bottom`}></div>
             <div className={`section_border_middle`}></div>
             <div
-              className={style.enquire_wrap}
-              style={{ minHeight: (winHeight - height) * (80 / 100) }}
+              className={`form ${style.enquire_wrap}`}
+              style={{ minHeight: (winHeight - height) * (85 / 100) }}
             >
-              <div className={style.left}>
+              <div className={`form_left ${style.left}`}>
                 <EqualHeightElement name="EnquireForm">
                   <div className={`section_title`}>{title}</div>
                   <div
@@ -38,6 +38,7 @@ const EnquireForm = ({ title, text }) => {
                     dangerouslySetInnerHTML={{ __html: text }}
                   />
                 </EqualHeightElement>
+                <div className={`section_border_bottom`}></div>
               </div>
               <div className={style.right}>
                 <EqualHeightElement name="EnquireForm">

@@ -8,11 +8,16 @@ import LazyLoad from "../Lazyload";
 import style from "./style.module.css";
 import NormalLink from "../NormalLink";
 
-const AmenitiesModal = ({ content, onClose }) => {
+const AmenitiesModal = ({ content, onClose, close_icon }) => {
   return (
-    <DialogBox className={style.AmenitiesModal} onClose={onClose}>
+    <DialogBox
+      close_icon={close_icon}
+      className={style.amenities_modal}
+      classes={`find_more`}
+      onClose={onClose}
+    >
       <EqualHeight>
-        <div className={style.outer}>
+        <div className={`art_club ${style.outer}`}>
           <div className={style.top}>{content.top_title}</div>
           <LazyLoad
             lazyLoadClass={`section_wrap`}
@@ -35,21 +40,36 @@ const AmenitiesModal = ({ content, onClose }) => {
               <div className={`section_border_middle`}></div>
               <div className={style.left}>
                 <EqualHeightElement name="AmenitiesModal">
-                  <div className={style.img_wrap}>
-                    <div className={style.sizer} />
-                    <Media src={content.image} size="608x472px" />
+                  <div className={style.image}>
+                    <div className={style.img_wrap}>
+                      <div className={style.sizer} />
+                      <Media src={content.image} size="608x472px" />
+                    </div>
                   </div>
                 </EqualHeightElement>
+                <div className={`section_border_bottom`}></div>
               </div>
               <div className={`${style.right}`}>
                 <EqualHeightElement name="AmenitiesModal">
-                  <LazyLoad className={style.content}>
-                    <div className={style.title}>{content.title}</div>
-                    <div
-                      className={style.text}
-                      dangerouslySetInnerHTML={{ __html: content.text }}
-                    ></div>
-                  </LazyLoad>
+                  <div className={style.text_wrap}>
+                    <LazyLoad className={style.content}>
+                      <div className={style.title}>{content.title}</div>
+                      <div
+                        className={style.text}
+                        dangerouslySetInnerHTML={{ __html: content.text }}
+                      ></div>
+                    </LazyLoad>
+                    <div className={style.bottom}>
+                      <div className={style.next}>
+                        Next: {content.next_label}
+                        <NormalLink className={style.next_icon}>
+                          <span className={style.icon}>
+                            <i className="fa fa-arrow-right"></i>
+                          </span>
+                        </NormalLink>
+                      </div>
+                    </div>
+                  </div>
                   <div className={style.next}>
                     Next: {content.next_label}
                     <NormalLink className={style.next_icon}>

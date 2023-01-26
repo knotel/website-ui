@@ -16,8 +16,7 @@
   font-weight: 300;
 }
 
-.table_text {
-  min-height: 300px;
+.content {
   padding: 40px;
 }
 
@@ -33,4 +32,93 @@
   list-style: disc;
   padding-top: 0px;
   margin-left: 24px;
+}
+
+:global .two_column_content .section_border_bottom {
+  display: none;
+}
+
+@media(max-width:1024px) {
+  .title {
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 1.2;
+    padding: 30px;
+  }
+
+  .content {
+    padding: 30px;
+  }
+
+  .text p {
+    font-size: 14px;
+  }
+
+  .text ul,
+  .text li {
+    font-size: 14px;
+    padding-top: 28px;
+  }
+
+  .text li {
+    padding-top: 0px;
+    margin-left: 20px;
+  }
+}
+
+@media(max-width:950px) {
+  .item {
+    display: block;
+    width: 100%;
+  }
+
+  :global .two_column_content .equal-height-JlocK {
+    height: auto !important;
+  }
+
+  :global .two_column_content .section_border_bottom {
+    display: block;
+  }
+}
+
+@media(max-width:740px) {
+  .title {
+    font-size: 20px;
+    padding: 24px 30px;
+  }
+
+  .content {
+    padding: 24px 30px;
+  }
+
+  .text ul,
+  .text li {
+    padding-top: 24px;
+  }
+
+  .text li {
+    padding-top: 0px;
+    margin-left: 18px;
+  }
+}
+
+@media(max-width:600px) {
+  .title {
+    font-size: 18px;
+    padding: 18px 24px;
+  }
+
+  .content {
+    padding: 18px 24px;
+  }
+
+  .text ul,
+  .text li {
+    padding-top: 18px;
+  }
+
+  .text li {
+    padding-top: 0px;
+    margin-left: 14px;
+  }
 }

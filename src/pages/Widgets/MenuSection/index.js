@@ -15,7 +15,7 @@ const MenuSection = ({ items = [] }) => {
   }
 
   return (
-    <div className={`c has_border`}>
+    <div className={`c has_border menu_block`}>
       <LazyLoad
         lazyLoadClass={`section_wrap col_2`}
         animatedClass="animated"
@@ -52,7 +52,7 @@ const MenuSection = ({ items = [] }) => {
                       />
                     </div>
                     <div className={style.text_wrap}>
-                      <div className={`section_title`}>{item.title}</div>
+                      <div className={style.title}>{item.title}</div>
                       <div className={style.section_text}>
                         <div className={style.icon}>
                           <i className="fas fa-arrow-right"></i>
@@ -62,6 +62,7 @@ const MenuSection = ({ items = [] }) => {
                     </div>
                   </div>
                 </LazyLoad>
+                <div className={`section_border_bottom`}></div>
               </NormalLink>
             );
           })

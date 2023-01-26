@@ -5,11 +5,12 @@
 .form_block {
   display: flex;
   align-items: center;
+  overflow-x: auto;
   column-gap: 16px;
   justify-content: flex-end;
 }
 
-.form_block > div {
+.form_block>div {
   padding: 0;
 }
 
@@ -31,8 +32,14 @@
   display: inline-block;
   width: 75%;
   vertical-align: middle;
-  padding: 0px 40px;
 }
+
+.filters>form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .filter {
   position: relative;
 }
@@ -123,6 +130,12 @@
   padding-top: 8px;
 }
 
+.filter_block>div {
+  margin: 0;
+  padding: 0;
+}
+
+
 .label,
 .value {
   padding-left: 8px;
@@ -145,7 +158,7 @@
 
 .more {
   padding: 12px 16px;
-  margin-top: 24px;
+  margin-top: 20px;
 }
 
 .more:hover {
@@ -154,13 +167,265 @@
   border: 1px solid var(--coral-red);
 }
 
+
 .noitem {
+  padding: 0px 60px;
+  height: 100%;
+}
+
+.noitem_text {
   font-size: 28px;
   font-weight: 300;
   line-height: 1.2;
   text-align: center;
   padding-top: 100px;
+  border: 1px solid var(--border-color);
+  border-top: none;
+  height: 100%;
 }
+
 .top {
   position: relative;
+}
+
+.icons {
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  .wrapper {
+    padding: 30px;
+  }
+
+  .title {
+    display: block;
+    width: 100%;
+    padding: 30px 40px 0px;
+  }
+
+  .filters {
+    display: block;
+    width: 100% !important;
+  }
+
+  .filters>form {
+    padding: 30px 40px;
+    justify-content: flex-start;
+  }
+
+  .form_block {
+    display: block;
+    margin-left: -16px;
+  }
+
+  .filter_block {
+    display: inline-block;
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 1280px) {
+
+  .image,
+  .content {
+    display: block;
+    width: 100%;
+  }
+
+  .sizer {
+    padding-top: 60%;
+  }
+
+  .content {
+    padding-top: 20px;
+    padding-left: 0px;
+  }
+}
+
+
+@media (max-width: 1120px) {
+  .title {
+    padding: 30px;
+  }
+
+  .filters>form {
+    margin-top: -20px;
+    padding: 0px 30px 30px 30px;
+  }
+
+  .filter_block {
+    margin-top: 20px;
+  }
+}
+
+@media(max-width: 1024px) {
+  .noitem {
+    padding: 0px 40px;
+  }
+}
+
+@media (max-width: 820px) {
+  .left {
+    display: block;
+    width: 100%;
+  }
+
+  .right {
+    opacity: 1;
+    z-index: 2;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .map {
+    height: calc(100% - 200px);
+  }
+
+  .details {
+    display: block;
+  }
+
+  .image,
+  .content {
+    display: inline-block;
+    width: 50%;
+  }
+
+  .sizer {
+    padding-top: 80%;
+  }
+
+  .top_wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .title {
+    padding: 30px;
+    border: none;
+  }
+
+  .filters {
+    display: none;
+  }
+
+  .content {
+    padding-left: 20px;
+    padding-top: 0px;
+  }
+
+  .icons {
+    display: flex;
+    padding: 30px;
+    column-gap: 16px;
+    align-items: center;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    color: var(--border-color);
+    font-weight: bold;
+  }
+
+  .filter_padd .filter_block {
+    display: block;
+    margin: 0 20px;
+  }
+
+  .filter_padd {
+    height: 100%;
+  }
+
+  .map_block {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+    background-color: #EEE7DB;
+    padding: 24px 16px;
+  }
+
+  .map_block .image {
+    position: relative;
+  }
+
+  .map_block .country,
+  .map_block .address {
+    font-size: 12px;
+    line-height: 1.1;
+  }
+
+  .map_block .place {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .map_block .sizer {
+    padding-top: 50%;
+  }
+
+  .arrow_icon {
+    width: 30px;
+    height: 18px;
+  }
+
+  .modal_top {
+    padding: 30px;
+    font-size: 23px;
+    line-height: 1.2;
+    font-weight: 300;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .modal_form {
+    position: relative;
+    height: 100vh;
+  }
+
+  .map_block .content {
+    padding-left: 16px;
+  }
+
+  .hide {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  :global .google_map .section_item_border_bottom {
+    display: none;
+  }
+
+  :global .filter_midline .section_border_middle {
+    display: none;
+  }
+}
+
+@media(max-width: 740px) {
+  .noitem {
+    padding: 0px 30px;
+  }
+}
+
+@media (max-width: 620px) {
+
+  .image,
+  .content {
+    display: block;
+    width: 100%;
+  }
+
+  .content {
+    padding-left: 0px;
+  }
+
+  .sizer {
+    padding-top: 60%;
+  }
+
+  .wrapper {
+    padding: 24px;
+  }
+
 }

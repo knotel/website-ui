@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
-
-import { Button } from "../../../components/Field";
+import { Field, Form } from "react-final-form";
+import { Button, Dropdown } from "../../../components/Field";
+import { OnChange } from "react-final-form-listeners";
 import LazyLoad from "../../../components/Lazyload";
 import Media from "../../../components/Media";
 import NormalLink from "../../../components/NormalLink";
@@ -14,6 +15,20 @@ const sliderOptions = {
   pagination: false,
   perPage: 3,
   gap: "16px",
+  breakpoints: {
+    420: {
+      perPage: 1,
+    },
+    560: {
+      perPage: 2,
+    },
+    820: {
+      perPage: 2,
+    },
+    1440: {
+      perPage: 2,
+    },
+  },
 };
 
 const swiperSlideClick = (swiper, items, action = "next") => {
@@ -26,7 +41,8 @@ const swiperSlideClick = (swiper, items, action = "next") => {
   swiper.go(action === "prev" ? prevSlide : nextSlide);
 };
 
-const ImageSlider = ({ id = "", options, items = [], autoplay = false }) => {
+const ImageSlider = (props) => {
+  const { id = "", options, items = [], autoplay = false } = props;
   const [country, setCountry] = useState(0);
   const swiperRef = useRef(null);
 
@@ -70,66 +86,93 @@ const ImageSlider = ({ id = "", options, items = [], autoplay = false }) => {
           </div>
         </div>
       </LazyLoad>
-      <div className={`c`}>
-        <Slider swiperRef={swiperRef} autoplay={autoplay}>
-          <div className={style.slider}>
-            <Splide
-              options={sliderOptions}
-              ref={swiperRef}
-              aria-label="My Favorite Images"
-            >
-              {getItems().map((item, i) => {
-                return (
-                  <SplideSlide
-                    className={`section_item ${style.item}`}
-                    key={`location_${i}`}
-                  >
-                    <div className={style.item_content}>
-                      <NormalLink link={item.link} />
-                      <div className={style.item_bg}>
-                        <div className={style.sizer} />
-                        <Media
-                          className={style.item_img}
-                          src={item.image}
-                          size="608x472"
-                        />
-                      </div>
-                      <div className={style.text_wrap}>
-                        <div className={style.place}>{item.title}</div>
-                        <div className={style.view}>View Location</div>
-                      </div>
-                    </div>
-                  </SplideSlide>
-                );
-              })}
-            </Splide>
-            <div className={style.prev}>
-              <NormalLink
-                className={style.slider_icon}
-                onClick={() =>
-                  swiperSlideClick(swiperRef.current.splide, items, "prev")
-                }
-              >
-                <span className={style.icon}>
-                  <i className="fas fa-arrow-left"></i>
-                </span>
-              </NormalLink>
-            </div>
-            <div className={style.next}>
-              <NormalLink
-                className={style.slider_icon}
-                onClick={() =>
-                  swiperSlideClick(swiperRef.current.splide, items)
-                }
-              >
-                <span className={style.icon}>
-                  <i className="fas fa-arrow-right"></i>
-                </span>
-              </NormalLink>
-            </div>
-          </div>
-        </Slider>
+      <div className={`${style.filter} c`}>
+        <Form
+          onSubmit={(data) => console.log(data)}
+          render={({ handleSubmit, values }) => {
+            return (
+              <>
+                <form
+                  name="location_filter"
+                  className={`image_slider ${style.form}`}
+                  onSubmit={handleSubmit}
+                >
+                  <Field
+                    name="city"
+                    component={Dropdown}
+                    prompt="Locations"
+                    options={options.reduce((acc, curr) => {
+                      return { ...acc, [curr.toLowerCase()]: curr };
+                    }, {})}
+                    onChange={() => alert("sdyghiu")}
+                  />
+                  <OnChange name="city">
+                    {(value) => {
+                      setCountry(value.toLowerCase());
+                    }}
+                  </OnChange>
+                </form>
+              </>
+            );
+          }}
+        />
       </div>
+      <Slider swiperRef={swiperRef} autoplay={autoplay}>
+        <div className={style.slider}>
+          <Splide
+            options={sliderOptions}
+            ref={swiperRef}
+            aria-label="My Favorite Images"
+          >
+            {getItems().map((item, i) => {
+              return (
+                <SplideSlide
+                  className={`section_item ${style.item}`}
+                  key={`location_${i}`}
+                >
+                  <div className={style.item_content}>
+                    <NormalLink link={item.link} />
+                    <div className={style.item_bg}>
+                      <div className={style.sizer} />
+                      <Media
+                        className={style.item_img}
+                        src={item.image}
+                        size="608x472"
+                      />
+                    </div>
+                    <div className={style.text_wrap}>
+                      <div className={style.place}>{item.title}</div>
+                      <div className={style.view}>View Location</div>
+                    </div>
+                  </div>
+                </SplideSlide>
+              );
+            })}
+          </Splide>
+          <div className={style.prev}>
+            <NormalLink
+              className={style.slider_icon}
+              onClick={() =>
+                swiperSlideClick(swiperRef.current.splide, items, "prev")
+              }
+            >
+              <span className={style.icon}>
+                <i className="fas fa-arrow-left"></i>
+              </span>
+            </NormalLink>
+          </div>
+          <div className={style.next}>
+            <NormalLink
+              className={style.slider_icon}
+              onClick={() => swiperSlideClick(swiperRef.current.splide, items)}
+            >
+              <span className={style.icon}>
+                <i className="fas fa-arrow-right"></i>
+              </span>
+            </NormalLink>
+          </div>
+        </div>
+      </Slider>
     </>
   );
 };

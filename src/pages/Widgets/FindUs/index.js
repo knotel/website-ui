@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import { EqualHeight, EqualHeightElement } from "react-equal-height/clean";
 
 import GoogleMaps from "../../../components/GoogleMaps";
 import LazyLoad from "../../../components/Lazyload";
+import { AppContext } from "../../../Contexts/AppContext";
 
 import style from "./style.module.css";
 
-const FindUs = ({ title, address, items = [], loc = {}, APIKey, markerIcon }) => {
+const FindUs = ({
+  title,
+  address,
+  items = [],
+  loc = {},
+  APIKey,
+  markerIcon,
+}) => {
+  const {
+    appContext: { winWidth },
+  } = useContext(AppContext);
   return (
     <>
       <EqualHeight>
@@ -20,7 +31,7 @@ const FindUs = ({ title, address, items = [], loc = {}, APIKey, markerIcon }) =>
             <div className={`section_border_left`}></div>
             <div className={`section_border_right`}></div>
             <div className={`section_border_bottom`}></div>
-            <div className={`section_border_middle`}></div>
+            {winWidth > 1200 && <div className={`section_border_middle`}></div>}
             <div className={style.left}>
               <EqualHeightElement name="FindUS">
                 <div className={style.content}>
@@ -43,6 +54,7 @@ const FindUs = ({ title, address, items = [], loc = {}, APIKey, markerIcon }) =>
                     })}
                   </div>
                 </div>
+                <div className={`section_border_bottom`}></div>
               </EqualHeightElement>
             </div>
             <div className={style.right}>

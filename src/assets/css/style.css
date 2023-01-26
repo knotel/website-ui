@@ -3,8 +3,7 @@
   font-family: "Epilogue";
   src: url("../fonts/Epilogue/Epilogue-Regular.eot");
   src: local("Epilogue Regular"), local("Epilogue-Regular"),
-    url("../fonts/Epilogue/Epilogue-Regular.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Epilogue/Epilogue-Regular.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Epilogue/Epilogue-Regular.woff2") format("woff2"),
     url("../fonts/Epilogue/Epilogue-Regular.woff") format("woff"),
     url("../fonts/Epilogue/Epilogue-Regular.ttf") format("truetype"),
@@ -18,8 +17,7 @@
   font-family: "Epilogue";
   src: url("../fonts/Epilogue/Epilogue-Italic.eot");
   src: local("Epilogue Italic"), local("Epilogue-Italic"),
-    url("../fonts/Epilogue/Epilogue-Italic.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Epilogue/Epilogue-Italic.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Epilogue/Epilogue-Italic.woff2") format("woff2"),
     url("../fonts/Epilogue/Epilogue-Italic.woff") format("woff"),
     url("../fonts/Epilogue/Epilogue-Italic.ttf") format("truetype"),
@@ -33,8 +31,7 @@
   font-family: "Epilogue";
   src: url("../fonts/Epilogue/Epilogue-Light.eot");
   src: local("Epilogue Light"), local("Epilogue-Light"),
-    url("../fonts/Epilogue/Epilogue-Light.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Epilogue/Epilogue-Light.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Epilogue/Epilogue-Light.woff2") format("woff2"),
     url("../fonts/Epilogue/Epilogue-Light.woff") format("woff"),
     url("../fonts/Epilogue/Epilogue-Light.ttf") format("truetype"),
@@ -48,13 +45,11 @@
   font-family: "Epilogue";
   src: url("../fonts/Epilogue/Epilogue-LightItalic.eot");
   src: local("Epilogue Light Italic"), local("Epilogue-LightItalic"),
-    url("../fonts/Epilogue/Epilogue-LightItalic.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Epilogue/Epilogue-LightItalic.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Epilogue/Epilogue-LightItalic.woff2") format("woff2"),
     url("../fonts/Epilogue/Epilogue-LightItalic.woff") format("woff"),
     url("../fonts/Epilogue/Epilogue-LightItalic.ttf") format("truetype"),
-    url("../fonts/Epilogue/Epilogue-LightItalic.svg#Epilogue-LightItalic")
-      format("svg");
+    url("../fonts/Epilogue/Epilogue-LightItalic.svg#Epilogue-LightItalic") format("svg");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -64,8 +59,7 @@
   font-family: "Epilogue";
   src: url("../fonts/Epilogue/Epilogue-Medium.eot");
   src: local("Epilogue Medium"), local("Epilogue-Medium"),
-    url("../fonts/Epilogue/Epilogue-Medium.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Epilogue/Epilogue-Medium.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Epilogue/Epilogue-Medium.woff2") format("woff2"),
     url("../fonts/Epilogue/Epilogue-Medium.woff") format("woff"),
     url("../fonts/Epilogue/Epilogue-Medium.ttf") format("truetype"),
@@ -79,13 +73,11 @@
   font-family: "Epilogue";
   src: url("../fonts/Epilogue/Epilogue-SemiBold.eot");
   src: local("Epilogue SemiBold"), local("Epilogue-SemiBold"),
-    url("../fonts/Epilogue/Epilogue-SemiBold.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Epilogue/Epilogue-SemiBold.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Epilogue/Epilogue-SemiBold.woff2") format("woff2"),
     url("../fonts/Epilogue/Epilogue-SemiBold.woff") format("woff"),
     url("../fonts/Epilogue/Epilogue-SemiBold.ttf") format("truetype"),
-    url("../fonts/Epilogue/Epilogue-SemiBold.svg#Epilogue-SemiBold")
-      format("svg");
+    url("../fonts/Epilogue/Epilogue-SemiBold.svg#Epilogue-SemiBold") format("svg");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -95,13 +87,11 @@
   font-family: "Epilogue";
   src: url("../fonts/Epilogue/Epilogue-SemiBoldItalic.eot");
   src: local("Epilogue SemiBold Italic"), local("Epilogue-SemiBoldItalic"),
-    url("../fonts/Epilogue/Epilogue-SemiBoldItalic.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Epilogue/Epilogue-SemiBoldItalic.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Epilogue/Epilogue-SemiBoldItalic.woff2") format("woff2"),
     url("../fonts/Epilogue/Epilogue-SemiBoldItalic.woff") format("woff"),
     url("../fonts/Epilogue/Epilogue-SemiBoldItalic.ttf") format("truetype"),
-    url("../fonts/Epilogue/Epilogue-SemiBoldItalic.svg#Epilogue-SemiBoldItalic")
-      format("svg");
+    url("../fonts/Epilogue/Epilogue-SemiBoldItalic.svg#Epilogue-SemiBoldItalic") format("svg");
   font-weight: 600;
   font-style: italic;
   font-display: swap;
@@ -111,8 +101,7 @@
   font-family: "Epilogue";
   src: url("../fonts/Epilogue/Epilogue-Thin.eot");
   src: local("Epilogue Thin"), local("Epilogue-Thin"),
-    url("../fonts/Epilogue/Epilogue-Thin.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Epilogue/Epilogue-Thin.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Epilogue/Epilogue-Thin.woff2") format("woff2"),
     url("../fonts/Epilogue/Epilogue-Thin.woff") format("woff"),
     url("../fonts/Epilogue/Epilogue-Thin.ttf") format("truetype"),
@@ -126,13 +115,11 @@
   font-family: "Epilogue";
   src: url("../fonts/Epilogue/Epilogue-ThinItalic.eot");
   src: local("Epilogue Thin Italic"), local("Epilogue-ThinItalic"),
-    url("../fonts/Epilogue/Epilogue-ThinItalic.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Epilogue/Epilogue-ThinItalic.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Epilogue/Epilogue-ThinItalic.woff2") format("woff2"),
     url("../fonts/Epilogue/Epilogue-ThinItalic.woff") format("woff"),
     url("../fonts/Epilogue/Epilogue-ThinItalic.ttf") format("truetype"),
-    url("../fonts/Epilogue/Epilogue-ThinItalic.svg#Epilogue-ThinItalic")
-      format("svg");
+    url("../fonts/Epilogue/Epilogue-ThinItalic.svg#Epilogue-ThinItalic") format("svg");
   font-weight: 100;
   font-style: italic;
   font-display: swap;
@@ -142,13 +129,11 @@
   font-family: "Epilogue";
   src: url("../fonts/Epilogue/Epilogue-MediumItalic.eot");
   src: local("Epilogue Medium Italic"), local("Epilogue-MediumItalic"),
-    url("../fonts/Epilogue/Epilogue-MediumItalic.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Epilogue/Epilogue-MediumItalic.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Epilogue/Epilogue-MediumItalic.woff2") format("woff2"),
     url("../fonts/Epilogue/Epilogue-MediumItalic.woff") format("woff"),
     url("../fonts/Epilogue/Epilogue-MediumItalic.ttf") format("truetype"),
-    url("../fonts/Epilogue/Epilogue-MediumItalic.svg#Epilogue-MediumItalic")
-      format("svg");
+    url("../fonts/Epilogue/Epilogue-MediumItalic.svg#Epilogue-MediumItalic") format("svg");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -158,8 +143,7 @@
   font-family: "Epilogue";
   src: url("../fonts/Epilogue/Epilogue-Black.eot");
   src: local("Epilogue Black"), local("Epilogue-Black"),
-    url("../fonts/Epilogue/Epilogue-Black.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Epilogue/Epilogue-Black.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Epilogue/Epilogue-Black.woff2") format("woff2"),
     url("../fonts/Epilogue/Epilogue-Black.woff") format("woff"),
     url("../fonts/Epilogue/Epilogue-Black.ttf") format("truetype"),
@@ -173,13 +157,11 @@
   font-family: "Epilogue";
   src: url("../fonts/Epilogue/Epilogue-BlackItalic.eot");
   src: local("Epilogue Black Italic"), local("Epilogue-BlackItalic"),
-    url("../fonts/Epilogue/Epilogue-BlackItalic.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Epilogue/Epilogue-BlackItalic.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Epilogue/Epilogue-BlackItalic.woff2") format("woff2"),
     url("../fonts/Epilogue/Epilogue-BlackItalic.woff") format("woff"),
     url("../fonts/Epilogue/Epilogue-BlackItalic.ttf") format("truetype"),
-    url("../fonts/Epilogue/Epilogue-BlackItalic.svg#Epilogue-BlackItalic")
-      format("svg");
+    url("../fonts/Epilogue/Epilogue-BlackItalic.svg#Epilogue-BlackItalic") format("svg");
   font-weight: 900;
   font-style: italic;
   font-display: swap;
@@ -189,8 +171,7 @@
   font-family: "Epilogue";
   src: url("../fonts/Epilogue/Epilogue-Bold.eot");
   src: local("Epilogue Bold"), local("Epilogue-Bold"),
-    url("../fonts/Epilogue/Epilogue-Bold.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Epilogue/Epilogue-Bold.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Epilogue/Epilogue-Bold.woff2") format("woff2"),
     url("../fonts/Epilogue/Epilogue-Bold.woff") format("woff"),
     url("../fonts/Epilogue/Epilogue-Bold.ttf") format("truetype"),
@@ -204,13 +185,11 @@
   font-family: "Epilogue";
   src: url("../fonts/Epilogue/Epilogue-BoldItalic.eot");
   src: local("Epilogue Bold Italic"), local("Epilogue-BoldItalic"),
-    url("../fonts/Epilogue/Epilogue-BoldItalic.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Epilogue/Epilogue-BoldItalic.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Epilogue/Epilogue-BoldItalic.woff2") format("woff2"),
     url("../fonts/Epilogue/Epilogue-BoldItalic.woff") format("woff"),
     url("../fonts/Epilogue/Epilogue-BoldItalic.ttf") format("truetype"),
-    url("../fonts/Epilogue/Epilogue-BoldItalic.svg#Epilogue-BoldItalic")
-      format("svg");
+    url("../fonts/Epilogue/Epilogue-BoldItalic.svg#Epilogue-BoldItalic") format("svg");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -220,13 +199,11 @@
   font-family: "Epilogue";
   src: url("../fonts/Epilogue/Epilogue-ExtraBold.eot");
   src: local("Epilogue ExtraBold"), local("Epilogue-ExtraBold"),
-    url("../fonts/Epilogue/Epilogue-ExtraBold.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Epilogue/Epilogue-ExtraBold.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Epilogue/Epilogue-ExtraBold.woff2") format("woff2"),
     url("../fonts/Epilogue/Epilogue-ExtraBold.woff") format("woff"),
     url("../fonts/Epilogue/Epilogue-ExtraBold.ttf") format("truetype"),
-    url("../fonts/Epilogue/Epilogue-ExtraBold.svg#Epilogue-ExtraBold")
-      format("svg");
+    url("../fonts/Epilogue/Epilogue-ExtraBold.svg#Epilogue-ExtraBold") format("svg");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -236,13 +213,11 @@
   font-family: "Epilogue";
   src: url("../fonts/Epilogue/Epilogue-ExtraBoldItalic.eot");
   src: local("Epilogue ExtraBold Italic"), local("Epilogue-ExtraBoldItalic"),
-    url("../fonts/Epilogue/Epilogue-ExtraBoldItalic.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Epilogue/Epilogue-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Epilogue/Epilogue-ExtraBoldItalic.woff2") format("woff2"),
     url("../fonts/Epilogue/Epilogue-ExtraBoldItalic.woff") format("woff"),
     url("../fonts/Epilogue/Epilogue-ExtraBoldItalic.ttf") format("truetype"),
-    url("../fonts/Epilogue/Epilogue-ExtraBoldItalic.svg#Epilogue-ExtraBoldItalic")
-      format("svg");
+    url("../fonts/Epilogue/Epilogue-ExtraBoldItalic.svg#Epilogue-ExtraBoldItalic") format("svg");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -252,13 +227,11 @@
   font-family: "Epilogue";
   src: url("../fonts/Epilogue/Epilogue-ExtraLight.eot");
   src: local("Epilogue ExtraLight"), local("Epilogue-ExtraLight"),
-    url("../fonts/Epilogue/Epilogue-ExtraLight.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Epilogue/Epilogue-ExtraLight.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Epilogue/Epilogue-ExtraLight.woff2") format("woff2"),
     url("../fonts/Epilogue/Epilogue-ExtraLight.woff") format("woff"),
     url("../fonts/Epilogue/Epilogue-ExtraLight.ttf") format("truetype"),
-    url("../fonts/Epilogue/Epilogue-ExtraLight.svg#Epilogue-ExtraLight")
-      format("svg");
+    url("../fonts/Epilogue/Epilogue-ExtraLight.svg#Epilogue-ExtraLight") format("svg");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -268,13 +241,11 @@
   font-family: "Epilogue";
   src: url("../fonts/Epilogue/Epilogue-ExtraLightItalic.eot");
   src: local("Epilogue ExtraLight Italic"), local("Epilogue-ExtraLightItalic"),
-    url("../fonts/Epilogue/Epilogue-ExtraLightItalic.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Epilogue/Epilogue-ExtraLightItalic.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Epilogue/Epilogue-ExtraLightItalic.woff2") format("woff2"),
     url("../fonts/Epilogue/Epilogue-ExtraLightItalic.woff") format("woff"),
     url("../fonts/Epilogue/Epilogue-ExtraLightItalic.ttf") format("truetype"),
-    url("../fonts/Epilogue/Epilogue-ExtraLightItalic.svg#Epilogue-ExtraLightItalic")
-      format("svg");
+    url("../fonts/Epilogue/Epilogue-ExtraLightItalic.svg#Epilogue-ExtraLightItalic") format("svg");
   font-weight: 200;
   font-style: italic;
   font-display: swap;
@@ -284,8 +255,7 @@
   font-family: "Gelasio";
   src: url("../fonts/Gelasio/Gelasio-Regular.eot");
   src: local("Gelasio Regular"), local("Gelasio-Regular"),
-    url("../fonts/Gelasio/Gelasio-Regular.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Gelasio/Gelasio-Regular.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Gelasio/Gelasio-Regular.woff2") format("woff2"),
     url("../fonts/Gelasio/Gelasio-Regular.woff") format("woff"),
     url("../fonts/Gelasio/Gelasio-Regular.ttf") format("truetype"),
@@ -299,8 +269,7 @@
   font-family: "Gelasio";
   src: url("../fonts/Gelasio/Gelasio-Italic.eot");
   src: local("Gelasio Italic"), local("Gelasio-Italic"),
-    url("../fonts/Gelasio/Gelasio-Italic.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Gelasio/Gelasio-Italic.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Gelasio/Gelasio-Italic.woff2") format("woff2"),
     url("../fonts/Gelasio/Gelasio-Italic.woff") format("woff"),
     url("../fonts/Gelasio/Gelasio-Italic.ttf") format("truetype"),
@@ -314,8 +283,7 @@
   font-family: "Gelasio";
   src: url("../fonts/Gelasio/Gelasio-Medium.eot");
   src: local("Gelasio Medium"), local("Gelasio-Medium"),
-    url("../fonts/Gelasio/Gelasio-Medium.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Gelasio/Gelasio-Medium.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Gelasio/Gelasio-Medium.woff2") format("woff2"),
     url("../fonts/Gelasio/Gelasio-Medium.woff") format("woff"),
     url("../fonts/Gelasio/Gelasio-Medium.ttf") format("truetype"),
@@ -329,13 +297,11 @@
   font-family: "Gelasio";
   src: url("../fonts/Gelasio/Gelasio-MediumItalic.eot");
   src: local("Gelasio Medium Italic"), local("Gelasio-MediumItalic"),
-    url("../fonts/Gelasio/Gelasio-MediumItalic.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Gelasio/Gelasio-MediumItalic.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Gelasio/Gelasio-MediumItalic.woff2") format("woff2"),
     url("../fonts/Gelasio/Gelasio-MediumItalic.woff") format("woff"),
     url("../fonts/Gelasio/Gelasio-MediumItalic.ttf") format("truetype"),
-    url("../fonts/Gelasio/Gelasio-MediumItalic.svg#Gelasio-MediumItalic")
-      format("svg");
+    url("../fonts/Gelasio/Gelasio-MediumItalic.svg#Gelasio-MediumItalic") format("svg");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -359,13 +325,11 @@
   font-family: "Gelasio";
   src: url("../fonts/Gelasio/Gelasio-BoldItalic.eot");
   src: local("Gelasio Bold Italic"), local("Gelasio-BoldItalic"),
-    url("../fonts/Gelasio/Gelasio-BoldItalic.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Gelasio/Gelasio-BoldItalic.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Gelasio/Gelasio-BoldItalic.woff2") format("woff2"),
     url("../fonts/Gelasio/Gelasio-BoldItalic.woff") format("woff"),
     url("../fonts/Gelasio/Gelasio-BoldItalic.ttf") format("truetype"),
-    url("../fonts/Gelasio/Gelasio-BoldItalic.svg#Gelasio-BoldItalic")
-      format("svg");
+    url("../fonts/Gelasio/Gelasio-BoldItalic.svg#Gelasio-BoldItalic") format("svg");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -375,8 +339,7 @@
   font-family: "Gelasio";
   src: url("../fonts/Gelasio/Gelasio-SemiBold.eot");
   src: local("Gelasio SemiBold"), local("Gelasio-SemiBold"),
-    url("../fonts/Gelasio/Gelasio-SemiBold.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Gelasio/Gelasio-SemiBold.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Gelasio/Gelasio-SemiBold.woff2") format("woff2"),
     url("../fonts/Gelasio/Gelasio-SemiBold.woff") format("woff"),
     url("../fonts/Gelasio/Gelasio-SemiBold.ttf") format("truetype"),
@@ -390,13 +353,11 @@
   font-family: "Gelasio";
   src: url("../fonts/Gelasio/Gelasio-SemiBoldItalic.eot");
   src: local("Gelasio SemiBold Italic"), local("Gelasio-SemiBoldItalic"),
-    url("../fonts/Gelasio/Gelasio-SemiBoldItalic.eot?#iefix")
-      format("embedded-opentype"),
+    url("../fonts/Gelasio/Gelasio-SemiBoldItalic.eot?#iefix") format("embedded-opentype"),
     url("../fonts/Gelasio/Gelasio-SemiBoldItalic.woff2") format("woff2"),
     url("../fonts/Gelasio/Gelasio-SemiBoldItalic.woff") format("woff"),
     url("../fonts/Gelasio/Gelasio-SemiBoldItalic.ttf") format("truetype"),
-    url("../fonts/Gelasio/Gelasio-SemiBoldItalic.svg#Gelasio-SemiBoldItalic")
-      format("svg");
+    url("../fonts/Gelasio/Gelasio-SemiBoldItalic.svg#Gelasio-SemiBoldItalic") format("svg");
   font-weight: 600;
   font-style: italic;
   font-display: swap;
@@ -408,11 +369,9 @@
   --footer-bg: #eee7db;
   --border-color: #000000;
   --beige-bg: #eee7db;
-  --footer-bottom-bg: linear-gradient(
-      0deg,
+  --footer-bottom-bg: linear-gradient(0deg,
       rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.2)
-    ),
+      rgba(0, 0, 0, 0.2)),
     #000000;
   --text-white: #fffbf5;
   --cream-bg: #fffbf5;
@@ -588,7 +547,7 @@ textarea {
   clear: both;
 }
 
-body > iframe {
+body>iframe {
   display: none !important;
 }
 
@@ -626,7 +585,7 @@ body > iframe {
   padding-bottom: 30px;
 }
 
-.sectionPadding + .sectionPadding {
+.sectionPadding+.sectionPadding {
   padding-top: 0;
 }
 
@@ -654,7 +613,7 @@ body > iframe {
 .section_border_right,
 .section_border_middle,
 .section_border_middle_2 {
-  z-index: 999;
+  z-index: 10;
 }
 
 .section_border_top,
@@ -710,6 +669,7 @@ body > iframe {
   background-color: var(--border-color);
   transition: height 5s;
 }
+
 .col_3 .section_border_middle,
 .col_33_66 .section_border_middle {
   left: 33.33%;
@@ -764,6 +724,7 @@ body > iframe {
   background-color: var(--border-color);
   transition: height 5s;
 }
+
 .animated .section_border_top,
 .animated .section_border_bottom,
 .animated .section_item_border_bottom,
@@ -786,8 +747,8 @@ body > iframe {
   height: 100%;
 }
 
-.has_border + .has_border .section_wrap .section_border_top,
-.has_border + .has_border .slider .section_border_top_full {
+.has_border+.has_border .section_wrap .section_border_top,
+.has_border+.has_border .slider .section_border_top_full {
   display: none;
 }
 
@@ -797,4 +758,67 @@ body > iframe {
 
 .listingSelected {
   background-color: var(--breeze-bg);
+}
+
+.react-datepicker-popper {
+  z-index: 50000 !important;
+}
+
+@media (max-width: 1024px) {
+  .c {
+    margin: auto;
+    padding: 0 40px;
+  }
+
+  .enquire form {
+    max-width: 400px;
+  }
+
+  .section_title {
+    font-size: 28px;
+  }
+
+  .col_20 .section_border_middle {
+    left: 15%;
+  }
+
+  .col_20 .section_border_middle_2 {
+    left: 85%;
+  }
+}
+
+@media (max-width: 740px) {
+  .c {
+    margin: auto;
+    padding: 0 30px;
+  }
+
+  .section_title {
+    font-size: 24px;
+  }
+
+  .col_20 .section_border_middle {
+    left: 10%;
+  }
+
+  .col_20 .section_border_middle_2 {
+    left: 90%;
+  }
+}
+
+@media(max-width:600px) {
+  .col_20 .section_border_middle {
+    display: none;
+  }
+
+  .col_20 .section_border_middle_2 {
+    display: none;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .section_title {
+    font-size: 21px;
+  }
 }

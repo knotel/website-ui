@@ -43,7 +43,7 @@ const TextImageSlider = ({
       <EqualHeight>
         <div className={`c has_border`}>
           <LazyLoad
-            lazyLoadClass={`section_wrap`}
+            lazyLoadClass={`section_wrap text_img_slider`}
             animatedClass="animated"
             rootMargin="-20%"
           >
@@ -87,28 +87,31 @@ const TextImageSlider = ({
                       className={`${style.left} ${colorClass[item.bg_color]}`}
                     >
                       {ready ? (
-                        <EqualHeightElement name="TextImageSliderContent">
-                          <div className={style.abs}>
-                            <LazyLoad className={style.content}>
-                              <div className={style.title}>{item.title}</div>
-                              <div className={style.text}>{item.text}</div>
-                              <div className={style.button}>
-                                <Button
-                                  buttonType={
-                                    item.white_button === true
-                                      ? "transparent_btn"
-                                      : ""
-                                  }
-                                  className={style.btn_padd}
-                                  onClick={item.on_button_click}
-                                  label={item.button_label}
-                                  link={item.button_url}
-                                />
-                              </div>
-                            </LazyLoad>
-                          </div>
-                        </EqualHeightElement>
+                        <>
+                          <EqualHeightElement name="TextImageSliderContent">
+                            <div className={style.abs}>
+                              <LazyLoad className={style.content}>
+                                <div className={style.title}>{item.title}</div>
+                                <div className={style.text}>{item.text}</div>
+                                <div className={style.button}>
+                                  <Button
+                                    buttonType={
+                                      item.white_button === true
+                                        ? "transparent_btn"
+                                        : ""
+                                    }
+                                    className={style.btn_padd}
+                                    onClick={item.on_button_click}
+                                    label={item.button_label}
+                                    link={item.button_url}
+                                  />
+                                </div>
+                              </LazyLoad>
+                            </div>
+                          </EqualHeightElement>
+                        </>
                       ) : null}
+                      <div className={`section_border_bottom`}></div> 
                     </div>
                     <div className={style.right}>
                       <EqualHeightElement name="TextImageSliderContent">

@@ -13,10 +13,16 @@ const EnquireModal = ({
   locationOptions,
   sizeOptions,
   content,
+  close_icon,
   interestOptions,
 }) => {
   return (
-    <DialogBox className="enquireForm" onClose={onClose} extraClass>
+    <DialogBox
+      close_icon={close_icon}
+      className="enquireForm"
+      onClose={onClose}
+      extraClass
+    >
       <div className="enquire">
         <ContactForm
           onSubmit={onSubmit}

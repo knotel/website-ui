@@ -1,6 +1,9 @@
 .head {
   padding: 40px;
   font-size: 28px !important;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.2;
 }
 
 .item {
@@ -52,4 +55,125 @@
 .link:hover {
   color: var(--coral-red);
   border-bottom: 1px solid var(--coral-red);
+}
+
+@media(max-width:1400px) {
+  .head {
+    padding: 30px;
+  }
+
+  .content {
+    padding: 40px;
+  }
+}
+
+@media(max-width:1280px) {
+  .content {
+    padding: 30px;
+    padding-bottom: 40px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .link {
+    padding-top: 20px;
+  }
+
+}
+
+
+@media(max-width:1024px) {
+  .content {
+    padding: 24px;
+    padding-bottom: 30px;
+  }
+}
+
+@media(max-width:940px) {
+  .item {
+    width: 50%;
+  }
+
+  .content {
+    padding: 40px;
+  }
+}
+
+@media(max-width:820px) {
+  .content {
+    padding: 30px;
+  }
+}
+
+@media(max-width:700px) {
+  .sizer {
+    padding-top: 129%;
+  }
+}
+
+@media(max-width:600px) {
+  .content {
+    padding: 24px;
+    padding-bottom: 30px;
+  }
+
+  .text {
+    padding-top: 16px;
+  }
+
+  .link {
+    padding-top: 24px;
+  }
+}
+
+@media(max-width:550px) {
+  .item {
+    display: block;
+    width: 100%;
+  }
+
+  .content {
+    padding: 40px;
+  }
+
+  .sizer {
+    padding-top: 100%;
+  }
+
+  :global .amenities .section_border_middle {
+    display: none;
+  }
+}
+
+@media(max-width:500px) {
+  .content {
+    padding: 30px;
+    padding-bottom: 40px;
+  }
+}
+
+@media(max-width:420px) {
+  .head {
+    padding: 24px;
+  }
+
+  .sizer {
+    padding-top: 115%;
+  }
+
+  .content {
+    padding: 24px;
+    padding-bottom: 30px;
+  }
+
+  .title {
+    font-size: 18px;
+    padding-top: 16px;
+  }
+
+  .link {
+    padding-top: 16px;
+  }
 }

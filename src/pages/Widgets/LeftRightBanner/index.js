@@ -37,6 +37,7 @@ const LeftRightBanner = ({
           className={style.left_right_banner}
           style={{ minHeight: (winHeight - height) * (80 / 100) }}
         >
+          <div className={style.gradient} />
           <div className={`${style.left} ${colorClass[bg_color]}`}>
             <div className={style.content_wrapper}>
               <div className={style.title}>{title}</div>

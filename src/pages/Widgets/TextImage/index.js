@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { get } from "lodash";
 import { EqualHeight, EqualHeightElement } from "react-equal-height/clean";
 
@@ -7,8 +7,13 @@ import { Button } from "../../../components/Field";
 import LazyLoad from "../../../components/Lazyload";
 
 import style from "./style.module.css";
+import { AppContext } from "../../../Contexts/AppContext";
 
 const TextImage = ({ items = [], className = false }) => {
+  const {
+    appContext: { winWidth },
+  } = useContext(AppContext);
+
   const colorClass = {
     red: style.redBg,
   };
@@ -33,8 +38,8 @@ const TextImage = ({ items = [], className = false }) => {
               items.length > 0 &&
               items.map((item, i) => (
                 <div
-                  className={`${style.section} ${
-                    get(item, "image_position") === "right"
+                  className={`text_img ${style.section} ${
+                    winWidth >= 950 && get(item, "image_position") === "right"
                       ? `col_50_50 ${style.right_side}`
                       : `col_50_50`
                   }`}
@@ -54,6 +59,7 @@ const TextImage = ({ items = [], className = false }) => {
                       </div>
                     </EqualHeightElement>
                   </div>
+                  <div className={`section_border_bottom`}></div>
                   <div
                     className={`${style.right} ${colorClass[item.bg_color]}`}
                   >

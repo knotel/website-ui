@@ -81,6 +81,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  column-gap: 20px;
   padding: 36px 40px 50px;
 }
 
@@ -107,4 +108,175 @@
 
 .icon.active {
   background-color: #000;
+}
+
+:global .left .section_border_bottom {
+  display: none;
+}
+
+@media(max-width:1400px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .button {
+    padding-top: 32px;
+  }
+}
+
+@media(max-width:1200px) {
+  .title {
+    font-size: 22px;
+  }
+
+  .abs {
+    padding: 30px;
+  }
+
+  .img {
+    padding: 30px;
+    padding-bottom: 0px;
+  }
+
+  .bottom {
+    padding: 26px 30px 36px;
+  }
+}
+
+@media(max-width:1120px) {
+  .text_image {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    display: block;
+    width: 100%;
+  }
+
+  .sizer {
+    padding-top: 50%;
+  }
+
+  .abs {
+    position: relative;
+    padding: 40px 30px;
+    transform: none;
+  }
+
+  .img {
+    padding: 30px;
+    padding-bottom: 10px;
+  }
+
+  :global .left .section_border_bottom {
+    display: block;
+
+  }
+
+  :global .text_img_slider .equal-height-JlocK {
+    height: auto !important;
+  }
+
+  :global .text_img_slider .section_border_middle {
+    display: none;
+  }
+}
+
+@media(max-width:820px) {
+  .btn_padd {
+    padding: 10px 12px;
+  }
+
+  .sizer {
+    padding-top: 57%;
+  }
+}
+
+
+@media(max-width:740px) {
+  .text {
+    font-size: 14px;
+  }
+
+  .img {
+    padding-bottom: 0px;
+  }
+
+  .bottom {
+    padding: 30px 30px 30px;
+  }
+
+  .icons {
+    display: flex;
+    margin: 0 -6px;
+  }
+
+  .icon {
+    width: 6px;
+    height: 6px;
+    border-radius: 8px;
+    margin: 0 6px
+  }
+}
+
+@media(max-width:600px) {
+  .sizer {
+    padding-top: 80%;
+  }
+}
+
+@media(max-width:550px) {
+  .bottom {
+    padding: 24px;
+  }
+
+  .abs {
+    padding: 30px 24px;
+  }
+
+  .img {
+    padding: 24px;
+    padding-bottom: 0px;
+  }
+
+  .sizer {
+    padding-top: 100%;
+  }
+
+  .text {
+    padding-top: 20px;
+  }
+
+  .button {
+    padding-top: 24px;
+  }
+}
+
+@media(max-width:450px) {
+  .sizer {
+    padding-top: 115%;
+  }
+}
+
+@media(max-width:420px) {
+  .img {
+    padding: 18px;
+    padding-bottom: 0px;
+  }
+
+  .bottom {
+    padding: 20px 18px;
+  }
+
+  .sizer {
+    padding-top: 128%;
+  }
+}
+
+@media(max-width:350px) {
+  .sizer {
+    padding-top: 135%;
+  }
 }

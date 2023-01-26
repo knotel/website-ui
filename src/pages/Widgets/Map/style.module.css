@@ -29,3 +29,40 @@
 .mapPad {
   padding: 1.5px 1px;
 }
+
+
+@media(max-width:1200px) {
+  .map {
+    height: 50vh;
+  }
+}
+
+@media(max-width:1024px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .top {
+    padding: 24px 30px;
+  }
+}
+
+@media(max-width:740px) {
+  .sizer {
+    padding-top: 80%;
+  }
+}
+
+@media(max-width:550px) {
+  .map {
+    height: 420px;
+  }
+
+  .top {
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+}

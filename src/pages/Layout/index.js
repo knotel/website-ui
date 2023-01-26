@@ -7,6 +7,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { AppContext } from "../../Contexts/AppContext";
 import { useRouter } from "next/router";
+import { get } from "lodash";
 
 const Layout = ({ children, headerProps, footerProps }) => {
   const [openForm, setOpenForm] = useState(false);
@@ -24,8 +25,10 @@ const Layout = ({ children, headerProps, footerProps }) => {
     function updateDimensions() {
       const _dimensions = {
         height: $(`.${style.header}`).outerHeight(),
-        winWidth: window.innerWidth,
         winHeight: $(window).height(),
+        width: $(window).outerWidth(),
+        winWidth: $(window).width(),
+        footerHeight: $(`.${style.footer}`).height(),
       };
       setDimensions(_dimensions);
       setContext(_dimensions);
@@ -36,7 +39,6 @@ const Layout = ({ children, headerProps, footerProps }) => {
       window.removeEventListener("resize", updateDimensions);
     };
   }, []);
-
 
   useEffect(() => {
     //Scroll to a section
@@ -55,6 +57,7 @@ const Layout = ({ children, headerProps, footerProps }) => {
   return (
     <>
       <Header
+        close_icon={headerProps.close_icon}
         logo={headerProps.logo}
         links={headerProps.links}
         setOpenForm={(e) => {
@@ -64,7 +67,13 @@ const Layout = ({ children, headerProps, footerProps }) => {
         offset={dimesions.height}
       />
       <div className="viewport">
-        <div className="content" style={{ paddingTop: dimesions.height }}>
+        <div
+          className={`content`}
+          style={{
+            paddingTop: dimesions.height,
+            minHeight: `calc(100vh - ${get(dimesions, "footerHeight", 0)}px)`,
+          }}
+        >
           {children}
         </div>
       </div>

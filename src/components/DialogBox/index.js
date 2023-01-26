@@ -49,20 +49,31 @@ export default class DialogBox extends React.Component {
   render() {
     const {
       className = "",
+      classes = false,
       content = false,
       buttons = false,
       showClose = true,
       children,
+      close_icon,
       extraClass = false,
+      burgerMenu = false,
+      close = false,
     } = this.props;
+
     const { openClass, closeClass } = this.state;
     return (
-      <ModalBase className={`${style.modal}`}>
+      <ModalBase className={`${style.modal}${classes ? ` ${classes}` : ""}`}>
         <div
           className={`${style.dialogBoxOverlayWrap}${openClass}${closeClass}`}
         >
           <div className={`${style.dialogBoxOverlay}`}>
-            <div className={`${style.dialogContent} ${className}`}>
+            <div
+              className={
+                burgerMenu === true
+                  ? style.header_dialog
+                  : `${style.dialogContent} ${className}`
+              }
+            >
               {showClose === true && (
                 <NormalLink
                   className={
@@ -74,6 +85,11 @@ export default class DialogBox extends React.Component {
                     <i className="fas fa-chevron-left"></i>
                   </span>
                   <span className={style.closeText}>Close</span>
+                  {close === true && (
+                    <span className={style.x_icon}>
+                      <img src={close_icon} alt={`close`} />
+                    </span>
+                  )}
                 </NormalLink>
               )}
               {content && content(this.onCloseHandler)}

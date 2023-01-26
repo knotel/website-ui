@@ -1,4 +1,4 @@
-.AmenitiesModal {
+.amenities_modal {
   border: 1px solid var(--border-color);
   background-color: var(--cream-bg);
 }
@@ -12,19 +12,23 @@
 
 .section {
   position: relative;
+  height: 100%;
 }
 
 .left {
   display: inline-block;
   width: 50%;
-  padding: 40px;
 }
 
 .right {
   width: 50%;
   display: inline-block;
-  padding: 40px;
   position: relative;
+}
+
+.text_wrap {
+  padding: 40px;
+  height: 100%;
 }
 
 .right_side {
@@ -50,6 +54,7 @@
   right: 50px;
   display: flex;
   align-items: center;
+  justify-content: end;
 }
 
 .next_icon {
@@ -74,12 +79,16 @@
   transform: translate(-50%, -50%);
 }
 
+.image {
+  padding: 40px;
+}
+
 .img_wrap {
   position: relative;
 }
 
 .sizer {
-  padding-top: 110%;
+  padding-top: 100%;
 }
 
 .title {
@@ -100,6 +109,168 @@
   padding-top: 16px;
 }
 
+
 .btn_padd {
   padding: 12px;
+}
+
+@media(max-width:1260px) {
+  .top {
+    padding: 40px 30px;
+  }
+
+  .top,
+  .title {
+    font-size: 24px;
+  }
+
+  .image,
+  .text_wrap {
+    padding: 30px;
+  }
+
+  .title {
+    padding-bottom: 0px;
+  }
+
+  .text p {
+    font-size: 14px;
+    padding-top: 18px;
+  }
+
+  .text p:first-child {
+    padding-top: 0px;
+  }
+
+  .text {
+    height: 300px;
+    overflow-y: auto;
+    margin-top: 24px;
+  }
+
+  .next {
+    right: 30px;
+    bottom: 30px;
+  }
+}
+
+@media(max-width:1120px) {
+  .text {
+    height: 250px;
+    overflow-y: auto;
+    margin-top: 16px;
+  }
+
+  .text p {
+    padding-top: 16px;
+  }
+
+}
+
+@media(max-width:1024px) {
+
+  .top,
+  .title {
+    font-size: 20px;
+  }
+
+  .text {
+    margin-top: 20px;
+  }
+
+  .top {
+    padding: 30px;
+  }
+
+  .next {
+    bottom: 30px;
+    right: 30px;
+  }
+
+  .next_icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media(max-width:940px) {
+  .section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left {
+    position: relative;
+  }
+
+  .left,
+  .right {
+    display: block;
+    width: 100%;
+  }
+
+  .sizer {
+    padding-top: 48%;
+  }
+
+  .text {
+    height: 200px;
+    overflow-y: auto;
+  }
+
+  .text p {
+    padding-top: 14px;
+  }
+
+  .image {
+    padding-top: 30px;
+  }
+
+  .text_wrap {
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
+
+  :global .art_club .equal-height-JlocK {
+    height: auto !important;
+  }
+
+  :global .art_club .section_border_middle {
+    display: none;
+  }
+}
+
+@media(max-width:600px) {
+  .sizer {
+    padding-top: 60%;
+  }
+
+  .top {
+    padding-left: 50px;
+  }
+}
+
+@media(max-width:500px) {
+  .sizer {
+    padding-top: 75%;
+  }
+
+  .image {
+    padding: 24px;
+  }
+
+  .text_wrap {
+    padding: 24px 24px 60px
+  }
+
+  .next {
+    bottom: 20px;
+    right: 24px;
+  }
+
+  .next_icon {
+    width: 24px;
+    height: 24px;
+  }
+
 }

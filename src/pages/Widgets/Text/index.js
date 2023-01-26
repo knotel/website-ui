@@ -24,12 +24,10 @@ const Text = ({ text, bg_color }) => {
           <div className={`section_border_right`}></div>
           <div className={`${colorClass[bg_color]} ${style.section_border}`}>
             <Center className={style.block_Center}>
-              <LazyLoad>
-                <div
-                  className={style.text}
-                  dangerouslySetInnerHTML={{ __html: text }}
-                />
-              </LazyLoad>
+              <div
+                className={style.text}
+                dangerouslySetInnerHTML={{ __html: text }}
+              />
             </Center>
           </div>
         </LazyLoad>

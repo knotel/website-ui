@@ -43,7 +43,9 @@ const ContactForm = ({
             return (
               <form
                 name="booking_contact"
-                className={style.form}
+                className={`${showText === true ? style.form_small : ``}${
+                  style.form
+                }`}
                 onSubmit={handleSubmit}
               >
                 <div className={style.form_wrap}>
