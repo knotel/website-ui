@@ -24,61 +24,61 @@ import "knotel-website-ui/dist/css/style.css";
 import "knotel-website-ui/dist/css/pagination.css";
 import "knotel-website-ui/dist/css/swiper.css";
 
-// const widgets = () => [
-//   {
-//     type: "hero_banner",
-//     desktop_image: bannerImg,
-//     title: "Introducing",
-//     title_image: bannerlogo,
-//     button_label: "Enquire",
-//     button_url: "/",
-//   },
-//   {
-//     type: "text",
-//     bg_color: "green",
-//     text: "<span> Workclub </span> hubs with access to your own branded <span> private office </span> in key gateway cities across the globe.",
-//   },
-//   {
-//     type: "menu_section",
-//     items: [
-//       {
-//         image: leftBg,
-//         title: "Office",
-//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing eliti",
-//         link: "/offices",
-//       },
-//       {
-//         image: rightBg,
-//         title: "Workclub",
-//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing eliti",
-//         link: "/workclubs",
-//       },
-//     ],
-//   },
-//   {
-//     type: "text_image_block",
-//     items: [
-//       {
-//         title: "Lorem ipsum dolor",
-//         sub_title: "Tempus scelerisque felis",
-//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus scelerisque felis lobortis commodo quis. Pulvinar leo ac, lacinia nibh tincidunt. ",
-//         button_label: "Learn more",
-//         button_url: "/",
-//         image: detailImg,
-//         image_position: "right",
-//       },
-//       {
-//         title: "Lorem ipsum dolor",
-//         sub_title: "Tempus scelerisque felis",
-//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus scelerisque felis lobortis commodo quis. Pulvinar leo ac, lacinia nibh tincidunt. ",
-//         button_label: "Learn more",
-//         button_url: "/",
-//         image: detailImg,
-//         image_position: "left",
-//       },
-//     ],
-//   },
-// ];
+const widgets = () => [
+  {
+    type: "hero_banner",
+    desktop_image: bannerImg,
+    title: "Introducing",
+    title_image: bannerlogo,
+    button_label: "Enquire",
+    button_url: "/",
+  },
+  {
+    type: "text",
+    bg_color: "green",
+    text: "<span> Workclub </span> hubs with access to your own branded <span> private office </span> in key gateway cities across the globe.",
+  },
+  {
+    type: "menu_section",
+    items: [
+      {
+        image: leftBg,
+        title: "Office",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing eliti",
+        link: "/offices",
+      },
+      {
+        image: rightBg,
+        title: "Workclub",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing eliti",
+        link: "/workclubs",
+      },
+    ],
+  },
+  {
+    type: "text_image_block",
+    items: [
+      {
+        title: "Lorem ipsum dolor",
+        sub_title: "Tempus scelerisque felis",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus scelerisque felis lobortis commodo quis. Pulvinar leo ac, lacinia nibh tincidunt. ",
+        button_label: "Learn more",
+        button_url: "/",
+        image: detailImg,
+        image_position: "right",
+      },
+      {
+        title: "Lorem ipsum dolor",
+        sub_title: "Tempus scelerisque felis",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus scelerisque felis lobortis commodo quis. Pulvinar leo ac, lacinia nibh tincidunt. ",
+        button_label: "Learn more",
+        button_url: "/",
+        image: detailImg,
+        image_position: "left",
+      },
+    ],
+  },
+];
 
 // const widgets = () => [
 //   {
@@ -434,86 +434,86 @@ import "knotel-website-ui/dist/css/swiper.css";
 //   },
 // ];
 
-const widgets = () => [
-  {
-    type: "left_right_banner",
-    image: bannerImg,
-    bg_color: "green",
-    title: "Ullamcorper purus",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitant ullamcorper placerat neque, pretium tortor.",
-    button_label: "Location",
-    button_url: "/",
-    border_line: true,
-  },
-  {
-    type: "text",
-    bg_color: "lightblue",
-    text: "<span>Lorem ipsum dolor sit amet,</span> consectetur adipiscing elit. Orci rhoncus auctor duis suscipit lobortis id diam. Tortor eu feugiat euismod tempor eget sed cras.",
-  },
-  {
-    type: "image_slider",
-    options: ["All", "UK", "Europe", "America"],
-    items: [
-      {
-        location: "america",
-        image: leftBg,
-        title: "Atlanta",
-        link: "",
-      },
-      {
-        location: "Europe",
-        image: rightBg,
-        title: "Austin",
-        link: "",
-      },
-      {
-        location: "uk",
-        image: leftBg,
-        title: "Berlin",
-        link: "",
-      },
-      {
-        location: "america",
-        image: rightBg,
-        title: "Atlanta",
-        link: "",
-      },
-      {
-        location: "Europe",
-        image: leftBg,
-        title: "Austin",
-        link: "",
-      },
-      {
-        location: "uk",
-        image: leftBg,
-        title: "Berlin",
-        link: "",
-      },
-    ],
-  },
-  {
-    type: "amenities",
-    heading: "Amenities",
-    items: [
-      {
-        image: leftBg,
-        title: "Amenity name",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus.",
-      },
-      {
-        image: rightBg,
-        title: "Amenity name",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus.",
-      },
-      {
-        image: leftBg,
-        title: "Amenity name",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus.",
-      },
-    ],
-  },
-];
+// const widgets = () => [
+//   {
+//     type: "left_right_banner",
+//     image: bannerImg,
+//     bg_color: "green",
+//     title: "Ullamcorper purus",
+//     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitant ullamcorper placerat neque, pretium tortor.",
+//     button_label: "Location",
+//     button_url: "/",
+//     border_line: true,
+//   },
+//   {
+//     type: "text",
+//     bg_color: "lightblue",
+//     text: "<span>Lorem ipsum dolor sit amet,</span> consectetur adipiscing elit. Orci rhoncus auctor duis suscipit lobortis id diam. Tortor eu feugiat euismod tempor eget sed cras.",
+//   },
+//   {
+//     type: "image_slider",
+//     options: ["All", "UK", "Europe", "America"],
+//     items: [
+//       {
+//         location: "america",
+//         image: leftBg,
+//         title: "Atlanta",
+//         link: "",
+//       },
+//       {
+//         location: "Europe",
+//         image: rightBg,
+//         title: "Austin",
+//         link: "",
+//       },
+//       {
+//         location: "uk",
+//         image: leftBg,
+//         title: "Berlin",
+//         link: "",
+//       },
+//       {
+//         location: "america",
+//         image: rightBg,
+//         title: "Atlanta",
+//         link: "",
+//       },
+//       {
+//         location: "Europe",
+//         image: leftBg,
+//         title: "Austin",
+//         link: "",
+//       },
+//       {
+//         location: "uk",
+//         image: leftBg,
+//         title: "Berlin",
+//         link: "",
+//       },
+//     ],
+//   },
+//   {
+//     type: "amenities",
+//     heading: "Amenities",
+//     items: [
+//       {
+//         image: leftBg,
+//         title: "Amenity name",
+//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus.",
+//       },
+//       {
+//         image: rightBg,
+//         title: "Amenity name",
+//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus.",
+//       },
+//       {
+//         image: leftBg,
+//         title: "Amenity name",
+//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus.",
+//       },
+//     ],
+//   },
+// ];
 
 // const widgets = (mapCenter, setCenter, filters, setFilters) => [
 //   {

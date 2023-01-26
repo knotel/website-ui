@@ -9,7 +9,14 @@ import Center from "../../components/Center";
 
 import LazyLoad from "../../components/Lazyload";
 
-const Header = ({ width = 0, offset = 0, setOpenForm, logo, close_icon }) => {
+const Header = ({
+  width = 0,
+  offset = 0,
+  setOpenForm,
+  logo,
+  close_icon,
+  links,
+}) => {
   const [open, setOpen] = useState(false);
   const [menu, setMenu] = useState(false);
   // const { header = {} } = useSelector((state) => get(state, `storage`));
@@ -29,6 +36,7 @@ const Header = ({ width = 0, offset = 0, setOpenForm, logo, close_icon }) => {
     });
   });
 
+  console.log("links --->", links);
   return (
     <>
       <div className={`${style.header}`}>
@@ -40,12 +48,11 @@ const Header = ({ width = 0, offset = 0, setOpenForm, logo, close_icon }) => {
               </NormalLink>
             </div>
             <div className={style.header_menu_wrap}>
-              <NormalLink className={style.header_menu} link="/office">
-                Office
-              </NormalLink>
-              <NormalLink className={style.header_menu} link="/workclub">
-                Workclub
-              </NormalLink>
+              {links.map((item) => (
+                <NormalLink className={style.header_menu} link={item.link}>
+                  {item.text}
+                </NormalLink>
+              ))}
               <div className={style.header_btn}>
                 <Button
                   buttonType="header_blue_btn"
