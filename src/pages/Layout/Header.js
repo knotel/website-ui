@@ -36,7 +36,6 @@ const Header = ({
     });
   });
 
-  console.log("links --->", links);
   return (
     <>
       <div className={`${style.header}`}>
@@ -49,7 +48,7 @@ const Header = ({
             </div>
             <div className={style.header_menu_wrap}>
               {links.map((item) => (
-                <NormalLink className={style.header_menu} link={item.link}>
+                <NormalLink className={style.header_menu} link={item.url}>
                   {item.text}
                 </NormalLink>
               ))}
