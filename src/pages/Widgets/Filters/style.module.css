@@ -1,6 +1,6 @@
-.title {
+/* .title {
   border-right: 1px solid var(--border-color);
-}
+} */
 
 .form_block {
   display: flex;
@@ -8,10 +8,12 @@
   overflow-x: auto;
   column-gap: 16px;
   justify-content: flex-end;
+  flex: 1
 }
 
 .form_block>div {
   padding: 0;
+  flex: 1 1 0px;
 }
 
 .menu {
@@ -38,6 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-right: 70px;
 }
 
 .filter {

@@ -206,7 +206,7 @@
 }
 
 .textbox {
-  border: 1.5px solid var(--border-color);
+  border: 1px solid var(--border-color);
   padding: 14px 16px;
   font-size: 14px;
   width: 100%;
@@ -490,6 +490,8 @@ input[type="checkbox"]:checked+.inputCheckboxLabel .checkboxSquare {
   padding-left: 15px;
   line-height: 0;
   color: var(--border-color);
+  position: absolute;
+  right: 20px;
 }
 
 .dropdown .textbox {
@@ -506,6 +508,12 @@ input[type="checkbox"]:checked+.inputCheckboxLabel .checkboxSquare {
 
 :global(.office_filter) .date_time {
   margin-top: 16px;
+}
+@media(max-width:1440px) {
+  .icon {
+    position: relative;
+    right: inherit;
+  }
 }
 
 @media(max-width:1260px) {

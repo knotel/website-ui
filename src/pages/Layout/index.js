@@ -21,20 +21,21 @@ const Layout = ({ children, headerProps, footerProps }) => {
   const g = router?.query?.g;
   const route = router?.route;
 
+  function updateDimensions() {
+    const _dimensions = {
+      height: $(`.${style.header}`).outerHeight(),
+      winHeight: $(window).height(),
+      width: $(window).outerWidth(),
+      winWidth: $(window).width(),
+      footerHeight: $(`.${style.footer}`).height(),
+    };
+    setDimensions(_dimensions);
+    setContext(_dimensions);
+  }
+
   useEffect(() => {
-    function updateDimensions() {
-      const _dimensions = {
-        height: $(`.${style.header}`).outerHeight(),
-        winHeight: $(window).height(),
-        width: $(window).outerWidth(),
-        winWidth: $(window).width(),
-        footerHeight: $(`.${style.footer}`).height(),
-      };
-      setDimensions(_dimensions);
-      setContext(_dimensions);
-    }
-    window.addEventListener("resize", updateDimensions);
     updateDimensions();
+    window.addEventListener("resize", updateDimensions);
     return () => {
       window.removeEventListener("resize", updateDimensions);
     };
@@ -49,8 +50,6 @@ const Layout = ({ children, headerProps, footerProps }) => {
         top: $(id).offset().top - dimesions.height,
         behavior: "smooth",
       });
-    } else {
-      $(window).scrollTop(0);
     }
   }, [{ route }]);
 

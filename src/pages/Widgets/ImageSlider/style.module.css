@@ -127,8 +127,8 @@
 }
 
 .view:hover {
-  color: var(--coral-red);
-  border-bottom: 1px solid var(--coral-red);
+  color: var(--coral-red-hover);
+  border-bottom: 1px solid var(--coral-red-hover);
 }
 
 .item_content a {

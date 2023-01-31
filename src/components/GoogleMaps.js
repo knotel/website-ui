@@ -153,7 +153,12 @@ const GoogleMaps = ({
                     transform: "translateX(-50%)",
                   }}
                 >
-                  <img src={markerIcon} alt="marker" />
+                  <img
+                    data-marker-lat={lat}
+                    data-marker-lng={lng}
+                    src={markerIcon}
+                    alt="marker"
+                  />
                 </span>
               }
             />

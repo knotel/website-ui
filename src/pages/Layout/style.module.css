@@ -46,7 +46,7 @@
 
 .header_menu:hover,
 .menu_links:hover {
-  color: var(--coral-red);
+  color: var(--coral-red-hover);
 }
 
 .header_btn {

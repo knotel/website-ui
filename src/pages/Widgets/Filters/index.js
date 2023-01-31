@@ -16,6 +16,7 @@ import DialogBox from "../../../components/DialogBox";
 import { AppContext } from "../../../Contexts/AppContext";
 
 const Filters = ({
+  labels,
   items = [],
   cityOptions,
   neighborhoodOptions,
@@ -29,6 +30,7 @@ const Filters = ({
   setCenter,
   onMarkerPress,
   onMouseOverListing,
+  onMouseLeaveListingsSection,
   onFilterChanged,
   defaultFilters,
   bi_map,
@@ -139,17 +141,10 @@ const Filters = ({
                               <div className={style.filter_block}>
                                 <Field
                                   initialValue={defaultFilters.city}
-                                  name="city"
+                                  name={labels.city.name}
                                   component={Dropdown}
                                   classes={style.menu}
-                                  prompt="City"
-                                  // options={{
-                                  //   london: "London",
-                                  //   birmingham: "Birmingham",
-                                  //   conventry: "Conventry",
-                                  //   leeds: "Leeds",
-                                  //   liverpool: "Liverpool",
-                                  // }}
+                                  prompt={labels.city.label}
                                   options={cityOptions}
                                   onChange={() => alert("sdyghiu")}
                                 />
@@ -157,70 +152,50 @@ const Filters = ({
                               <div className={style.filter_block}>
                                 <Field
                                   initialValue={defaultFilters.neighborhood}
-                                  name="neighborhood"
+                                  name={labels.neighborhood.name}
                                   component={Dropdown}
                                   classes={style.menu}
-                                  prompt="Neighborhood"
-                                  // options={{
-                                  //   "greater london": "Greater London",
-                                  //   durham: "Durham",
-                                  //   dorset: "Dorset",
-                                  // }}
+                                  prompt={labels.neighborhood.label}
                                   options={neighborhoodOptions}
                                 />
                               </div>
                               <div className={style.filter_block}>
                                 <Field
                                   initialValue={defaultFilters.availableFrom}
-                                  name="availableFrom"
+                                  name={labels.date.name}
                                   component={DateTime}
                                   classes={style.menu}
-                                  prompt="Date Range"
+                                  prompt={labels.date.label}
                                   emptyValue={""}
                                 />
                               </div>
                               <div className={style.filter_block}>
                                 <Field
                                   initialValue={defaultFilters.seatCapacity}
-                                  name="seatCapacity"
+                                  name={labels.seat.name}
                                   component={Dropdown}
                                   classes={style.menu}
-                                  prompt="Seat #"
-                                  // options={{
-                                  //   0: "Undefined Seats",
-                                  //   10: "10 Above",
-                                  //   20: "20 Above",
-                                  // }}
+                                  prompt={labels.seat.label}
                                   options={seatOptions}
                                 />
                               </div>
                               <div className={style.filter_block}>
                                 <Field
                                   initialValue={defaultFilters.floor}
-                                  name="floor"
+                                  name={labels.floor.name}
                                   component={Dropdown}
                                   classes={style.menu}
-                                  prompt="Floor #"
-                                  // options={{
-                                  //   1: "Ground Floor",
-                                  //   2: "Second Floor",
-                                  //   3: "Thrid Floor",
-                                  // }}
+                                  prompt={labels.floor.label}
                                   options={floorOptions}
                                 />
                               </div>
                               <div className={style.filter_block}>
                                 <Field
                                   initialValue={defaultFilters.size}
-                                  name="size"
+                                  name={labels.size.name}
                                   component={Dropdown}
                                   classes={style.menu}
-                                  prompt="Square Feet"
-                                  // options={{
-                                  //   "10000-20000": "10000 - 20000 sqft",
-                                  //   "20000-40000": "20000 - 40000 sqft",
-                                  //   "40000-80000": "40000 - 80000 sqft",
-                                  // }}
+                                  prompt={labels.size.label}
                                   options={sizeOptions}
                                 />
                               </div>
@@ -268,7 +243,11 @@ const Filters = ({
                     <div className={`section_border_bottom`}></div>
                     <div className={`section_border_middle`}></div>
                     {list.length > 0 && (
-                      <div className={style.wrap} style={{ height: height }}>
+                      <div
+                        onMouseLeave={onMouseLeaveListingsSection}
+                        className={style.wrap}
+                        style={{ height: height }}
+                      >
                         <>
                           <div
                             id="listings_cont"
@@ -283,7 +262,11 @@ const Filters = ({
                                     data-latitude={item.lat}
                                     data-longitude={item.lng}
                                     onMouseOver={(e) => {
-                                      onMouseOverListing?.(e);
+                                      onMouseOverListing?.(
+                                        e,
+                                        item.lat,
+                                        item.lng
+                                      );
                                       setCenter({
                                         lat: item.lat,
                                         lng: item.lng,
@@ -481,50 +464,50 @@ const Filters = ({
                             >
                               <Field
                                 defaultValue={defaultFilters.city}
-                                name="city"
+                                name={labels.city.name}
                                 component={Dropdown}
                                 classes={style.menu}
-                                prompt="City"
+                                prompt={labels.city.label}
                                 options={cityOptions}
                               />
                               <Field
                                 defaultValue={defaultFilters.neighborhood}
-                                name="neighborhood"
+                                name={labels.neighborhood.name}
                                 component={Dropdown}
                                 classes={style.menu}
-                                prompt="Neighborhood"
+                                prompt={labels.neighborhood.label}
                                 options={neighborhoodOptions}
                               />
                               <Field
                                 defaultValue={defaultFilters.availableFrom}
-                                name="availableFrom"
+                                name={labels.date.name}
                                 component={DateTime}
                                 classes={style.menu}
-                                prompt="Date Range"
+                                prompt={labels.date.label}
                                 emptyValue={""}
                               />
                               <Field
                                 defaultValue={defaultFilters.seatCapacity}
-                                name="seatCapacity"
+                                name={labels.seat.name}
                                 component={Dropdown}
                                 classes={style.menu}
-                                prompt="Seat #"
+                                prompt={labels.seat.label}
                                 options={seatOptions}
                               />
                               <Field
                                 defaultValue={defaultFilters.floor}
-                                name="floor"
+                                name={labels.floor.name}
                                 component={Dropdown}
                                 classes={style.menu}
-                                prompt="Floor #"
+                                prompt={labels.floor.label}
                                 options={floorOptions}
                               />
                               <Field
                                 defaultValue={defaultFilters.size}
-                                name="size"
+                                name={labels.size.name}
                                 component={Dropdown}
                                 classes={style.menu}
-                                prompt="Square Feet"
+                                prompt={labels.size.label}
                                 options={sizeOptions}
                               />
                             </div>

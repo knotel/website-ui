@@ -380,6 +380,7 @@
   --breeze-bg: #dce1d9;
   --primary-blue: #13234a;
   --coral-red: #c9343a;
+  --coral-red-hover: #e58075;
   --default-text: #000000;
   --border-color: #000000;
   --primary-white: #ffffff;
@@ -762,6 +763,10 @@ body>iframe {
 
 .react-datepicker-popper {
   z-index: 50000 !important;
+}
+
+.markerGray {
+  filter: grayscale(.8);
 }
 
 @media (max-width: 1024px) {
