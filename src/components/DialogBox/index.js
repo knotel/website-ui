@@ -84,10 +84,10 @@ export default class DialogBox extends React.Component {
                   <span className={style.closeIcon}>
                     <i className="fas fa-chevron-left"></i>
                   </span>
-                  <span className={style.closeText}>Close</span>
+                  <span className={style.closeText}>Done</span>
                   {close === true && (
                     <span className={style.x_icon}>
-                      <img src={close_icon} alt={`close`} />
+                      <img src={close_icon} alt={`done`} />
                     </span>
                   )}
                 </NormalLink>

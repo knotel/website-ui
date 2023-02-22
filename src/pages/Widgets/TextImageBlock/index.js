@@ -49,6 +49,7 @@ const TextImageBlock = ({ items = [] }) => {
                       <div className={style.button}>
                         <Button
                           buttonType="block_btn"
+                          onClick={item.onButtonClick}
                           label={item.button_label}
                           link={item.button_url}
                         />

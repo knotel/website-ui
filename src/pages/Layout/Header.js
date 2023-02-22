@@ -58,6 +58,7 @@ const Header = ({
                   onClick={() => {
                     setOpenForm("enquire-form");
                   }}
+                  id="enquireTrigger"
                   label="Enquire"
                 ></Button>
               </div>
