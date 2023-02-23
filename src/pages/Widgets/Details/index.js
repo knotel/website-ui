@@ -119,6 +119,7 @@ const Details = ({ items = [] }) => {
                                   className={style.download}
                                   icon_placement="left"
                                   svgIcon={value.logo}
+                                  link={value.link}
                                   onClick={on_button_click}
                                   label={value.button_label}
                                 />
