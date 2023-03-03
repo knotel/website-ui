@@ -22,7 +22,8 @@ const Filters = ({
   neighborhoodOptions,
   seatOptions,
   floorOptions,
-  sizeOptions,
+  sizeInSqftOptions,
+  sizeInM2Options,
   city,
   APIKey,
   markerIcon,
@@ -191,12 +192,22 @@ const Filters = ({
                               </div>
                               <div className={style.filter_block}>
                                 <Field
-                                  initialValue={defaultFilters.size}
-                                  name={labels.size.name}
+                                  initialValue={defaultFilters.sizeInSqft}
+                                  name={labels.sizeInSqft.name}
                                   component={Dropdown}
                                   classes={style.menu}
-                                  prompt={labels.size.label}
-                                  options={sizeOptions}
+                                  prompt={labels.sizeInSqft.label}
+                                  options={sizeInSqftOptions}
+                                />
+                              </div>
+                              <div className={style.filter_block}>
+                                <Field
+                                  initialValue={defaultFilters.sizeInM2}
+                                  name={labels.sizeInM2.name}
+                                  component={Dropdown}
+                                  classes={style.menu}
+                                  prompt={labels.sizeInM2.label}
+                                  options={sizeInM2Options}
                                 />
                               </div>
                             </div>
@@ -320,13 +331,18 @@ const Filters = ({
                                                   </div>
                                                 )}
                                                 {value.link && (
-                                                  <NormalLink
-                                                    link="/"
-                                                    className={style.link}
-                                                  >
-                                                    {" "}
-                                                    {value.link}
-                                                  </NormalLink>
+                                                  <div className={style.value}>
+                                                    <NormalLink
+                                                      link={`${
+                                                        value.type
+                                                          ? value.type + ":"
+                                                          : ""
+                                                      }${value.link}`}
+                                                      className={style.link}
+                                                    >
+                                                      {value.link}
+                                                    </NormalLink>
+                                                  </div>
                                                 )}
                                               </div>
                                             );
@@ -406,7 +422,7 @@ const Filters = ({
                 {list.length === 0 && (
                   <div className={style.noitem} style={{ height: height }}>
                     <div className={style.noitem_text}>
-                      {"No Office were found"}
+                      {"No offices are available that match your search"}
                     </div>
                   </div>
                 )}
@@ -503,12 +519,20 @@ const Filters = ({
                                 options={floorOptions}
                               />
                               <Field
-                                defaultValue={defaultFilters.size}
-                                name={labels.size.name}
+                                defaultValue={defaultFilters.sizeInSqft}
+                                name={labels.sizeInSqft.name}
                                 component={Dropdown}
                                 classes={style.menu}
-                                prompt={labels.size.label}
-                                options={sizeOptions}
+                                prompt={labels.sizeInSqft.label}
+                                options={sizeInSqftOptions}
+                              />
+                              <Field
+                                defaultValue={defaultFilters.sizeInM2}
+                                name={labels.sizeInM2.name}
+                                component={Dropdown}
+                                classes={style.menu}
+                                prompt={labels.sizeInM2.label}
+                                options={sizeInM2Options}
                               />
                             </div>
                           </form>

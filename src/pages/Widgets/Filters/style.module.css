@@ -28,6 +28,7 @@
   font-size: 28px;
   line-height: 1.2;
   padding: 45px;
+  word-break: break-word;
 }
 
 .filters {

@@ -32,7 +32,10 @@ const Footer = ({ footerProps }) => {
               <img src={footerProps.logo} alt="knotel" />
             </NormalLink>
             <div>
-              <NormalLink className={style.footer_email}>
+              <NormalLink
+                link={`mailto:${contactEmail}`}
+                className={style.footer_email}
+              >
                 {contactEmail}
               </NormalLink>
             </div>

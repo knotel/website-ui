@@ -80,14 +80,16 @@ const Details = ({ items = [] }) => {
                                   </div>
                                 )}
                                 {value.link && (
-                                  <NormalLink
-                                    link={`${
-                                      value.type ? value.type + ":" : ""
-                                    }${value.link}`}
-                                    className={style.link}
-                                  >
-                                    {value.linkLabel || value.link}
-                                  </NormalLink>
+                                  <div className={style.value}>
+                                    <NormalLink
+                                      link={`${
+                                        value.type ? value.type + ":" : ""
+                                      }${value.link}`}
+                                      className={style.link}
+                                    >
+                                      {value.linkLabel || value.link}
+                                    </NormalLink>
+                                  </div>
                                 )}
                                 {value.hours === true && (
                                   <div>
