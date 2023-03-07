@@ -596,7 +596,7 @@ const widgets = (mapCenter, setCenter, filters, setFilters) => [
       seat: { label: "Seat", name: "seatCapacity" },
       floor: { label: "Floor", name: "floor" },
     },
-    APIKey: "",
+    APIKey: "AIzaSyA7QhLNGYH_eg6-ZtPhfZlkh6dBSBNpcdk",
     markerIcon: marker,
     mapCenter,
     setCenter,

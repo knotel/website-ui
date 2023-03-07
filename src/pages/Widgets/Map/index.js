@@ -4,7 +4,6 @@ import GoogleMaps from "../../../components/GoogleMaps";
 
 import style from "./style.module.css";
 
-
 const Map = ({ address, loc = {}, APIKey, markerIcon, onMarkerPress }) => {
   return (
     <>
