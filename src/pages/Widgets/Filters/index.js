@@ -25,6 +25,7 @@ const Filters = ({
   sizeInSqftOptions,
   sizeInM2Options,
   city,
+  contactEmail,
   APIKey,
   markerIcon,
   mapCenter,
@@ -310,26 +311,18 @@ const Filters = ({
                                           {item.address}
                                         </div>
                                         <div className={style.details}>
+                                          <h3 className={style.details_header}>
+                                            Available Spaces
+                                          </h3>
                                           {item.list.map((value, j) => {
                                             return (
                                               <div
                                                 className={style.text_wrap}
                                                 key={`about_location_${j}`}
                                               >
-                                                <div className={style.icon}>
-                                                  <img
-                                                    src={value.icon}
-                                                    alt={`${value.label} icon`}
-                                                  />
-                                                </div>
                                                 <div className={style.label}>
                                                   {value.label}
                                                 </div>
-                                                {value.value && (
-                                                  <div className={style.value}>
-                                                    {value.value}
-                                                  </div>
-                                                )}
                                                 {value.link && (
                                                   <div className={style.value}>
                                                     <NormalLink
@@ -347,6 +340,19 @@ const Filters = ({
                                               </div>
                                             );
                                           })}
+                                        </div>
+                                        <div className={style.email_cont}>
+                                          <div className={style.email_label}>
+                                            Enquire:
+                                          </div>
+                                          <div>
+                                            <NormalLink
+                                              link={`mailto:${item.contactEmail}`}
+                                              className={style.email_link}
+                                            >
+                                              {item.contactEmail}
+                                            </NormalLink>
+                                          </div>
                                         </div>
                                         <Button
                                           link={item.link}

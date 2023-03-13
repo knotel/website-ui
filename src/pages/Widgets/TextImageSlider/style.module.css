@@ -2,6 +2,12 @@
   position: relative;
 }
 
+.h3 {
+  margin-top: 2.5rem;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
 .left {
   display: inline-block;
   width: 33.33%;
@@ -140,6 +146,199 @@
 
   .bottom {
     padding: 26px 30px 36px;
+  }
+}
+
+.text_wrap {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  padding-top: 24px;
+}
+
+.text_wrap.aboutUs {
+  align-items: flex-start;
+}
+
+.text_wrap.aboutUs .label {
+  min-width: 112px;
+}
+
+.text_wrap .flex {
+  display: flex;
+  align-items: center;
+}
+
+.text_wrap:first-child,
+.info:first-child {
+  padding-top: 0;
+}
+
+.label {
+  padding-left: 8px;
+  padding-right: 4px;
+}
+
+.link {
+  border-bottom: 1px solid var(--border-color);
+  line-height: normal;
+}
+
+.link:hover {
+  border-bottom: 1px solid var(--common-blue);
+}
+
+.list {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 2;
+}
+
+.list li {
+  list-style: disc;
+  margin-left: 20px;
+  padding-left: 4px;
+}
+
+.list li::marker {
+  width: 2px;
+  height: 2px;
+}
+
+.list_icon {
+  font-size: 15px;
+  width: 15px;
+  height: 15px;
+}
+
+.download {
+  font-size: 14px;
+  font-weight: 300;
+  padding: 12px;
+  line-height: 1.2;
+}
+
+.pdf {
+  border: 1px solid black;
+}
+
+@media(max-width:1400px) {
+
+  .title,
+  .wrapper {
+    padding: 30px;
+  }
+
+  .info {
+    padding-top: 18px;
+  }
+
+  .text_wrap {
+    padding-top: 18px;
+  }
+
+  .list {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+}
+
+
+@media(max-width:1260px) {
+  .item {
+    width: 50%;
+  }
+
+  .wrapper {
+    min-height: auto;
+  }
+
+  .title {
+    font-size: 21px;
+  }
+
+  .download {
+    padding: 10px;
+  }
+}
+
+@media(max-width:940px) {
+  .text_wrap.aboutUs .label {
+    min-width: 90px;
+  }
+
+  .wrapper {
+    padding: 30px;
+  }
+
+}
+
+@media(max-width:820px) {
+  .item {
+    display: block;
+    width: 100%;
+  }
+
+  .list li {
+    margin-left: 18px;
+  }
+
+  .wrapper {
+    padding: 40px 24px;
+  }
+
+  .text_wrap {
+    padding-top: 24px;
+  }
+
+  :global .details .section_border_middle {
+    display: none;
+  }
+
+  :global .details_table .equal-height-JlocK {
+    height: auto !important;
+  }
+}
+
+@media(max-width:550px) {
+  .title {
+    font-size: 20px;
+    padding: 24px;
+  }
+
+  .list li {
+    margin-left: 14px;
+  }
+
+  .info,
+  .text_wrap {
+    line-height: 1.2;
+    font-size: 14px;
+  }
+
+  .list {
+    font-size: 14px;
+  }
+
+  .download {
+    padding: 8px;
+  }
+
+  .text_wrap.aboutUs .label {
+    min-width: 80px;
+  }
+}
+
+@media(max-width:400px) {
+  .list {
+    line-height: 1.8;
+  }
+
+  .wrapper {
+    padding: 32px 16px;
   }
 }
 

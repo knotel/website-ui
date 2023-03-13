@@ -83,138 +83,248 @@ import "knotel-website-ui/dist/css/swiper.css";
 // ];
 
 // office detail
-// const widgets = () => [
-//   {
-//     type: "banner",
-//     image: detailImg,
-//     title: "HYLO ground floor",
-//     text: "Welcome to London’s future workplace.",
-//   },
-//   {
-//     type: "details",
-//     items: [
-//       {
-//         title: "About",
-//         list: [
-//           {
-//             icon: logo1,
-//             label: "Available:",
-//             value: "November 1",
-//           },
-//           {
-//             icon: logo2,
-//             label: "Floor #:",
-//             value: "Ground Floor",
-//           },
-//           {
-//             icon: logo3,
-//             label: "Size:",
-//             value: "26,685 sqft",
-//           },
-//           {
-//             icon: logo4,
-//             label: "Seat #:",
-//             value: "Undefined Seats",
-//           },
-//           {
-//             icon: logo5,
-//             label: "Enquire:",
-//             link: "Lorem@ipsum.com",
-//           },
-//         ],
-//       },
-//       {
-//         title: "Whats Included",
-//         list: [
-//           {
-//             text: "Lorem ipsum dolor sit amet",
-//           },
-//           {
-//             text: "consectetur adipiscing elit ",
-//           },
-//           {
-//             text: "Nisi, nulla id viverra pharetra",
-//           },
-//           {
-//             text: "Eget leo vitae mattis leo",
-//           },
-//           {
-//             text: "Risus etiam nisl",
-//           },
-//           {
-//             text: "Sit turpis sed vestibulum dignissim",
-//           },
-//         ],
-//       },
-//       {
-//         title: "Further Information",
-//         list: [
-//           {
-//             logo: download,
-//             button_label: "Download Flyer",
-//             button_link: "/",
-//             on_button_click: () => console.log("download flyer"),
-//           },
-//           {
-//             logo: download,
-//             button_label: "Download Images",
-//             button_link: "/",
-//             on_button_click: () => console.log("download images"),
-//           },
-//           {
-//             logo: download,
-//             button_label: "Download Floor Plan",
-//             link: "https://www.facebook.com",
-//             on_button_click: () => console.log("download flor plan"),
-//           },
-//         ],
-//       },
-//     ],
-//   },
-//   {
-//     type: "text_image_slider",
-//     items: [
-//       {
-//         title: "London’s future workspace",
-//         text: "Knotel at HYLO offers 27,000 square feet of premium office space across 4 floors and access to 17,000 sq ft of retail space. One of London’s most exciting new buildings, HYLO boasts high rise tower floors, roof gardens and new public space. Welcome to London’s future workplace.",
-//         button_label: "Schedule a tour",
-//         // button_url: "/",
-//         on_button_click: () => console.log("button clicked --->"),
-//         image_position: "right",
-//         caption: "HYLO groundfloor",
-//         list: [{ image: rightBg }, { image: rightBg }, { image: rightBg }],
-//       },
-//     ],
-//   },
-//   {
-//     type: "text_image_slider",
-//     hideBorder: "bottom",
-//     items: [
-//       {
-//         title: "Old & new collide",
-//         text: "This is a place where old and new collide; from cutting-edge-cool Old Street and Shoreditch to the historically influenced City of London. The area is the epicentre of London’s creative and collaborative industries and is more popular than ever with many of London’s forward-thinking financial and professional occupiers. ",
-//         button_label: "Request information",
-//         button_url: "/",
-//         on_button_click: () => console.log("button clicked --->"),
-//         list: [{ image: rightBg }, { image: rightBg }, { image: rightBg }],
-//         image_position: "left",
-//         bg_color: "green",
-//         caption: "Image caption goes here",
-//         white_button: true,
-//       },
-//     ],
-//   },
-//   {
-//     type: "map",
-//     address: "103–105 Bunhill Row, 8th floor",
-//     APIKey: "",
-//     markerIcon: marker,
-//     loc: {
-//       lat: 30.26555,
-//       lng: -97.7497,
-//     },
-//   },
-// ];
+const widgets = () => [
+  {
+    type: "banner",
+    image: detailImg,
+    title: "HYLO ground floor",
+    text: "Welcome to London’s future workplace.",
+  },
+  {
+    type: "details",
+    items: [
+      {
+        title: "About",
+        type: "text",
+        text: `h1>HTML Ipsum Presents</h1>
+<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+				<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p> <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p> <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>`,
+      },
+      {
+        title: "Whats Included",
+        list: [
+          {
+            text: "Lorem ipsum dolor sit amet",
+          },
+          {
+            text: "consectetur adipiscing elit ",
+          },
+          {
+            text: "Nisi, nulla id viverra pharetra",
+          },
+          {
+            text: "Eget leo vitae mattis leo",
+          },
+          {
+            text: "Risus etiam nisl",
+          },
+          {
+            text: "Sit turpis sed vestibulum dignissim",
+          },
+        ],
+      },
+      {
+        title: "Further Information",
+        list: [
+          {
+            logo: download,
+            button_label: "Download Flyer",
+            button_link: "/",
+            on_button_click: () => console.log("download flyer"),
+          },
+          {
+            logo: download,
+            button_label: "Download Images",
+            button_link: "/",
+            on_button_click: () => console.log("download images"),
+          },
+          {
+            logo: download,
+            button_label: "Download Floor Plan",
+            link: "https://www.facebook.com",
+            on_button_click: () => console.log("download flor plan"),
+          },
+        ],
+      },
+    ],
+  },
+  {
+    type: "text_image_slider",
+    items: [
+      {
+        title: "HYLO's Ground Floor",
+        type: "details",
+        list_tems: [
+          {
+            icon: logo1,
+            label: "Available:",
+            value: "December 3",
+          },
+          {
+            icon: logo2,
+            label: "Floor #:",
+            value: "Ground Floor",
+          },
+          {
+            icon: logo3,
+            label: "Size:",
+            value: "26,685 sqft",
+          },
+          {
+            icon: logo4,
+            label: "Seat #:",
+            value: "1000 Seats",
+          },
+          {
+            icon: logo5,
+            label: "Enquire:",
+            link: "Lorem@ipsum.com",
+          },
+        ],
+        text: "Knotel at HYLO offers 27,000 square feet of premium office space across 4 floors and access to 17,000 sq ft of retail space. One of London’s most exciting new buildings, HYLO boasts high rise tower floors, roof gardens and new public space. Welcome to London’s future workplace.",
+        button_label: "Schedule a tour",
+        // button_url: "/",
+        on_button_click: () => console.log("button clicked --->"),
+        image_position: "right",
+        caption: "HYLO groundfloor",
+        list: [{ image: rightBg }, { image: rightBg }, { image: rightBg }],
+      },
+    ],
+  },
+  {
+    type: "text_image_slider",
+    items: [
+      {
+        title: "HYLO's 1st Floor",
+        type: "details",
+        list_tems: [
+          {
+            icon: logo1,
+            label: "Available:",
+            value: "December 3",
+          },
+          {
+            icon: logo2,
+            label: "Floor #:",
+            value: "Ground Floor",
+          },
+          {
+            icon: logo3,
+            label: "Size:",
+            value: "26,685 sqft",
+          },
+          {
+            icon: logo4,
+            label: "Seat #:",
+            value: "1000 Seats",
+          },
+          {
+            icon: logo5,
+            label: "Enquire:",
+            link: "Lorem@ipsum.com",
+          },
+        ],
+        text: "Knotel at HYLO offers 27,000 square feet of premium office space across 4 floors and access to 17,000 sq ft of retail space. One of London’s most exciting new buildings, HYLO boasts high rise tower floors, roof gardens and new public space. Welcome to London’s future workplace.",
+        button_label: "Schedule a tour",
+        // button_url: "/",
+        on_button_click: () => console.log("button clicked --->"),
+        image_position: "right",
+        caption: "HYLO groundfloor",
+        list: [{ image: rightBg }, { image: rightBg }, { image: rightBg }],
+      },
+    ],
+  },
+  {
+    type: "text_image_slider",
+    items: [
+      {
+        title: "HYLO's Ground Floor",
+        type: "details",
+        list_tems: [
+          {
+            icon: logo1,
+            label: "Available:",
+            value: "December 3",
+          },
+          {
+            icon: logo2,
+            label: "Floor #:",
+            value: "Ground Floor",
+          },
+          {
+            icon: logo3,
+            label: "Size:",
+            value: "26,685 sqft",
+          },
+          {
+            icon: logo4,
+            label: "Seat #:",
+            value: "1000 Seats",
+          },
+          {
+            icon: logo5,
+            label: "Enquire:",
+            link: "Lorem@ipsum.com",
+          },
+        ],
+        text: "",
+        button_label: "Schedule a tour",
+        // button_url: "/",
+        on_button_click: () => console.log("button clicked --->"),
+        image_position: "right",
+        caption: "HYLO groundfloor",
+        list: [{ image: rightBg }, { image: rightBg }, { image: rightBg }],
+      },
+    ],
+  },
+  {
+    type: "text_image_slider",
+    hideBorder: "bottom",
+    preview_type: "pdf",
+    items: [
+      {
+        title: "Old & new collide",
+        text: "This is a place where old and new collide; from cutting-edge-cool Old Street and Shoreditch to the historically influenced City of London. The area is the epicentre of London’s creative and collaborative industries and is more popular than ever with many of London’s forward-thinking financial and professional occupiers. ",
+        button_label: "Request information",
+        button_url: "/",
+        on_button_click: () => console.log("button clicked --->"),
+        list: [
+          {
+            image:
+              "https://assets.ctfassets.net/5tq979orlb7f/EnX0vXCBJ8evXVKoMjNdF/3d98d7fa048aa766968e1cb8816c97a8/18_-_20_Farringdon_Lane__Clerks_Court__LOWERGROUND_FULL_-_Floor_Plan__1_.pdf",
+            caption: "HYLO 1st Floor",
+          },
+          {
+            image:
+              "https://assets.ctfassets.net/5tq979orlb7f/EnX0vXCBJ8evXVKoMjNdF/3d98d7fa048aa766968e1cb8816c97a8/18_-_20_Farringdon_Lane__Clerks_Court__LOWERGROUND_FULL_-_Floor_Plan__1_.pdf",
+            caption: "HYLO 2nd Floor",
+          },
+          {
+            image:
+              "https://assets.ctfassets.net/5tq979orlb7f/EnX0vXCBJ8evXVKoMjNdF/3d98d7fa048aa766968e1cb8816c97a8/18_-_20_Farringdon_Lane__Clerks_Court__LOWERGROUND_FULL_-_Floor_Plan__1_.pdf",
+            caption: "HYLO 3rd Floor",
+          },
+        ],
+        image_position: "left",
+        bg_color: "green",
+        caption: "Image caption goes here",
+        white_button: true,
+      },
+    ],
+  },
+  {
+    type: "map",
+    address: "103–105 Bunhill Row, 8th floor",
+    APIKey: "",
+    markerIcon: marker,
+    loc: {
+      lat: 30.26555,
+      lng: -97.7497,
+    },
+  },
+];
 
 // membership page
 // const widgets = () => [
@@ -244,7 +354,7 @@ import "knotel-website-ui/dist/css/swiper.css";
 //         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Laoreet etiam blandit ultrices risus nulla nisi, risus. Odio ac in vivamus non integer nunc, dolor neque scelerisque. Ultricies eu duis enim tincidunt a mauris odio.",
 //         button_label: "Call To Action",
 //         button_url: "/",
-//       },
+//       },f
 //       {
 //         title: "Lorem Ipsum Dolor",
 //         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Laoreet etiam blandit ultrices risus nulla nisi, risus. Odio ac in vivamus non integer nunc, dolor neque scelerisque. Ultricies eu duis enim tincidunt a mauris odio.",
@@ -584,214 +694,244 @@ import "knotel-website-ui/dist/css/swiper.css";
 // ];
 
 // offices by city / filters page
-const widgets = (mapCenter, setCenter, filters, setFilters) => [
-  {
-    type: "filters",
-    labels: {
-      city: { label: "City", name: "city" },
-      neighborhood: { label: "Neighbourhood", name: "neighborhood" },
-      sizeInSqft: { label: "Square Feet", name: "sizeInSqft" },
-      sizeInM2: { label: "Meter Square", name: "sizeInM2" },
-      date: { label: "Date Range", name: "availableFrom" },
-      seat: { label: "Seat", name: "seatCapacity" },
-      floor: { label: "Floor", name: "floor" },
-    },
-    APIKey: "AIzaSyA7QhLNGYH_eg6-ZtPhfZlkh6dBSBNpcdk",
-    markerIcon: marker,
-    mapCenter,
-    setCenter,
-    onMarkerPress: (lat, lng) => {},
-    cityOptions: {
-      "hylo-first-floor": "HyLO",
-    },
-    neighborhoodOptions: {
-      ketu: "ketu",
-      alapere: "alapere",
-    },
-    sizeInSqftOptions: {
-      50: "500",
-      70: "350",
-    },
-    sizeInM2Options: {
-      50: "500",
-      70: "350",
-    },
-    city: "Amsterdam",
-    close_icon: bi_map,
-    listIcon,
-    arrow,
-    funnel,
-    bi_map,
-    defaultFilters: filters,
-    onMouseOverListing: (e) => {},
-    onMouseLeaveListingsSection: () => {
-      console.log("mouse left listing section --->");
-    },
-    onFilterChanged: (values) => setFilters(values),
-    items: [
-      {
-        image: leftBg,
-        link: "",
-        country: "London",
-        place: "HYLO, Ground Floor",
-        address: "Bunhill Row, Greater London, United Kingdom",
-        lat: 6.5244,
-        lng: 3.3792,
-        floor: "1",
-        seat: "1000",
-        square_feet: "26685",
-        available_date: 1670025000,
-        list: [
-          {
-            icon: logo1,
-            label: "Available:",
-            value: "December 3",
-          },
-          {
-            icon: logo2,
-            label: "Floor #:",
-            value: "Ground Floor",
-          },
-          {
-            icon: logo3,
-            label: "Size:",
-            value: "26,685 sqft",
-          },
-          {
-            icon: logo4,
-            label: "Seat #:",
-            value: "1000 Seats",
-          },
-          {
-            icon: logo5,
-            label: "Enquire:",
-            link: "Lorem@ipsum.com",
-          },
-        ],
-      },
-      {
-        image: leftBg,
-        link: "",
-        country: "London",
-        place: "80 Old Street, 3rd Floor",
-        address: "80, Old Street, Greater London, United Kingdom",
-        lat: 51.507224,
-        lng: -0.1277,
-        seat: "0",
-        floor: "1",
-        square_feet: "16685",
-        available_date: 1670025000,
-        list: [
-          {
-            icon: logo1,
-            label: "Available:",
-            value: "December 3",
-          },
-          {
-            icon: logo2,
-            label: "Floor #:",
-            value: "Ground Floor",
-          },
-          {
-            icon: logo3,
-            label: "Size:",
-            value: "16,685 sqft",
-          },
-          {
-            icon: logo4,
-            label: "Seat #:",
-            value: "Undefined Seats",
-          },
-          {
-            icon: logo5,
-            label: "Enquire:",
-            link: "Lorem@ipsum.com",
-          },
-        ],
-      },
-      {
-        image: rightBg,
-        link: "",
-        country: "Conventry",
-        place: "Clerks Court",
-        address: "Dorset, United Kingdom",
-        lat: 51.50722,
-        lng: -0.1273,
-        floor: "1",
-        seat: "10",
-        square_feet: "26685",
-        available_date: 1667300455,
-        list: [
-          {
-            icon: logo1,
-            label: "Available:",
-            value: "November 1",
-          },
-          {
-            icon: logo2,
-            label: "Floor #:",
-            value: "Ground Floor",
-          },
-          {
-            icon: logo3,
-            label: "Size:",
-            value: "26,685 sqft",
-          },
-          {
-            icon: logo4,
-            label: "Seat #:",
-            value: "10 Seats",
-          },
-          {
-            icon: logo5,
-            label: "Enquire:",
-            link: "Lorem@ipsum.com",
-          },
-        ],
-      },
-      {
-        image: rightBg,
-        link: "",
-        country: "London",
-        place: "80 Old Street, 3rd Floor",
-        address: "80, Old Street, Greater London, United Kingdom",
-        lat: 51.507224,
-        lng: -0.1277,
-        floor: "3",
-        seat: "2000",
-        square_feet: "36685",
-        available_date: 1667300455,
-        list: [
-          {
-            icon: logo1,
-            label: "Available:",
-            value: "November 1",
-          },
-          {
-            icon: logo2,
-            label: "Floor #:",
-            value: "Thrid Floor",
-          },
-          {
-            icon: logo3,
-            label: "Size:",
-            value: "36,685 sqft",
-          },
-          {
-            icon: logo4,
-            label: "Seat #:",
-            value: "Undefined Seats",
-          },
-          {
-            icon: logo5,
-            label: "Enquire:",
-            link: "Lorem@ipsum.com",
-          },
-        ],
-      },
-    ],
-  },
-];
+// const widgets = (mapCenter, setCenter, filters, setFilters) => [
+//   {
+//     type: "filters",
+//     labels: {
+//       city: { label: "City", name: "city" },
+//       neighborhood: { label: "Neighbourhood", name: "neighborhood" },
+//       sizeInSqft: { label: "Square Feet", name: "sizeInSqft" },
+//       sizeInM2: { label: "Meter Square", name: "sizeInM2" },
+//       date: { label: "Date Range", name: "availableFrom" },
+//       seat: { label: "Seat", name: "seatCapacity" },
+//       floor: { label: "Floor", name: "floor" },
+//     },
+//     APIKey: "AIzaSyA7QhLNGYH_eg6-ZtPhfZlkh6dBSBNpcdk",
+//     markerIcon: marker,
+//     mapCenter,
+//     setCenter,
+//     onMarkerPress: (lat, lng) => {},
+//     cityOptions: {
+//       "hylo-first-floor": "HyLO",
+//     },
+//     neighborhoodOptions: {
+//       ketu: "ketu",
+//       alapere: "alapere",
+//     },
+//     sizeInSqftOptions: {
+//       50: "500",
+//       70: "350",
+//     },
+//     sizeInM2Options: {
+//       50: "500",
+//       70: "350",
+//     },
+//     city: "Amsterdam",
+//     close_icon: bi_map,
+//     listIcon,
+//     arrow,
+//     funnel,
+//     bi_map,
+//     defaultFilters: filters,
+//     onMouseOverListing: (e) => {},
+//     onMouseLeaveListingsSection: () => {
+//       console.log("mouse left listing section --->");
+//     },
+//     onFilterChanged: (values) => setFilters(values),
+//     items: [
+//       {
+//         image: leftBg,
+//         link: "",
+//         country: "London",
+//         place: "HYLO, Ground Floor",
+//         contactEmail: "brokers@knotel.com",
+//         address: "Bunhill Row, Greater London, United Kingdom",
+//         lat: 6.5244,
+//         lng: 3.3792,
+//         floor: "1",
+//         seat: "1000",
+//         square_feet: "26685",
+//         available_date: 1670025000,
+//         list: [
+//           {
+//             label: "Hylo, 1st Floor",
+//           },
+//           {
+//             label: "Hylo, 2nd Floor",
+//           },
+//           {
+//             label: "Hylo, 3rd Floor",
+//           },
+//           {
+//             label: "+ 3 more",
+//           },
+//         ],
+//       },
+//       {
+//         image: leftBg,
+//         link: "",
+//         country: "London",
+//         place: "80 Old Street, 3rd Floor",
+//         address: "80, Old Street, Greater London, United Kingdom",
+//         lat: 51.507224,
+//         lng: -0.1277,
+//         seat: "0",
+//         contactEmail: "brokers@knotel.com",
+//         floor: "1",
+//         square_feet: "16685",
+//         available_date: 1670025000,
+//         list: [
+//           {
+//             label: "1st Floor",
+//           },
+//           {
+//             label: "2nd Floor",
+//           },
+//           {
+//             label: "3rd Floor",
+//           },
+//           {
+//             label: "+3 more",
+//           },
+//         ],
+//       },
+//       {
+//         image: rightBg,
+//         link: "",
+//         country: "Conventry",
+//         place: "Clerks Court",
+//         address: "Dorset, United Kingdom",
+//         lat: 51.50722,
+//         lng: -0.1273,
+//         floor: "1",
+//         seat: "10",
+//         square_feet: "26685",
+//         contactEmail: "brokers@knotel.com",
+
+//         available_date: 1667300455,
+//         list: [
+//           {
+//             label: "Available:",
+//           },
+//           {
+//             label: "Floor #:",
+//           },
+//           {
+//             label: "Size:",
+//           },
+//           {
+//             label: "Seat #:",
+//           },
+//         ],
+//       },
+//       {
+//         image: rightBg,
+//         link: "",
+//         country: "London",
+//         place: "80 Old Street, 3rd Floor",
+//         address: "80, Old Street, Greater London, United Kingdom",
+//         lat: 51.507224,
+//         lng: -0.1277,
+//         floor: "3",
+//         seat: "2000",
+//         square_feet: "36685",
+//         contactEmail: "brokers@knotel.com",
+
+//         available_date: 1667300455,
+//         list: [
+//           {
+//             label: "Available:",
+//           },
+//           {
+//             label: "Floor #:",
+//           },
+//           {
+//             label: "Size:",
+//           },
+//           {
+//             label: "Seat #:",
+//           },
+//         ],
+//       },
+//     ],
+//   },
+// ];
+
+// const widgets = (mapCenter, setCenter, filters, setFilters) => [
+//   {
+//     type: "filters",
+//     labels: {
+//       city: { label: "City", name: "city" },
+//       neighborhood: { label: "Neighborhood", name: "neighborhood" },
+//       sizeInSqft: { label: "Square Feet", name: "sizeSqft" },
+//       sizeInM2: { label: "Meters Squared", name: "sizeM2" },
+//       date: { label: "Date Range", name: "availableFrom" },
+//       seat: { label: "People", name: "seatCapacity" },
+//       floor: { label: "Floors", name: "floor" },
+//     },
+//     APIKey: "AIzaSyA7QhLNGYH_eg6-ZtPhfZlkh6dBSBNpcdk",
+//     markerIcon: "/icons/marker_new.png",
+//     close_icon: "/svgs/closeIcon.svg",
+//     listIcon: "/svgs/list.svg",
+//     arrow: "/svgs/map_arrow.svg",
+//     funnel: "/svgs/filterfunnel.svg",
+//     bi_map: "/svgs/bi_map.svg",
+//     mapCenter: null,
+//     defaultFilters: {},
+//     cityOptions: {
+//       amsterdam: "Amsterdam",
+//       austin: "Austin",
+//       berlin: "Berlin",
+//       dallas: "Dallas",
+//       dublin: "Dublin",
+//       london: "London",
+//       "los-angeles": "Los Angeles",
+//       miami: "Miami",
+//       "new-york-city": "New York City",
+//       paris: "Paris (Deskeo)",
+//       "san-francisco": "San Francisco",
+//       seattle: "Seattle",
+//       toronto: "Toronto",
+//     },
+//     neighborhoodOptions: { "City Fringe": "City Fringe" },
+//     seatOptions: {
+//       "1_to_15": "1-15",
+//       "16_to_30": "16-30",
+//       "31_to_45": "31 - 45",
+//       "46_to_60": "46 - 60",
+//       "60_to_": "60 +",
+//     },
+//     sizeInSqftOptions: {
+//       _to_2000: "Under 2000 sqft",
+//       "2001_to_5000": "2001 - 5000 sqft",
+//       "5001_to_8000": "5001 - 8000 sqft",
+//       "8000_to_": "+8000 sqft",
+//     },
+//     sizeInM2Options: {
+//       _to_185: "Under 185 ㎡",
+//       "186_to_470": "186 - 470 ㎡",
+//       "471_to_750": "471 - 750 ㎡",
+//       "750_to_": "+750 ㎡",
+//     },
+//     floorOptions: {
+//       "0_to_10": "Ground - 10th Floor",
+//       "10_to_20": "10th - 20th Floor",
+//       "21_to_50": "21st - 50th Floor",
+//     },
+//     city: "London",
+//     items: [
+//       {
+//         image:
+//           "https://images.ctfassets.net/5tq979orlb7f/30JUqC92tLWSquD6v47TYV/8d338725aed573cc1a9a6771df619876/20200715-Socrates_Gilray_House-NO_06-Front_closeup.jpg",
+//         link: "/offices/london/gilray-house",
+//         country: "London",
+//         address: "1 , 150 City Rd London EC1V 2NL , UK",
+//         lat: 51.52707,
+//         lng: -0.08866,
+//       },
+//     ],
+//   },
+// ];
 // landlords;
 // const widgets = () => [
 //   {
