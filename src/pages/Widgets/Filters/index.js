@@ -15,10 +15,16 @@ import LazyLoad from "../../../components/Lazyload";
 import DialogBox from "../../../components/DialogBox";
 import { AppContext } from "../../../Contexts/AppContext";
 
+const unitsOfMeasurements = {
+  SQM: "SQM",
+  SQFT: "SQFT",
+};
+
 const Filters = ({
   labels,
   items = [],
   cityOptions,
+  unitOfMeasurement,
   neighborhoodOptions,
   seatOptions,
   floorOptions,
@@ -191,26 +197,29 @@ const Filters = ({
                                   options={floorOptions}
                                 />
                               </div>
-                              <div className={style.filter_block}>
-                                <Field
-                                  initialValue={defaultFilters.sizeInSqft}
-                                  name={labels.sizeInSqft.name}
-                                  component={Dropdown}
-                                  classes={style.menu}
-                                  prompt={labels.sizeInSqft.label}
-                                  options={sizeInSqftOptions}
-                                />
-                              </div>
-                              <div className={style.filter_block}>
-                                <Field
-                                  initialValue={defaultFilters.sizeInM2}
-                                  name={labels.sizeInM2.name}
-                                  component={Dropdown}
-                                  classes={style.menu}
-                                  prompt={labels.sizeInM2.label}
-                                  options={sizeInM2Options}
-                                />
-                              </div>
+                              {unitOfMeasurement === unitsOfMeasurements.SQM ? (
+                                <div className={style.filter_block}>
+                                  <Field
+                                    initialValue={defaultFilters.sizeInM2}
+                                    name={labels.sizeInM2.name}
+                                    component={Dropdown}
+                                    classes={style.menu}
+                                    prompt={labels.sizeInM2.label}
+                                    options={sizeInM2Options}
+                                  />
+                                </div>
+                              ) : (
+                                <div className={style.filter_block}>
+                                  <Field
+                                    initialValue={defaultFilters.sizeInSqft}
+                                    name={labels.sizeInSqft.name}
+                                    component={Dropdown}
+                                    classes={style.menu}
+                                    prompt={labels.sizeInSqft.label}
+                                    options={sizeInSqftOptions}
+                                  />
+                                </div>
+                              )}
                             </div>
                           </form>
                         </div>
@@ -524,22 +533,25 @@ const Filters = ({
                                 prompt={labels.floor.label}
                                 options={floorOptions}
                               />
-                              <Field
-                                defaultValue={defaultFilters.sizeInSqft}
-                                name={labels.sizeInSqft.name}
-                                component={Dropdown}
-                                classes={style.menu}
-                                prompt={labels.sizeInSqft.label}
-                                options={sizeInSqftOptions}
-                              />
-                              <Field
-                                defaultValue={defaultFilters.sizeInM2}
-                                name={labels.sizeInM2.name}
-                                component={Dropdown}
-                                classes={style.menu}
-                                prompt={labels.sizeInM2.label}
-                                options={sizeInM2Options}
-                              />
+                              {unitOfMeasurement === unitsOfMeasurements.SQM ? (
+                                <Field
+                                  defaultValue={defaultFilters.sizeInM2}
+                                  name={labels.sizeInM2.name}
+                                  component={Dropdown}
+                                  classes={style.menu}
+                                  prompt={labels.sizeInM2.label}
+                                  options={sizeInM2Options}
+                                />
+                              ) : (
+                                <Field
+                                  defaultValue={defaultFilters.sizeInSqft}
+                                  name={labels.sizeInSqft.name}
+                                  component={Dropdown}
+                                  classes={style.menu}
+                                  prompt={labels.sizeInSqft.label}
+                                  options={sizeInSqftOptions}
+                                />
+                              )}
                             </div>
                           </form>
                         </div>
