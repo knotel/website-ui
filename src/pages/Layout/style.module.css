@@ -8,6 +8,11 @@
   border-bottom: 1px solid var(--border-color);
 }
 
+.header_btn a {
+  background-color: #4866fc;
+  border-color: #4866fc;
+}
+
 .header_wrap {
   display: flex;
   justify-content: space-between;
@@ -83,9 +88,14 @@
   padding-top: 8px;
 }
 
+.footer_link_item a:hover {
+  color: #E68176
+}
+
 .footer_title {
   letter-spacing: 1.6px;
   padding-bottom: 8px;
+  font-weight: 400;
 }
 
 .footer_bottom {
@@ -117,6 +127,11 @@
 
 .f_button {
   padding-top: 24px;
+}
+
+.f_button a:hover {
+  background-color: #4866fc;
+  border-color: #4866fc;
 }
 
 .socials {

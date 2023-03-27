@@ -4,6 +4,11 @@
   overflow: hidden;
 }
 
+.newsletter_button {
+  background-color: var(--common-blue);
+  border-color: var(--common-blue);
+}
+
 .newsletterDialog {
   background-color: var(--cream-bg);
 }

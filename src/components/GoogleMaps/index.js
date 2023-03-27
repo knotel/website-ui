@@ -18,27 +18,25 @@ const Marker = ({ pointer, onMarkerPress, lat, lng }) => {
 
   return (
     <div style={{ position: "relative" }}>
-      {tooltipVisible ? (
-        <a
-          style={{
-            padding: 10,
-            background: "white",
-            position: "absolute",
-            minWidth: "12rem",
-            border: "1px solid black",
-            bottom: 50,
-            textAlign: "center",
-            left: "50%",
-            transform: "translate(-50%, 0)",
-          }}
-          href={`https://maps.google.com/?q=${lat},${lng}`}
-          target={"_blank"}
-        >
-          <div>
-            <span>Show in Google Maps</span>
-          </div>
-        </a>
-      ) : null}
+      <a
+        style={{
+          padding: 10,
+          background: "white",
+          position: "absolute",
+          minWidth: "12rem",
+          border: "1px solid black",
+          bottom: 50,
+          textAlign: "center",
+          left: "50%",
+          transform: "translate(-50%, 0)",
+        }}
+        href={`https://maps.google.com/?q=${lat},${lng}`}
+        target={"_blank"}
+      >
+        <div>
+          <span>Show in Google Maps</span>
+        </div>
+      </a>
       <div onClick={toggleTooltip}>{pointer}</div>;
     </div>
   );

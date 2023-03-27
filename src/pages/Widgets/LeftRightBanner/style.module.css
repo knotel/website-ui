@@ -36,11 +36,21 @@
   color: var(--text-white);
 }
 
+.greenBg a:hover {
+  background-color: #FFFBF5;
+  border-color: #FFFBF5;
+  color: #13234a;
+}
+
 .blueBg {
   background: #13234a;
   color: var(--text-white);
 }
 
+.cali{
+  background-color: #DCE1D9;
+  
+}
 .content_wrapper {
   padding: 80px 40px 0px;
 }

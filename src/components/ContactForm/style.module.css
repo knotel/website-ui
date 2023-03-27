@@ -41,6 +41,11 @@
   line-height: 1.6;
 }
 
+.contact_button {
+  background-color: #4866fc;
+  border-color: #4866fc;
+}
+
 @media (max-width: 1024px) {
   .form {
     padding-top: 0px;

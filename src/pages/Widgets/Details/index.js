@@ -17,7 +17,7 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 
-const Details = ({ items = [] }) => {
+const Details = ({ items = [], pageFor }) => {
   const [textEditorRef, setTextEditorRef] = useState(null);
 
   const {
@@ -27,6 +27,10 @@ const Details = ({ items = [] }) => {
   const { setForceUpdate } = useContext(EqualHeightContext);
 
   // console.log("editor ref --->", textEditorRef.current);
+
+  const styleSelector = {
+    coral: style.coral,
+  };
 
   useEffect(() => {
     setForceUpdate((value) => !value);
@@ -57,7 +61,9 @@ const Details = ({ items = [] }) => {
             <div className={`section_border_top`}></div>
             <div className={`section_border_left`}></div>
             <div className={`section_border_right`}></div>
-            <div className={`section_border_bottom`}></div>
+            {pageFor === "club detail" ? null : (
+              <div className={`section_border_bottom`}></div>
+            )}
             <div className={`section_border_middle`}></div>
             {winWidth >= 1260 && items.length >= 2 && (
               <div className={`section_border_middle_2`}></div>
@@ -90,6 +96,8 @@ const Details = ({ items = [] }) => {
                               return (
                                 <div
                                   className={`${
+                                    styleSelector[value.hover] || ""
+                                  } ${
                                     get(item, "className", false)
                                       ? `${
                                           style[get(item, "className", false)]
@@ -166,7 +174,9 @@ const Details = ({ items = [] }) => {
                           })
                         )}
                       </div>
-                      <div className={`section_border_bottom`}></div>
+                      {pageFor === "club detail" ? null : (
+                        <div className={`section_border_bottom`}></div>
+                      )}
                     </EqualHeightElement>
                   </div>
                 );

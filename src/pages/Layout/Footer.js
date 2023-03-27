@@ -39,7 +39,6 @@ const Footer = ({ footerProps }) => {
                 {contactEmail}
               </NormalLink>
             </div>
-
             <div className={style.f_button}>
               <Button
                 id={"subscribeTrigger"}

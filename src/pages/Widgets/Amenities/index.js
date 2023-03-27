@@ -11,7 +11,7 @@ import style from "./style.module.css";
 import AmenitiesModal from "../../../components/AmenitiesModal";
 import { AppContext } from "../../../Contexts/AppContext";
 
-const Amenities = ({ heading, items = [], close_icon }) => {
+const Amenities = ({ heading, items = [], close_icon, forPage }) => {
   const {
     appContext: { winWidth },
   } = useContext(AppContext);
@@ -110,11 +110,20 @@ const Amenities = ({ heading, items = [], close_icon }) => {
                         <div className={style.text}>{item.text}</div>
                         <NormalLink
                           onClick={() => {
-                            setOpen({ state: true, index });
+                            forPage === "offices"
+                              ? item.onButtonClick()
+                              : setOpen({
+                                  state: true,
+                                  index: index,
+                                });
                           }}
-                          className={style.link}
+                          className={`${style.link} ${
+                            forPage === "offices" ? style.blue_link : ""
+                          } `}
                         >
-                          Find Out More
+                          {forPage === "offices"
+                            ? "Contact Us"
+                            : "Find Out More"}
                         </NormalLink>
                         {open.state === true && (
                           <AmenitiesModal

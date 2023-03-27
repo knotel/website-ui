@@ -8,6 +8,11 @@
   position: relative;
 }
 
+.coral a:hover {
+  color: #E68176;
+  border-bottom-color: #E68176;
+}
+
 .title {
   font-size: 23px;
   font-weight: 300;

@@ -114,6 +114,10 @@
   padding: 12px;
 }
 
+.text {
+  line-height: 1.5;
+}
+
 @media(max-width:1260px) {
   .top {
     padding: 40px 30px;

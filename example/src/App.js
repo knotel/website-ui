@@ -83,249 +83,249 @@ import "knotel-website-ui/dist/css/swiper.css";
 // ];
 
 // office detail
-const widgets = () => [
-  {
-    type: "banner",
-    image: detailImg,
-    title: "HYLO ground floor",
-    text: "Welcome to London’s future workplace.",
-  },
-  {
-    type: "details",
-    items: [
-      {
-        title: "About",
-        type: "text",
-        text: `h1>HTML Ipsum Presents</h1>
-<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-				<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p> <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p> <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>`,
-      },
-      {
-        title: "Whats Included",
-        list: [
-          {
-            text: "Lorem ipsum dolor sit amet",
-          },
-          {
-            text: "consectetur adipiscing elit ",
-          },
-          {
-            text: "Nisi, nulla id viverra pharetra",
-          },
-          {
-            text: "Eget leo vitae mattis leo",
-          },
-          {
-            text: "Risus etiam nisl",
-          },
-          {
-            text: "Sit turpis sed vestibulum dignissim",
-          },
-        ],
-      },
-      {
-        title: "Further Information",
-        list: [
-          {
-            logo: download,
-            button_label: "Download Flyer",
-            button_link: "/",
-            on_button_click: () => console.log("download flyer"),
-          },
-          {
-            logo: download,
-            button_label: "Download Images",
-            button_link: "/",
-            on_button_click: () => console.log("download images"),
-          },
-          {
-            logo: download,
-            button_label: "Download Floor Plan",
-            link: "https://www.facebook.com",
-            on_button_click: () => console.log("download flor plan"),
-          },
-        ],
-      },
-    ],
-  },
-  {
-    type: "text_image_slider",
-    items: [
-      {
-        title: "HYLO's Ground Floor",
-        type: "details",
-        list_tems: [
-          {
-            icon: logo1,
-            label: "Available:",
-            value: "December 3",
-          },
-          {
-            icon: logo2,
-            label: "Floor #:",
-            value: "Ground Floor",
-          },
-          {
-            icon: logo3,
-            label: "Size:",
-            value: "26,685 sqft",
-          },
-          {
-            icon: logo4,
-            label: "Seat #:",
-            value: "1000 Seats",
-          },
-          {
-            icon: logo5,
-            label: "Enquire:",
-            link: "Lorem@ipsum.com",
-            linkLabel: "sample link label",
-          },
-        ],
-        text: "Knotel at HYLO offers 27,000 square feet of premium office space across 4 floors and access to 17,000 sq ft of retail space. One of London’s most exciting new buildings, HYLO boasts high rise tower floors, roof gardens and new public space. Welcome to London’s future workplace.",
-        button_label: "Schedule a tour",
-        // button_url: "/",
-        on_button_click: () => console.log("button clicked --->"),
-        image_position: "right",
-        caption: "HYLO groundfloor",
-        list: [{ image: rightBg }, { image: rightBg }, { image: rightBg }],
-      },
-    ],
-  },
-  {
-    type: "text_image_slider",
-    items: [
-      {
-        title: "HYLO's 1st Floor",
-        type: "details",
-        list_tems: [
-          {
-            icon: logo1,
-            label: "Available:",
-            value: "December 3",
-          },
-          {
-            icon: logo2,
-            label: "Floor #:",
-            value: "Ground Floor",
-          },
-          {
-            icon: logo3,
-            label: "Size:",
-            value: "26,685 sqft",
-          },
-          {
-            icon: logo4,
-            label: "Seat #:",
-            value: "1000 Seats",
-          },
-          {
-            icon: logo5,
-            label: "Enquire:",
-            link: "Lorem@ipsum.com",
-          },
-        ],
-        text: "Knotel at HYLO offers 27,000 square feet of premium office space across 4 floors and access to 17,000 sq ft of retail space. One of London’s most exciting new buildings, HYLO boasts high rise tower floors, roof gardens and new public space. Welcome to London’s future workplace.",
-        button_label: "Schedule a tour",
-        // button_url: "/",
-        on_button_click: () => console.log("button clicked --->"),
-        image_position: "right",
-        caption: "HYLO groundfloor",
-        list: [{ image: rightBg }, { image: rightBg }, { image: rightBg }],
-      },
-    ],
-  },
-  {
-    type: "text_image_slider",
-    items: [
-      {
-        title: "HYLO's Ground Floor",
-        type: "details",
-        list_tems: [
-          {
-            icon: logo1,
-            label: "Available:",
-            value: "December 3",
-          },
-          {
-            icon: logo2,
-            label: "Floor #:",
-            value: "Ground Floor",
-          },
-          {
-            icon: logo3,
-            label: "Size:",
-            value: "26,685 sqft",
-          },
-          {
-            icon: logo4,
-            label: "Seat #:",
-            value: "1000 Seats",
-          },
-          {
-            icon: logo5,
-            label: "Enquire:",
-            link: "Lorem@ipsum.com",
-          },
-        ],
-        text: "",
-        button_label: "Schedule a tour",
-        // button_url: "/",
-        on_button_click: () => console.log("button clicked --->"),
-        image_position: "right",
-        caption: "HYLO groundfloor",
-        list: [{ image: rightBg }, { image: rightBg }, { image: rightBg }],
-      },
-    ],
-  },
-  {
-    type: "text_image_slider",
-    hideBorder: "bottom",
-    preview_type: "pdf",
-    items: [
-      {
-        title: "Old & new collide",
-        text: "This is a place where old and new collide; from cutting-edge-cool Old Street and Shoreditch to the historically influenced City of London. The area is the epicentre of London’s creative and collaborative industries and is more popular than ever with many of London’s forward-thinking financial and professional occupiers. ",
-        button_label: "Request information",
-        button_url: "/",
-        on_button_click: () => console.log("button clicked --->"),
-        list: [
-          {
-            image:
-              "https://assets.ctfassets.net/5tq979orlb7f/EnX0vXCBJ8evXVKoMjNdF/3d98d7fa048aa766968e1cb8816c97a8/18_-_20_Farringdon_Lane__Clerks_Court__LOWERGROUND_FULL_-_Floor_Plan__1_.pdf",
-            caption: "HYLO 1st Floor",
-          },
-          {
-            image:
-              "https://assets.ctfassets.net/5tq979orlb7f/EnX0vXCBJ8evXVKoMjNdF/3d98d7fa048aa766968e1cb8816c97a8/18_-_20_Farringdon_Lane__Clerks_Court__LOWERGROUND_FULL_-_Floor_Plan__1_.pdf",
-            caption: "HYLO 2nd Floor",
-          },
-          {
-            image:
-              "https://assets.ctfassets.net/5tq979orlb7f/EnX0vXCBJ8evXVKoMjNdF/3d98d7fa048aa766968e1cb8816c97a8/18_-_20_Farringdon_Lane__Clerks_Court__LOWERGROUND_FULL_-_Floor_Plan__1_.pdf",
-            caption: "HYLO 3rd Floor",
-          },
-        ],
-        image_position: "left",
-        bg_color: "green",
-        caption: "Image caption goes here",
-        white_button: true,
-      },
-    ],
-  },
-  {
-    type: "map",
-    address: "103–105 Bunhill Row, 8th floor",
-    APIKey: "",
-    markerIcon: marker,
-    loc: {
-      lat: 30.26555,
-      lng: -97.7497,
-    },
-  },
-];
+// const widgets = () => [
+//   {
+//     type: "banner",
+//     image: detailImg,
+//     title: "HYLO ground floor",
+//     text: "Welcome to London’s future workplace.",
+//   },
+//   {
+//     type: "details",
+//     items: [
+//       {
+//         title: "About",
+//         type: "text",
+//         text: `h1>HTML Ipsum Presents</h1>
+// <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+//         <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+// <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+// 				<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p> <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p> <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>`,
+//       },
+//       {
+//         title: "Whats Included",
+//         list: [
+//           {
+//             text: "Lorem ipsum dolor sit amet",
+//           },
+//           {
+//             text: "consectetur adipiscing elit ",
+//           },
+//           {
+//             text: "Nisi, nulla id viverra pharetra",
+//           },
+//           {
+//             text: "Eget leo vitae mattis leo",
+//           },
+//           {
+//             text: "Risus etiam nisl",
+//           },
+//           {
+//             text: "Sit turpis sed vestibulum dignissim",
+//           },
+//         ],
+//       },
+//       {
+//         title: "Further Information",
+//         list: [
+//           {
+//             logo: download,
+//             button_label: "Download Flyer",
+//             button_link: "/",
+//             on_button_click: () => console.log("download flyer"),
+//           },
+//           {
+//             logo: download,
+//             button_label: "Download Images",
+//             button_link: "/",
+//             on_button_click: () => console.log("download images"),
+//           },
+//           {
+//             logo: download,
+//             button_label: "Download Floor Plan",
+//             link: "https://www.facebook.com",
+//             on_button_click: () => console.log("download flor plan"),
+//           },
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     type: "text_image_slider",
+//     items: [
+//       {
+//         title: "HYLO's Ground Floor",
+//         type: "details",
+//         list_tems: [
+//           {
+//             icon: logo1,
+//             label: "Available:",
+//             value: "December 3",
+//           },
+//           {
+//             icon: logo2,
+//             label: "Floor #:",
+//             value: "Ground Floor",
+//           },
+//           {
+//             icon: logo3,
+//             label: "Size:",
+//             value: "26,685 sqft",
+//           },
+//           {
+//             icon: logo4,
+//             label: "Seat #:",
+//             value: "1000 Seats",
+//           },
+//           {
+//             icon: logo5,
+//             label: "Enquire:",
+//             link: "Lorem@ipsum.com",
+//             linkLabel: "sample link label",
+//           },
+//         ],
+//         text: "Knotel at HYLO offers 27,000 square feet of premium office space across 4 floors and access to 17,000 sq ft of retail space. One of London’s most exciting new buildings, HYLO boasts high rise tower floors, roof gardens and new public space. Welcome to London’s future workplace.",
+//         button_label: "Schedule a tour",
+//         // button_url: "/",
+//         on_button_click: () => console.log("button clicked --->"),
+//         image_position: "right",
+//         caption: "HYLO groundfloor",
+//         list: [{ image: rightBg }, { image: rightBg }, { image: rightBg }],
+//       },
+//     ],
+//   },
+//   {
+//     type: "text_image_slider",
+//     items: [
+//       {
+//         title: "HYLO's 1st Floor",
+//         type: "details",
+//         list_tems: [
+//           {
+//             icon: logo1,
+//             label: "Available:",
+//             value: "December 3",
+//           },
+//           {
+//             icon: logo2,
+//             label: "Floor #:",
+//             value: "Ground Floor",
+//           },
+//           {
+//             icon: logo3,
+//             label: "Size:",
+//             value: "26,685 sqft",
+//           },
+//           {
+//             icon: logo4,
+//             label: "Seat #:",
+//             value: "1000 Seats",
+//           },
+//           {
+//             icon: logo5,
+//             label: "Enquire:",
+//             link: "Lorem@ipsum.com",
+//           },
+//         ],
+//         text: "Knotel at HYLO offers 27,000 square feet of premium office space across 4 floors and access to 17,000 sq ft of retail space. One of London’s most exciting new buildings, HYLO boasts high rise tower floors, roof gardens and new public space. Welcome to London’s future workplace.",
+//         button_label: "Schedule a tour",
+//         // button_url: "/",
+//         on_button_click: () => console.log("button clicked --->"),
+//         image_position: "right",
+//         caption: "HYLO groundfloor",
+//         list: [{ image: rightBg }, { image: rightBg }, { image: rightBg }],
+//       },
+//     ],
+//   },
+//   {
+//     type: "text_image_slider",
+//     items: [
+//       {
+//         title: "HYLO's Ground Floor",
+//         type: "details",
+//         list_tems: [
+//           {
+//             icon: logo1,
+//             label: "Available:",
+//             value: "December 3",
+//           },
+//           {
+//             icon: logo2,
+//             label: "Floor #:",
+//             value: "Ground Floor",
+//           },
+//           {
+//             icon: logo3,
+//             label: "Size:",
+//             value: "26,685 sqft",
+//           },
+//           {
+//             icon: logo4,
+//             label: "Seat #:",
+//             value: "1000 Seats",
+//           },
+//           {
+//             icon: logo5,
+//             label: "Enquire:",
+//             link: "Lorem@ipsum.com",
+//           },
+//         ],
+//         text: "",
+//         button_label: "Schedule a tour",
+//         // button_url: "/",
+//         on_button_click: () => console.log("button clicked --->"),
+//         image_position: "right",
+//         caption: "HYLO groundfloor",
+//         list: [{ image: rightBg }, { image: rightBg }, { image: rightBg }],
+//       },
+//     ],
+//   },
+//   {
+//     type: "text_image_slider",
+//     hideBorder: "bottom",
+//     preview_type: "pdf",
+//     items: [
+//       {
+//         title: "Old & new collide",
+//         text: "This is a place where old and new collide; from cutting-edge-cool Old Street and Shoreditch to the historically influenced City of London. The area is the epicentre of London’s creative and collaborative industries and is more popular than ever with many of London’s forward-thinking financial and professional occupiers. ",
+//         button_label: "Request information",
+//         button_url: "/",
+//         on_button_click: () => console.log("button clicked --->"),
+//         list: [
+//           {
+//             image:
+//               "https://assets.ctfassets.net/5tq979orlb7f/EnX0vXCBJ8evXVKoMjNdF/3d98d7fa048aa766968e1cb8816c97a8/18_-_20_Farringdon_Lane__Clerks_Court__LOWERGROUND_FULL_-_Floor_Plan__1_.pdf",
+//             caption: "HYLO 1st Floor",
+//           },
+//           {
+//             image:
+//               "https://assets.ctfassets.net/5tq979orlb7f/EnX0vXCBJ8evXVKoMjNdF/3d98d7fa048aa766968e1cb8816c97a8/18_-_20_Farringdon_Lane__Clerks_Court__LOWERGROUND_FULL_-_Floor_Plan__1_.pdf",
+//             caption: "HYLO 2nd Floor",
+//           },
+//           {
+//             image:
+//               "https://assets.ctfassets.net/5tq979orlb7f/EnX0vXCBJ8evXVKoMjNdF/3d98d7fa048aa766968e1cb8816c97a8/18_-_20_Farringdon_Lane__Clerks_Court__LOWERGROUND_FULL_-_Floor_Plan__1_.pdf",
+//             caption: "HYLO 3rd Floor",
+//           },
+//         ],
+//         image_position: "left",
+//         bg_color: "green",
+//         caption: "Image caption goes here",
+//         white_button: true,
+//       },
+//     ],
+//   },
+//   {
+//     type: "map",
+//     address: "103–105 Bunhill Row, 8th floor",
+//     APIKey: "",
+//     markerIcon: marker,
+//     loc: {
+//       lat: 30.26555,
+//       lng: -97.7497,
+//     },
+//   },
+// ];
 
 // membership page
 // const widgets = () => [
@@ -349,13 +349,14 @@ const widgets = () => [
 //   },
 //   {
 //     type: "call_to_action",
+//     forPage: "membership",
 //     items: [
 //       {
 //         title: "Mauris Fusce",
 //         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Laoreet etiam blandit ultrices risus nulla nisi, risus. Odio ac in vivamus non integer nunc, dolor neque scelerisque. Ultricies eu duis enim tincidunt a mauris odio.",
 //         button_label: "Call To Action",
 //         button_url: "/",
-//       },f
+//       },
 //       {
 //         title: "Lorem Ipsum Dolor",
 //         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Laoreet etiam blandit ultrices risus nulla nisi, risus. Odio ac in vivamus non integer nunc, dolor neque scelerisque. Ultricies eu duis enim tincidunt a mauris odio.",
@@ -432,185 +433,187 @@ const widgets = () => [
 // ];
 
 // club detail
-// const widgets = () => [
-//   {
-//     type: "banner",
-//     image:
-//       "https://images.ctfassets.net/5tq979orlb7f/5xmHEAh50S2kgsa0ngGg3E/c120a56c3964b931846ff322dc17b4b0/workclub.jpg",
-//     title: "Old Sessions House",
-//     text: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Lacus.",
-//   },
-//   {
-//     type: "details",
-//     items: [
-//       {
-//         title: "About",
-//         className: "aboutUs",
-//         list: [
-//           {
-//             icon: "/svgs/location.svg",
-//             label: "Location:",
-//             value: "21, Clerkenwell Close Greater London, United Kingdom 1",
-//           },
-//           {
-//             icon: "/svgs/hours.svg",
-//             label: "Hours:",
-//             hours: true,
-//             open: "OPEN",
-//             openDays: "Mon - Fri",
-//             closedDays: "Sat - Sun",
-//             timing: "8:00am - 8:00pm",
-//             close: "CLOSED",
-//           },
-//           {
-//             icon: "/svgs/logo5.svg",
-//             label: "Enquire:",
-//             type: "mailto",
-//             link: "Lorem@ipsim.com",
-//           },
-//         ],
-//       },
-//       {
-//         title: "Whats Included",
-//         list: [
-//           { text: "Knotel Art Club" },
-//           { text: "Pool" },
-//           { text: "Roof Terrace" },
-//         ],
-//       },
-//       {
-//         title: "Further Information",
-//         list: [
-//           {
-//             icon: "/svgs/tel.svg",
-//             type: "tel",
-//             label: "Tel:",
-//             link: "0203 678 2234",
-//           },
-//           {
-//             icon: "/svgs/logo5.svg",
-//             label: "Enquire:",
-//             type: "mailto",
-//             link: "info@sessions.com",
-//           },
-//           {
-//             icon: "/svgs/memberships.svg",
-//             label: "Memberships:",
-//             linkLabel: "Explore memberships",
-//             link: "/",
-//           },
-//         ],
-//       },
-//     ],
-//   },
-//   {
-//     type: "amenities",
-//     heading: "Amenities",
-//     close_icon: listIcon,
-//     items: [
-//       {
-//         image:
-//           "https://images.ctfassets.net/5tq979orlb7f/3QxEPYD4yQstPW8MuLcwbM/81aff0c6d98e09be21722955dae9629d/old_session_real.jpeg",
-//         title: "Knotel Art Club",
-//         text: "Knotel Arts Club is about to open as an urban sanctuary that sits in the old Judges’ Dining Room at Sessions House. This magnificent Victorian room with its added mezzanine is lit by natural flame from two log fires as well as restored gas lit chandeliers. The room is also surrounded by outdoor terraces with fireplaces, rooftop bar, secret garden and swimming pool. Created with a studio ethos, it is a restaurant, wine bar and performance space that moves and shifts with the season. The modern European cuisine is headed by acclaimed chef Florence Knight who will base the offering on fresh local produce.",
-//       },
-//       {
-//         image:
-//           "https://images.ctfassets.net/5tq979orlb7f/4EIMKXMrVscETXbwhbzz0l/ce6e2f2bc48c1165042e09183a6c6184/sessions_pool.jpeg",
-//         title: "Pool",
-//         text: "As another truly unique feature, the only one of its kind on the roof of a grade II* listed property, the terrace also offers a circa 250 sq. ft. corner infinity pool from which one can view the cityscape watching the world go by. The turquoise water is heated all year around and can be enjoyed at a comfortable 33 degrees even in winter or for a refreshing plunge in the summer months. Using natural Portland stone, it has been designed to seamlessly integrate with the terrace materials and the Georgian stone façade below. A state of the art filtering and treatment system creates exceptionally pure water to reduce the need of chlorine and other chemicals.",
-//       },
-//       {
-//         image:
-//           "https://images.ctfassets.net/5tq979orlb7f/2EqnA7UfZIpWrVrtbT2N4F/f4211afd3bcaf36ec1c26f1e9d5181e2/old_session_home.jpeg",
-//         title: "Roof Terrace",
-//         text: "A hidden oasis is perhaps the best way to describe the roof garden on this majestic Georgian building on which to enjoy the island site’s expansive panoramic views of the London Skyline. An evergreen hedge, olive trees, rosemary and a small vineyard all have their part in transporting its guests to a relaxing Mediterranean landscape. The old chimneys have been fitted with gas fired open flame flambeaux to light the terrace with natural fire and there is even an outdoor fireplace to cosy up in front of.",
-//       },
-//     ],
-//   },
-//   {
-//     type: "image_with_text",
-//     className: "paddingClass",
-//     items: [
-//       {
-//         image:
-//           "https://images.ctfassets.net/5tq979orlb7f/3KhdJKXfGh35YGZs9UNsv2/2d12586c24a104178b3167fa167389ec/membership-hero.jpg",
-//         title: "Memberships",
-//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quam enim turpis ut quam interdum neque mauris quis. Mi, lorem egestas neque sagittis pulvinar dolor, commodo.",
-//         button_label: "Explore Memberships",
-//         button_url: "workclub/membership",
-//         image_position: "right",
-//         cream_btn: true,
-//         bg_color: "red",
-//       },
-//     ],
-//   },
-//   {
-//     type: "text_image_slider",
-//     items: [
-//       {
-//         title: "The Neighbourhood",
-//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit turpis donec eu amet, id. Volutpat in dis sagittis velit mauris.",
-//         button_label: "Enquire",
-//         caption: "Sample Caption Works",
-//         button_url: "/",
-//         list: [
-//           {
-//             image:
-//               "https://images.ctfassets.net/5tq979orlb7f/10qmuHIivpEIlIqZuUzehm/6a6b6f3e29f814366b7343e231892d6d/hero.jpg",
-//           },
-//           {
-//             image:
-//               "https://images.ctfassets.net/5tq979orlb7f/5xmHEAh50S2kgsa0ngGg3E/c120a56c3964b931846ff322dc17b4b0/workclub.jpg",
-//           },
-//           {
-//             image:
-//               "https://downloads.ctfassets.net/5tq979orlb7f/6YCtkdrd1VVEo9umAb9BXn/fb0866eeb7293311f513c318d4aa9786/OSH_Press_Preview0222.jpg",
-//           },
-//         ],
-//         image_position: "left",
-//       },
-//     ],
-//   },
-//   {
-//     type: "find_us",
-//     title: "Find Us",
-//     address: "21, Clerkenwell Close Greater London, United Kingdom 1",
-//     apiKey: "",
-//     markerIcon: marker,
-//     loc: {
-//       lat: 30.26555,
-//       lng: -97.7497,
-//     },
-//     items: [
-//       {
-//         icon: "/svgs/bus.svg",
-//         label: "Bus:",
-//         value: "3 Blocks from __ bus stop",
-//       },
-//       {
-//         icon: "/svgs/rail.svg",
-//         label: "Rail:",
-//         value: "Kings Cross St Pancras - 15 min via tube",
-//       },
-//       {
-//         icon: "/svgs/cycle.svg",
-//         label: "Cycle:",
-//         value: "3 Blocks from __station",
-//       },
-//       {
-//         icon: "/svgs/plane.svg",
-//         label: "Airport:",
-//         value: "Heathrow - 1 hour via public transport",
-//       },
-//       {
-//         icon: "/svgs/tube.svg",
-//         label: "Tube:",
-//         value: "Holborn Tube - 2 min walk",
-//       },
-//     ],
-//   },
-// ];
+const widgets = () => [
+  {
+    type: "banner",
+    image:
+      "https://images.ctfassets.net/5tq979orlb7f/5xmHEAh50S2kgsa0ngGg3E/c120a56c3964b931846ff322dc17b4b0/workclub.jpg",
+    title: "Old Sessions House",
+    text: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Lacus.",
+  },
+  {
+    type: "details",
+    pageFor: "club detail",
+    items: [
+      {
+        title: "About",
+        className: "aboutUs",
+        list: [
+          {
+            icon: "/svgs/location.svg",
+            label: "Location:",
+            value: "21, Clerkenwell Close Greater London, United Kingdom 1",
+          },
+          {
+            icon: "/svgs/hours.svg",
+            label: "Hours:",
+            hours: true,
+            open: "OPEN",
+            openDays: "Mon - Fri",
+            closedDays: "Sat - Sun",
+            timing: "8:00am - 8:00pm",
+            close: "CLOSED",
+          },
+          {
+            icon: "/svgs/logo5.svg",
+            label: "Enquire:",
+            type: "mailto",
+            link: "Lorem@ipsim.com",
+          },
+        ],
+      },
+      {
+        title: "Whats Included",
+        list: [
+          { text: "Knotel Art Club" },
+          { text: "Pool" },
+          { text: "Roof Terrace" },
+        ],
+      },
+      {
+        title: "Further Information",
+        list: [
+          {
+            icon: "/svgs/tel.svg",
+            type: "tel",
+            label: "Tel:",
+            link: "0203 678 2234",
+          },
+          {
+            icon: "/svgs/logo5.svg",
+            label: "Enquire:",
+            type: "mailto",
+            link: "info@sessions.com",
+          },
+          {
+            hover: "coral",
+            icon: "/svgs/memberships.svg",
+            label: "Memberships:",
+            linkLabel: "Explore memberships",
+            link: "/",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    type: "amenities",
+    heading: "Amenities",
+    close_icon: listIcon,
+    items: [
+      {
+        image:
+          "https://images.ctfassets.net/5tq979orlb7f/3QxEPYD4yQstPW8MuLcwbM/81aff0c6d98e09be21722955dae9629d/old_session_real.jpeg",
+        title: "Knotel Art Club",
+        text: "Knotel Arts Club is about to open as an urban sanctuary that sits in the old Judges’ Dining Room at Sessions House. This magnificent Victorian room with its added mezzanine is lit by natural flame from two log fires as well as restored gas lit chandeliers. The room is also surrounded by outdoor terraces with fireplaces, rooftop bar, secret garden and swimming pool. Created with a studio ethos, it is a restaurant, wine bar and performance space that moves and shifts with the season. The modern European cuisine is headed by acclaimed chef Florence Knight who will base the offering on fresh local produce.",
+      },
+      {
+        image:
+          "https://images.ctfassets.net/5tq979orlb7f/4EIMKXMrVscETXbwhbzz0l/ce6e2f2bc48c1165042e09183a6c6184/sessions_pool.jpeg",
+        title: "Pool",
+        text: "As another truly unique feature, the only one of its kind on the roof of a grade II* listed property, the terrace also offers a circa 250 sq. ft. corner infinity pool from which one can view the cityscape watching the world go by. The turquoise water is heated all year around and can be enjoyed at a comfortable 33 degrees even in winter or for a refreshing plunge in the summer months. Using natural Portland stone, it has been designed to seamlessly integrate with the terrace materials and the Georgian stone façade below. A state of the art filtering and treatment system creates exceptionally pure water to reduce the need of chlorine and other chemicals.",
+      },
+      {
+        image:
+          "https://images.ctfassets.net/5tq979orlb7f/2EqnA7UfZIpWrVrtbT2N4F/f4211afd3bcaf36ec1c26f1e9d5181e2/old_session_home.jpeg",
+        title: "Roof Terrace",
+        text: "A hidden oasis is perhaps the best way to describe the roof garden on this majestic Georgian building on which to enjoy the island site’s expansive panoramic views of the London Skyline. An evergreen hedge, olive trees, rosemary and a small vineyard all have their part in transporting its guests to a relaxing Mediterranean landscape. The old chimneys have been fitted with gas fired open flame flambeaux to light the terrace with natural fire and there is even an outdoor fireplace to cosy up in front of.",
+      },
+    ],
+  },
+  {
+    type: "image_with_text",
+    className: "paddingClass",
+    items: [
+      {
+        image:
+          "https://images.ctfassets.net/5tq979orlb7f/3KhdJKXfGh35YGZs9UNsv2/2d12586c24a104178b3167fa167389ec/membership-hero.jpg",
+        title: "Memberships",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quam enim turpis ut quam interdum neque mauris quis. Mi, lorem egestas neque sagittis pulvinar dolor, commodo.",
+        button_label: "Explore Memberships",
+        button_url: "workclub/membership",
+        image_position: "right",
+        cream_btn: true,
+        bg_color: "red",
+      },
+    ],
+  },
+  {
+    type: "text_image_slider",
+    items: [
+      {
+        title: "The Neighbourhood",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit turpis donec eu amet, id. Volutpat in dis sagittis velit mauris.",
+        button_label: "Enquire",
+        caption: "Sample Caption Works",
+        button_url: "/",
+        list: [
+          {
+            image:
+              "https://images.ctfassets.net/5tq979orlb7f/10qmuHIivpEIlIqZuUzehm/6a6b6f3e29f814366b7343e231892d6d/hero.jpg",
+          },
+          {
+            image:
+              "https://images.ctfassets.net/5tq979orlb7f/5xmHEAh50S2kgsa0ngGg3E/c120a56c3964b931846ff322dc17b4b0/workclub.jpg",
+          },
+          {
+            image:
+              "https://downloads.ctfassets.net/5tq979orlb7f/6YCtkdrd1VVEo9umAb9BXn/fb0866eeb7293311f513c318d4aa9786/OSH_Press_Preview0222.jpg",
+          },
+        ],
+        image_position: "left",
+      },
+    ],
+  },
+  {
+    type: "find_us",
+    title: "Find Us",
+    address: "21, Clerkenwell Close Greater London, United Kingdom 1",
+    apiKey: "",
+    markerIcon: marker,
+    loc: {
+      lat: 30.26555,
+      lng: -97.7497,
+    },
+    items: [
+      {
+        icon: "/svgs/bus.svg",
+        label: "Bus:",
+        value: "3 Blocks from __ bus stop",
+      },
+      {
+        icon: "/svgs/rail.svg",
+        label: "Rail:",
+        value: "Kings Cross St Pancras - 15 min via tube",
+      },
+      {
+        icon: "/svgs/cycle.svg",
+        label: "Cycle:",
+        value: "3 Blocks from __station",
+      },
+      {
+        icon: "/svgs/plane.svg",
+        label: "Airport:",
+        value: "Heathrow - 1 hour via public transport",
+      },
+      {
+        icon: "/svgs/tube.svg",
+        label: "Tube:",
+        value: "Holborn Tube - 2 min walk",
+      },
+    ],
+  },
+];
 
 // offices landing page
 // const widgets = () => [
@@ -674,20 +677,24 @@ const widgets = () => [
 //   {
 //     type: "amenities",
 //     heading: "Amenities",
+//     forPage: "offices",
 //     items: [
 //       {
 //         image: leftBg,
 //         title: "Amenity name",
+//         onButtonClick: () => document.getElementById("enquireTrigger")?.click(),
 //         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus.",
 //       },
 //       {
 //         image: rightBg,
 //         title: "Amenity name",
+//         onButtonClick: () => document.getElementById("enquireTrigger")?.click(),
 //         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus.",
 //       },
 //       {
 //         image: leftBg,
 //         title: "Amenity name",
+//         onButtonClick: () => document.getElementById("enquireTrigger")?.click(),
 //         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem arcu porta nisl sollicitudin posuere gravida rhoncus.",
 //       },
 //     ],
@@ -939,7 +946,7 @@ const widgets = () => [
 //   {
 //     type: "left_right_banner",
 //     image: bannerImg,
-//     bg_color: "darkblue",
+//     bg_color: "green",
 //     title: "Flexible solutions for your office portfolio.",
 //     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 //     button_label: "Submit your space",
@@ -985,7 +992,7 @@ const widgets = () => [
 //   {
 //     type: "left_right_banner",
 //     image: bannerImg,
-//     bg_color: "darkblue",
+//     bg_color: "cali",
 //     title: "Flexible solutions to meet client needs.",
 //     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
 //     button_label: "Get in touch",

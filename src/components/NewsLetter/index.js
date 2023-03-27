@@ -94,6 +94,7 @@ const NewsLetter = ({
                               <Button
                                 fetching={submitting}
                                 submit
+                                className={style.newsletter_button}
                                 label={content.button_label}
                                 buttonType="form_button"
                               />

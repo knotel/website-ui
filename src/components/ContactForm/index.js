@@ -130,6 +130,7 @@ const ContactForm = ({
                   placeholder="Additional details"
                 />
                 <Button
+                  className={style.contact_button}
                   fetching={submitting}
                   submit
                   label={contact.button_label}

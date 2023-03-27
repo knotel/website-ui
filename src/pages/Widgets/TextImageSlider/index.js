@@ -14,7 +14,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 import style from "./style.module.css";
 
-const sliderOptions = { arrows: false, pagination: false };
+const sliderOptions = { type: "loop", arrows: false, pagination: false };
 
 const TextImageSlider = ({
   items = [],

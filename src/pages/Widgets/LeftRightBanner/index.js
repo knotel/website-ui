@@ -23,6 +23,7 @@ const LeftRightBanner = ({
   const colorClass = {
     green: style.greenBg,
     darkblue: style.blueBg,
+    cali : style.cali
   };
   return (
     <div className={`c`}>

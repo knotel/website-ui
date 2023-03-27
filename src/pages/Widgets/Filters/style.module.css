@@ -190,8 +190,8 @@
 
 .more:hover {
   color: var(--primary-white);
-  background-color: var(--coral-red);
-  border: 1px solid var(--coral-red);
+  background-color: var(--coral-red-hover);
+  border: 1px solid var(--coral-red-hover);
 }
 
 

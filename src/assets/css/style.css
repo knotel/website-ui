@@ -365,7 +365,7 @@
 
 :root {
   --layout-bg: #fffbf5;
-  --button-bg: #4866fc;
+  --button-bg: #E68176;
   --footer-bg: #eee7db;
   --border-color: #000000;
   --beige-bg: #eee7db;
@@ -768,6 +768,26 @@ body>iframe {
 .markerGray {
   filter: grayscale(.8);
 }
+
+.markerBounce {
+  animation: bounce .4s ease alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
 
 @media (max-width: 1024px) {
   .c {

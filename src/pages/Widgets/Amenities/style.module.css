@@ -44,7 +44,7 @@
 .link {
   font-size: 14px;
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 1.5;
   padding-top: 16px;
 }
 
@@ -57,6 +57,11 @@
 .link:hover {
   color: var(--coral-red-hover);
   border-bottom: 1px solid var(--coral-red-hover);
+}
+
+.blue_link:hover {
+  color: var(--common-blue);
+  border-bottom: 1px solid var(--common-blue);
 }
 
 @media(max-width:1400px) {

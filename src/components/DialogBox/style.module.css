@@ -83,7 +83,7 @@
 
 .dialogClose:hover,
 .extraClass:hover {
-  color: var(--coral-red-hover);
+  /* color: var(--coral-red-hover); */
 }
 
 .dialogContent {

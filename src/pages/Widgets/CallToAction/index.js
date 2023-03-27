@@ -8,7 +8,7 @@ import { AppContext } from "../../../Contexts/AppContext";
 
 import style from "./style.module.css";
 
-const CallToAction = ({ items = [] }) => {
+const CallToAction = ({ items = [], forPage }) => {
   const {
     appContext: { winWidth },
   } = useContext(AppContext);
@@ -29,7 +29,9 @@ const CallToAction = ({ items = [] }) => {
           <div className={`section_border_left`}></div>
           <div className={`section_border_right`}></div>
           <div className={`section_border_bottom`}></div>
-          {winWidth > 820 && <div className={`section_border_middle`}></div>}
+          {winWidth > 820 && forPage !== "membership" && (
+            <div className={`section_border_middle`}></div>
+          )}
           {winWidth > 820 && items.length >= 2 && (
             <div className={`section_border_middle_2`}></div>
           )}
