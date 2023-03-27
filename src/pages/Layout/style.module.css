@@ -89,7 +89,7 @@
 }
 
 .footer_link_item a:hover {
-  color: #E68176
+  color: var(--button-bg)
 }
 
 .footer_title {

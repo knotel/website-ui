@@ -32,8 +32,8 @@
 .option.active,
 .option:hover {
   color: var(--primary-white);
-  background-color: #E68176;
-  border: 1px solid #E68176;
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-bg);
 }
 
 .prev,

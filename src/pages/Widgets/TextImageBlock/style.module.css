@@ -61,6 +61,11 @@
   padding-top: 40px;
 }
 
+.button a:hover{
+  background-color: var(--button-bg);
+  border-color: var(--button-bg);
+}
+
 :global .section_item .text_left .section_border_bottom {
   display: none;
 }

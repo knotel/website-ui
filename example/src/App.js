@@ -24,63 +24,63 @@ import "knotel-website-ui/dist/css/style.css";
 import "knotel-website-ui/dist/css/pagination.css";
 import "knotel-website-ui/dist/css/swiper.css";
 
-// const widgets = () => [
-//   {
-//     type: "hero_banner",
-//     desktop_image: bannerImg,
-//     title: "Introducing",
-//     title_image: bannerlogo,
-//     button_label: "Enquire",
-//     onButtonClick: () => console.log("button clicked -->"),
-//   },
-//   {
-//     type: "text",
-//     bg_color: "green",
-//     text: "<span> Workclub </span> hubs with access to your own branded <span> private office </span> in key gateway cities across the globe.",
-//   },
-//   {
-//     type: "menu_section",
-//     items: [
-//       {
-//         image: leftBg,
-//         title: "Office",
-//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing eliti",
-//         link: "/offices",
-//       },
-//       {
-//         image: rightBg,
-//         title: "Workclub",
-//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing eliti",
-//         link: "/workclubs",
-//       },
-//     ],
-//   },
-//   {
-//     type: "text_image_block",
-//     items: [
-//       {
-//         title: "Lorem ipsum dolor",
-//         sub_title: "Tempus scelerisque felis",
-//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus scelerisque felis lobortis commodo quis. Pulvinar leo ac, lacinia nibh tincidunt. ",
-//         button_label: "Learn more",
-//         button_url: "/",
-//         onButtonClick: () => console.log("on button clicked -->"),
-//         image: detailImg,
-//         image_position: "right",
-//       },
-//       {
-//         title: "Lorem ipsum dolor",
-//         sub_title: "Tempus scelerisque felis",
-//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus scelerisque felis lobortis commodo quis. Pulvinar leo ac, lacinia nibh tincidunt. ",
-//         button_label: "Learn more",
-//         button_url: "/",
-//         onButtonClick: () => console.log("on button clicked -->"),
-//         image: detailImg,
-//         image_position: "left",
-//       },
-//     ],
-//   },
-// ];
+const widgets = () => [
+  {
+    type: "hero_banner",
+    desktop_image: bannerImg,
+    title: "Introducing",
+    title_image: bannerlogo,
+    button_label: "Enquire",
+    onButtonClick: () => console.log("button clicked -->"),
+  },
+  {
+    type: "text",
+    bg_color: "green",
+    text: "<span> Workclub </span> hubs with access to your own branded <span> private office </span> in key gateway cities across the globe.",
+  },
+  {
+    type: "menu_section",
+    items: [
+      {
+        image: leftBg,
+        title: "Office",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing eliti",
+        link: "/offices",
+      },
+      {
+        image: rightBg,
+        title: "Workclub",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing eliti",
+        link: "/workclubs",
+      },
+    ],
+  },
+  {
+    type: "text_image_block",
+    items: [
+      {
+        title: "Lorem ipsum dolor",
+        sub_title: "Tempus scelerisque felis",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus scelerisque felis lobortis commodo quis. Pulvinar leo ac, lacinia nibh tincidunt. ",
+        button_label: "Learn more",
+        button_url: "/",
+        onButtonClick: () => console.log("on button clicked -->"),
+        image: detailImg,
+        image_position: "right",
+      },
+      {
+        title: "Lorem ipsum dolor",
+        sub_title: "Tempus scelerisque felis",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus scelerisque felis lobortis commodo quis. Pulvinar leo ac, lacinia nibh tincidunt. ",
+        button_label: "Learn more",
+        button_url: "/",
+        onButtonClick: () => console.log("on button clicked -->"),
+        image: detailImg,
+        image_position: "left",
+      },
+    ],
+  },
+];
 
 // office detail
 // const widgets = () => [
@@ -433,187 +433,187 @@ import "knotel-website-ui/dist/css/swiper.css";
 // ];
 
 // club detail
-const widgets = () => [
-  {
-    type: "banner",
-    image:
-      "https://images.ctfassets.net/5tq979orlb7f/5xmHEAh50S2kgsa0ngGg3E/c120a56c3964b931846ff322dc17b4b0/workclub.jpg",
-    title: "Old Sessions House",
-    text: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Lacus.",
-  },
-  {
-    type: "details",
-    pageFor: "club detail",
-    items: [
-      {
-        title: "About",
-        className: "aboutUs",
-        list: [
-          {
-            icon: "/svgs/location.svg",
-            label: "Location:",
-            value: "21, Clerkenwell Close Greater London, United Kingdom 1",
-          },
-          {
-            icon: "/svgs/hours.svg",
-            label: "Hours:",
-            hours: true,
-            open: "OPEN",
-            openDays: "Mon - Fri",
-            closedDays: "Sat - Sun",
-            timing: "8:00am - 8:00pm",
-            close: "CLOSED",
-          },
-          {
-            icon: "/svgs/logo5.svg",
-            label: "Enquire:",
-            type: "mailto",
-            link: "Lorem@ipsim.com",
-          },
-        ],
-      },
-      {
-        title: "Whats Included",
-        list: [
-          { text: "Knotel Art Club" },
-          { text: "Pool" },
-          { text: "Roof Terrace" },
-        ],
-      },
-      {
-        title: "Further Information",
-        list: [
-          {
-            icon: "/svgs/tel.svg",
-            type: "tel",
-            label: "Tel:",
-            link: "0203 678 2234",
-          },
-          {
-            icon: "/svgs/logo5.svg",
-            label: "Enquire:",
-            type: "mailto",
-            link: "info@sessions.com",
-          },
-          {
-            hover: "coral",
-            icon: "/svgs/memberships.svg",
-            label: "Memberships:",
-            linkLabel: "Explore memberships",
-            link: "/",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    type: "amenities",
-    heading: "Amenities",
-    close_icon: listIcon,
-    items: [
-      {
-        image:
-          "https://images.ctfassets.net/5tq979orlb7f/3QxEPYD4yQstPW8MuLcwbM/81aff0c6d98e09be21722955dae9629d/old_session_real.jpeg",
-        title: "Knotel Art Club",
-        text: "Knotel Arts Club is about to open as an urban sanctuary that sits in the old Judges’ Dining Room at Sessions House. This magnificent Victorian room with its added mezzanine is lit by natural flame from two log fires as well as restored gas lit chandeliers. The room is also surrounded by outdoor terraces with fireplaces, rooftop bar, secret garden and swimming pool. Created with a studio ethos, it is a restaurant, wine bar and performance space that moves and shifts with the season. The modern European cuisine is headed by acclaimed chef Florence Knight who will base the offering on fresh local produce.",
-      },
-      {
-        image:
-          "https://images.ctfassets.net/5tq979orlb7f/4EIMKXMrVscETXbwhbzz0l/ce6e2f2bc48c1165042e09183a6c6184/sessions_pool.jpeg",
-        title: "Pool",
-        text: "As another truly unique feature, the only one of its kind on the roof of a grade II* listed property, the terrace also offers a circa 250 sq. ft. corner infinity pool from which one can view the cityscape watching the world go by. The turquoise water is heated all year around and can be enjoyed at a comfortable 33 degrees even in winter or for a refreshing plunge in the summer months. Using natural Portland stone, it has been designed to seamlessly integrate with the terrace materials and the Georgian stone façade below. A state of the art filtering and treatment system creates exceptionally pure water to reduce the need of chlorine and other chemicals.",
-      },
-      {
-        image:
-          "https://images.ctfassets.net/5tq979orlb7f/2EqnA7UfZIpWrVrtbT2N4F/f4211afd3bcaf36ec1c26f1e9d5181e2/old_session_home.jpeg",
-        title: "Roof Terrace",
-        text: "A hidden oasis is perhaps the best way to describe the roof garden on this majestic Georgian building on which to enjoy the island site’s expansive panoramic views of the London Skyline. An evergreen hedge, olive trees, rosemary and a small vineyard all have their part in transporting its guests to a relaxing Mediterranean landscape. The old chimneys have been fitted with gas fired open flame flambeaux to light the terrace with natural fire and there is even an outdoor fireplace to cosy up in front of.",
-      },
-    ],
-  },
-  {
-    type: "image_with_text",
-    className: "paddingClass",
-    items: [
-      {
-        image:
-          "https://images.ctfassets.net/5tq979orlb7f/3KhdJKXfGh35YGZs9UNsv2/2d12586c24a104178b3167fa167389ec/membership-hero.jpg",
-        title: "Memberships",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quam enim turpis ut quam interdum neque mauris quis. Mi, lorem egestas neque sagittis pulvinar dolor, commodo.",
-        button_label: "Explore Memberships",
-        button_url: "workclub/membership",
-        image_position: "right",
-        cream_btn: true,
-        bg_color: "red",
-      },
-    ],
-  },
-  {
-    type: "text_image_slider",
-    items: [
-      {
-        title: "The Neighbourhood",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit turpis donec eu amet, id. Volutpat in dis sagittis velit mauris.",
-        button_label: "Enquire",
-        caption: "Sample Caption Works",
-        button_url: "/",
-        list: [
-          {
-            image:
-              "https://images.ctfassets.net/5tq979orlb7f/10qmuHIivpEIlIqZuUzehm/6a6b6f3e29f814366b7343e231892d6d/hero.jpg",
-          },
-          {
-            image:
-              "https://images.ctfassets.net/5tq979orlb7f/5xmHEAh50S2kgsa0ngGg3E/c120a56c3964b931846ff322dc17b4b0/workclub.jpg",
-          },
-          {
-            image:
-              "https://downloads.ctfassets.net/5tq979orlb7f/6YCtkdrd1VVEo9umAb9BXn/fb0866eeb7293311f513c318d4aa9786/OSH_Press_Preview0222.jpg",
-          },
-        ],
-        image_position: "left",
-      },
-    ],
-  },
-  {
-    type: "find_us",
-    title: "Find Us",
-    address: "21, Clerkenwell Close Greater London, United Kingdom 1",
-    apiKey: "",
-    markerIcon: marker,
-    loc: {
-      lat: 30.26555,
-      lng: -97.7497,
-    },
-    items: [
-      {
-        icon: "/svgs/bus.svg",
-        label: "Bus:",
-        value: "3 Blocks from __ bus stop",
-      },
-      {
-        icon: "/svgs/rail.svg",
-        label: "Rail:",
-        value: "Kings Cross St Pancras - 15 min via tube",
-      },
-      {
-        icon: "/svgs/cycle.svg",
-        label: "Cycle:",
-        value: "3 Blocks from __station",
-      },
-      {
-        icon: "/svgs/plane.svg",
-        label: "Airport:",
-        value: "Heathrow - 1 hour via public transport",
-      },
-      {
-        icon: "/svgs/tube.svg",
-        label: "Tube:",
-        value: "Holborn Tube - 2 min walk",
-      },
-    ],
-  },
-];
+// const widgets = () => [
+//   {
+//     type: "banner",
+//     image:
+//       "https://images.ctfassets.net/5tq979orlb7f/5xmHEAh50S2kgsa0ngGg3E/c120a56c3964b931846ff322dc17b4b0/workclub.jpg",
+//     title: "Old Sessions House",
+//     text: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Lacus.",
+//   },
+//   {
+//     type: "details",
+//     pageFor: "club detail",
+//     items: [
+//       {
+//         title: "About",
+//         className: "aboutUs",
+//         list: [
+//           {
+//             icon: "/svgs/location.svg",
+//             label: "Location:",
+//             value: "21, Clerkenwell Close Greater London, United Kingdom 1",
+//           },
+//           {
+//             icon: "/svgs/hours.svg",
+//             label: "Hours:",
+//             hours: true,
+//             open: "OPEN",
+//             openDays: "Mon - Fri",
+//             closedDays: "Sat - Sun",
+//             timing: "8:00am - 8:00pm",
+//             close: "CLOSED",
+//           },
+//           {
+//             icon: "/svgs/logo5.svg",
+//             label: "Enquire:",
+//             type: "mailto",
+//             link: "Lorem@ipsim.com",
+//           },
+//         ],
+//       },
+//       {
+//         title: "Whats Included",
+//         list: [
+//           { text: "Knotel Art Club" },
+//           { text: "Pool" },
+//           { text: "Roof Terrace" },
+//         ],
+//       },
+//       {
+//         title: "Further Information",
+//         list: [
+//           {
+//             icon: "/svgs/tel.svg",
+//             type: "tel",
+//             label: "Tel:",
+//             link: "0203 678 2234",
+//           },
+//           {
+//             icon: "/svgs/logo5.svg",
+//             label: "Enquire:",
+//             type: "mailto",
+//             link: "info@sessions.com",
+//           },
+//           {
+//             hover: "coral",
+//             icon: "/svgs/memberships.svg",
+//             label: "Memberships:",
+//             linkLabel: "Explore memberships",
+//             link: "/",
+//           },
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     type: "amenities",
+//     heading: "Amenities",
+//     close_icon: listIcon,
+//     items: [
+//       {
+//         image:
+//           "https://images.ctfassets.net/5tq979orlb7f/3QxEPYD4yQstPW8MuLcwbM/81aff0c6d98e09be21722955dae9629d/old_session_real.jpeg",
+//         title: "Knotel Art Club",
+//         text: "Knotel Arts Club is about to open as an urban sanctuary that sits in the old Judges’ Dining Room at Sessions House. This magnificent Victorian room with its added mezzanine is lit by natural flame from two log fires as well as restored gas lit chandeliers. The room is also surrounded by outdoor terraces with fireplaces, rooftop bar, secret garden and swimming pool. Created with a studio ethos, it is a restaurant, wine bar and performance space that moves and shifts with the season. The modern European cuisine is headed by acclaimed chef Florence Knight who will base the offering on fresh local produce.",
+//       },
+//       {
+//         image:
+//           "https://images.ctfassets.net/5tq979orlb7f/4EIMKXMrVscETXbwhbzz0l/ce6e2f2bc48c1165042e09183a6c6184/sessions_pool.jpeg",
+//         title: "Pool",
+//         text: "As another truly unique feature, the only one of its kind on the roof of a grade II* listed property, the terrace also offers a circa 250 sq. ft. corner infinity pool from which one can view the cityscape watching the world go by. The turquoise water is heated all year around and can be enjoyed at a comfortable 33 degrees even in winter or for a refreshing plunge in the summer months. Using natural Portland stone, it has been designed to seamlessly integrate with the terrace materials and the Georgian stone façade below. A state of the art filtering and treatment system creates exceptionally pure water to reduce the need of chlorine and other chemicals.",
+//       },
+//       {
+//         image:
+//           "https://images.ctfassets.net/5tq979orlb7f/2EqnA7UfZIpWrVrtbT2N4F/f4211afd3bcaf36ec1c26f1e9d5181e2/old_session_home.jpeg",
+//         title: "Roof Terrace",
+//         text: "A hidden oasis is perhaps the best way to describe the roof garden on this majestic Georgian building on which to enjoy the island site’s expansive panoramic views of the London Skyline. An evergreen hedge, olive trees, rosemary and a small vineyard all have their part in transporting its guests to a relaxing Mediterranean landscape. The old chimneys have been fitted with gas fired open flame flambeaux to light the terrace with natural fire and there is even an outdoor fireplace to cosy up in front of.",
+//       },
+//     ],
+//   },
+//   {
+//     type: "image_with_text",
+//     className: "paddingClass",
+//     items: [
+//       {
+//         image:
+//           "https://images.ctfassets.net/5tq979orlb7f/3KhdJKXfGh35YGZs9UNsv2/2d12586c24a104178b3167fa167389ec/membership-hero.jpg",
+//         title: "Memberships",
+//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quam enim turpis ut quam interdum neque mauris quis. Mi, lorem egestas neque sagittis pulvinar dolor, commodo.",
+//         button_label: "Explore Memberships",
+//         button_url: "workclub/membership",
+//         image_position: "right",
+//         cream_btn: true,
+//         bg_color: "red",
+//       },
+//     ],
+//   },
+//   {
+//     type: "text_image_slider",
+//     items: [
+//       {
+//         title: "The Neighbourhood",
+//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit turpis donec eu amet, id. Volutpat in dis sagittis velit mauris.",
+//         button_label: "Enquire",
+//         caption: "Sample Caption Works",
+//         button_url: "/",
+//         list: [
+//           {
+//             image:
+//               "https://images.ctfassets.net/5tq979orlb7f/10qmuHIivpEIlIqZuUzehm/6a6b6f3e29f814366b7343e231892d6d/hero.jpg",
+//           },
+//           {
+//             image:
+//               "https://images.ctfassets.net/5tq979orlb7f/5xmHEAh50S2kgsa0ngGg3E/c120a56c3964b931846ff322dc17b4b0/workclub.jpg",
+//           },
+//           {
+//             image:
+//               "https://downloads.ctfassets.net/5tq979orlb7f/6YCtkdrd1VVEo9umAb9BXn/fb0866eeb7293311f513c318d4aa9786/OSH_Press_Preview0222.jpg",
+//           },
+//         ],
+//         image_position: "left",
+//       },
+//     ],
+//   },
+//   {
+//     type: "find_us",
+//     title: "Find Us",
+//     address: "21, Clerkenwell Close Greater London, United Kingdom 1",
+//     apiKey: "",
+//     markerIcon: marker,
+//     loc: {
+//       lat: 30.26555,
+//       lng: -97.7497,
+//     },
+//     items: [
+//       {
+//         icon: "/svgs/bus.svg",
+//         label: "Bus:",
+//         value: "3 Blocks from __ bus stop",
+//       },
+//       {
+//         icon: "/svgs/rail.svg",
+//         label: "Rail:",
+//         value: "Kings Cross St Pancras - 15 min via tube",
+//       },
+//       {
+//         icon: "/svgs/cycle.svg",
+//         label: "Cycle:",
+//         value: "3 Blocks from __station",
+//       },
+//       {
+//         icon: "/svgs/plane.svg",
+//         label: "Airport:",
+//         value: "Heathrow - 1 hour via public transport",
+//       },
+//       {
+//         icon: "/svgs/tube.svg",
+//         label: "Tube:",
+//         value: "Holborn Tube - 2 min walk",
+//       },
+//     ],
+//   },
+// ];
 
 // offices landing page
 // const widgets = () => [

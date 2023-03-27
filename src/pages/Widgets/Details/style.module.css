@@ -9,8 +9,8 @@
 }
 
 .coral a:hover {
-  color: #E68176;
-  border-bottom-color: #E68176;
+  color: var(--button-bg);
+  border-bottom-color: var(--button-bg);
 }
 
 .title {
