@@ -34,6 +34,7 @@ const NoMatch = () => {
               changed or is temporaily unavailable.
             </p>
             <Button
+              className={style.no_match_btn}
               label="Go to Home"
               link={"/"}
               buttonType="header_blue_btn"

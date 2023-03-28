@@ -3,4 +3,4 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import Page from "./PageViews.js";
 
-export default Page;
+export default  Page;

@@ -21,6 +21,7 @@ import Filters from "./Filters";
 import FindUs from "./FindUs";
 import CallToAction from "./CallToAction";
 import Features from "./Features";
+import NoMatch from "../NoMatch";
 
 const Widget = ({ data }) => {
   if (data.type === "hero_banner") {
@@ -91,6 +92,10 @@ const Widget = ({ data }) => {
   }
   if (data.type === "membership_features") {
     return <Features {...data} />;
+  }
+
+  if (data.type === "404") {
+    return <NoMatch />;
   }
 
   return null;
