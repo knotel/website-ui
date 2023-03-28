@@ -66,6 +66,13 @@
   margin-top: 25px;
 }
 
+.title_text h1,
+.title_text h2,
+.title_text h3,
+.title_text h4 {
+  font-weight: 300;
+}
+
 .banner_logo {
   position: relative;
   margin-top: 40px;
