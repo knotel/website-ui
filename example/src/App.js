@@ -18,69 +18,70 @@ import bi_map from "./assets/bi_map.svg";
 import marker from "./assets/marker.png";
 import Logo from "./assets/Logo.svg";
 
-import Page  from "knotel-website-ui";
+import Page from "knotel-website-ui";
 import "knotel-website-ui/dist/index.css";
 import "knotel-website-ui/dist/css/style.css";
 import "knotel-website-ui/dist/css/pagination.css";
 import "knotel-website-ui/dist/css/swiper.css";
 
-// const widgets = () => [
-//   {
-//     type: "hero_banner",
-//     desktop_image: bannerImg,
-//     title: "Introducing",
-//     title_image: bannerlogo,
-//     button_label: "Enquire",
-//     onButtonClick: () => console.log("button clicked -->"),
-//   },
-//   {
-//     type: "text",
-//     bg_color: "green",
-//     text: "<span> Workclub </span> hubs with access to your own branded <span> private office </span> in key gateway cities across the globe.",
-//   },
-//   {
-//     type: "menu_section",
-//     items: [
-//       {
-//         image: leftBg,
-//         title: "Office",
-//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing eliti",
-//         link: "/offices",
-//       },
-//       {
-//         image: rightBg,
-//         title: "Workclub",
-//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing eliti",
-//         link: "/workclubs",
-//       },
-//     ],
-//   },
-//   {
-//     type: "text_image_block",
-//     items: [
-//       {
-//         title: "Lorem ipsum dolor",
-//         sub_title: "Tempus scelerisque felis",
-//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus scelerisque felis lobortis commodo quis. Pulvinar leo ac, lacinia nibh tincidunt. ",
-//         button_label: "Learn more",
-//         button_url: "/",
-//         onButtonClick: () => console.log("on button clicked -->"),
-//         image: detailImg,
-//         image_position: "right",
-//       },
-//       {
-//         title: "Lorem ipsum dolor",
-//         sub_title: "Tempus scelerisque felis",
-//         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus scelerisque felis lobortis commodo quis. Pulvinar leo ac, lacinia nibh tincidunt. ",
-//         button_label: "Learn more",
-//         button_url: "/",
-//         onButtonClick: () => console.log("on button clicked -->"),
-//         image: detailImg,
-//         image_position: "left",
-//       },
-//     ],
-//   },
-// ];
+const widgets = () => [
+  {
+    type: "hero_banner",
+    desktop_image: bannerImg,
+    title: "Introducing",
+    title_image: bannerlogo,
+    title_text: "<h1>Old Sessions House <h1>",
+    button_label: "Enquire",
+    onButtonClick: () => console.log("button clicked -->"),
+  },
+  {
+    type: "text",
+    bg_color: "green",
+    text: "<span> Workclub </span> hubs with access to your own branded <span> private office </span> in key gateway cities across the globe.",
+  },
+  {
+    type: "menu_section",
+    items: [
+      {
+        image: leftBg,
+        title: "Office",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing eliti",
+        link: "/offices",
+      },
+      {
+        image: rightBg,
+        title: "Workclub",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing eliti",
+        link: "/workclubs",
+      },
+    ],
+  },
+  {
+    type: "text_image_block",
+    items: [
+      {
+        title: "Lorem ipsum dolor",
+        sub_title: "Tempus scelerisque felis",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus scelerisque felis lobortis commodo quis. Pulvinar leo ac, lacinia nibh tincidunt. ",
+        button_label: "Learn more",
+        button_url: "/",
+        onButtonClick: () => console.log("on button clicked -->"),
+        image: detailImg,
+        image_position: "right",
+      },
+      {
+        title: "Lorem ipsum dolor",
+        sub_title: "Tempus scelerisque felis",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus scelerisque felis lobortis commodo quis. Pulvinar leo ac, lacinia nibh tincidunt. ",
+        button_label: "Learn more",
+        button_url: "/",
+        onButtonClick: () => console.log("on button clicked -->"),
+        image: detailImg,
+        image_position: "left",
+      },
+    ],
+  },
+];
 
 // office detail
 // const widgets = () => [
@@ -1091,11 +1092,11 @@ const socials = [
   },
 ];
 
-const widgets = () => [
-  {
-    type: "404",
-  },
-];
+// const widgets = () => [
+//   {
+//     type: "404",
+//   },
+// ];
 const subscribeLabel = "Subscribe";
 const contactEmail = "hellohello@knotel.com";
 const footerLeftText =

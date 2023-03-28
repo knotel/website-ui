@@ -10,6 +10,7 @@ import { AppContext } from "../../../Contexts/AppContext";
 
 const BannerHero = ({
   title,
+  title_text,
   title_image,
   desktop_image,
   onButtonClick,
@@ -37,9 +38,20 @@ const BannerHero = ({
             <div className={style.center}>
               <LazyLoad>
                 <div className={style.title}>{title}</div>
-                <div className={style.banner_logo}>
-                  <img src={title_image} alt="Knotel workclub" size="480x140" />
-                </div>
+                {title_text ? (
+                  <div
+                    className={`${style.title_text}`}
+                    dangerouslySetInnerHTML={{ __html: title_text }}
+                  />
+                ) : (
+                  <div className={style.banner_logo}>
+                    <img
+                      src={title_image}
+                      alt="Knotel workclub"
+                      size="480x140"
+                    />
+                  </div>
+                )}
                 <div className={style.button}>
                   <Button
                     buttonType="banner_btn"

@@ -25,6 +25,7 @@
   transition: height 5s;
 }
 
+
 .banner_hero:before {
   left: 0;
 }
@@ -58,6 +59,11 @@
   width: 100%;
   min-height: 100vh;
   color: #fff;
+}
+
+.title_text {
+  font-size: 35px;
+  margin-top: 25px;
 }
 
 .banner_logo {
@@ -164,6 +170,10 @@
     min-height: 80vh !important;
   }
 
+  .title_text {
+    font-size: 25px;
+  }
+
   .banner_logo img {
     width: 300px;
   }
@@ -203,6 +213,10 @@
 }
 
 @media (max-width: 550px) {
+  .title_text {
+    font-size: 15px;
+  }
+
   .banner_logo img {
     width: 280px;
   }
