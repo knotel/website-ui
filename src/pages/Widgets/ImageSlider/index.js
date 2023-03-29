@@ -88,7 +88,7 @@ const ImageSlider = (props) => {
       </LazyLoad>
       <div className={`${style.filter} c`}>
         <Form
-          onSubmit={(data) => console.log(data)}
+          onSubmit={(data) => null}
           render={({ handleSubmit, values }) => {
             return (
               <>

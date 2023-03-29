@@ -37,8 +37,6 @@ const Amenities = ({ heading, items = [], close_icon, forPage }) => {
       open.index === items.length - 1 ? "" : items[open.index + 1].title,
   });
 
-  console.log("new open index --->", open);
-
   return (
     <>
       <EqualHeight>

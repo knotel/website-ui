@@ -40,7 +40,7 @@ const TermsMenu = ({ items = [], pathname }) => {
       </div>
       <div className={style.filter}>
         <Form
-          onSubmit={(data) => console.log(data)}
+          onSubmit={(data) => null}
           render={({ handleSubmit, values }) => {
             return (
               <>
