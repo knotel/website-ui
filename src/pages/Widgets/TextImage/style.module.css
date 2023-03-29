@@ -61,6 +61,11 @@
   line-height: 1.1;
 }
 
+.blue_hover:hover {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
 .text {
   font-size: 18px;
   font-weight: 300;
@@ -82,6 +87,10 @@
 
 .paddingClass .button {
   padding-top: 32px;
+}
+
+.white_border_hover:hover {
+  border-color: var(--text-white);
 }
 
 :global .text_img .left .section_border_bottom {

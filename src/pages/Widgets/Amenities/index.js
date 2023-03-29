@@ -32,10 +32,12 @@ const Amenities = ({ heading, items = [], close_icon, forPage }) => {
     title: items[open.index].title,
     image_position: "right",
     image: items[open.index].image,
-    text: items[open.index].text,
+    text: items[open.index].description || items[open.index].text,
     next_label:
       open.index === items.length - 1 ? "" : items[open.index + 1].title,
   });
+
+  console.log("new open index --->", open);
 
   return (
     <>
@@ -128,6 +130,9 @@ const Amenities = ({ heading, items = [], close_icon, forPage }) => {
                         {open.state === true && (
                           <AmenitiesModal
                             close_icon={close_icon}
+                            index={open.index}
+                            data_length={items.length}
+                            setOpen={setOpen}
                             content={getAmenityData(item, index)}
                             onClose={() => setOpen(false)}
                           />

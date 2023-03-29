@@ -13,6 +13,7 @@
   border-bottom-color: var(--button-bg);
 }
 
+
 .title {
   font-size: 23px;
   font-weight: 300;
@@ -103,6 +104,11 @@
   font-weight: 300;
   padding: 12px;
   line-height: 1.2;
+}
+
+.download:hover {
+  background-color: var(--common-blue);
+  border-color: var(--common-blue);
 }
 
 @media(max-width:1400px) {

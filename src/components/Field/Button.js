@@ -99,7 +99,9 @@ const Button = (props) => {
     return (
       <a
         id={id}
-        className={`${style.button}${className ? " " + className : ""}`}
+        className={`${style.button}${className ? " " + className : ""} ${
+          style.button_click
+        }`}
         onClick={onClick}
         href={false}
       >

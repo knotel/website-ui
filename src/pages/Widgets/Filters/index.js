@@ -385,6 +385,7 @@ const Filters = ({
                               style={{ height: mapHeight }}
                             >
                               <GoogleMaps
+                                showInMaps={false}
                                 markers={list.map((x) => ({
                                   loc: { lat: x.lat, lng: x.lng },
                                 }))}

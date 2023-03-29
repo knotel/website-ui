@@ -16,11 +16,14 @@ const TextImage = ({ items = [], className = false }) => {
 
   const colorClass = {
     red: style.redBg,
+    white_border_hover: style.white_border_hover,
+    blue_hover: style.blue_hover
   };
 
   if (!items || items.length <= 0) {
     return null;
   }
+
   return (
     <>
       <EqualHeight>
@@ -78,7 +81,9 @@ const TextImage = ({ items = [], className = false }) => {
                               buttonType={
                                 item.cream_btn === true ? "cream_btn" : ""
                               }
-                              className={style.btn_padd}
+                              className={`${style.btn_padd} ${
+                                colorClass[item.button_type]
+                              }`}
                               label={item.button_label}
                               link={item.button_url}
                             />

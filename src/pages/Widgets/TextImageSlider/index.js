@@ -32,8 +32,13 @@ const TextImageSlider = ({
   const [ready, setReady] = useState(false);
   const [pdfImages, setPdfImages] = useState([]);
 
+  const btn_classes = {
+    blue_hover: style.blue_hover,
+  };
+
   useEffect(() => {
     if (ready) return;
+
     if (swiperRef?.current) {
       if (preview_type === "pdf" && !pdfImages.length) return;
       setReady(true);
@@ -44,7 +49,9 @@ const TextImageSlider = ({
     return null;
   }
 
-  return (
+  return preview_type === "pdf" && !pdfImages.length ? (
+    <></>
+  ) : (
     <>
       <EqualHeight>
         <div className={`c has_border`}>
@@ -175,19 +182,25 @@ const TextImageSlider = ({
                                 ) : (
                                   <div className={style.text}>{item.text}</div>
                                 )}
-                                <div className={style.button}>
-                                  <Button
-                                    buttonType={
-                                      item.white_button === true
-                                        ? "transparent_btn"
-                                        : ""
-                                    }
-                                    className={style.btn_padd}
-                                    onClick={item.on_button_click}
-                                    label={item.button_label}
-                                    link={item.button_url}
-                                  />
-                                </div>
+                                {item.hide_button ? (
+                                  <></>
+                                ) : (
+                                  <div className={style.button}>
+                                    <Button
+                                      buttonType={
+                                        item.white_button === true
+                                          ? "transparent_btn"
+                                          : ""
+                                      }
+                                      className={`${style.btn_padd} ${
+                                        btn_classes[item.button_type]
+                                      }`}
+                                      onClick={item.on_button_click}
+                                      label={item.button_label}
+                                      link={item.button_url}
+                                    />
+                                  </div>
+                                )}
                               </LazyLoad>
                             </div>
                           </EqualHeightElement>

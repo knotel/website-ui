@@ -133,6 +133,7 @@ const widgets = () => [
 //             logo: download,
 //             button_label: "Download Flyer",
 //             button_link: "/",
+//             button_type: "blue_hover",
 //             on_button_click: () => console.log("download flyer"),
 //           },
 //           {
@@ -201,6 +202,7 @@ const widgets = () => [
 //       {
 //         title: "HYLO's 1st Floor",
 //         type: "details",
+//         button_type: "blue_hover",
 //         list_tems: [
 //           {
 //             icon: logo1,
@@ -290,6 +292,7 @@ const widgets = () => [
 //         title: "Old & new collide",
 //         text: "This is a place where old and new collide; from cutting-edge-cool Old Street and Shoreditch to the historically influenced City of London. The area is the epicentre of London’s creative and collaborative industries and is more popular than ever with many of London’s forward-thinking financial and professional occupiers. ",
 //         button_label: "Request information",
+//         button_type: "blue_hover",
 //         button_url: "/",
 //         on_button_click: () => console.log("button clicked --->"),
 //         list: [
@@ -356,12 +359,14 @@ const widgets = () => [
 //         title: "Mauris Fusce",
 //         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Laoreet etiam blandit ultrices risus nulla nisi, risus. Odio ac in vivamus non integer nunc, dolor neque scelerisque. Ultricies eu duis enim tincidunt a mauris odio.",
 //         button_label: "Call To Action",
+//         button_type: "blue_hover",
 //         button_url: "/",
 //       },
 //       {
 //         title: "Lorem Ipsum Dolor",
 //         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Laoreet etiam blandit ultrices risus nulla nisi, risus. Odio ac in vivamus non integer nunc, dolor neque scelerisque. Ultricies eu duis enim tincidunt a mauris odio.",
 //         button_label: "Call To Action",
+//         button_type: "blue_hover",
 //         button_url: "/",
 //       },
 //     ],
@@ -517,18 +522,24 @@ const widgets = () => [
 //           "https://images.ctfassets.net/5tq979orlb7f/3QxEPYD4yQstPW8MuLcwbM/81aff0c6d98e09be21722955dae9629d/old_session_real.jpeg",
 //         title: "Knotel Art Club",
 //         text: "Knotel Arts Club is about to open as an urban sanctuary that sits in the old Judges’ Dining Room at Sessions House. This magnificent Victorian room with its added mezzanine is lit by natural flame from two log fires as well as restored gas lit chandeliers. The room is also surrounded by outdoor terraces with fireplaces, rooftop bar, secret garden and swimming pool. Created with a studio ethos, it is a restaurant, wine bar and performance space that moves and shifts with the season. The modern European cuisine is headed by acclaimed chef Florence Knight who will base the offering on fresh local produce.",
+//         description:
+//           "Knotel Arts Club is about to open as an urban sanctuary that sits in the old Judges’ Dining Room at Sessions House. This magnificent Victorian room with its added mezzanine is lit by natural flame from two log fires as well as restored gas lit chandeliers. The room is also surrounded by outdoor terraces with fireplaces, rooftop bar, secret garden and swimming pool. Created with a studio ethos, it is a restaurant, wine bar and performance space that moves and shifts with the season. The modern European cuisine is headed by acclaimed chef Florence Knight who will base the offering on fresh local produce.",
 //       },
 //       {
 //         image:
 //           "https://images.ctfassets.net/5tq979orlb7f/4EIMKXMrVscETXbwhbzz0l/ce6e2f2bc48c1165042e09183a6c6184/sessions_pool.jpeg",
 //         title: "Pool",
 //         text: "As another truly unique feature, the only one of its kind on the roof of a grade II* listed property, the terrace also offers a circa 250 sq. ft. corner infinity pool from which one can view the cityscape watching the world go by. The turquoise water is heated all year around and can be enjoyed at a comfortable 33 degrees even in winter or for a refreshing plunge in the summer months. Using natural Portland stone, it has been designed to seamlessly integrate with the terrace materials and the Georgian stone façade below. A state of the art filtering and treatment system creates exceptionally pure water to reduce the need of chlorine and other chemicals.",
+//         description:
+//           "As another truly unique feature, the only one of its kind on the roof of a grade II* listed property, the terrace also offers a circa 250 sq. ft. corner infinity pool from which one can view the cityscape watching the world go by. The turquoise water is heated all year around and can be enjoyed at a comfortable 33 degrees even in winter or for a refreshing plunge in the summer months. Using natural Portland stone, it has been designed to seamlessly integrate with the terrace materials and the Georgian stone façade below. A state of the art filtering and treatment system creates exceptionally pure water to reduce the need of chlorine and other chemicals. As another truly unique feature, the only one of its kind on the roof of a grade II* listed property, the terrace also offers a circa 250 sq. ft. corner infinity pool from which one can view the cityscape watching the world go by. The turquoise water is heated all year around and can be enjoyed at a comfortable 33 degrees even in winter or for a refreshing plunge in the summer months. Using natural Portland stone, it has been designed to seamlessly integrate with the terrace materials and the Georgian stone façade below. A state of the art filtering and treatment system creates exceptionally pure water to reduce the need of chlorine and other chemicals As another truly unique feature, the only one of its kind on the roof of a grade II* listed property, the terrace also offers a circa 250 sq. ft. corner infinity pool from which one can view the cityscape watching the world go by. The turquoise water is heated all year around and can be enjoyed at a comfortable 33 degrees even in winter or for a refreshing plunge in the summer months. Using natural Portland stone, it has been designed to seamlessly integrate with the terrace materials and the Georgian stone façade below. A state of the art filtering and treatment system creates exceptionally pure water to reduce the need of chlorine and other chemicals",
 //       },
 //       {
 //         image:
 //           "https://images.ctfassets.net/5tq979orlb7f/2EqnA7UfZIpWrVrtbT2N4F/f4211afd3bcaf36ec1c26f1e9d5181e2/old_session_home.jpeg",
 //         title: "Roof Terrace",
 //         text: "A hidden oasis is perhaps the best way to describe the roof garden on this majestic Georgian building on which to enjoy the island site’s expansive panoramic views of the London Skyline. An evergreen hedge, olive trees, rosemary and a small vineyard all have their part in transporting its guests to a relaxing Mediterranean landscape. The old chimneys have been fitted with gas fired open flame flambeaux to light the terrace with natural fire and there is even an outdoor fireplace to cosy up in front of.",
+//         description:
+//           "A hidden oasis is perhaps the best way to describe the roof garden on this majestic Georgian building on which to enjoy the island site’s expansive panoramic views of the London Skyline. An evergreen hedge, olive trees, rosemary and a small vineyard all have their part in transporting its guests to a relaxing Mediterranean landscape. The old chimneys have been fitted with gas fired open flame flambeaux to light the terrace with natural fire and there is even an outdoor fireplace to cosy up in front of.",
 //       },
 //     ],
 //   },
@@ -545,6 +556,7 @@ const widgets = () => [
 //         button_url: "workclub/membership",
 //         image_position: "right",
 //         cream_btn: true,
+//         button_type: "white_border_hover",
 //         bg_color: "red",
 //       },
 //     ],
@@ -555,6 +567,7 @@ const widgets = () => [
 //       {
 //         title: "The Neighbourhood",
 //         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit turpis donec eu amet, id. Volutpat in dis sagittis velit mauris.",
+//         hide_button: true,
 //         button_label: "Enquire",
 //         caption: "Sample Caption Works",
 //         button_url: "/",
@@ -846,7 +859,6 @@ const widgets = () => [
 //         seat: "2000",
 //         square_feet: "36685",
 //         contactEmail: "brokers@knotel.com",
-
 //         available_date: 1667300455,
 //         list: [
 //           {
@@ -942,6 +954,7 @@ const widgets = () => [
 //     ],
 //   },
 // ];
+
 // landlords;
 // const widgets = () => [
 //   {
@@ -952,6 +965,7 @@ const widgets = () => [
 //     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 //     button_label: "Submit your space",
 //     button_url: "image_with_text",
+//     button_type: "blue_hover",
 //     onButtonClick: () => console.log("button clicked --->"),
 //     whiteButton: true,
 //   },
@@ -963,6 +977,7 @@ const widgets = () => [
 //         title: "Mauris fusce.",
 //         text: "Knotel works with landlords to design, build and operate office space for companies on flexible terms, while minimizing buildout disruption and maximizing long-term property value.",
 //         button_label: "Submit your space",
+//         button_type: "blue_hover",
 //         onButtonClick: () => console.log("----> button clicked"),
 //         image_position: "left",
 //       },
@@ -971,6 +986,7 @@ const widgets = () => [
 //         title: "Mauris fusce.",
 //         text: "Knotel works with landlords to design, build and operate office space for companies on flexible terms, while minimizing buildout disruption and maximizing long-term property value.",
 //         button_label: "Submit your space",
+//         button_type: "blue_hover",
 //         onButtonClick: () => console.log("----> button clicked"),
 //         button_url: "/",
 //         image_position: "right",
@@ -998,6 +1014,7 @@ const widgets = () => [
 //     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
 //     button_label: "Get in touch",
 //     button_url: "/",
+//     button_type: "blue_hover",
 //     onButtonClick: () => console.log("button clicked --->"),
 //   },
 //   {

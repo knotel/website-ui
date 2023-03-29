@@ -1,3 +1,4 @@
+
 .button {
   display: inline-block;
   padding: 12px 60px;
@@ -110,7 +111,7 @@
 
 .banner_btn,
 .white_btn {
-  padding: 14px 24px;
+  padding: 12px 16px;
   background-color: transparent;
   color: var(--text-white);
   border: 1px solid var(--text-white);

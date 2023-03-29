@@ -12,6 +12,7 @@ const LeftRightBanner = ({
   image,
   onButtonClick,
   bg_color,
+  button_type,
   button_label,
   button_url,
   icon = false,
@@ -23,7 +24,8 @@ const LeftRightBanner = ({
   const colorClass = {
     green: style.greenBg,
     darkblue: style.blueBg,
-    cali : style.cali
+    cali: style.cali,
+    blue_hover: style.blue_hover,
   };
   return (
     <div className={`c`}>
@@ -51,6 +53,7 @@ const LeftRightBanner = ({
                     label={button_label}
                     link={button_url}
                     svgIcon={icon}
+                    className={colorClass[button_type]}
                   />
                 ) : (
                   <Button
@@ -58,6 +61,7 @@ const LeftRightBanner = ({
                     buttonType="white_btn"
                     label={button_label}
                     link={button_url}
+                    className={colorClass[button_type]}
                   />
                 )}
               </div>

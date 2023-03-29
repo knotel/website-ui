@@ -57,6 +57,12 @@
   padding-top: 57%;
 }
 
+.blue_hover:hover {
+  background-color: var(--common-blue);
+  color: var(--text-white);
+  border-color: var(--common-blue);
+}
+
 .title {
   font-size: 28px;
   font-weight: 300;

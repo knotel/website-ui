@@ -19,7 +19,7 @@
 }
 
 .text {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.66;
   padding-top: 16px;
@@ -35,6 +35,11 @@
 
 :global .call_to_action .text_wrap .section_border_bottom {
   display: none;
+}
+
+.blue_hover:hover {
+  background-color: var(--common-blue);
+  border-color: var(--common-blue);
 }
 
 @media(max-width:1260px) {

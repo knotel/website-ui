@@ -8,7 +8,14 @@ import LazyLoad from "../Lazyload";
 import style from "./style.module.css";
 import NormalLink from "../NormalLink";
 
-const AmenitiesModal = ({ content, onClose, close_icon }) => {
+const AmenitiesModal = ({
+  content,
+  onClose,
+  close_icon,
+  setOpen,
+  index,
+  data_length,
+}) => {
   return (
     <DialogBox
       close_icon={close_icon}
@@ -72,7 +79,15 @@ const AmenitiesModal = ({ content, onClose, close_icon }) => {
                   </div>
                   <div className={style.next}>
                     Next: {content.next_label}
-                    <NormalLink className={style.next_icon}>
+                    <NormalLink
+                      onClick={() =>
+                        setOpen({
+                          state: true,
+                          index: index === data_length - 1 ? index : index + 1,
+                        })
+                      }
+                      className={style.next_icon}
+                    >
                       <span className={style.icon}>
                         <i className="fa fa-arrow-right"></i>
                       </span>

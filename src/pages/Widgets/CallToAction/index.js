@@ -17,6 +17,11 @@ const CallToAction = ({ items = [], forPage }) => {
   if (!items || items.length <= 0) {
     return null;
   }
+
+  const colorClass = {
+    blue_hover: style.blue_hover,
+  };
+
   return (
     <EqualHeight>
       <div className={`c has_border call_to_action`}>
@@ -58,7 +63,9 @@ const CallToAction = ({ items = [], forPage }) => {
                         <div className={style.button}>
                           <Button
                             buttonType="banner_button"
-                            className={style.item_btn}
+                            className={`${style.item_btn} ${
+                              colorClass[item.button_type]
+                            }`}
                             label={item.button_label}
                             link={item.button_url}
                           />

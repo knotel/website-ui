@@ -26,10 +26,9 @@ const Details = ({ items = [], pageFor }) => {
 
   const { setForceUpdate } = useContext(EqualHeightContext);
 
-  // console.log("editor ref --->", textEditorRef.current);
-
   const styleSelector = {
     coral: style.coral,
+    coral_white: style.coral_white,
   };
 
   useEffect(() => {

@@ -47,16 +47,32 @@
   color: var(--text-white);
 }
 
-.cali{
+.cali {
   background-color: #DCE1D9;
-  
 }
+
+.cali a {
+  border-color: var(--default-text);
+  color: var(--default-text);
+}
+
+.blue_hover:hover {
+  background-color: var(--common-blue) !important;
+  border-color: var(--common-blue) !important;
+  color: var(--text-white) !important;
+}
+
 .content_wrapper {
   padding: 80px 40px 0px;
 }
 
 .banner_btn {
   padding-top: 40px;
+}
+
+.banner_btn a {
+  padding: 12px 16px;
+  font-size: 14px;
 }
 
 .btn_padd {
@@ -106,6 +122,15 @@
 }
 
 @media(max-width:1024px) {
+  .cali div {
+    color: var(--text-white);
+  }
+
+  .cali a {
+    color: var(--text-white);
+    border-color: var(--text-white);
+  }
+
   .left_right_banner {
     position: relative;
   }

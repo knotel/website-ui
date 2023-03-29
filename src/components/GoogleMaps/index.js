@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import GoogleMapReact from "google-map-react";
 
-const Marker = ({ pointer, onMarkerPress, lat, lng }) => {
+const Marker = ({ pointer, onMarkerPress, lat, lng, showInMaps }) => {
   const [tooltipVisible, setVisible] = useState(false);
 
   const toggleTooltip = () => {
@@ -18,31 +18,34 @@ const Marker = ({ pointer, onMarkerPress, lat, lng }) => {
 
   return (
     <div style={{ position: "relative" }}>
-      <a
-        style={{
-          padding: 10,
-          background: "white",
-          position: "absolute",
-          minWidth: "12rem",
-          border: "1px solid black",
-          bottom: 50,
-          textAlign: "center",
-          left: "50%",
-          transform: "translate(-50%, 0)",
-        }}
-        href={`https://maps.google.com/?q=${lat},${lng}`}
-        target={"_blank"}
-      >
-        <div>
-          <span>Show in Google Maps</span>
-        </div>
-      </a>
+      {showInMaps ? (
+        <a
+          style={{
+            padding: 10,
+            background: "white",
+            position: "absolute",
+            minWidth: "12rem",
+            border: "1px solid black",
+            bottom: 50,
+            textAlign: "center",
+            left: "50%",
+            transform: "translate(-50%, 0)",
+          }}
+          href={`https://maps.google.com/?q=${lat},${lng}`}
+          target={"_blank"}
+        >
+          <div>
+            <span>Show in Google Maps</span>
+          </div>
+        </a>
+      ) : null}
       <div onClick={toggleTooltip}>{pointer}</div>;
     </div>
   );
 };
 
 const GoogleMaps = ({
+  showInMaps = true,
   markers = [],
   center = {},
   zoom = 11,
@@ -177,6 +180,7 @@ const GoogleMaps = ({
           markers.length > 0 &&
           markers.map(({ loc: { lat = 0, lng = 0 } }, index) => (
             <Marker
+              showInMaps={showInMaps}
               key={`marker_${index}`}
               lat={lat}
               lng={lng}
