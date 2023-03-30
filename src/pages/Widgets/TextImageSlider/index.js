@@ -49,7 +49,7 @@ const TextImageSlider = ({
     return null;
   }
 
-  return preview_type === "pdf" && !pdfImages.length ? (
+  return preview_type === "pdf" && !items.length ? (
     <></>
   ) : (
     <>

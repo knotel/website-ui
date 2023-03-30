@@ -29,6 +29,22 @@
   margin: auto;
 }
 
+.title_text {
+  font-size: 35px;
+  margin-top: 25px;
+}
+
+.title_text span {
+  font-family: "Gelasio";
+}
+
+.title_text h1,
+.title_text h2,
+.title_text h3,
+.title_text h4 {
+  font-weight: 300;
+}
+
 .center {
   max-width: 500px;
   padding: 60px 0;

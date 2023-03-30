@@ -8,7 +8,14 @@ import { AppContext } from "../../../Contexts/AppContext";
 
 import style from "./style.module.css";
 
-const Banner = ({ image, title, text, border_line = false, logo }) => {
+const Banner = ({
+  image,
+  title,
+  text,
+  border_line = false,
+  logo,
+  title_text,
+}) => {
   const {
     appContext: { winHeight, height },
   } = useContext(AppContext);
@@ -37,6 +44,20 @@ const Banner = ({ image, title, text, border_line = false, logo }) => {
                 ></div>
               </div>
             </>
+          )}
+
+          {title_text && (
+            <Center className={style.banner_center}>
+              <div className={style.center}>
+                <LazyLoad>
+                  <div className={style.title}>{title}</div>
+                  <div
+                    className={`${style.title_text}`}
+                    dangerouslySetInnerHTML={{ __html: title_text }}
+                  />
+                </LazyLoad>
+              </div>
+            </Center>
           )}
 
           {logo && (

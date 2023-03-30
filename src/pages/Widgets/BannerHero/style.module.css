@@ -66,6 +66,10 @@
   margin-top: 25px;
 }
 
+.title_text span {
+  font-family: "Gelasio";
+}
+
 .title_text h1,
 .title_text h2,
 .title_text h3,
