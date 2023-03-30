@@ -11,7 +11,13 @@ import style from "./style.module.css";
 import AmenitiesModal from "../../../components/AmenitiesModal";
 import { AppContext } from "../../../Contexts/AppContext";
 
-const Amenities = ({ heading, items = [], close_icon, forPage }) => {
+const Amenities = ({
+  heading,
+  items = [],
+  close_icon,
+  forPage,
+  hide_bottom_border,
+}) => {
   const {
     appContext: { winWidth },
   } = useContext(AppContext);
@@ -68,7 +74,11 @@ const Amenities = ({ heading, items = [], close_icon, forPage }) => {
             <div className={`section_border_left`}></div>
             <div className={`section_border_right`}></div>
             <div className={`section_border_middle`}></div>
-            <div className={`section_border_bottom`}></div>
+            {hide_bottom_border ? (
+              <></>
+            ) : (
+              <div className={`section_border_bottom`}></div>
+            )}
             {winWidth > 940 && items.length >= 2 && (
               <div className={`section_border_middle_2`}></div>
             )}
@@ -87,7 +97,7 @@ const Amenities = ({ heading, items = [], close_icon, forPage }) => {
                     } ${islastRow ? `last_row` : ``}`}
                     key={`amenities_${index}`}
                   >
-                    {!islastRow && index % 3 === 0 && (
+                    {!islastRow && (
                       <div className={`section_item_border_bottom`}></div>
                     )}
                     {winWidth < 940 && (

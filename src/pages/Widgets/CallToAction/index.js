@@ -66,6 +66,7 @@ const CallToAction = ({ items = [], forPage }) => {
                             className={`${style.item_btn} ${
                               colorClass[item.button_type]
                             }`}
+                            onClick={item.on_button_click}
                             label={item.button_label}
                             link={item.button_url}
                           />
