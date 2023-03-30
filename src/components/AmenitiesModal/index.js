@@ -18,9 +18,9 @@ const AmenitiesModal = ({
 }) => {
   return (
     <DialogBox
-      close_icon={close_icon}
       className={style.amenities_modal}
       classes={`find_more`}
+      close_class="hover_coral"
       onClose={onClose}
     >
       <EqualHeight>

@@ -58,7 +58,13 @@ export default class DialogBox extends React.Component {
       extraClass = false,
       burgerMenu = false,
       close = false,
+      close_class
     } = this.props;
+
+    const colorClass={
+      hover_coral: style.hover_coral
+    }
+
 
     const { openClass, closeClass } = this.state;
     return (
@@ -77,14 +83,14 @@ export default class DialogBox extends React.Component {
               {showClose === true && (
                 <NormalLink
                   className={
-                    extraClass === true ? style.extraClass : style.dialogClose
+                   `${ extraClass === true ? style.extraClass : style.dialogClose} ${colorClass[close_class]}`
                   }
                   onClick={this.onCloseHandler}
                 >
                   <span className={style.closeIcon}>
                     <i className="fas fa-chevron-left"></i>
                   </span>
-                  <span className={style.closeText}>Done</span>
+                  <span className={style.closeText}>{"Done"}</span>
                   {close === true && (
                     <span className={style.x_icon}>
                       <img src={close_icon} alt={`done`} />

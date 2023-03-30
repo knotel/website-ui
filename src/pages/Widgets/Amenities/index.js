@@ -17,20 +17,22 @@ const Amenities = ({
   close_icon,
   forPage,
   hide_bottom_border,
+  max_length,
 }) => {
   const {
     appContext: { winWidth },
   } = useContext(AppContext);
   const [open, setOpen] = useState({ state: false, index: 0 });
   const [currentIndex, setCurrentIndex] = useState();
+  const sliced_items = max_length ? [...items].slice(0, max_length) : items;
 
   if (!items || items.length <= 0) {
     return null;
   }
 
   const chunks = () => {
-    if (winWidth < 940) return chunk(items, 2);
-    return chunk(items, 3);
+    if (winWidth < 940) return chunk(sliced_items, 2);
+    return chunk(sliced_items, 3);
   };
 
   const getAmenityData = () => ({
@@ -135,16 +137,6 @@ const Amenities = ({
                             ? "Contact Us"
                             : "Find Out More"}
                         </NormalLink>
-                        {open.state === true && (
-                          <AmenitiesModal
-                            close_icon={close_icon}
-                            index={open.index}
-                            data_length={items.length}
-                            setOpen={setOpen}
-                            content={getAmenityData(item, index)}
-                            onClose={() => setOpen(false)}
-                          />
-                        )}
                       </div>
                     </EqualHeightElement>
                   </div>
@@ -153,6 +145,16 @@ const Amenities = ({
             )}
           </div>
         </LazyLoad>
+        {open.state === true && (
+          <AmenitiesModal
+            close_icon={close_icon}
+            index={open.index}
+            data_length={items.length}
+            setOpen={setOpen}
+            content={getAmenityData()}
+            onClose={() => setOpen(false)}
+          />
+        )}
       </EqualHeight>
     </>
   );

@@ -86,6 +86,10 @@
   /* color: var(--coral-red-hover); */
 }
 
+.hover_coral:hover {
+  color: var(--coral-red-hover);
+}
+
 .dialogContent {
   position: fixed;
   width: calc(100% - 120px);

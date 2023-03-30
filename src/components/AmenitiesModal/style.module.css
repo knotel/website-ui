@@ -66,9 +66,9 @@
 }
 
 .next_icon:hover {
-  background-color: var(--coral-red);
+  background-color: var(--coral-red-hover);
   color: white;
-  border: 1px solid var(--coral-red);
+  border: 1px solid var(--coral-red-hover);
 }
 
 .icon {
