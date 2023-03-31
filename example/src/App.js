@@ -519,7 +519,7 @@ const widgets = () => [
   },
   {
     type: "amenities",
-    heading: "Amenities",
+    heading: "Workclub Amenities",
     max_length: 3,
     close_icon: listIcon,
     hide_bottom_border: true,

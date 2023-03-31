@@ -36,7 +36,7 @@ const Amenities = ({
   };
 
   const getAmenityData = () => ({
-    top_title: "Club amenities",
+    top_title: heading,
     title: items[open.index].title,
     image_position: "right",
     image: items[open.index].image,
