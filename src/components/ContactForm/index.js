@@ -69,7 +69,7 @@ const ContactForm = ({
                 <Field
                   name="email"
                   component={Input}
-                  placeholder="Email Addrress*"
+                  placeholder="Email Address*"
                   validate={composeValidators(required(), email())}
                 />
                 <Field
