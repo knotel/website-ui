@@ -39,7 +39,7 @@ const Footer = ({ footerProps }) => {
                 {contactEmail}
               </NormalLink>
             </div>
-            <div className={style.f_button}>
+            {/* <div className={style.f_button}>
               <Button
                 id={"subscribeTrigger"}
                 onClick={() => {
@@ -47,7 +47,7 @@ const Footer = ({ footerProps }) => {
                 }}
                 label={subscribeLabel}
               />
-            </div>
+            </div> */}
             {open === true && (
               <NewsLetter
                 onSubmit={newsLetterForm.onSubmit}
