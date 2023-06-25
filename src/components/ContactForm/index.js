@@ -4,7 +4,7 @@ import { required, email } from "redux-form-validators";
 
 import { composeValidators } from "../../helpers/input";
 
-import { Button, Dropdown, Input } from "../Field";
+import { Button, Dropdown, Input, InputHiddenUrl } from "../Field";
 import LazyLoad from "../Lazyload";
 import style from "./style.module.css";
 
@@ -43,9 +43,8 @@ const ContactForm = ({
             return (
               <form
                 name="booking_contact"
-                className={`${showText === true ? style.form_small : ``}${
-                  style.form
-                }`}
+                className={`${showText === true ? style.form_small : ``}${style.form
+                  }`}
                 onSubmit={handleSubmit}
               >
                 <div className={style.form_wrap}>
@@ -69,7 +68,7 @@ const ContactForm = ({
                 <Field
                   name="email"
                   component={Input}
-                  placeholder="Email Addrress*"
+                  placeholder="Email Address*"
                   validate={composeValidators(required(), email())}
                 />
                 <Field
@@ -92,7 +91,7 @@ const ContactForm = ({
                       name="companySize"
                       component={Dropdown}
                       prompt="Company Size"
-                      options={sizeOptions}
+                      options={{ '1-10': '1-10', '11-50': '11-50', '50+': '50+' }}
                       validate={composeValidators(required())}
                     />
                   </div>
@@ -101,11 +100,22 @@ const ContactForm = ({
                   name="location"
                   component={Dropdown}
                   prompt="Select City"
-                  options={locationOptions}
+                  options={{
+                    "Amsterdam": { "Amsterdam - De Pijp": "De Pijp", "Amsterdam - Canal Area": "Canal Area", "Amsterdam - Central": "Central" },
+                    "Austin": { "Austin - NW Austin": "NW Austin", "Austin - Westlake": "Westlake", "Austin - Downtown": "Downtown" },
+                    "Berlin": { "Berlin - Kreuzberg": "Kreuzberg", "Berlin - Mitte": "Mitte", "Berlin - Kurfürstendamm": "Kurfürstendamm" },
+                    "Dublin": { "Dublin - Dublin 2": "Dublin 2", "Dublin - D2": "D2" },
+                    "London": { "London - Soho": "Soho", "London - Clerkenwell": "Clerkenwell", "London - Southwark": "Southwark", "London - City Fringe": "City Fringe", "London - Farringdon": "Farringdon", "London - Covent Garden": "Covent Garden", "London - Fitzrovia": "Fitzrovia", "London - City Core": "City Core", "London - Monument": "Monument" },
+                    "Miami": { "Miami - Wynwood": "Wynwood", "Miami - West Palm Beach": "West Palm Beach", "Miami - Little Gables": "Little Gables", "Miami - Midtown": "Midtown" },
+                    "Paris (Deskeo)": "Paris (Deskeo)",
+                    "Toronto": { "Toronto - Financial District": "Financial District" },
+                    "White Plains": "White Plains",
+                    "Other (please add location detail below)": "Other (please add location detail below)"
+                  }}
                   validate={composeValidators(required())}
                 />
                 {values.location ===
-                locationValues[locationValues.length - 1] ? (
+                  locationValues[locationValues.length - 1] ? (
                   <Field
                     name="locationAdditionalDetails"
                     component={Input}
@@ -129,6 +139,7 @@ const ContactForm = ({
                   component={Input}
                   placeholder="Additional details"
                 />
+                <Field name="url" component={InputHiddenUrl} />
                 <Button
                   className={style.contact_button}
                   fetching={submitting}
