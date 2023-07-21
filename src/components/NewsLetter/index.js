@@ -85,7 +85,7 @@ const NewsLetter = ({
                               <Field
                                 name="email"
                                 component={Input}
-                                placeholder="Email Address*"
+                                placeholder="Email Addrress*"
                                 validate={composeValidators(
                                   required(),
                                   email()
