@@ -39,6 +39,15 @@ const Footer = ({ footerProps }) => {
                 {contactEmail}
               </NormalLink>
             </div>
+            {/* <div className={style.f_button}>
+              <Button
+                id={"subscribeTrigger"}
+                onClick={() => {
+                  setOpen(true);
+                }}
+                label={subscribeLabel}
+              />
+            </div> */}
             {open === true && (
               <NewsLetter
                 onSubmit={newsLetterForm.onSubmit}
