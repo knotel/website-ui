@@ -10,6 +10,7 @@ import style from "./style.module.css";
 
 const Banner = ({
   image,
+  tag = "div",
   title,
   text,
   border_line = false,
@@ -19,6 +20,7 @@ const Banner = ({
   const {
     appContext: { winHeight, height },
   } = useContext(AppContext);
+  const Tag = tag;
   return (
     <div className={`c`}>
       <div
@@ -37,7 +39,9 @@ const Banner = ({
           {title && (
             <>
               <div className={style.content}>
-                <div className={style.title}>{title}</div>
+                <Tag>
+                  <span className={style.title}>{title}</span>
+                </Tag>
                 <div
                   className={style.text}
                   dangerouslySetInnerHTML={{ __html: text }}
