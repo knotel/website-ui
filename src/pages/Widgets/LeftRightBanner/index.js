@@ -8,6 +8,7 @@ import { AppContext } from "../../../Contexts/AppContext";
 
 const LeftRightBanner = ({
   title,
+  tag = "div",
   text,
   image,
   onButtonClick,
@@ -27,6 +28,7 @@ const LeftRightBanner = ({
     cali: style.cali,
     blue_hover: style.blue_hover,
   };
+  const Tag = tag;
   return (
     <div className={`c`}>
       <div
@@ -43,7 +45,9 @@ const LeftRightBanner = ({
           <div className={style.gradient} />
           <div className={`${style.left} ${colorClass[bg_color]}`}>
             <div className={style.content_wrapper}>
-              <div className={style.title}>{title}</div>
+              <Tag>
+                <span className={style.title}>{title}</span>
+              </Tag>
               <div className={style.text}>{text}</div>
               <div className={style.banner_btn}>
                 {icon ? (
