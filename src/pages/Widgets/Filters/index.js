@@ -83,9 +83,8 @@ const Filters = ({
     const isMapSection = $(`.${style.left}`).hasClass(style.hide);
     if (winWidth > 820 || isMapSection) {
       setHeight(
-        `${
-          parseFloat(winHeight) -
-          parseFloat(fetchHeight("filter_bar") + navBarHeight)
+        `${parseFloat(winHeight) -
+        parseFloat(fetchHeight("filter_bar") + navBarHeight)
         }px`
       );
       setMapHeight(
@@ -99,9 +98,8 @@ const Filters = ({
     }
     if (listLength === 0) {
       setHeight(
-        `${
-          parseFloat(winHeight) -
-          parseFloat(fetchHeight("filter_bar") + navBarHeight)
+        `${parseFloat(winHeight) -
+        parseFloat(fetchHeight("filter_bar") + navBarHeight)
         }px`
       );
     }
@@ -142,7 +140,7 @@ const Filters = ({
                       <div className={`section_border_left`}></div>
                       <div className={`section_border_right`}></div>
                       <div className={style.top_wrapper}>
-                        <div className={style.title}>{city}</div>
+                        <h1 className={style.title}>{city}</h1>
                         <div className={style.filters}>
                           <form name="booking_contact" className={style.form}>
                             <div className={style.form_block}>
@@ -272,9 +270,8 @@ const Filters = ({
                         <>
                           <div
                             id="listings_cont"
-                            className={`${
-                              element !== "locations" ? `${style.hide} ` : ""
-                            }${style.left}`}
+                            className={`${element !== "locations" ? `${style.hide} ` : ""
+                              }${style.left}`}
                           >
                             {list.map((item, index) => {
                               return (
@@ -335,11 +332,10 @@ const Filters = ({
                                                 {value.link && (
                                                   <div className={style.value}>
                                                     <NormalLink
-                                                      link={`${
-                                                        value.type
+                                                      link={`${value.type
                                                           ? value.type + ":"
                                                           : ""
-                                                      }${value.link}`}
+                                                        }${value.link}`}
                                                       className={style.link}
                                                     >
                                                       {value.link}
@@ -376,9 +372,8 @@ const Filters = ({
                             })}
                           </div>
                           <div
-                            className={`google_map ${
-                              element !== "map" ? `${style.hide} ` : ""
-                            }${style.right}`}
+                            className={`google_map ${element !== "map" ? `${style.hide} ` : ""
+                              }${style.right}`}
                           >
                             <div
                               className={style.map}

@@ -99,18 +99,18 @@ const ContactForm = ({
                 <Field
                   name="location"
                   component={Dropdown}
-                  prompt="Select City"
+                  prompt="Select Location"
                   options={{
-                    "Amsterdam": { "Amsterdam - De Pijp": "De Pijp", "Amsterdam - Canal Area": "Canal Area", "Amsterdam - Central": "Central" },
-                    "Austin": { "Austin - NW Austin": "NW Austin", "Austin - Westlake": "Westlake", "Austin - Downtown": "Downtown" },
-                    "Berlin": { "Berlin - Kreuzberg": "Kreuzberg", "Berlin - Mitte": "Mitte", "Berlin - Kurfürstendamm": "Kurfürstendamm" },
-                    "Dublin": { "Dublin - Dublin 2": "Dublin 2", "Dublin - D2": "D2" },
-                    "London": { "London - Soho": "Soho", "London - Clerkenwell": "Clerkenwell", "London - Southwark": "Southwark", "London - City Fringe": "City Fringe", "London - Farringdon": "Farringdon", "London - Covent Garden": "Covent Garden", "London - Fitzrovia": "Fitzrovia", "London - City Core": "City Core", "London - Monument": "Monument" },
-                    "Miami": { "Miami - Wynwood": "Wynwood", "Miami - West Palm Beach": "West Palm Beach", "Miami - Little Gables": "Little Gables", "Miami - Midtown": "Midtown" },
-                    "Paris (Deskeo)": "Paris (Deskeo)",
-                    "Toronto": { "Toronto - Financial District": "Financial District" },
-                    "White Plains": "White Plains",
-                    "Other (please add location detail below)": "Other (please add location detail below)"
+                    "Other": "Other",
+                    "Amsterdam": { "Amsterdam - Keizersgracht 121": "Keizersgracht 121" },
+                    "Austin": { "Austin - 12710 Research Blvd": "12710 Research Blvd", "Austin - The Overlook at Rob Roy": "The Overlook at Rob Roy", "Austin - 119 Nueces Street": "119 Nueces Street" },
+                    "Berlin": { "Berlin - Mehringdamm 33": "Mehringdamm 33", "Berlin - Mehringdamm 32": "Mehringdamm 32", "Berlin - Hussitenstrasse 32": "Hussitenstrasse 32", "Berlin - Neue Grünstrasse 17": "Neue Grünstrasse 17", "Berlin - Nürnberger Strasse 8": "Nürnberger Strasse 8" },
+                    "Dublin": { "Dublin - Dublin Riverview House, 21 - 23 City Quay": "Dublin Riverview House, 21 - 23 City Quay" },
+                    "London": { "London - 33 Soho Square": "33 Soho Square", "London - Gilray House": "Gilray House", "London - Waverley House, 7-12 Noel Street": "Waverley House, 7-12 Noel Street", "London - 1 Finsbury Market": "1 Finsbury Market", "London - Imperial House": "Imperial House", "London - Chadwick Court, 15 Hatfields": "Chadwick Court, 15 Hatfields", "London - Old Sessions House": "Old Sessions House", "London - 33 Charlotte Street": "33 Charlotte Street", "London - Clerks Court": "Clerks Court", "London - HYLO": "HYLO", "London - One Lackington": "One Lackington" },
+                    "Miami": { "Miami - The Press": "The Press", "Miami - 1200 Ponce De Leon": "1200 Ponce De Leon", "Miami - 225 NE 34th St": "225 NE 34th St", "Miami - Wyncatcher": "Wyncatcher" },
+                    "Seattle": { "Seattle - Federal Reserve": "Federal Reserve" },
+                    "Toronto": { "Toronto - 121 King Street West": "121 King Street West" },
+                    "White Plains": { "White Plains - 360 Hamilton Ave": "360 Hamilton Ave" }
                   }}
                   validate={composeValidators(required())}
                 />
