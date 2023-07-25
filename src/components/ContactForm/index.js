@@ -107,6 +107,7 @@ const ContactForm = ({
                     "Berlin": { "Berlin - Mehringdamm 33": "Mehringdamm 33", "Berlin - Mehringdamm 32": "Mehringdamm 32", "Berlin - Hussitenstrasse 32": "Hussitenstrasse 32", "Berlin - Neue Grünstrasse 17": "Neue Grünstrasse 17", "Berlin - Nürnberger Strasse 8": "Nürnberger Strasse 8" },
                     "Dublin": { "Dublin - Dublin Riverview House, 21 - 23 City Quay": "Dublin Riverview House, 21 - 23 City Quay" },
                     "London": { "London - 33 Soho Square": "33 Soho Square", "London - Gilray House": "Gilray House", "London - Waverley House, 7-12 Noel Street": "Waverley House, 7-12 Noel Street", "London - 1 Finsbury Market": "1 Finsbury Market", "London - Imperial House": "Imperial House", "London - Chadwick Court, 15 Hatfields": "Chadwick Court, 15 Hatfields", "London - Old Sessions House": "Old Sessions House", "London - 33 Charlotte Street": "33 Charlotte Street", "London - Clerks Court": "Clerks Court", "London - HYLO": "HYLO", "London - One Lackington": "One Lackington" },
+                    "Malibu": { "Malibu - Malibu Vista": "Malibu Vista" },
                     "Miami": { "Miami - The Press": "The Press", "Miami - 1200 Ponce De Leon": "1200 Ponce De Leon", "Miami - 225 NE 34th St": "225 NE 34th St", "Miami - Wyncatcher": "Wyncatcher" },
                     "Seattle": { "Seattle - Federal Reserve": "Federal Reserve" },
                     "Toronto": { "Toronto - 121 King Street West": "121 King Street West" },
