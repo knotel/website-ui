@@ -470,7 +470,6 @@ area,
 a,
 button {
   border: 0px;
-  outline: none;
 }
 
 h1,
@@ -528,7 +527,6 @@ input,
 textarea,
 select {
   border: 0;
-  outline: none;
   line-height: normal;
   -webkit-appearance: none;
   border-radius: 0;
@@ -563,6 +561,17 @@ body>iframe {
   position: fixed;
   width: 100%;
   left: 0;
+}
+
+.skipLink {
+  height: 1px;
+  left: -999px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  transition: none;
+  width: 1px;
+  z-index: -999;
 }
 
 .disabledLink {

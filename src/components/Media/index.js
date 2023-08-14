@@ -24,6 +24,8 @@ const NormalImage = ({ src, className, alt }) => {
   return (
     <div className={style.bsz}>
       <div
+        role="img"
+        aria-label={alt}
         className={`${style.bgImage}${className ? " " + className : ""}`}
         style={{ backgroundImage: `url(${src})` }}
       >
@@ -76,6 +78,8 @@ const LazyImage = ({ src, className, alt, sizer }) => {
       )}
       <OutOfView className={style.bsz} onOutCallback={onOutHandler}>
         <div
+          role="img"
+          aria-label={alt}
           className={`${style.bgImage}${className ? " " + className : ""}${
             loaded === 0 ? " " + style.loading : ""
           }`}

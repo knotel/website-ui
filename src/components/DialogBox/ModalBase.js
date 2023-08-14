@@ -10,6 +10,8 @@ export default class ModalBase extends React.Component {
   componentDidMount() {
     const el = document.createElement("div");
     el.className = this.props.className || style.modal;
+    el.role = "dialog";
+    el.setAttribute('aria-modal', "true");
     document.body.appendChild(el);
     this.setState({ el });
   }

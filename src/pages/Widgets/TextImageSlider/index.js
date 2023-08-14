@@ -86,11 +86,10 @@ const TextImageSlider = ({
               items.map((item, i) => {
                 return (
                   <div
-                    className={`section_item ${style.text_image} ${
-                      get(item, "image_position") === "left"
+                    className={`section_item ${style.text_image} ${get(item, "image_position") === "left"
                         ? `col_66_33 ${style.left_side}`
                         : `col_33_66`
-                    }`}
+                      }`}
                     key={`text_img_${i}`}
                   >
                     {i + 1 !== items.length && (
@@ -115,19 +114,17 @@ const TextImageSlider = ({
                                       if (icon) {
                                         return (
                                           <div
-                                            className={`${
-                                              get(item, "className", false)
-                                                ? `${
-                                                    style[
-                                                      get(
-                                                        item,
-                                                        "className",
-                                                        false
-                                                      )
-                                                    ]
-                                                  } `
+                                            className={`${get(item, "className", false)
+                                                ? `${style[
+                                                get(
+                                                  item,
+                                                  "className",
+                                                  false
+                                                )
+                                                ]
+                                                } `
                                                 : ""
-                                            }${style.text_wrap}`}
+                                              }${style.text_wrap}`}
                                             key={`about_${j}`}
                                           >
                                             <div className={style.flex}>
@@ -149,11 +146,10 @@ const TextImageSlider = ({
                                             {value.link && (
                                               <div className={style.value}>
                                                 <NormalLink
-                                                  link={`${
-                                                    value.type
+                                                  link={`${value.type
                                                       ? value.type + ":"
                                                       : ""
-                                                  }${value.link}`}
+                                                    }${value.link}`}
                                                   className={style.link}
                                                 >
                                                   {value.linkLabel ||
@@ -192,9 +188,8 @@ const TextImageSlider = ({
                                           ? "transparent_btn"
                                           : ""
                                       }
-                                      className={`${style.btn_padd} ${
-                                        btn_classes[item.button_type]
-                                      }`}
+                                      className={`${style.btn_padd} ${btn_classes[item.button_type]
+                                        }`}
                                       onClick={item.on_button_click}
                                       label={item.button_label}
                                       link={item.button_url}
@@ -226,14 +221,14 @@ const TextImageSlider = ({
                                 options={sliderOptions}
                                 ref={swiperRef}
                                 onMoved={(e, prev) => setActive(prev)}
-                                aria-label="My Favorite Images"
+                                aria-label="Carousel"
                               >
                                 {item.list.map((item, i) => (
                                   <SplideSlide key={item.image}>
                                     <div className={style.img}>
                                       <div className={style.img_wrap}>
                                         <div className={style.sizer} />
-                                        <Media src={item.image} />
+                                        <Media src={item.image} alt={`Slider Image ${i + 1}`} />
                                       </div>
                                     </div>
                                     {/* <Media src={item.image} /> */}
@@ -247,9 +242,8 @@ const TextImageSlider = ({
                                 <div className={style.icons}>
                                   {item.list.map((item, i) => (
                                     <div
-                                      className={`${style.icon}${
-                                        active === i ? ` ${style.active}` : ""
-                                      }`}
+                                      className={`${style.icon}${active === i ? ` ${style.active}` : ""
+                                        }`}
                                       key={i}
                                       onClick={() => {
                                         swiperRef.current.splide.go(i);
@@ -315,7 +309,7 @@ const PDFViewer = ({
 
       const results = await Promise.all(mappedImages);
       setPdfImages(results);
-    } catch (err) {}
+    } catch (err) { }
   };
 
   useEffect(() => {
@@ -337,7 +331,7 @@ const PDFViewer = ({
                 <div className={style.img_wrap}>
                   <div className={style.sizer} />
                   <NormalLink link={item.originLink} target="_blank">
-                    <Media className={style.pdf} src={item.url} />
+                    <Media className={style.pdf} src={item.url} alt={`PDF Image ${i + 1}`} />
                   </NormalLink>
                 </div>
               </div>
@@ -352,9 +346,8 @@ const PDFViewer = ({
         <div className={style.icons}>
           {pdfImages.map((item, i) => (
             <div
-              className={`${style.icon}${
-                active === i ? ` ${style.active}` : ""
-              }`}
+              className={`${style.icon}${active === i ? ` ${style.active}` : ""
+                }`}
               key={i}
               onClick={() => {
                 swiperRef.current.splide.go(i);

@@ -76,6 +76,7 @@ const LeftRightBanner = ({
               className={style.banner_image}
               src={image}
               size="920x600px"
+              alt="Banner Image"
             />
           </div>
         </div>

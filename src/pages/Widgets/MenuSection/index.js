@@ -49,6 +49,7 @@ const MenuSection = ({ items = [] }) => {
                         className={style.item_img}
                         src={item.image}
                         size="608x472px"
+                        alt="Menu Section"
                       />
                     </div>
                     <div className={style.text_wrap}>

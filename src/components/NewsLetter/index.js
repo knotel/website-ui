@@ -116,6 +116,7 @@ const NewsLetter = ({
                         className={style.item_img}
                         src={content.image}
                         size="609x396px"
+                        alt="Newsletter"
                       />
                     </div>
                   </div>

@@ -33,11 +33,12 @@ const BannerHero = ({
             className={`${style.banner_image} fixed`}
             src={desktop_image}
             size="2560x1124"
+            alt="Hero Banner"
           />
           <Center className={style.banner_center}>
             <div className={style.center}>
               <LazyLoad>
-                <div className={style.title}>{title}</div>
+                <div role="heading" className={style.title}>{title}</div>
                 {title_text ? (
                   <div
                     className={`${style.title_text}`}
