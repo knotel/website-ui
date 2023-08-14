@@ -38,7 +38,7 @@ const Header = ({
 
   return (
     <>
-      <div className={`${style.header}`}>
+      <div className={`${style.header}`} role="navigaton">
         <div className={`c has_border`}>
           <div className={style.header_wrap}>
             <div className={style.header_logo}>

@@ -302,6 +302,7 @@ const Filters = ({
                                         <Media
                                           className={style.item_img}
                                           src={item.image}
+                                          alt={item.place}
                                         />
                                       </EqualHeightElement>
                                     </div>
@@ -403,6 +404,7 @@ const Filters = ({
                                   <Media
                                     className={style.item_img}
                                     src={list[0].image}
+                                    alt={list[0].place}
                                   />
                                 </div>
                                 <div className={style.content}>

@@ -22,7 +22,7 @@ const NormalLink = ({
 
   if (download === true) {
     return (
-      <Link href={link}>
+      <Link href={link} ariaLabel="Click to download">
         <a className={`${className}`} onClick={onClick} download>
           {children}
         </a>
@@ -32,7 +32,7 @@ const NormalLink = ({
 
   if (httpCondt) {
     return (
-      <Link href={link}>
+      <Link href={link} ariaLabel="External Link">
         <a
           className={`${className}`}
           target="_blank"
@@ -47,7 +47,7 @@ const NormalLink = ({
 
   if (mailtoCondt || telCondt) {
     return (
-      <Link href={link}>
+      <Link href={link} ariaLabel={telCondt ? "Click to call" : "Click to email"}>
         <a className={`${className}`} onClick={onClick}>
           {children}
         </a>

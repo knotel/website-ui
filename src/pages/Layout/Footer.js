@@ -25,7 +25,7 @@ const Footer = ({ footerProps }) => {
 
   return (
     <div className={`c has_border`}>
-      <div className={style.footer}>
+      <div className={style.footer} role="contentinfo">
         <div className={style.footer_wrap}>
           <div className={`${style.f_mobile} ${style.footer_left}`}>
             <NormalLink className={style.footer_logo}>
@@ -75,10 +75,12 @@ const Footer = ({ footerProps }) => {
             footerLinks.length > 0 &&
             footerLinks.map((item, i) => (
               <div
+                role="navigation"
+                ariaLabelledby={`footer_${item.title}`}
                 className={`${style.f_mobile} ${style.footer_col}`}
                 key={`f_title_${i}`}
               >
-                <div className={style.footer_title}>{item.title}</div>
+                <div id={`footer_${item.title}`} className={style.footer_title}>{item.title}</div>
                 {item.links.map((linkItem, j) => (
                   <div
                     className={style.footer_link_item}

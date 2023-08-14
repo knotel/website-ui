@@ -63,7 +63,7 @@ const TextImageBlock = ({ items = [] }) => {
                     <EqualHeightElement name="TextImageBlock">
                       <div className={style.img_wrap}>
                         <div className={style.sizer} />
-                        <Media src={item.image} />
+                        <Media src={item.image} alt={item.title} />
                       </div>
                     </EqualHeightElement>
                   </div>

@@ -50,7 +50,7 @@ const AmenitiesModal = ({
                   <div className={style.image}>
                     <div className={style.img_wrap}>
                       <div className={style.sizer} />
-                      <Media src={content.image} size="608x472px" />
+                      <Media src={content.image} size="608x472px" alt={content.title} />
                     </div>
                   </div>
                 </EqualHeightElement>

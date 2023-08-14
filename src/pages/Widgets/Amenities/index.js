@@ -115,6 +115,7 @@ const Amenities = ({
                               className={style.item_img}
                               src={item.image}
                               size="608x472px"
+                              alt={item.title}
                             />
                           </div>
                         </div>

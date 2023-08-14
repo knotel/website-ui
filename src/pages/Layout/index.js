@@ -66,7 +66,10 @@ const Layout = ({ children, headerProps, footerProps }) => {
         offset={dimesions.height}
       />
       <div className="viewport">
+        <a className="skipLink" href="#main-content">Skip to main content</a>
         <div
+          id="main-content"
+          role="main"
           className={`content`}
           style={{
             paddingTop: dimesions.height,

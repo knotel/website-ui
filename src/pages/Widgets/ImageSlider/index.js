@@ -71,9 +71,8 @@ const ImageSlider = (props) => {
               <div className={style.options}>
                 {options.map((option, i) => (
                   <Button
-                    className={`${
-                      country === option.toLowerCase() ? `${style.active} ` : ""
-                    }${style.option}`}
+                    className={`${country === option.toLowerCase() ? `${style.active} ` : ""
+                      }${style.option}`}
                     label={option}
                     key={`country_${i}`}
                     onClick={() => {
@@ -122,7 +121,7 @@ const ImageSlider = (props) => {
           <Splide
             options={sliderOptions}
             ref={swiperRef}
-            aria-label="My Favorite Images"
+            aria-label="Carousel"
           >
             {getItems().map((item, i) => {
               return (
@@ -138,6 +137,7 @@ const ImageSlider = (props) => {
                         className={style.item_img}
                         src={item.image}
                         size="608x472"
+                        alt={`Slider Image ${i + 1}`}
                       />
                     </div>
                     <div className={style.text_wrap}>
