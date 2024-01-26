@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import $ from "jquery-slim";
 
 import EnquireModal from "../../components/EnquireModal";
+import GiftCardModal from '../Widgets/GiftCardModal';
 import style from "./style.module.css";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -11,6 +12,7 @@ import { get } from "lodash";
 
 const Layout = ({ children, headerProps, footerProps }) => {
   const [openForm, setOpenForm] = useState(false);
+  const [openGiftCardForm, setOpenGiftCardForm] = useState(false);
   const { setContext } = useContext(AppContext);
   const [dimesions, setDimensions] = useState({
     height: 0,
@@ -19,6 +21,7 @@ const Layout = ({ children, headerProps, footerProps }) => {
   });
   const router = useRouter();
   const g = router?.query?.g;
+  const o = router?.query?.o;
   const route = router?.route;
 
   function updateDimensions() {
@@ -42,6 +45,12 @@ const Layout = ({ children, headerProps, footerProps }) => {
   }, []);
 
   useEffect(() => {
+    //Open gift card form
+    if (o === "gift-card-form") {
+      setOpenGiftCardForm(true);
+      return;
+    }
+
     //Scroll to a section
     let id = "#" + g;
     id = id.replace(/\//g, "");
@@ -91,6 +100,9 @@ const Layout = ({ children, headerProps, footerProps }) => {
           {...headerProps.contactForm}
           onClose={() => setOpenForm(false)}
         />
+      )}
+      {openGiftCardForm === true && (
+        <GiftCardModal onClose={() => setOpenGiftCardForm(false)} />
       )}
     </>
   );

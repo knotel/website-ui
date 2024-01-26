@@ -1,0 +1,70 @@
+.form {
+    padding-top: 15px;
+    max-width: 600px;
+}
+
+.form_small {
+    max-width: 400px;
+}
+
+.form_title {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.form_wrap {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.form_block {
+    display: inline-block;
+    width: 50%;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.text {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+    padding-top: 16px;
+}
+
+.text span {
+    font-family: "Gelasio";
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 350;
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    .form {
+        padding-top: 0px;
+    }
+
+    .form_title {
+        font-size: 24px;
+    }
+
+    .text,
+    .text span {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 550px) {
+    .form_title {
+        font-size: 21px;
+    }
+
+    .text,
+    .text span {
+        font-size: 14px;
+    }
+
+}
