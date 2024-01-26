@@ -42,7 +42,7 @@ const GiftCardForm = ({
                                 </div>
                                 <Field name="email" component={Input} placeholder="Email Address*" validate={composeValidators(required(), email())} />
                                 <Field name="phone" component={Input} placeholder="Phone Number" />
-                                <Field name="companyName" component={Input} placeholder="Company Name" />
+                                <Field name="companyName" component={Input} placeholder="Company Name" /> 
                                 <Button
                                     submit={true}
                                     fetching={submitting}

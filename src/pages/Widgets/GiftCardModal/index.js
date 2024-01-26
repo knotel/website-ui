@@ -1,7 +1,4 @@
 import React from 'react';
-import { get } from 'lodash';
-
-import { data } from '../../../helpers/mock';
 import DialogBox from '../../../components/DialogBox';
 import GiftCardForm from '../GiftCardForm';
 
