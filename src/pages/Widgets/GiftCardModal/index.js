@@ -6,11 +6,23 @@ import DialogBox from '../../../components/DialogBox';
 import GiftCardForm from '../GiftCardForm';
 
 
-const GiftCardModal = ({ onClose }) => {
+const GiftCardModal = ({
+    onClose,
+    onSubmit,
+    submitting,
+    submitted,
+    content
+}) => {
     return (
         <DialogBox className={`giftForm`} onClose={onClose} extraClass={true}>
             <div className={`gift`}>
-                <GiftCardForm content={get(data, 'gift_form')} showText={true} />
+                <GiftCardForm
+                    showText={true}
+                    onSubmit={onSubmit}
+                    submitted={submitted}
+                    submitting={submitting}
+                    content={content}
+                />
             </div>
         </DialogBox>
     )

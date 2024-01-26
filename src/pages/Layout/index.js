@@ -102,7 +102,7 @@ const Layout = ({ children, headerProps, footerProps }) => {
         />
       )}
       {openGiftCardForm === true && (
-        <GiftCardModal onClose={() => setOpenGiftCardForm(false)} />
+        <GiftCardModal {...headerProps.giftForm} onClose={() => setOpenGiftCardForm(false)} />
       )}
     </>
   );
