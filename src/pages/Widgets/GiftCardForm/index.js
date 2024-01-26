@@ -34,15 +34,15 @@ const GiftCardForm = ({
                             <form name="gift_card_form" className={`${showText === true ? style.form_small : ``}${style.form}`} onSubmit={handleSubmit}>
                                 <div className={style.form_wrap}>
                                     <div className={style.form_block}>
-                                        <Field name="f_name" component={Input} placeholder="First Name*" validate={composeValidators(required())} />
+                                        <Field name="firstName" component={Input} placeholder="First Name*" validate={composeValidators(required())} />
                                     </div>
                                     <div className={style.form_block}>
-                                        <Field name="l_name" component={Input} placeholder="Last Name*" validate={composeValidators(required())} />
+                                        <Field name="lastName" component={Input} placeholder="Last Name*" validate={composeValidators(required())} />
                                     </div>
                                 </div>
                                 <Field name="email" component={Input} placeholder="Email Address*" validate={composeValidators(required(), email())} />
                                 <Field name="phone" component={Input} placeholder="Phone Number" />
-                                <Field name="name" component={Input} placeholder="Company Name" />
+                                <Field name="companyName" component={Input} placeholder="Company Name" />
                                 <Button
                                     submit={true}
                                     fetching={submitting}
