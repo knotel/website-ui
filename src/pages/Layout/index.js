@@ -20,9 +20,6 @@ const Layout = ({ children, headerProps, footerProps }) => {
     // winHeight: window.innerHeight,
   });
   const router = useRouter();
-  const g = router?.query?.g;
-  const o = router?.query?.o;
-  const route = router?.route;
 
   function updateDimensions() {
     const _dimensions = {
@@ -45,13 +42,17 @@ const Layout = ({ children, headerProps, footerProps }) => {
   }, []);
 
   useEffect(() => {
+    const o = router?.query?.o;
+    const route = router?.route;
+    const city = router?.query?.city;
     //Open gift card form
-    if (o === "gift-card-form") {
+    if (o === "gift-card-form" && route === "/offices/[city]" && city == "miami") {
       setOpenGiftCardForm(true);
       return;
     }
 
     //Scroll to a section
+    const g = router?.query?.g;
     let id = "#" + g;
     id = id.replace(/\//g, "");
     if ($(id).length) {
@@ -60,7 +61,7 @@ const Layout = ({ children, headerProps, footerProps }) => {
         behavior: "smooth",
       });
     }
-  }, [{ route }]);
+  }, [router?.asPath, router?.query]);
 
   return (
     <>
