@@ -31,7 +31,6 @@
 
 .dialogBoxOverlay {
   position: absolute;
-  overflow: auto;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.514);
 }
@@ -83,11 +82,7 @@
 
 .dialogClose:hover,
 .extraClass:hover {
-  /* color: var(--coral-red-hover); */
-}
-
-.hover_coral:hover {
-  color: var(--coral-red-hover);
+  color: var(--coral-red)
 }
 
 .dialogContent {
@@ -101,6 +96,7 @@
   opacity: 0;
   transition: all 0.4s;
   transition-delay: 0.2s;
+  overflow: auto;
 }
 
 .dialogOpen .dialogContent {
@@ -129,7 +125,6 @@
   transition-delay: 0.2s;
 }
 
-
 :global(.enquireForm) {
   position: fixed;
   top: 0;
@@ -140,18 +135,17 @@
   opacity: 0;
   transition: transform 0.4s ease-in;
   transition-delay: 0.6s;
-  background-color: #fffbf5;
+  background-color: #FFFBF5;
   height: 100%;
   max-width: 500px;
   margin: 0;
 }
 
 .dialogOpen :global(.enquireForm) {
-  transition: transform 0.8s ease-in;
+  transition: transform .8s ease-in;
   transform: translate(0) !important;
   visibility: visible;
   opacity: 1;
-  overflow: auto;
 }
 
 :global(.enquire) {
@@ -161,66 +155,32 @@
   border-top: 1px solid black;
 }
 
-@media (max-width: 550px) {
-  .closeText {
-    display: none;
-  }
 
-  .dialogClose {
-    right: 0;
-    top: 0;
-  }
-
-  .col {
-    display: block;
-    width: auto;
-  }
-
-
-  .extraClass {
-    left: 30px;
-    top: 18px;
-  }
-
-  :global(.find_more) .dialogClose {
-    left: 24px;
-    padding: 24px 0px;
-  }
-
-  :global(.mobileFilter) .closeText {
-    display: block;
-  }
-
-  :global(.newsletter_dialog) .dialogContent {
-    width: calc(100% - 100px);
-  }
-
-  :global(.mobile_menu) .dialogContent {
-    width: 100%;
-  }
-
-  :global(.enquire) {
-    margin-top: 52px;
-  }
-
-  :global(.enquireForm) {
-    height: 100%;
-    max-width: 300px;
-  }
-
-  :global(.newsletter_dialog) .dialogClose {
-    padding: 12px 0px;
-  }
-
-  :global(.newsletter_dialog) .closeText {
-    display: block;
-  }
-
-  :global(.find_more) .dialogContent {
-    width: calc(100% - 80px);
-  }
+:global(.giftForm) {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%) !important;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+  transition-delay: 0.6s;
+  background-color: #FFFBF5;
+  max-width: 680px;
+  margin: 0;
 }
 
+.dialogOpen :global(.giftForm) {
+  transition: opacity .8s ease-in;
+  visibility: visible;
+  opacity: 1;
+}
+
+:global(.gift) {
+  padding: 40px;
+  margin-top: 88px;
+  border-top: 1px solid black;
+}
 
 @media(max-width:1260px) {
   :global(.newsletter_dialog) .dialogClose {
@@ -250,6 +210,10 @@
     max-width: 500px;
     overflow: auto;
   }
+
+  :global(.gift) {
+    margin-top: 72px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -262,6 +226,12 @@
 @media(max-width:940px) {
   :global(.find_more) .dialogContent {
     width: calc(100% - 220px);
+  }
+}
+
+@media(max-height: 680px) and (orientation: landscape) {
+  :global(.giftForm) {
+    height: 100%;
   }
 }
 
@@ -280,6 +250,11 @@
   :global(.enquire) {
     padding: 30px;
     padding-right: 30px;
+    margin-top: 64px;
+  }
+
+  :global(.gift) {
+    padding: 30px;
     margin-top: 64px;
   }
 
@@ -330,11 +305,83 @@
   }
 }
 
+@media (max-width: 550px) {
+  .closeText {
+    display: none;
+  }
+
+  :global(.giftForm) .closeText {
+    display: inline-block;
+  }
+
+  .dialogClose {
+    right: 0;
+    top: 0;
+  }
+
+  .col {
+    display: block;
+    width: auto;
+  }
+
+  .extraClass {
+    left: 30px;
+    top: 18px;
+  }
+
+  :global(.find_more) .dialogClose {
+    left: 24px;
+    padding: 24px 0px;
+  }
+
+  :global(.mobileFilter) .closeText {
+    display: block;
+  }
+
+  :global(.newsletter_dialog) .dialogContent {
+    width: calc(100% - 100px);
+  }
+
+  :global(.mobile_menu) .dialogContent {
+    width: 100%;
+  }
+
+  :global(.enquire),
+  :global(.gift) {
+    margin-top: 52px;
+  }
+
+  :global(.enquireForm) {
+    height: 100%;
+    max-width: 300px;
+  }
+
+  :global(.newsletter_dialog) .dialogClose {
+    padding: 12px 0px;
+  }
+
+  :global(.newsletter_dialog) .closeText {
+    display: block;
+  }
+
+  :global(.find_more) .dialogContent {
+    width: calc(100% - 80px);
+  }
+}
+
 @media (max-width: 500px) {
   :global(.enquireForm) {
     min-width: 100%;
   }
 
+  :global(.giftForm) {
+    min-width: 100%;
+    transform: none !important;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 44px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -350,6 +397,10 @@
 
   :global(.enquire) {
     margin-top: 46px;
+  }
+
+  :global(.gift) {
+    padding: 16px;
   }
 
   :global(.find_more) .dialogContent {
