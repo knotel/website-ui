@@ -76,7 +76,7 @@ const Footer = ({ footerProps }) => {
             footerLinks.map((item, i) => (
               <div
                 role="navigation"
-                ariaLabelledby={`footer_${item.title}`}
+                aria-labelledby={`footer_${item.title}`}
                 className={`${style.f_mobile} ${style.footer_col}`}
                 key={`f_title_${i}`}
               >

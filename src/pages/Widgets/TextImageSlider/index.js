@@ -324,7 +324,7 @@ const PDFViewer = ({
         onMoved={(e, prev) => setActive(prev)}
         aria-label="My Favorite Images"
       >
-        {pdfImages.map((item) => (
+        {pdfImages.map((item, i) => (
           <>
             <SplideSlide key={item.caption}>
               <div className={style.img}>
