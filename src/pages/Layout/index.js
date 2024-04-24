@@ -3,6 +3,7 @@ import $ from "jquery-slim";
 
 import EnquireModal from "../../components/EnquireModal";
 import GiftCardModal from '../Widgets/GiftCardModal';
+import CampaignModal from '../Widgets/CampaignModal';
 import style from "./style.module.css";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -13,6 +14,7 @@ import { get } from "lodash";
 const Layout = ({ children, headerProps, footerProps }) => {
   const [openForm, setOpenForm] = useState(false);
   const [openGiftCardForm, setOpenGiftCardForm] = useState(false);
+  const [openCampaignForm, setOpenCampaignForm] = useState(false);
   const { setContext } = useContext(AppContext);
   const [dimesions, setDimensions] = useState({
     height: 0,
@@ -48,6 +50,12 @@ const Layout = ({ children, headerProps, footerProps }) => {
     //Open gift card form
     if (o === "gift-card-form" && route === "/offices/[city]" && city == "miami") {
       setOpenGiftCardForm(true);
+      return;
+    }
+
+    // Open campaign form modal
+    if (o === "campaign-us" || o === "campaign-europe") {
+      setOpenCampaignForm(true);
       return;
     }
 
@@ -104,6 +112,9 @@ const Layout = ({ children, headerProps, footerProps }) => {
       )}
       {openGiftCardForm === true && (
         <GiftCardModal {...headerProps.giftForm} onClose={() => setOpenGiftCardForm(false)} />
+      )}
+      {openCampaignForm === true && (
+        <CampaignModal {...headerProps.campaignForm} onClose={() => setOpenCampaignForm(false)} campaign={router?.query?.o} />
       )}
     </>
   );
