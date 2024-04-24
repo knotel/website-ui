@@ -1240,6 +1240,26 @@ const App = () => {
           locationOptions: { Nigeria: "Nigeria", Abia: "Abia" },
           interestOptions: ["Events", "WorkClub", "Office", "Others"],
         },
+        campaignForm: {
+          content: {
+            form_title: 'Default campaign form modal title', // TODO - replace with actual content
+            form_text: 'Default campaign form modal text', // TODO - replace with actual content
+            button_label: 'Submit'
+          },
+          /** Override default content on a per-campaign basis.
+           * Corresponds to `?o=campaign-us` or `?o=campaign-europe` query params
+           */
+          campaigns: {
+            'campaign-us': {
+              form_title: 'US Campaign Modal Title', // TODO - replace with actual content
+              form_text: 'Lorem ipsum dolor sit amet, tempora qui officia omnis.' // TODO - replace with actual content
+            },
+            'campaign-europe': {
+              form_title: 'Europe Campaign Modal Title', // TODO - replace with actual content
+              form_text: 'Lorem ipsum eveniet vero excepturi.' // TODO - replace with actual content
+            }
+          },
+        },
       }}
       footerProps={{
         logo: Logo,
