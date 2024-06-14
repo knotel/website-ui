@@ -4,6 +4,7 @@ import $ from "jquery-slim";
 import EnquireModal from "../../components/EnquireModal";
 import GiftCardModal from '../Widgets/GiftCardModal';
 import CampaignModal from '../Widgets/CampaignModal';
+import ContactModal from '../Widgets/ContactModal';
 import style from "./style.module.css";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -15,6 +16,7 @@ const Layout = ({ children, headerProps, footerProps }) => {
   const [openForm, setOpenForm] = useState(false);
   const [openGiftCardForm, setOpenGiftCardForm] = useState(false);
   const [openCampaignForm, setOpenCampaignForm] = useState(false);
+  const [openContactFormModal, setOpenContactFormModal] = useState(false);
   const { setContext } = useContext(AppContext);
   const [dimesions, setDimensions] = useState({
     height: 0,
@@ -56,6 +58,12 @@ const Layout = ({ children, headerProps, footerProps }) => {
     // Open campaign form modal
     if (o === "campaign-us" || o === "campaign-europe") {
       setOpenCampaignForm(true);
+      return;
+    }
+    
+    // Open contact form modal
+    if (o === "contact") {
+      setOpenContactFormModal(true);
       return;
     }
 
@@ -115,6 +123,9 @@ const Layout = ({ children, headerProps, footerProps }) => {
       )}
       {openCampaignForm === true && (
         <CampaignModal {...headerProps.campaignForm} onClose={() => setOpenCampaignForm(false)} campaign={router?.query?.o} />
+      )}
+      {openContactFormModal === true && (
+        <ContactModal {...headerProps.contactForm} onClose={() => setOpenContactFormModal(false)} />
       )}
     </>
   );
