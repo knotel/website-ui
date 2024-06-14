@@ -16,7 +16,7 @@ const Layout = ({ children, headerProps, footerProps }) => {
   const [openForm, setOpenForm] = useState(false);
   const [openGiftCardForm, setOpenGiftCardForm] = useState(false);
   const [openCampaignForm, setOpenCampaignForm] = useState(false);
-  const [openContactFormModal, setOpenContactFormModal] = useState(true);
+  const [openContactFormModal, setOpenContactFormModal] = useState(false);
   const { setContext } = useContext(AppContext);
   const [dimesions, setDimensions] = useState({
     height: 0,
@@ -125,7 +125,7 @@ const Layout = ({ children, headerProps, footerProps }) => {
         <CampaignModal {...headerProps.campaignForm} onClose={() => setOpenCampaignForm(false)} campaign={router?.query?.o} />
       )}
       {openContactFormModal === true && (
-        <ContactModal {...headerProps.contactForm} onClose={() => setOpenContactFormModal(false)} />
+        <ContactModal {...headerProps.contactForm} {...headerProps.contactModalForm} onClose={() => setOpenContactFormModal(false)} />
       )}
     </>
   );

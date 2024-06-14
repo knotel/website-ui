@@ -13,6 +13,8 @@ const ContactModal = ({
     content,
     close_icon,
     interestOptions,
+    hideFields = ['companyName', 'companySize', 'interest'],
+    requiredFields = ['firstName', 'lastName', 'email', 'location'],
 }) => {
     return (
         <DialogBox className={`giftForm`} onClose={onClose} extraClass={true} close_icon={close_icon}>
@@ -25,7 +27,8 @@ const ContactModal = ({
                     sizeOptions={sizeOptions}
                     interestOptions={interestOptions}
                     contact={content}
-                    hideFields={['companyName', 'companySize', 'interest']}
+                    hideFields={hideFields}
+                    requiredFields={requiredFields}
                     showText
                 />
             </div>

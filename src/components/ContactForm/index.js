@@ -18,6 +18,7 @@ const ContactForm = ({
   sizeOptions,
   interestOptions,
   hideFields = [],
+  requiredFields = ['firstName', 'lastName', 'email', 'phone', 'companyName', 'companySize', 'location', 'locationAdditionalDetails', 'interest'],
 }) => {
 
   /**
@@ -71,7 +72,7 @@ const ContactForm = ({
                           name="firstName"
                           component={Input}
                           placeholder="First Name*"
-                          validate={composeValidators(required())}
+                          validate={requiredFields.includes('firstName') && composeValidators(required())}
                         />
                       </div>
                     </ShowField>
@@ -81,7 +82,7 @@ const ContactForm = ({
                           name="lastName"
                           component={Input}
                           placeholder="Last Name*"
-                          validate={composeValidators(required())}
+                          validate={requiredFields.includes('lastName') && composeValidators(required())}
                         />
                       </div>
                     </ShowField>
@@ -92,15 +93,16 @@ const ContactForm = ({
                     name="email"
                     component={Input}
                     placeholder="Email Address*"
-                    validate={composeValidators(required(), email())}
+                    validate={requiredFields.includes('email') && composeValidators(required(), email())}
                   />
                 </ShowField>
                 <ShowField name="phone">
                   <Field
                     name="phone"
                     component={Input}
+                    type="tel"
                     placeholder="Phone Number"
-                    validate={composeValidators(required())}
+                    validate={requiredFields.includes('phone') && composeValidators(required())}
                   />
                 </ShowField>
                 <ShowField name={["companyName", "companySize"]}>
@@ -111,7 +113,7 @@ const ContactForm = ({
                           name="companyName"
                           component={Input}
                           placeholder="Company Name"
-                          validate={composeValidators(required())}
+                          validate={requiredFields.includes('companyName') && composeValidators(required())}
                         />
                       </div>
                     </ShowField>
@@ -122,7 +124,7 @@ const ContactForm = ({
                           component={Dropdown}
                           prompt="Company Size"
                           options={{ '1-10': '1-10', '11-50': '11-50', '50+': '50+' }}
-                          validate={composeValidators(required())}
+                          validate={requiredFields.includes('companySize') && composeValidators(required())}
                         />
                       </div>
                     </ShowField>
@@ -146,7 +148,7 @@ const ContactForm = ({
                       "Toronto": { "Toronto - 121 King Street West": "121 King Street West" },
                       "White Plains": { "White Plains - 360 Hamilton Ave": "360 Hamilton Ave" }
                     }}
-                    validate={composeValidators(required())}
+                    validate={requiredFields.includes('location') && composeValidators(required())}
                   />
                   {values.location ===
                     locationValues[locationValues.length - 1] ? (
@@ -154,7 +156,7 @@ const ContactForm = ({
                       name="locationAdditionalDetails"
                       component={Input}
                       placeholder="Location Details"
-                      validate={composeValidators(required())}
+                      validate={requiredFields.includes('locationAdditionalDetails') && composeValidators(required())}
                     />
                   ) : (
                     <></>
@@ -166,7 +168,7 @@ const ContactForm = ({
                     component={Dropdown}
                     prompt="Interested in ..."
                     options={interestOptions}
-                    validate={composeValidators(required())}
+                    validate={requiredFields.includes('interest') && composeValidators(required())}
                   />
                 </ShowField>
                 <ShowField name="additionalDetails">
@@ -176,6 +178,7 @@ const ContactForm = ({
                     rows={2}
                     component={Input}
                     placeholder="Additional details"
+                    validate={requiredFields.includes('additionalDetails') && composeValidators(required())}
                   />
                 </ShowField>
                 <Field name="url" component={InputHiddenUrl} />
