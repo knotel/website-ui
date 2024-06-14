@@ -16,7 +16,7 @@ const Layout = ({ children, headerProps, footerProps }) => {
   const [openForm, setOpenForm] = useState(false);
   const [openGiftCardForm, setOpenGiftCardForm] = useState(false);
   const [openCampaignForm, setOpenCampaignForm] = useState(false);
-  const [openContactFormModal, setOpenContactFormModal] = useState(false);
+  const [openContactFormModal, setOpenContactFormModal] = useState(true);
   const { setContext } = useContext(AppContext);
   const [dimesions, setDimensions] = useState({
     height: 0,

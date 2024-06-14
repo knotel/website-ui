@@ -1,6 +1,6 @@
 import React from 'react';
 import DialogBox from '../../../components/DialogBox';
-import ContactForm from '../ContactForm';
+import ContactForm from '../../../components/ContactForm';
 
 
 const ContactModal = ({
@@ -8,22 +8,25 @@ const ContactModal = ({
     onSubmit,
     submitting,
     submitted,
+    locationOptions,
+    sizeOptions,
     content,
-    campaigns,
-    campaign
+    close_icon,
+    interestOptions,
 }) => {
-    const campaignContent = campaigns?.[campaign] || {};
-    Object.assign(content, campaignContent);
     return (
-        <DialogBox className={`giftForm`} onClose={onClose} extraClass={true}>
+        <DialogBox className={`giftForm`} onClose={onClose} extraClass={true} close_icon={close_icon}>
             <div className={`gift`}>
                 <ContactForm
-                    showText={true}
                     onSubmit={onSubmit}
                     submitted={submitted}
                     submitting={submitting}
-                    content={content}
-                    campaign={campaign}
+                    locationOptions={locationOptions}
+                    sizeOptions={sizeOptions}
+                    interestOptions={interestOptions}
+                    contact={content}
+                    hideFields={['companyName', 'companySize', 'interest']}
+                    showText
                 />
             </div>
         </DialogBox>
