@@ -71,7 +71,7 @@ const ContactForm = ({
                         <Field
                           name="firstName"
                           component={Input}
-                          placeholder="First Name*"
+                          placeholder="First Name*1"
                           validate={requiredFields.includes('firstName') && composeValidators(required())}
                         />
                       </div>
@@ -136,6 +136,7 @@ const ContactForm = ({
                     component={Dropdown}
                     prompt="Select Location"
                     options={{
+                      "FANTASTIC": "BEASTS",
                       "Other": "Other",
                       "Amsterdam": { "Amsterdam - Keizersgracht 121": "Keizersgracht 121" },
                       "Austin": { "Austin - 12710 Research Blvd": "12710 Research Blvd", "Austin - The Overlook at Rob Roy": "The Overlook at Rob Roy", "Austin - 119 Nueces Street": "119 Nueces Street" },

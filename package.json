@@ -20,7 +20,7 @@
     }
   },
   "scripts": {
-    "build": "microbundle-crl --no-compress --jsxFragment React.Fragment --format modern,cjs && cp -r src/assets/css dist/ && cp -r src/assets/fonts  dist/",
+    "build": "rm -rf package && microbundle-crl --no-compress --jsxFragment React.Fragment --format modern,cjs && cp -r src/assets/css dist/ && cp -r src/assets/fonts  dist/",
     "start": "run-s build",
     "watch": "npm-watch",
     "prepare": "run-s build",
