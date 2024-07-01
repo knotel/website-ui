@@ -7,3 +7,5 @@
 
 # builds
 /dist
+/package
+/.DS_STORE

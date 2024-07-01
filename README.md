@@ -31,7 +31,8 @@ class Example extends Component {
 ## Package
 1. check the package.json to see what the version is
 1. update it to the next version e.g. 1.4.15 -> 1.4.16
-1. run npm run 
+1. from the root dir run `yarn run build`
+1. manually crete a folder called "package" and copy/paste the package.json, readme.md, and dist folder into it
 1. from the root dir, run: tar -cvzf knotel-website-ui-v1.4.16.tgz package/
 1. publish
 1. update new-website with new reference
