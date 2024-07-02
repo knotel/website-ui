@@ -55,8 +55,7 @@ const ContactForm = ({
           />
         </LazyLoad>
       ) : (
-        <Form
-     
+        <div     
           render={({ handleSubmit, values }) => {
             const locationValues = Object.values(locationOptions);
             return (
