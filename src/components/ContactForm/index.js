@@ -29,7 +29,7 @@ const ContactForm = ({
    * If an array is passed into the name prop, all fields in the array must be in the hideFields array for the field to be hidden.
    */
   const ShowField = ({ name = '', children }) => {
-    // normalize the name prop to an array
+    // normalize the name prop to an arrayf
     const names = Array.isArray(name) ? name : [name];
     // Check that every name is in the hideFields array. If any are not, return the children nodes.
     return !names.every(val => hideFields.includes(val)) && children;
@@ -71,7 +71,7 @@ const ContactForm = ({
                         <Field
                           name="firstName"
                           component={Input}
-                          placeholder="First Name*1"
+                          placeholder="First Name*z"
                           validate={requiredFields.includes('firstName') && composeValidators(required())}
                         />
                       </div>
