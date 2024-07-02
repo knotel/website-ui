@@ -69,7 +69,7 @@ const NewsLetter = ({
                                   <Field
                                     name="firstName"
                                     component={Input}
-                                    placeholder="First Name*2"
+                                    placeholder="First Name*"
                                     validate={composeValidators(required())}
                                   />
                                 </div>

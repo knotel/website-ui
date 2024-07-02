@@ -39,7 +39,7 @@ const GiftCardForm = (props) => {
                                 <form name="gift_card_form" className={`${showText === true ? style.form_small : ``}${style.form}`} onSubmit={handleSubmit}>
                                     <div className={style.form_wrap}>
                                         <div className={style.form_block}>
-                                            <Field name="firstName" component={Input} placeholder="First Name*3" validate={composeValidators(required())} />
+                                            <Field name="firstName" component={Input} placeholder="First Name*" validate={composeValidators(required())} />
                                         </div>
                                         <div className={style.form_block}>
                                             <Field name="lastName" component={Input} placeholder="Last Name*" validate={composeValidators(required())} />
