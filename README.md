@@ -37,6 +37,11 @@ class Example extends Component {
 1. publish
 1. update new-website with new reference
 1. fin
+## Autopackage
+chmod +x maketar.sh
+./maketar.sh 1.6.4 
+
+
 ## License
 
 MIT © [](https://github.com/)

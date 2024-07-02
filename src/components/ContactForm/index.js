@@ -64,7 +64,6 @@ const ContactForm = ({
                 className={`${showText === true ? style.form_small : ``}${
                   style.form
                 }`}
-                onSubmit={handleSubmit}
               >
                 <input type="hidden" name="oid" value="00DcX0000000CFh"/>
                 <input type="hidden" name="retURL" value="http://knotel.com"/>
