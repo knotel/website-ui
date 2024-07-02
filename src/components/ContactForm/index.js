@@ -36,6 +36,7 @@ const ContactForm = ({
   //   var unableToDispaly = !canDisplay;
   //   return unableToDispaly && children;
   // }
+            const locationValues = Object.values(locationOptions);
 
   return (
     <>
@@ -55,10 +56,6 @@ const ContactForm = ({
           />
         </LazyLoad>
       ) : (
-        <div     
-          render={({ handleSubmit, values }) => {
-            const locationValues = Object.values(locationOptions);
-            return (
               <form
                 action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DcX0000000CFh"
                 method="POST"
@@ -276,9 +273,6 @@ const ContactForm = ({
                   buttonType="form_button"
                 />
               </form>
-            );
-          }}
-        />
       )}
     </>
   );
