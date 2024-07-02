@@ -163,7 +163,6 @@ const ContactForm = ({
                     component={Dropdown}
                     prompt="Select Location"
                     options={{
-                      FANTASTIC: "BEASTS",
                       Other: "Other",
                       Amsterdam: {
                         "Amsterdam - Keizersgracht 121": "Keizersgracht 121",
@@ -223,20 +222,7 @@ const ContactForm = ({
                       composeValidators(required())
                     }
                   />
-                  {values.location ===
-                  locationValues[locationValues.length - 1] ? (
-                    <Field
-                      name="locationAdditionalDetails"
-                      component={Input}
-                      placeholder="Location Details"
-                      validate={
-                        requiredFields.includes("locationAdditionalDetails") &&
-                        composeValidators(required())
-                      }
-                    />
-                  ) : (
-                    <></>
-                  )}
+              
                 </div>
                 <div name="interest">
                   <Field
