@@ -30,21 +30,19 @@ const ContactForm = ({
     "interest",
   ],
 }) => {
-  // /**
-  //  * Wrapper to conditionally hide a field.
-  //  *
-  //  * If the field name is in the hideFields array, the field will not be rendered.
-  //  *
-  //  * If an array is passed into the name prop, all fields in the array must be in the hideFields array for the field to be hidden.
-  //  */
-  // const div = ({ name = '', children }) => {
-  //   // normalize the name prop to an arrayf
-  //   const names = Array.isArray(name) ? name : [name];
-  //   // Check that every name is in the hideFields array. If any are not, return the children nodes.
-  //   var canDisplay = names.every((val) => hideFields.includes(val));
-  //   var unableToDispaly = !canDisplay;
-  //   return unableToDispaly && children;
-  // }
+  /**
+   * Wrapper to conditionally hide a field.
+   *
+   * If the field name is in the hideFields array, the field will not be rendered.
+   *
+   * If an array is passed into the name prop, all fields in the array must be in the hideFields array for the field to be hidden.
+   */
+  const ShowField = ({ name = "", children }) => {
+    // normalize the name prop to an array
+    const names = Array.isArray(name) ? name : [name];
+    // Check that every name is in the hideFields array. If any are not, return the children nodes.
+    return !names.every((val) => hideFields.includes(val)) && children;
+  };
 
   return (
     <>
@@ -70,33 +68,28 @@ const ContactForm = ({
             const locationValues = Object.values(locationOptions);
             return (
               <form
-                action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DcX0000000CFh"
-                method="POST"
                 name="booking_contact"
                 className={`${showText === true ? style.form_small : ``}${
                   style.form
                 }`}
                 onSubmit={handleSubmit}
               >
-                <input type="hidden" name="oid" value="00DcX0000000CFh" />
-                <input type="hidden" name="retURL" value="http://knotel.com" />
-
-                <div name={["firstName", "lastName"]}>
+                <ShowField name={["firstName", "lastName"]}>
                   <div className={style.form_wrap}>
-                    <div name="firstName">
+                    <ShowField name="firstName">
                       <div className={style.form_block}>
                         <Field
                           name="firstName"
                           component={Input}
-                          placeholder="First Name*" // TODO HERE
+                          placeholder="First Name*"
                           validate={
                             requiredFields.includes("firstName") &&
                             composeValidators(required())
                           }
                         />
                       </div>
-                    </div>
-                    <div name="lastName">
+                    </ShowField>
+                    <ShowField name="lastName">
                       <div className={style.form_block}>
                         <Field
                           name="lastName"
@@ -108,10 +101,10 @@ const ContactForm = ({
                           }
                         />
                       </div>
-                    </div>
+                    </ShowField>
                   </div>
-                </div>
-                <div name="email">
+                </ShowField>
+                <ShowField name="email">
                   <Field
                     name="email"
                     component={Input}
@@ -121,8 +114,8 @@ const ContactForm = ({
                       composeValidators(required(), email())
                     }
                   />
-                </div>
-                <div name="phone">
+                </ShowField>
+                <ShowField name="phone">
                   <Field
                     name="phone"
                     component={Input}
@@ -133,10 +126,10 @@ const ContactForm = ({
                       composeValidators(required())
                     }
                   />
-                </div>
-                <div name={["companyName", "companySize"]}>
+                </ShowField>
+                <ShowField name={["companyName", "companySize"]}>
                   <div className={style.form_wrap}>
-                    <div name="companyName">
+                    <ShowField name="companyName">
                       <div className={style.form_block}>
                         <Field
                           name="companyName"
@@ -148,8 +141,8 @@ const ContactForm = ({
                           }
                         />
                       </div>
-                    </div>
-                    <div name="companySize">
+                    </ShowField>
+                    <ShowField name="companySize">
                       <div className={style.form_block}>
                         <Field
                           name="companySize"
@@ -166,69 +159,27 @@ const ContactForm = ({
                           }
                         />
                       </div>
-                    </div>
+                    </ShowField>
                   </div>
-                </div>
-                <div name="location">
+                </ShowField>
+                <ShowField name="location">
                   <Field
                     name="location"
                     component={Dropdown}
                     prompt="Select Location"
                     options={{
-                      FANTASTIC: "BEASTS",
-                      Other: "Other",
-                      Amsterdam: {
-                        "Amsterdam - Keizersgracht 121": "Keizersgracht 121",
-                      },
-                      Austin: {
-                        "Austin - 12710 Research Blvd": "12710 Research Blvd",
-                        "Austin - The Overlook at Rob Roy":
-                          "The Overlook at Rob Roy",
-                        "Austin - 119 Nueces Street": "119 Nueces Street",
-                      },
-                      Berlin: {
-                        "Berlin - Mehringdamm 33": "Mehringdamm 33",
-                        "Berlin - Mehringdamm 32": "Mehringdamm 32",
-                        "Berlin - Hussitenstrasse 32": "Hussitenstrasse 32",
-                        "Berlin - Neue Grünstrasse 17": "Neue Grünstrasse 17",
-                        "Berlin - Nürnberger Strasse 8": "Nürnberger Strasse 8",
-                      },
-                      Dublin: {
-                        "Dublin - Dublin Riverview House, 21 - 23 City Quay":
-                          "Dublin Riverview House, 21 - 23 City Quay",
-                      },
-                      London: {
-                        "London - 33 Soho Square": "33 Soho Square",
-                        "London - Gilray House": "Gilray House",
-                        "London - Waverley House, 7-12 Noel Street":
-                          "Waverley House, 7-12 Noel Street",
-                        "London - 1 Finsbury Market": "1 Finsbury Market",
-                        "London - Imperial House": "Imperial House",
-                        "London - Chadwick Court, 15 Hatfields":
-                          "Chadwick Court, 15 Hatfields",
-                        "London - Old Sessions House": "Old Sessions House",
-                        "London - 33 Charlotte Street": "33 Charlotte Street",
-                        "London - Clerks Court": "Clerks Court",
-                        "London - HYLO": "HYLO",
-                        "London - One Lackington": "One Lackington",
-                      },
-                      Malibu: { "Malibu - Malibu Vista": "Malibu Vista" },
-                      Miami: {
-                        "Miami - The Press": "The Press",
-                        "Miami - 1200 Ponce De Leon": "1200 Ponce De Leon",
-                        "Miami - 225 NE 34th St": "225 NE 34th St",
-                        "Miami - Wyncatcher": "Wyncatcher",
-                      },
-                      Seattle: {
-                        "Seattle - Federal Reserve": "Federal Reserve",
-                      },
-                      Toronto: {
-                        "Toronto - 121 King Street West":
-                          "121 King Street West",
-                      },
-                      "White Plains": {
-                        "White Plains - 360 Hamilton Ave": "360 Hamilton Ave",
-                      },
+                      "": "None",
+                      London: "London",
+                      Berlin: "Berlin",
+                      Frankfurt: "Frankfurt",
+                      Amsterdam: "Amsterdam",
+                      Dublin: "Dublin",
+                      "West Palm Beach": "West Palm Beach",
+                      Miami: "Miami",
+                      "Coral Gables": "Coral Gables",
+                      Austin: "Austin",
+                      Rollingwood: "Rollingwood",
+                      "White Plains": "White Plains",
                     }}
                     validate={
                       requiredFields.includes("location") &&
@@ -249,8 +200,8 @@ const ContactForm = ({
                   ) : (
                     <></>
                   )}
-                </div>
-                <div name="interest">
+                </ShowField>
+                <ShowField name="interest">
                   <Field
                     name="interest"
                     component={Dropdown}
@@ -261,8 +212,8 @@ const ContactForm = ({
                       composeValidators(required())
                     }
                   />
-                </div>
-                <div name="additionalDetails">
+                </ShowField>
+                <ShowField name="additionalDetails">
                   <Field
                     name="additionalDetails"
                     type="textarea"
@@ -274,7 +225,7 @@ const ContactForm = ({
                       composeValidators(required())
                     }
                   />
-                </div>
+                </ShowField>
                 <Field name="url" component={InputHiddenUrl} />
                 <Button
                   className={style.contact_button}
