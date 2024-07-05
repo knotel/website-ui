@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.module.css">
+  
+</head>
+<div className="form">
+    <div className="form_title">{contact.form_title}</div>
+    <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DcX0000000CFh"
+        method="POST">
+        <input type="hidden" name="oid" value="00DcX0000000CFh" />
+        <input type="hidden" name="retURL" value="http://knotel.com" />
+        <input className="text" placeholder="First Name*" id="first_name" maxlength="40" name="first_name" size="20"
+            type="text" required />
+        <br />
+        <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required />
+        <br />
+
+        <input placeholder="Email Address*" id="email" maxlength="80" name="email" size="20" type="text" required />
+        <br />
+        <input placeholder="Phone Number*" id="company" maxlength="40" name="company" size="20" type="text" required />
+        <br />
+        Head Count:
+
+        <input id="00NcX0000000EZP" name="00NcX0000000EZP" size="20" type="text" required pattern="[0-9\s]" />
+        <br />
+        Target City:
+        <select id="00Nf400000U3hIp" name="00Nf400000U3hIp" title="Target City" required>
+            <option value="">--None--</option>
+            <option value="London">London</option>
+            <option value="Berlin">Berlin</option>
+            <option value="Frankfurt">Frankfurt</option>
+            <option value="Amsterdam">Amsterdam</option>
+            <option value="Dublin">Dublin</option>
+            <option value="West Palm Beach">West Palm Beach</option>
+            <option value="Miami">Miami</option>
+            <option value="Coral Gables">Coral Gables</option>
+            <option value="Austin">Austin</option>
+            <option value="Rollingwood">Rollingwood</option>
+            <option value="White Plains">White Plains</option>
+        </select>
+        <br />
+        Interested in:
+        <select id="00NcX0000002NDR" name="00NcX0000002NDR" title="Interested in" required>
+            <option value="">--None--</option>
+            <option value="Office">Office</option>
+            <option value="Workclub Membership">Workclub Membership</option>
+            <option value="Broker Info">Broker Info</option>
+            <option value="Landlord Info">Landlord Info</option>
+            <option value="Host an Event">Host an Event</option>
+            <option value="Other">Other</option>
+        </select>
+        <br />
+        <input className={style.button} type="submit" name="submit" />
+    </form>
+</div>
+
+</html>
+<script>
+    document.querySelector('#00NcX0000000EZP').addEventListener('change',
+        function (event) {
+            const value = event.target.value;
+            const target = event.target;
+            debugger;
+        });
+</script>
