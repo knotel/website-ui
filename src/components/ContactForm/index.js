@@ -125,7 +125,7 @@ const ContactForm = ({
               placeholder="Phone"
             />
             <br />
-            <select id="00Nf400000A7K3F" name="00Nf400000A7K3F" title="Source" value="Web" type="hidden">
+            <select id="00Nf400000A7K3F" name="00Nf400000A7K3F" title="Source" value="Web" class="hiddenSelect">
               <option value="">--None--</option>
               <option value="Web">Web</option>
             </select>
