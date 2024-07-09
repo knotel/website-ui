@@ -86,6 +86,7 @@ const ContactForm = ({
               type="text"
               placeholder="First Name"
               style={inputStyle}
+              required
             />
             <br />
             <input
@@ -96,6 +97,7 @@ const ContactForm = ({
               type="text"
               placeholder="Last Name"
               style={inputStyle}
+              required
             />
             <br />
             <input
@@ -107,6 +109,7 @@ const ContactForm = ({
               placeholder="Email"
               style={inputStyle}
               pattern="[^@\s]+@[^@\s]+\.[^@\s][^@\s]+"
+              required
             />
             <br />
             <input
@@ -117,6 +120,7 @@ const ContactForm = ({
               type="text"
               placeholder="Company"
               style={inputStyle}
+              required
             />
             <br />
             <input
@@ -127,6 +131,7 @@ const ContactForm = ({
               placeholder="Head Count"
               style={inputStyle}
               pattern="0|[1-9]\d*" //only numbers
+              required
             />
             <br />
 
@@ -138,6 +143,7 @@ const ContactForm = ({
               type="text"
               placeholder="Phone"
               style={inputStyle}
+              required
             />
             <br />
             <select
@@ -168,6 +174,7 @@ const ContactForm = ({
               name="00Nf400000U3hIp"
               title="Target City"
               style={inputStyle}
+              required
             >
               <option value="" disabled selected>
                 Select Location
@@ -190,6 +197,7 @@ const ContactForm = ({
               name="00NcX0000002NDR"
               title="Interested in"
               style={inputStyle}
+              required
             >
               <option value="" disabled selected>
                 Interested In
