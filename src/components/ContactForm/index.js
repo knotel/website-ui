@@ -76,8 +76,8 @@ const ContactForm = ({
               maxlength="40"
               name="first_name"
               size="20"
-                type="text"
-                placeholder="First Name"
+              type="text"
+              placeholder="First Name"
             />
             <br />
             <input
@@ -85,8 +85,8 @@ const ContactForm = ({
               maxlength="80"
               name="last_name"
               size="20"
-                type="text"
-                placeholder="Last Name"
+              type="text"
+              placeholder="Last Name"
             />
             <br />
             <input
@@ -94,8 +94,8 @@ const ContactForm = ({
               maxlength="80"
               name="email"
               size="20"
-                type="text"
-                placeholder="Email"
+              type="text"
+              placeholder="Email"
             />
             <br />
             <input
@@ -103,16 +103,16 @@ const ContactForm = ({
               maxlength="40"
               name="company"
               size="20"
-                type="text"
-                placeholder="Company"
+              type="text"
+              placeholder="Company"
             />
             <br />
             <input
               id="00NcX0000000EZP"
               name="00NcX0000000EZP"
               size="20"
-                type="text"
-                placeholder="Head Count"
+              type="text"
+              placeholder="Head Count"
             />
             <br />
 
@@ -125,12 +125,19 @@ const ContactForm = ({
               placeholder="Phone"
             />
             <br />
-            <select id="00Nf400000A7K3F" name="00Nf400000A7K3F" title="Source" value="Web" style={{height: "0px"}} tabIndex={-1}>
+            <select
+              id="00Nf400000A7K3F"
+              name="00Nf400000A7K3F"
+              title="Source"
+              value="Web"
+              style={{ height: "0px" }}
+              tabIndex={-1}
+            >
               <option value="">--None--</option>
               <option value="Web">Web</option>
             </select>
-              <br />
-              
+            <br />
+
             <textarea
               placeholder="Additional Details"
               id="00NcX0000000EZc"
@@ -139,13 +146,15 @@ const ContactForm = ({
               type="text"
               wrap="soft"
             ></textarea>
-            <br />            
+            <br />
             <select
               id="00Nf400000U3hIp"
               name="00Nf400000U3hIp"
               title="Target City"
             >
-              <option value="">--None--</option>
+              <option value="" disabled selected>
+               Select Location
+              </option>
               <option value="London">London</option>
               <option value="Berlin">Berlin</option>
               <option value="Frankfurt">Frankfurt</option>
@@ -164,7 +173,9 @@ const ContactForm = ({
               name="00NcX0000002NDR"
               title="Interested in"
             >
-              <option value="">--None--</option>
+              <option value="" disabled selected>
+                Interested In
+              </option>
               <option value="Office">Office</option>
               <option value="Workclub Membership">Workclub Membership</option>
               <option value="Broker Info">Broker Info</option>
