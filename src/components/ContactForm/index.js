@@ -46,6 +46,13 @@ const ContactForm = ({
   React.useEffect(() => {
     document.getElementById("00Nf400000A7K3F").visible = false;
   });
+  const inputStyle = {
+    width: "100%",
+    height: "4rem",
+    marginBottom: "1rem",
+    border: "solid 1px",
+    paddingLeft: "1rem"
+  };
   return (
     <>
       <div className={style.form_title}>{contact.form_title}</div>
@@ -78,6 +85,7 @@ const ContactForm = ({
               size="20"
               type="text"
               placeholder="First Name"
+              style={inputStyle}
             />
             <br />
             <input
@@ -87,6 +95,7 @@ const ContactForm = ({
               size="20"
               type="text"
               placeholder="Last Name"
+              style={inputStyle}
             />
             <br />
             <input
@@ -96,6 +105,7 @@ const ContactForm = ({
               size="20"
               type="text"
               placeholder="Email"
+              style={inputStyle}
             />
             <br />
             <input
@@ -105,6 +115,7 @@ const ContactForm = ({
               size="20"
               type="text"
               placeholder="Company"
+              style={inputStyle}
             />
             <br />
             <input
@@ -113,6 +124,7 @@ const ContactForm = ({
               size="20"
               type="text"
               placeholder="Head Count"
+              style={inputStyle}
             />
             <br />
 
@@ -123,6 +135,7 @@ const ContactForm = ({
               size="20"
               type="text"
               placeholder="Phone"
+              style={inputStyle}
             />
             <br />
             <select
@@ -145,15 +158,17 @@ const ContactForm = ({
               rows="3"
               type="text"
               wrap="soft"
+              style={inputStyle}
             ></textarea>
             <br />
             <select
               id="00Nf400000U3hIp"
               name="00Nf400000U3hIp"
               title="Target City"
+              style={inputStyle}
             >
               <option value="" disabled selected>
-               Select Location
+                Select Location
               </option>
               <option value="London">London</option>
               <option value="Berlin">Berlin</option>
@@ -172,6 +187,7 @@ const ContactForm = ({
               id="00NcX0000002NDR"
               name="00NcX0000002NDR"
               title="Interested in"
+              style={inputStyle}
             >
               <option value="" disabled selected>
                 Interested In
@@ -184,7 +200,7 @@ const ContactForm = ({
               <option value="Other">Other</option>
             </select>
             <br />
-            <input type="submit" name="submit" />
+            <input type="submit" name="submit" style={inputStyle} />
           </form>
         </div>
       )}
