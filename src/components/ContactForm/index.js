@@ -43,7 +43,9 @@ const ContactForm = ({
     // Check that every name is in the hideFields array. If any are not, return the children nodes.
     return !names.every((val) => hideFields.includes(val)) && children;
   };
-
+  React.useEffect(() => {
+    document.getElementById("00Nf400000A7K3F").visible = false;
+  });
   return (
     <>
       <div className={style.form_title}>{contact.form_title}</div>
