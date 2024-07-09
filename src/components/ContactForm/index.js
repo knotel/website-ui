@@ -106,6 +106,7 @@ const ContactForm = ({
               type="text"
               placeholder="Email"
               style={inputStyle}
+              pattern="[^@\s]+@[^@\s]+\.[^@\s][^@\s]+"
             />
             <br />
             <input
@@ -125,6 +126,7 @@ const ContactForm = ({
               type="text"
               placeholder="Head Count"
               style={inputStyle}
+              pattern="0|[1-9]\d*" //only numbers
             />
             <br />
 
@@ -158,7 +160,7 @@ const ContactForm = ({
               rows="3"
               type="text"
               wrap="soft"
-              style={inputStyle}
+              style={{ ...inputStyle, paddingTop: "1rem" }}
             ></textarea>
             <br />
             <select
