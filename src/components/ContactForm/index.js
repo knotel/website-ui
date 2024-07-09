@@ -62,182 +62,119 @@ const ContactForm = ({
           />
         </LazyLoad>
       ) : (
-        <Form
-          onSubmit={(data) => onSubmit(data)}
-          render={({ handleSubmit, values }) => {
-            const locationValues = Object.values(locationOptions);
-            return (
-              <form
-                name="booking_contact"
-                className={`${showText === true ? style.form_small : ``}${
-                  style.form
-                }`}
-                onSubmit={handleSubmit}
-              >
-                <ShowField name={["firstName", "lastName"]}>
-                  <div className={style.form_wrap}>
-                    <ShowField name="firstName">
-                      <div className={style.form_block}>
-                        <Field
-                          name="firstName"
-                          component={Input}
-                          placeholder="First Name*"
-                          validate={
-                            requiredFields.includes("firstName") &&
-                            composeValidators(required())
-                          }
-                        />
-                      </div>
-                    </ShowField>
-                    <ShowField name="lastName">
-                      <div className={style.form_block}>
-                        <Field
-                          name="lastName"
-                          component={Input}
-                          placeholder="Last Name*"
-                          validate={
-                            requiredFields.includes("lastName") &&
-                            composeValidators(required())
-                          }
-                        />
-                      </div>
-                    </ShowField>
-                  </div>
-                </ShowField>
-                <ShowField name="email">
-                  <Field
-                    name="email"
-                    component={Input}
-                    placeholder="Email Address*"
-                    validate={
-                      requiredFields.includes("email") &&
-                      composeValidators(required(), email())
-                    }
-                  />
-                </ShowField>
-                <ShowField name="phone">
-                  <Field
-                    name="phone"
-                    component={Input}
-                    type="tel"
-                    placeholder="Phone Number"
-                    validate={
-                      requiredFields.includes("phone") &&
-                      composeValidators(required())
-                    }
-                  />
-                </ShowField>
-                <ShowField name={["companyName", "companySize"]}>
-                  <div className={style.form_wrap}>
-                    <ShowField name="companyName">
-                      <div className={style.form_block}>
-                        <Field
-                          name="companyName"
-                          component={Input}
-                          placeholder="Company Name"
-                          validate={
-                            requiredFields.includes("companyName") &&
-                            composeValidators(required())
-                          }
-                        />
-                      </div>
-                    </ShowField>
-                    <ShowField name="companySize">
-                      <div className={style.form_block}>
-                        <Field
-                          name="companySize"
-                          component={Dropdown}
-                          prompt="Company Size"
-                          options={{
-                            "1-10": "1-10",
-                            "11-50": "11-50",
-                            "50+": "50+",
-                          }}
-                          validate={
-                            requiredFields.includes("companySize") &&
-                            composeValidators(required())
-                          }
-                        />
-                      </div>
-                    </ShowField>
-                  </div>
-                </ShowField>
-                <ShowField name="location">
-                  <Field
-                    name="location"
-                    component={Dropdown}
-                    prompt="Select Location"
-                    options={{
-                      "": "None",
-                      London: "London",
-                      Berlin: "Berlin",
-                      Frankfurt: "Frankfurt",
-                      Amsterdam: "Amsterdam",
-                      Dublin: "Dublin",
-                      "West Palm Beach": "West Palm Beach",
-                      Miami: "Miami",
-                      "Coral Gables": "Coral Gables",
-                      Austin: "Austin",
-                      Rollingwood: "Rollingwood",
-                      "White Plains": "White Plains",
-                    }}
-                    validate={
-                      requiredFields.includes("location") &&
-                      composeValidators(required())
-                    }
-                  />
-                  {values.location ===
-                  locationValues[locationValues.length - 1] ? (
-                    <Field
-                      name="locationAdditionalDetails"
-                      component={Input}
-                      placeholder="Location Details"
-                      validate={
-                        requiredFields.includes("locationAdditionalDetails") &&
-                        composeValidators(required())
-                      }
-                    />
-                  ) : (
-                    <></>
-                  )}
-                </ShowField>
-                <ShowField name="interest">
-                  <Field
-                    name="interest"
-                    component={Dropdown}
-                    prompt="Interested in ..."
-                    options={interestOptions}
-                    validate={
-                      requiredFields.includes("interest") &&
-                      composeValidators(required())
-                    }
-                  />
-                </ShowField>
-                <ShowField name="additionalDetails">
-                  <Field
-                    name="additionalDetails"
-                    type="textarea"
-                    rows={2}
-                    component={Input}
-                    placeholder="Additional details"
-                    validate={
-                      requiredFields.includes("additionalDetails") &&
-                      composeValidators(required())
-                    }
-                  />
-                </ShowField>
-                <Field name="url" component={InputHiddenUrl} />
-                <Button
-                  className={style.contact_button}
-                  fetching={submitting}
-                  submit
-                  label={contact.button_label}
-                  buttonType="form_button"
-                />
-              </form>
-            );
-          }}
-        />
+        <div>
+          <form
+            action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DcX0000000CFh"
+            method="POST"
+          >
+            <input type="hidden" name="oid" value="00DcX0000000CFh" />
+            <input type="hidden" name="retURL" value="http://knotel.com" />
+            <label for="first_name">First Name</label>
+            <input
+              id="first_name"
+              maxlength="40"
+              name="first_name"
+              size="20"
+              type="text"
+            />
+            <br />
+            <label for="last_name">Last Name</label>
+            <input
+              id="last_name"
+              maxlength="80"
+              name="last_name"
+              size="20"
+              type="text"
+            />
+            <br />
+            <label for="email">Email</label>
+            <input
+              id="email"
+              maxlength="80"
+              name="email"
+              size="20"
+              type="text"
+            />
+            <br />
+            <label for="company">Company</label>
+            <input
+              id="company"
+              maxlength="40"
+              name="company"
+              size="20"
+              type="text"
+            />
+            <br />
+            Head Count:
+            <input
+              id="00NcX0000000EZP"
+              name="00NcX0000000EZP"
+              size="20"
+              type="text"
+            />
+            <br />
+            <label for="phone">Phone</label>
+            <input
+              id="phone"
+              maxlength="40"
+              name="phone"
+              size="20"
+              type="text"
+            />
+            <br />
+            Source:
+            <select id="00Nf400000A7K3F" name="00Nf400000A7K3F" title="Source">
+              <option value="">--None--</option>
+              <option value="Web">Web</option>
+            </select>
+            <br />
+            Additional Details:
+            <textarea
+              id="00NcX0000000EZc"
+              name="00NcX0000000EZc"
+              rows="3"
+              type="text"
+              wrap="soft"
+            ></textarea>
+            <br />
+            Target City:
+            <select
+              id="00Nf400000U3hIp"
+              name="00Nf400000U3hIp"
+              title="Target City"
+            >
+              <option value="">--None--</option>
+              <option value="London">London</option>
+              <option value="Berlin">Berlin</option>
+              <option value="Frankfurt">Frankfurt</option>
+              <option value="Amsterdam">Amsterdam</option>
+              <option value="Dublin">Dublin</option>
+              <option value="West Palm Beach">West Palm Beach</option>
+              <option value="Miami">Miami</option>
+              <option value="Coral Gables">Coral Gables</option>
+              <option value="Austin">Austin</option>
+              <option value="Rollingwood">Rollingwood</option>
+              <option value="White Plains">White Plains</option>
+            </select>
+            <br />
+            Interested in:
+            <select
+              id="00NcX0000002NDR"
+              name="00NcX0000002NDR"
+              title="Interested in"
+            >
+              <option value="">--None--</option>
+              <option value="Office">Office</option>
+              <option value="Workclub Membership">Workclub Membership</option>
+              <option value="Broker Info">Broker Info</option>
+              <option value="Landlord Info">Landlord Info</option>
+              <option value="Host an Event">Host an Event</option>
+              <option value="Other">Other</option>
+            </select>
+            <br />
+            <input type="submit" name="submit" />
+          </form>
+        </div>
       )}
     </>
   );
