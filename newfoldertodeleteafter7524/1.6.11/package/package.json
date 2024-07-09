@@ -1,0 +1,96 @@
+{
+  "name": "knotel-website-ui",
+  "version": "1.6.11",
+  "private": true,
+  "description": "Made with create-react-library",
+  "author": "",
+  "license": "MIT",
+  "repository": "/knotel-website-ui",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "rm -rf package && microbundle-crl --no-compress --jsxFragment React.Fragment --format modern,cjs && cp -r src/assets/css dist/ && cp -r src/assets/fonts  dist/",
+    "start": "run-s build",
+    "watch": "npm-watch",
+    "prepare": "run-s build",
+    "test": "run-s test:unit test:lint test:build",
+    "test:build": "run-s build",
+    "test:lint": "eslint .",
+    "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
+    "test:watch": "react-scripts test --env=jsdom",
+    "predeploy": "cd example && yarn install && yarn run build",
+    "deploy": "gh-pages -d example/build"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.2",
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide": "^4.1.4",
+    "axios": "^0.27.2",
+    "cash-dom": "^8.1.1",
+    "date-fns": "^2.28.0",
+    "file-loader": "^6.2.0",
+    "final-form": "^4.20.7",
+    "google-map-react": "^2.2.0",
+    "highcharts": "^10.1.0",
+    "highcharts-react-official": "^3.1.0",
+    "html-to-react": "^1.5.0",
+    "jquery-slim": "^3.0.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.3",
+    "npm-watch": "^0.11.0",
+    "react-date-range": "^1.4.0",
+    "react-datepicker": "^4.8.0",
+    "react-dropzone": "^14.2.1",
+    "react-equal-height": "^1.2.2",
+    "react-final-form": "^6.5.9",
+    "react-final-form-listeners": "^1.0.3",
+    "react-no-ssr": "^1.1.0",
+    "react-pdf": "^6.2.2",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "react-svg": "^15.1.14",
+    "react-toastify": "^9.0.5",
+    "redux": "^4.2.0",
+    "redux-form-validators": "^3.3.2",
+    "redux-promise-middleware": "^6.1.2",
+    "worker-loader": "^3.0.8"
+  },
+  "peerDependencies": {
+    "next": "12.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "gh-pages": "^2.2.0",
+    "microbundle-crl": "^0.13.11",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.4"
+  },
+  "files": [
+    "dist"
+  ]
+}
