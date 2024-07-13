@@ -51,7 +51,7 @@ const ContactForm = ({
     height: "4rem",
     marginBottom: "1rem",
     border: "solid 1px",
-    paddingLeft: "1rem"
+    paddingLeft: "1rem",
   };
   return (
     <>
@@ -73,11 +73,12 @@ const ContactForm = ({
       ) : (
         <div>
           <form
-            action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DcX0000000CFh"
+            action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Df4000000nm4e"
             method="POST"
           >
-            <input type="hidden" name="oid" value="00DcX0000000CFh" />
+            <input type="hidden" name="oid" value="00Df4000000nm4e" />
             <input type="hidden" name="retURL" value="http://knotel.com" />
+
             <input
               id="first_name"
               maxlength="40"
@@ -100,6 +101,7 @@ const ContactForm = ({
               required={true}
             />
             <br />
+
             <input
               id="email"
               maxlength="80"
@@ -109,6 +111,17 @@ const ContactForm = ({
               placeholder="Email"
               style={inputStyle}
               pattern="[^@\s]+@[^@\s]+\.[^@\s][^@\s]+"
+              required={true}
+            />
+            <br />
+            <input
+              id="phone"
+              maxlength="40"
+              name="phone"
+              size="20"
+              type="text"
+              placeholder="Phone"
+              style={inputStyle}
               required={true}
             />
             <br />
@@ -124,8 +137,8 @@ const ContactForm = ({
             />
             <br />
             <input
-              id="00NcX0000000EZP"
-              name="00NcX0000000EZP"
+              id="00NVV000000milJ"
+              name="00NVV000000milJ"
               size="20"
               type="text"
               placeholder="Head Count"
@@ -135,17 +148,6 @@ const ContactForm = ({
             />
             <br />
 
-            <input
-              id="phone"
-              maxlength="40"
-              name="phone"
-              size="20"
-              type="text"
-              placeholder="Phone"
-              style={inputStyle}
-              required={true}
-            />
-            <br />
             <select
               id="00Nf400000A7K3F"
               name="00Nf400000A7K3F"
@@ -157,18 +159,17 @@ const ContactForm = ({
               <option value="">--None--</option>
               <option value="Web">Web</option>
             </select>
-            <br />
-
             <textarea
               placeholder="Additional Details"
-              id="00NcX0000000EZc"
-              name="00NcX0000000EZc"
+              id="00NVV000000milY"
+              name="00NVV000000milY"
               rows="3"
               type="text"
               wrap="soft"
               style={{ ...inputStyle, paddingTop: "1rem" }}
             ></textarea>
             <br />
+
             <select
               id="00Nf400000U3hIp"
               name="00Nf400000U3hIp"
@@ -191,10 +192,9 @@ const ContactForm = ({
               <option value="Rollingwood">Rollingwood</option>
               <option value="White Plains">White Plains</option>
             </select>
-            <br />
             <select
-              id="00NcX0000002NDR"
-              name="00NcX0000002NDR"
+              id="00NVV000000milK"
+              name="00NVV000000milK"
               title="Interested in"
               style={inputStyle}
               required={true}
@@ -210,7 +210,7 @@ const ContactForm = ({
               <option value="Other">Other</option>
             </select>
             <br />
-            <input type="submit" name="submit" style={inputStyle} />
+            <input type="submit" name="submit" />
           </form>
         </div>
       )}

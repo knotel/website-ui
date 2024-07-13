@@ -45,3 +45,8 @@ chmod +x maketar.sh
 ## License
 
 MIT © [](https://github.com/)
+## Salesforce integration
+The salesforce team (Dheeconsulting) will provide a form element. Convert the form in 
+src/components/ContactForm/index.js
+to match the form components. 
+Do not just copy paste the form in. you will get an unstyled form.
