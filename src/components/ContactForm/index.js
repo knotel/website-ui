@@ -210,7 +210,7 @@ const ContactForm = ({
               <option value="Other">Other</option>
             </select>
             <br />
-            <input type="submit" name="submit" />
+            <input type="submit" name="submit" style={inputStyle} />
           </form>
         </div>
       )}

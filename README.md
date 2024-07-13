@@ -38,8 +38,13 @@ class Example extends Component {
 1. update new-website with new reference
 1. fin
 ## Autopackage
-chmod +x maketar.sh
-./maketar.sh 1.6.4 
+1. update package.json to new verison
+2. (if never done before): invoke in bash the following to enable execution of the script
+`chmod +x maketar.sh`
+3. invoke in bash:
+`./maketar.sh 1.6.4 ` where the version matches the package.json version
+4. commit the files and push 
+5. if this is a production release, create a new tag and include that
 
 
 ## License
