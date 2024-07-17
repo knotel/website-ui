@@ -147,29 +147,6 @@ const ContactForm = ({
               required={true}
             />
             <br />
-
-            <select
-              id="00Nf400000A7K3F"
-              name="00Nf400000A7K3F"
-              title="Source"
-              value="Web"
-              style={{ height: "0px" }}
-              tabIndex={-1}
-            >
-              <option value="">--None--</option>
-              <option value="Web">Web</option>
-            </select>
-            <textarea
-              placeholder="Additional Details"
-              id="00NVV000000milY"
-              name="00NVV000000milY"
-              rows="3"
-              type="text"
-              wrap="soft"
-              style={{ ...inputStyle, paddingTop: "1rem" }}
-            ></textarea>
-            <br />
-
             <select
               id="00Nf400000U3hIp"
               name="00Nf400000U3hIp"
@@ -192,6 +169,7 @@ const ContactForm = ({
               <option value="Rollingwood">Rollingwood</option>
               <option value="White Plains">White Plains</option>
             </select>
+            <br />
             <select
               id="00NVV000000milK"
               name="00NVV000000milK"
@@ -210,6 +188,30 @@ const ContactForm = ({
               <option value="Other">Other</option>
             </select>
             <br />
+              
+            <select
+              id="00Nf400000A7K3F"
+              name="00Nf400000A7K3F"
+              title="Source"
+              value="Web"
+              style={{ height: "0px" }}
+              tabIndex={-1}
+            >
+              <option value="">--None--</option>
+              <option value="Web">Web</option>
+            </select>
+
+            <textarea
+              placeholder="Additional Details"
+              id="00NVV000000milY"
+              name="00NVV000000milY"
+              rows="3"
+              type="text"
+              wrap="soft"
+              style={{ ...inputStyle, paddingTop: "1rem" }}
+            ></textarea>
+            <br />
+
             <input type="submit" name="submit" style={inputStyle} />
           </form>
         </div>
