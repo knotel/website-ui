@@ -42,10 +42,9 @@ const Footer = ({ footerProps }) => {
             <div className={style.footer_row}>
               <img
                 src="https://images.ctfassets.net/5tq979orlb7f/fzxRUDEJiyi1bnSHt4oSE/cffa080783ff5f93cb0bb46bb6889800/KnotelLogoRound.png"
-                alt="knotel brand"
-                style={{height: '15%', width: '15%', padding: '3rem'}}
+                alt="knotel brand"                
               />
-              <span style={{paddingTop: "50%"}}>
+              <span>
                 <div className={style.brand_mark_footer}>HEADQUARTERS</div>
                 <div className={style.brand_mark_footer}>AS A SERVICE</div>
               </span>
