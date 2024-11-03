@@ -42,7 +42,7 @@ const Footer = ({ footerProps }) => {
             <div className={style.footer_row}>
               <div classname={"knotelroundimage"}>
                 <img
-                  src="https://images.ctfassets.net/5tq979orlb7f/fzxRUDEJiyi1bnSHt4oSE/cffa080783ff5f93cb0bb46bb6889800/KnotelLogoRound.png"
+                  src="https://images.ctfassets.net/5tq979orlb7f/fzxRUDEJiyi1bnSHt4oSE/19183c02a53a01b9b4bded2efb49ee4f/KnotelLogoRound.png"
                   alt="knotel brand"
                 />
               </div>
