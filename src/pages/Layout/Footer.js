@@ -39,9 +39,12 @@ const Footer = ({ footerProps }) => {
                 {contactEmail}
               </NormalLink>
             </div>
-            <div>
+            <div className={style.footer_row}>
               <img src={knotelLogoRound} alt="knotel brand" />
-              <span className={style.brand_mark_footer}>HEADQUARTERS AS A SERVICE</span>
+              <span>
+                <div className={style.brand_mark_footer}>HEADQUARTERS</div>
+                <div className={style.brand_mark_footer}>AS A SERVICE</div>
+              </span>
             </div>
             {/* <div className={style.f_button}>
               <Button
