@@ -1,8 +1,8 @@
 {
   "name": "knotel-website-ui",
-  "version": "1.7.7",
+  "version": "1.7.8",
   "private": true,
-  "description": "Made with create-react-library",
+  "description": "Knotel: Headquarters as a service",
   "author": "",
   "license": "MIT",
   "repository": "/knotel-website-ui",
