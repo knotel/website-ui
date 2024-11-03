@@ -9,7 +9,7 @@ import NewsLetter from "../../components/NewsLetter";
 import NormalLink from "../../components/NormalLink";
 
 import style from "./style.module.css";
-
+import knotelLogoRound from '../../assets/images/KnotelLogoRound.png'
 const Footer = ({ footerProps }) => {
   const {
     footerLinks,
@@ -38,6 +38,10 @@ const Footer = ({ footerProps }) => {
               >
                 {contactEmail}
               </NormalLink>
+            </div>
+            <div>
+              <img src={knotelLogoRound} alt="knotel brand" />
+              <span className={style.brand_mark_footer}>HEADQUARTERS AS A SERVICE</span>
             </div>
             {/* <div className={style.f_button}>
               <Button
@@ -80,7 +84,9 @@ const Footer = ({ footerProps }) => {
                 className={`${style.f_mobile} ${style.footer_col}`}
                 key={`f_title_${i}`}
               >
-                <div id={`footer_${item.title}`} className={style.footer_title}>{item.title}</div>
+                <div id={`footer_${item.title}`} className={style.footer_title}>
+                  {item.title}
+                </div>
                 {item.links.map((linkItem, j) => (
                   <div
                     className={style.footer_link_item}
