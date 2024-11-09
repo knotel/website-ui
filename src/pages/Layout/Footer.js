@@ -40,7 +40,7 @@ const Footer = ({ footerProps }) => {
               </NormalLink>
             </div>
             <div className={style.footer_row}>
-              <div classname={"knotelroundimage"}>
+              <div className={"knotelroundimage"}>
                 <img
                   src="https://images.ctfassets.net/5tq979orlb7f/fzxRUDEJiyi1bnSHt4oSE/19183c02a53a01b9b4bded2efb49ee4f/KnotelLogoRound.png"
                   alt="knotel brand"

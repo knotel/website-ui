@@ -45,6 +45,11 @@ const ContactForm = ({
   };
   React.useEffect(() => {
     document.getElementById("00Nf400000A7K3F").visible = false;
+    const script = document.createElement("script");
+    script.src = "https://www.googletagmanager.com/gtag/js?id=AW-16735554300";
+    script.async = true;
+
+    document.body.appendChild(script);
   });
   const inputStyle = {
     width: "100%",
@@ -52,6 +57,15 @@ const ContactForm = ({
     marginBottom: "1rem",
     border: "solid 1px",
     paddingLeft: "1rem",
+  };
+  const onFormSubmit = function (e) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-16735554300");
   };
   return (
     <>
@@ -74,7 +88,8 @@ const ContactForm = ({
         <div>
           <form
             action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Df4000000nm4e"
-            method="POST"
+              method="POST"
+              onSubmit={onFormSubmit}
           >
             <input type="hidden" name="oid" value="00Df4000000nm4e" />
             <input type="hidden" name="retURL" value="http://knotel.com" />
@@ -212,7 +227,7 @@ const ContactForm = ({
             ></textarea>
             <br />
 
-            <input type="submit" name="submit" style={inputStyle} />
+              <input type="submit" name="submit" style={inputStyle}/>
           </form>
         </div>
       )}
