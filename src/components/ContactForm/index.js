@@ -65,7 +65,10 @@ const ContactForm = ({
       }
       gtag("js", new Date());
 
-      gtag("config", "AW-16735554300");
+    gtag("config", "AW-16735554300");
+    gtag("event", "conversion", {
+      send_to: "AW-16735554300/APHbCMOVr-gZEPyVkaw-",
+    });
   };
   return (
     <>
